@@ -305,7 +305,38 @@ def get_wind_inputs(countries, scenario):
                 
                 # print(wind_on_parameters_df)
                 wind_off_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", 'parameters.csv'), index=False)
-            
+         
+        # === ADDRESS MISSING GROUPS IN PARAMETERS.CSV IN CASE THEY ARE ACCIDENTALLY ADDED TO NETWORK STRUCTURE ===
+        max_defined_group_on = wind_on_capex_df['group'].astype(int).max()
+        max_defined_group_off = wind_off_capex_df['group'].astype(int).max() if country not in land_locked_countries else -1
+    
+        for group in range(10):  # Groups 0–9
+            if group > max_defined_group_on:
+                wind_on_parameters_df = pd.read_csv(os.path.join(stevfns_inputs, f"RE_WIND_Onshore_Lim_{group}", 'parameters.csv'))
+                wind_on_parameters_df.loc[wind_on_parameters_df['location_name'] == country, 'sizing_constant'] = 0
+                wind_on_parameters_df.loc[wind_on_parameters_df['location_name'] == country, 'maximum_size'] = 0
+                wind_on_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Onshore_Lim_{group}", 'parameters.csv'), index=False)
+        
+                # === Save dummy profile ===
+                dummy_profile = np.zeros(WindOnshore_CF_df.shape[0])
+                wind_on_dir = os.path.join(stevfns_inputs, f"RE_WIND_Onshore_Lim_{group}", "profiles", "WINDOUT", f"lat{lat}")
+                os.makedirs(wind_on_dir, exist_ok=True)
+                wind_on_filename = os.path.join(wind_on_dir, f'WINDOUT_lat{lat}_lon{lon}.csv')
+                pd.Series(dummy_profile).to_csv(wind_on_filename, index=False, header=False)
+
+            if country not in land_locked_countries and group > max_defined_group_off:
+                wind_off_parameters_df = pd.read_csv(os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", 'parameters.csv'))
+                wind_off_parameters_df.loc[wind_off_parameters_df['location_name'] == country, 'sizing_constant'] = 0
+                wind_off_parameters_df.loc[wind_off_parameters_df['location_name'] == country, 'maximum_size'] = 0
+                wind_off_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", 'parameters.csv'), index=False)
+        
+                # === Save dummy profile ===
+                dummy_profile = np.zeros(WindOffshore_CF_df.shape[0])
+                wind_off_dir = os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", "profiles", "WINDOUT", f"lat{lat}")
+                os.makedirs(wind_off_dir, exist_ok=True)
+                wind_off_filename = os.path.join(wind_off_dir, f'WINDOUT_lat{lat}_lon{lon}.csv')
+                pd.Series(dummy_profile).to_csv(wind_off_filename, index=False, header=False)
+                
     return
 
 def get_average_wind_inputs(countries, scenario):
