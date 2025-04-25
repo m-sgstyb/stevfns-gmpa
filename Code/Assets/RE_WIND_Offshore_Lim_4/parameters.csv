@@ -1,5 +1,5 @@
 Type,sizing_constant,sizing_constant_unit,lifespan,lifespan_unit,RE_type,set_size,set_number,maximum_size,maximum_size_unit,location_name
-0,0.0,G$/GWp,262800,h,WINDOUT,24,0,0.0,GWp,SGP
+0,100.0,G$/GWp,262800,h,WINDOUT,24,0,0.0,GWp,SGP
 1,7.427290944999999,G$/GWp,262800,h,WINDOUT,24,0,370.959,GWp,IDN
 2,7.383092179999999,G$/GWp,262800,h,WINDOUT,24,0,57.662,GWp,MYS
 3,7.311480502,G$/GWp,262800,h,WINDOUT,24,0,1.542,GWp,BRN

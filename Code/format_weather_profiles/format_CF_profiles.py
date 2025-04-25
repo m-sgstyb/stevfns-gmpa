@@ -49,9 +49,6 @@ root_dir = os.path.dirname(__file__)
 location_parameters_filename = os.path.join(root_dir, 'lat–lon-data.csv')
 raw_data_folder = os.path.join(root_dir, "raw_from_Box")
 
-
-# onshore_wind_folder = os.path.join(stevfns_inputs, "RE_WIND_Onshore_Lim", "profiles", "WINDOUT")
-# offshore_wind_folder = os.path.join(stevfns_inputs, "RE_WIND_Offshore_Lim", "profiles", "WINDOUT")
 rooftop_pv_folder = os.path.join(stevfns_inputs, "RE_PV_Rooftop_Lim", "profiles", "PVOUT")
 openfield_pv_folder = os.path.join(stevfns_inputs, "RE_PV_Openfield_Lim", "profiles", "PVOUT")
 
@@ -100,16 +97,19 @@ def get_pv_inputs(countries):
         '''
         OPENFIELD PV
         '''
-        
-        # Extract CF profile for openfield PV, Climate Analytics format
+        # === Capacity profiles ====
         PVopen_CF_df = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
-                                                f'{country}', 'pvopenfield', 'capacity_factor_binned.csv'))
-        PVopen_CF_df = PVopen_CF_df.T
-        PVopen_CF_df = PVopen_CF_df.drop('region', axis=0)
+                                                f'{country}', 'pvopenfield', 'capacity_factor_binned.csv'), header=None)
         
-        # The below works for the formats in Pilot Phase
-        # PVopen_CF_df = PVopen_CF_df.drop([0, 1], axis=1)
-        # PVopen_CF_df = PVopen_CF_df.drop('Unnamed: 0', axis=0)
+        if country in pilot_countries:
+            PVopen_CF_df = PVopen_CF_df.T
+            PVopen_CF_df = PVopen_CF_df.drop([0, 1, 2], axis=1)  #columns
+            PVopen_CF_df = PVopen_CF_df.drop(0, axis=0) #rows
+        else:
+            PVopen_CF_df = PVopen_CF_df.T
+            PVopen_CF_df = PVopen_CF_df.drop(0, axis=1) #column for region
+            PVopen_CF_df = PVopen_CF_df.drop(0, axis=0) #extra row
+            
         
         # Find/create directory for openfield PV profiles
         pv_of_dir = os.path.join(openfield_pv_folder, f'lat{lat}')
@@ -120,6 +120,15 @@ def get_pv_inputs(countries):
         # save formatted files into PV Openfield Lim and PV Openfield BAU asset folders
         PVopen_CF_df.to_csv(pv_of_filename, index=False, header=False)
         
+        max_capacity_of = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
+                                      f'{country}', 'pvopenfield', 'capacity_binned.csv'), header=None)
+        capex_of = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
+                                      f'{country}', 'pvopenfield', 'capex_binned.csv'), header=None)
+        capex_of.columns = capex_of.iloc[0]
+        capex_of = capex_of[1:]
+        capex_of = capex_of.reset_index(drop=True)
+        # print(capex_of)
+        
         pv_ofbau_dir = os.path.join(openfield_pvbau_folder, f'lat{lat}')
         if not os.path.exists(pv_ofbau_dir):
             os.makedirs(pv_ofbau_dir)
@@ -129,22 +138,23 @@ def get_pv_inputs(countries):
         '''
         ROOFTOP PV
         '''
-        
-        # Extract CF profile for rooftop PV, Climate Analytics format
+        # === Capacity profiles ====
         PVroof_CF_df = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
                                                 f'{country}', 'pvrooftop', 'capacity_factor_binned.csv'))
-        PVroof_CF_df = PVroof_CF_df.T
-        PVroof_CF_df = PVroof_CF_df.drop('region', axis=0)
-        # PVroof_CF_df = PVroof_CF_df.drop([0, 1], axis=1)
-        # PVroof_CF_df = PVroof_CF_df.drop('Unnamed: 0', axis=0)
-        
+        if country in pilot_countries:
+            PVroof_CF_df = PVroof_CF_df.T
+            PVroof_CF_df = PVroof_CF_df.drop([0, 1], axis=1)
+            PVroof_CF_df = PVroof_CF_df.drop('Unnamed: 0', axis=0)
+        else:
+            PVroof_CF_df = PVroof_CF_df.T
+            PVroof_CF_df = PVroof_CF_df.drop('region', axis=0) #extra row
         # Find/create directory for openfield PV profiles
         pv_rt_dir = os.path.join(rooftop_pv_folder, f'lat{lat}')
         if not os.path.exists(pv_rt_dir):
             os.makedirs(pv_rt_dir) 
         pv_rt_filename = os.path.join(pv_rt_dir, f'PVOUT_lat{lat}_lon{lon}.csv')
         
-        # Save csv with correct format
+        # Save csv with correct format into STEVFNs inputs
         PVroof_CF_df.to_csv(pv_rt_filename, index=False, header=False)
     
     return
@@ -313,11 +323,11 @@ def get_wind_inputs(countries, scenario):
         for group in range(10):  # Groups 0–9
             if group > max_defined_group_on:
                 wind_on_parameters_df = pd.read_csv(os.path.join(stevfns_inputs, f"RE_WIND_Onshore_Lim_{group}", 'parameters.csv'))
-                wind_on_parameters_df.loc[wind_on_parameters_df['location_name'] == country, 'sizing_constant'] = 0
+                wind_on_parameters_df.loc[wind_on_parameters_df['location_name'] == country, 'sizing_constant'] = 100
                 wind_on_parameters_df.loc[wind_on_parameters_df['location_name'] == country, 'maximum_size'] = 0
                 wind_on_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Onshore_Lim_{group}", 'parameters.csv'), index=False)
         
-                # === Save dummy profile ===
+                # === Save dummy zeros profile ===
                 dummy_profile = np.zeros(WindOnshore_CF_df.shape[0])
                 wind_on_dir = os.path.join(stevfns_inputs, f"RE_WIND_Onshore_Lim_{group}", "profiles", "WINDOUT", f"lat{lat}")
                 os.makedirs(wind_on_dir, exist_ok=True)
@@ -326,11 +336,11 @@ def get_wind_inputs(countries, scenario):
 
             if country not in land_locked_countries and group > max_defined_group_off:
                 wind_off_parameters_df = pd.read_csv(os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", 'parameters.csv'))
-                wind_off_parameters_df.loc[wind_off_parameters_df['location_name'] == country, 'sizing_constant'] = 0
+                wind_off_parameters_df.loc[wind_off_parameters_df['location_name'] == country, 'sizing_constant'] = 100
                 wind_off_parameters_df.loc[wind_off_parameters_df['location_name'] == country, 'maximum_size'] = 0
                 wind_off_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", 'parameters.csv'), index=False)
         
-                # === Save dummy profile ===
+                # === Save dummy zeros profile ===
                 dummy_profile = np.zeros(WindOffshore_CF_df.shape[0])
                 wind_off_dir = os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", "profiles", "WINDOUT", f"lat{lat}")
                 os.makedirs(wind_off_dir, exist_ok=True)
@@ -452,12 +462,12 @@ def get_average_wind_inputs(countries, scenario):
 
 
 #%%
-# countries = ['SGP']
-countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
-              'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
+countries = ['SGP', 'KOR']
+# countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
+#               'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
 # countries_avg = ['VNM', 'THA', 'KHM', 'IDN']
 
 
-# get_pv_inputs(countries)
-get_wind_inputs(countries, 'high')
+get_pv_inputs(countries)
+# get_wind_inputs(countries, 'high')
 # get_average_wind_inputs(countries_avg, 'high')
