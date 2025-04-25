@@ -10,12 +10,12 @@ Climate Analytics processed renewables data, hardcoded for this specitic format.
 
 It reads the RES analysis files for capacity factor profiles for PV and Wind obtained
 by Climate Analytics, prepares and saves them as STEVFNs inputs directly into their asset folders.
+This script saves:
+        1. CAPEX in asset's parameters.csv
+        2. Maximum technical capacity in asset's parameters.csv
+        3. BAU estimated capacity (obtained separately from existing in 2023 and growing only with demand)
+        4. CF profiles to the asset's profiles folder for wind and PV. Wind profiles separated into bins
 
-
-PLEASE NOTE: The function for wind is hardcoded to average out 10 binned profiles into one
-If a wind file has a different format, or does not exist, this function will not work
-and the profile will have to be handled manually.
-Please contact Mónica if this arises.
 
 Methodology:
     1. In Box, go to Modelling > res_analysis and download the folders named for the countries
@@ -24,17 +24,15 @@ Methodology:
     raw_from_Box > res_analysis folder in STEVFNs repo
     3. Edit the list defined after the functions in this script to include those countries
     4. Run both of the functions
-    
     5. Check that the Asset Folders for:
         RE_PV_Openfield_Lim
         RE_PV_Openfield_BAU
         RE_PV_Rooftop_Lim
         
-        RE_WIND_Onshore_Lim
+        RE_WIND_Onshore_Lim_{group}
         RE_WIND_Onshore_BAU
-        RE_WIND_Offshore_Lim
+        RE_WIND_Offshore_Lim_{group}
      Have created new folders with the renewable data processed as required.
-
 """
 
 import pandas as pd
@@ -65,8 +63,10 @@ lat_lon_df.columns = lat_lon_df.iloc[0]
 
 land_locked_countries = ['LAO']
 pilot_countries = ['IDN', 'LAO', 'PHL', 'BRN', 'KHM', 'SGP', 'THA', 'VNM', 'MYS']
+phase_2_countries = ['KOR', 'BRA', 'CHL', 'COL', 'EGY', 'KEN','MAR', 'NGA', 'PER','ZAF']
 
-def get_pv_inputs(countries):
+
+def get_pv_inputs(countries, scenario):
     '''
     
     Parameters
@@ -81,7 +81,7 @@ def get_pv_inputs(countries):
     None.
 
     '''
-    
+    print("============PV Processing==============\n")
     for country in countries:
     
         lat = lat_lon_df.loc['lat', f'{country}']
@@ -95,12 +95,11 @@ def get_pv_inputs(countries):
         lon = max(lon, -180.0)
 
         '''
-        OPENFIELD PV
+        OPENFIELD and ROOFTOP PV
         '''
         # === Capacity profiles ====
         PVopen_CF_df = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
                                                 f'{country}', 'pvopenfield', 'capacity_factor_binned.csv'), header=None)
-        
         if country in pilot_countries:
             PVopen_CF_df = PVopen_CF_df.T
             PVopen_CF_df = PVopen_CF_df.drop([0, 1, 2], axis=1)  #columns
@@ -109,7 +108,6 @@ def get_pv_inputs(countries):
             PVopen_CF_df = PVopen_CF_df.T
             PVopen_CF_df = PVopen_CF_df.drop(0, axis=1) #column for region
             PVopen_CF_df = PVopen_CF_df.drop(0, axis=0) #extra row
-            
         
         # Find/create directory for openfield PV profiles
         pv_of_dir = os.path.join(openfield_pv_folder, f'lat{lat}')
@@ -120,25 +118,12 @@ def get_pv_inputs(countries):
         # save formatted files into PV Openfield Lim and PV Openfield BAU asset folders
         PVopen_CF_df.to_csv(pv_of_filename, index=False, header=False)
         
-        max_capacity_of = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
-                                      f'{country}', 'pvopenfield', 'capacity_binned.csv'), header=None)
-        capex_of = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
-                                      f'{country}', 'pvopenfield', 'capex_binned.csv'), header=None)
-        capex_of.columns = capex_of.iloc[0]
-        capex_of = capex_of[1:]
-        capex_of = capex_of.reset_index(drop=True)
-        # print(capex_of)
-        
         pv_ofbau_dir = os.path.join(openfield_pvbau_folder, f'lat{lat}')
         if not os.path.exists(pv_ofbau_dir):
             os.makedirs(pv_ofbau_dir)
         PVopen_CF_df.to_csv(os.path.join(pv_ofbau_dir, f'PVOUT_lat{lat}_lon{lon}.csv'),
                             index=False, header=False)
         
-        '''
-        ROOFTOP PV
-        '''
-        # === Capacity profiles ====
         PVroof_CF_df = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
                                                 f'{country}', 'pvrooftop', 'capacity_factor_binned.csv'))
         if country in pilot_countries:
@@ -156,7 +141,96 @@ def get_pv_inputs(countries):
         
         # Save csv with correct format into STEVFNs inputs
         PVroof_CF_df.to_csv(pv_rt_filename, index=False, header=False)
+        
+        # === Maximum capacities ====
+        # Read the raw CSV without headers
+        max_capacity_df = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
+                                                   'maximum_capacity_potential.csv'), header=None)
+        
+        # Set the first row as column headers and drop reduntant row
+        max_capacity_df.columns = max_capacity_df.iloc[0]
+        max_capacity_df = max_capacity_df.drop(0).reset_index(drop=True)
+        # Set 'location' as the index (not column 0 anymore!)
+        max_capacity_df = max_capacity_df.set_index('location')
+        #Transpose — countries become index, technologies become columns
+        max_capacity_df = max_capacity_df.T
+        max_cap_of_value = max_capacity_df.loc[country, 'pvopenfield']
+        max_cap_rt_value = max_capacity_df.loc[country, 'pvrooftop']
+        
+        # === Capacity update for BAU openfield asset ===
+        bau_capacity_df = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis', 'bau_capacities.csv'), header=None)
+        bau_capacity_df.columns = bau_capacity_df.iloc[0]
+        bau_capacity_df = bau_capacity_df.drop(0).reset_index(drop=True)
+        bau_capacity_df = bau_capacity_df.set_index('location')
+        bau_capacity_df = bau_capacity_df.T
+        bau_capacity_value = bau_capacity_df.loc[country, 'pvopenfield']
+        
+        bau_params_filename = os.path.join(stevfns_inputs, "RE_PV_Openfield_BAU", 'parameters.csv')
+        bau_parameters_df = pd.read_csv(bau_params_filename)
+        bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
+                                  'maximum_size'] = float(bau_capacity_value)
+        
+        
+
+        # === CAPEX values ===
+        capex_of = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
+                                      f'{country}', 'pvopenfield', 'capex_binned.csv'), header=None)
+        capex_of.columns = capex_of.iloc[0] 
+        capex_of = capex_of[1:].reset_index(drop=True)
+        
+        capex_rt = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
+                                      f'{country}', 'pvrooftop', 'capex_binned.csv'), header=None)
+        capex_rt.columns = capex_rt.iloc[0] 
+        capex_rt = capex_rt[1:].reset_index(drop=True)
+        
+        if country in pilot_countries:
+            #write processing for pilot format and the other formats
+            capex_of_value = capex_of.loc[(capex_of['scenario'] == f'{scenario}') & 
+                                          (capex_of['region'] == f'{country}'),
+                                          2050.0].values[0]
+            capex_rt_value = capex_of.loc[(capex_of['scenario'] == f'{scenario}') & 
+                                          (capex_of['region'] == f'{country}'),
+                                          2050.0].values[0]
+            
+        else:
+            # Get capex value for openfield PV
+            capex_of_value = capex_of.loc[(capex_of['scenario'] == f'{scenario}') & 
+                                          (capex_of['group'].astype(int) == 0) &
+                                          (capex_of['region'] == f'{country}'),
+                                          2050.0].values[0]
+            capex_rt_value = capex_of.loc[(capex_of['scenario'] == f'{scenario}') & 
+                                          (capex_of['group'].astype(int) == 0) &
+                                          (capex_of['region'] == f'{country}'),
+                                          2050.0].values[0]
+        
+        # Find parameters.csv files and input data
+        pv_open_filename = os.path.join(stevfns_inputs, "RE_PV_Openfield_Lim", 'parameters.csv')
+        pv_open_parameters_df = pd.read_csv(pv_open_filename)
+        # Change the value for CAPEX
+        pv_open_parameters_df.loc[pv_open_parameters_df['location_name'] == country,
+                                  'sizing_constant'] = float(capex_of_value) / 1000
+        pv_open_parameters_df.loc[pv_open_parameters_df['location_name'] == country,
+                                  'maximum_size'] = float(max_cap_of_value)
+        
+        pv_roof_filename = os.path.join(stevfns_inputs, "RE_PV_Rooftop_Lim", 'parameters.csv')
+        pv_roof_parameters_df = pd.read_csv(pv_roof_filename)
+        # Change the value for CAPEX
+        pv_roof_parameters_df.loc[pv_roof_parameters_df['location_name'] == country,
+                                  'sizing_constant'] = float(capex_rt_value) / 1000
+        pv_roof_parameters_df.loc[pv_roof_parameters_df['location_name'] == country,
+                                  'maximum_size'] = float(max_cap_rt_value)
+        
+        
+        # === BAU parameters update CAPEX ===
+        bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
+                                  'sizing_constant'] = float(capex_of_value) / 1000
+        
+        # print(wind_on_parameters_df)
+        pv_open_parameters_df.to_csv(os.path.join(stevfns_inputs, "RE_PV_Openfield_Lim", 'parameters.csv'), index=False)
+        pv_roof_parameters_df.to_csv(os.path.join(stevfns_inputs, "RE_PV_Rooftop_Lim", 'parameters.csv'), index=False)
+        bau_parameters_df.to_csv(bau_params_filename, index=False)
     
+        print("finished PV country: ", country)
     return
 
 
@@ -177,9 +251,8 @@ def get_wind_inputs(countries, scenario):
     None.
 
     '''
-    
+    print("============WIND Processing==============\n")
     for country in countries:
-        print(country)
         lat = lat_lon_df.loc['lat', f'{country}']
         lat = np.int64(np.round((lat) / 0.5)) * 0.5
         lat = min(lat,90.0)
@@ -346,7 +419,8 @@ def get_wind_inputs(countries, scenario):
                 os.makedirs(wind_off_dir, exist_ok=True)
                 wind_off_filename = os.path.join(wind_off_dir, f'WINDOUT_lat{lat}_lon{lon}.csv')
                 pd.Series(dummy_profile).to_csv(wind_off_filename, index=False, header=False)
-                
+
+        print("finished wind country: ", country)
     return
 
 def get_average_wind_inputs(countries, scenario):
@@ -365,8 +439,8 @@ def get_average_wind_inputs(countries, scenario):
     -------
     None
     '''
+    print("============WIND AVG Processing==============\n",)
     for country in countries:
-        print(country)
         lat = lat_lon_df.loc['lat', country]
         lon = lat_lon_df.loc['lon', country]
 
@@ -456,18 +530,31 @@ def get_average_wind_inputs(countries, scenario):
                 off_param_df.loc[off_param_df['location_name'] == country, 'sizing_constant'] = avg_off_capex
                 off_param_df.loc[off_param_df['location_name'] == country, 'maximum_size'] = total_off_cap
                 off_param_df.to_csv(off_param_file, index=False)
+                
+        print("finished avg wind country: ", country)
 
     return
 
 
 
 #%%
-countries = ['SGP', 'KOR']
+
+#Phase 1 and 2
 # countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
 #               'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
-# countries_avg = ['VNM', 'THA', 'KHM', 'IDN']
 
 
-get_pv_inputs(countries)
-# get_wind_inputs(countries, 'high')
+#Phase 2, milestone 2
+countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
+
+
+
+get_pv_inputs(countries, 'high')
+get_wind_inputs(countries, 'high')
+
 # get_average_wind_inputs(countries_avg, 'high')
+
+
+
+
+
