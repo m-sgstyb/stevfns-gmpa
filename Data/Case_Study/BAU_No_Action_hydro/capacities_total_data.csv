@@ -1,0 +1,8 @@
+country_1,country_2,country_3,country_4,collaboration_emissions,technology_cost,technology_capacity,technology_name
+BR,,,,205.3,1.5,80.4,RE_PV_Openfield_BAU_[BR]
+BR,,,,205.3,2.2,62.6,RE_WIND_Onshore_BAU_[BR]
+BR,,,,205.3,8.5,210.1,HYDRO_[BR]
+BR,,,,205.3,6.7,60.3,PP_CO2_[BR]
+BR,,,,205.3,20.6,137.1,FF_to_HTH_[BR]
+BR,,,,205.3,0.0,206.6,EL_Demand_[BR]
+BR,,,,205.3,0.0,137.1,HTH_Demand_[BR]
