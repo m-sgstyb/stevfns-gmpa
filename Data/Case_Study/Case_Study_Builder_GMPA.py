@@ -199,7 +199,7 @@ def update_scenarios_collab(base_case_study):
 # Leave base_scenario_name as "BAU"
 # =============================================================================
 
-single_country_case_study = "BR_Hydro_test"
+single_country_case_study = "KR_Hydro_test"
 # multiple_country_case_study = "BN-MY"  # Can be of all combinations e.g. XX-YY-ZZ or WW-XX-YY-ZZ
 
 base_scenario_name = "BAU"

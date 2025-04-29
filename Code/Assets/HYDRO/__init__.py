@@ -26,7 +26,8 @@ class HYDRO_Asset(Asset_STEVFNs):
     @staticmethod
     def cost_fun(flows, params):
         usage_constant = params["usage_constant"]
-        return usage_constant * cp.sum(flows)
+        capacity_factor = params["capacity_factor"]
+        return usage_constant * cp.sum(flows * capacity_factor)
     
     @staticmethod
     def conversion_fun(flows, params):
