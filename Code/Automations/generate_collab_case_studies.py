@@ -13,14 +13,14 @@ REDUCTION_STEPS = [f"{i * 10}" for i in range(10)]   # 0 … 100 %
 # ─────────────── discover single-country dirs ─────────────── #
 
 def find_country_folders(root: Path) -> dict[str, Path]:
-    folder = folder.resolve()
+    root = root.resolve()
     mapping = {
         m.group("cc"): entry
-        for entry in folder.iterdir()
+        for entry in root.iterdir()
         if (m := AUTARKY_RE.match(entry.name)) and entry.is_dir()
     }
     if not mapping:
-        raise RuntimeError(f"No Autarky_<CC> folders in {folder}")
+        raise RuntimeError(f"No Autarky_<CC> folders in {root}")
     return mapping
 
 
@@ -88,27 +88,24 @@ def copy_bau_static(src_country_folder: Path, dst_bau: Path):
 # ─────────────── CO₂-Budget parameter table ─────────────── #
 
 def load_co2_budget_table(root: Path) -> pd.DataFrame:
-    csv_path = root / "../Assets/CO2_Budget/parameters.csv"
+    csv_path = (root.parent / "Assets" / "CO2_Budget" / "parameters.csv").resolve()
     df = pd.read_csv(csv_path)
     df.columns = [c.strip() for c in df.columns]
     if "Type" not in df.columns:
-        df = df.rename(columns={"git": "Type", "git_": "Type"})
-    return df[df["case_study"].str.contains("_", na=False)][["Type", "case_study"]]
+        raise ValueError("No <Type> column in CO2_Budget/parameters.csv")
+    return df[df["case_study"].str.contains("-", na=False)][["Type", "case_study"]]
 
 
 def normalise_case_study(txt: str) -> tuple[frozenset[str], str]:
-    name, suff = txt.split("_", 1)
-    suff = "COLLAB" if suff.upper().startswith("COLLAB") else "AUT"
-    return frozenset(sorted(name.split("-"))), suff
-
-
-def resolve_co2_type(combo_codes, params_df, suffix) -> int:
-    want_set, want_suf = frozenset(sorted(combo_codes)), suffix.upper()
+    return frozenset(txt.strip().split("-"))
+    
+def resolve_co2_type(combo_codes, params_df) -> int:
+    want_set = frozenset(sorted(combo_codes))
     for _, row in params_df.iterrows():
-        cs_set, cs_suf = normalise_case_study(str(row["case_study"]))
-        if cs_set == want_set and cs_suf == want_suf:
+        cs_set = normalise_case_study(str(row["case_study"]))
+        if cs_set == want_set:
             return int(row["Type"])
-    raise ValueError(f"No CO2_Budget Type for {'-'.join(combo_codes)}_{suffix}")
+    raise ValueError(f"No CO2_Budget Type for {'-'.join(combo_codes)}")
 
 # ─────────────── Asset_Parameters builder ─────────────── #
 
@@ -147,10 +144,10 @@ def bump_co2_asset_type(src_csv: Path, dst_csv: Path, offset: int):
 
 def main(root_dir, selected_countries=None):
     root = Path(root_dir).resolve()
-    case_study_dir = root / "../../Data/Case_Study"
+    case_study_dir = (root.parent.parent / "Data" / "Case_Study").resolve()
     output_dir     = case_study_dir
 
-    country_folders = find_country_folders(root)
+    country_folders = find_country_folders(case_study_dir)
     if selected_countries:
         selected_countries = [cc.upper() for cc in selected_countries]
         unknown = set(selected_countries) - set(country_folders)
@@ -176,26 +173,39 @@ def main(root_dir, selected_countries=None):
             write_network_csv(union, f_aut)
             write_network_csv(coll,  f_col)
 
-            for folder, net_df, suf in (
-                (f_aut, union, "AUT"),
-                (f_col, coll,  "COLLAB"),
+            
+            for folder, net_df in (
+                (f_aut, union),
+                (f_col, coll),
             ):
-                bau = folder / "BAU"
-                bau.mkdir(parents=True, exist_ok=True)
-                copy_bau_static(country_folders[combo[0]], bau)
-                co2_type = resolve_co2_type(combo, co2_params_df, suf)
+                if not folder.exists():
+                    # First-time creation
+                    write_network_csv(net_df, folder)
+                    bau = folder / "BAU"
+                    bau.mkdir(parents=True, exist_ok=True)
+                    copy_bau_static(country_folders[combo[0]], bau)
+                else:
+                    print(f"↻  Updating parameters in existing folder {folder.name}")
+                    bau = folder / "BAU"
+            
+                co2_type = resolve_co2_type(combo, co2_params_df)
                 write_asset_parameters(build_asset_parameters(net_df, co2_type), bau)
-
+            
                 for idx, step_name in enumerate(REDUCTION_STEPS, start=1):
                     dst = folder / step_name
-                    clone_folder(bau, dst)
+                    dst.mkdir(parents=True, exist_ok=True)
+                
+                    # Always copy the static files if not already there
+                    for fname in ("Location_Parameters.csv", "System_Parameters.csv"):
+                        if not (dst / fname).exists():
+                            shutil.copy(bau / fname, dst / fname)
+                
+                    # Always overwrite Asset_Parameters.csv with incremented CO₂ type
                     bump_co2_asset_type(
                         bau / "Asset_Parameters.csv",
                         dst / "Asset_Parameters.csv",
                         offset=idx
                     )
-
-            print(f"✓  {name}: Autarky & Collab (reductions) done")
 
 # ─────────────── script entry ─────────────── #
 

@@ -203,7 +203,7 @@ base_scenario_name = "BAU"
 # single_country_case_study = "LA"
 # update_scenarios_single_country(single_country_case_study)
 
-multiple_country_case_study = "VN-TH-KH"  # Can be of all combinations e.g. XX-YY-ZZ or WW-XX-YY-ZZ
+multiple_country_case_study = "KH-LA-TH"  # Can be of all combinations e.g. XX-YY-ZZ or WW-XX-YY-ZZ
 update_scenarios_collab(multiple_country_case_study)
 
 
