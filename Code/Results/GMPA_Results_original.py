@@ -3,11 +3,12 @@
 """
 Created on Tue Oct 31 10:49:50 2023
 
-@author: Mónica Sagastuy-Breña
+@author: mnsgsty
 """
 
 import pandas as pd
 import numpy as np
+
 
 def export_results(my_network):
     '''Class to export all results, generalized for all case studies'''
@@ -330,4 +331,3 @@ def export_total_data_capacities(my_network, location_parameters_df, asset_param
         total_data_df = pd.concat([total_data_df, t_df], ignore_index=True)
     
     return total_data_df
-

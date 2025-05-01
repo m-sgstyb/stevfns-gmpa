@@ -11,11 +11,12 @@ import time
 import os
 from os.path import normpath, basename
 import cvxpy as cp
-
+import subprocess
 
 from Code.Network.Network import Network_STEVFNs
 from Code.Plotting import DPhil_Plotting
 from Code.Results import GMPA_Results
+from Code.Plotting import GMPA_plot_mitigation_curve
 
 
 #### Define Input Files ####
@@ -129,7 +130,35 @@ total_df.to_csv(results_filename, index=False, header=True)
 total_df_1.to_csv(unrounded_results_filename, index=False, header=True)
 total_cap_df.to_csv(capacities_filename, index=False, header=True)
     
+
+#### Plot data
+# Run the plotting script after main processing
+dpacc_name = os.path.join(case_study_folder, "mitigation_curve.png")
+subplots_name = os.path.join(case_study_folder, "dpacc_subplots.png")
+GMPA_plot_mitigation_curve.mitigation_curve(
+    unrounded_results_filename,
+    dpacc_name,
+    case_study_name,
+    countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY"],  # or omit this to auto-include all
+)
+GMPA_plot_mitigation_curve.dpacc_subplots(
+    unrounded_results_filename,
+    capacities_filename,
+    subplots_name,
+    case_study_name,
+    countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY"],  # or omit this to auto-include all
+)
+
         
 final_time = time.time()
-print("Time to build network, run all scenarios, and export data", (final_time - start_time0)/60, "min")
+print("------------------All Scenarios Run------------------------\n",
+      "Time to build network, run all scenarios, export and plot data",
+      (final_time - start_time0)/60, "min")
+
+
+
+
+
+
+
    
