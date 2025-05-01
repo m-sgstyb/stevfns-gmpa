@@ -82,7 +82,17 @@ def load_existing_cases(output_file):
                 existing_cases[case].append(row['maximum_budget'])
     return existing_cases
 
+def ensure_file_ends_with_newline(file_path):
+    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+        with open(file_path, mode='rb+') as f:
+            f.seek(-1, os.SEEK_END)
+            last_char = f.read(1)
+            if last_char != b'\n':
+                f.write(b'\n')
+
 def write_parameters(output_file, case_study, values, starting_type):
+    ensure_file_ends_with_newline(output_file)  # 🛡 Ensure newline before appending
+
     with open(output_file, mode='a', newline='', encoding='utf-8') as out_f:
         writer = csv.writer(out_f)
         for val in values:
