@@ -44,7 +44,7 @@ CODE_DIR = os.path.split(os.getcwd())[0]
 stevfns_inputs = os.path.join(CODE_DIR, "Assets")
 
 root_dir = os.path.dirname(__file__)
-location_parameters_filename = os.path.join(root_dir, 'lat–lon-data.csv')
+location_parameters_filename = os.path.join(root_dir, 'lat_lon_data.csv')
 raw_data_folder = os.path.join(root_dir, "raw_from_Box")
 
 rooftop_pv_folder = os.path.join(stevfns_inputs, "RE_PV_Rooftop_Lim", "profiles", "PVOUT")
