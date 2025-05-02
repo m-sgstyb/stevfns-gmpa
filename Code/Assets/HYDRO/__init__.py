@@ -30,7 +30,7 @@ class HYDRO_Asset(Asset_STEVFNs):
     
     @staticmethod
     def conversion_fun(flows, params):
-        return flows * params["capacity_factor"]
+        return flows
     
     @staticmethod
     def conversion_fun_2(flows, params):
@@ -40,8 +40,8 @@ class HYDRO_Asset(Asset_STEVFNs):
     def __init__(self):
         super().__init__()
         self.cost_fun_params = {"usage_constant": cp.Parameter(nonneg=True)}
-        self.conversion_fun_params = {"capacity_factor": cp.Parameter(nonneg=True)}
-        self.conversion_fun_params_2 = {"existing_capacity": cp.Parameter(nonneg=True)}
+        self.conversion_fun_params_2 = {"existing_capacity": cp.Parameter(nonneg=True),
+                                        "capacity_factor": cp.Parameter(nonneg=True)}
         
         
     def define_structure(self, asset_structure):
@@ -107,6 +107,9 @@ class HYDRO_Asset(Asset_STEVFNs):
         self.cost_fun_params["usage_constant"].value = (self.cost_fun_params["usage_constant"].value * 
                                                         NPV_factor * simulation_factor)
 
+    def _update_existing_capacity(self):
+        self.conversion_fun_params_2["existing_capacity"].value =  self.conversion_fun_params_2["existing_capacity"].value * self.conversion_fun_params_2["capacity_factor"].value
+
     def _update_parameters(self):
         for parameter_name, parameter in self.cost_fun_params.items():
             parameter.value = self.parameters_df[parameter_name]
@@ -119,6 +122,8 @@ class HYDRO_Asset(Asset_STEVFNs):
             
         #Update O&M cost parameters based on NPV#
         self._update_usage_constants()
+        #Update existing capacity with CF
+        self._update_existing_capacity()
         
     def get_plot_data(self):
         capacity_factor = self.conversion_fun_params["capacity_factor"].value
