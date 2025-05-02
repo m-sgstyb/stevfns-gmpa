@@ -30,7 +30,7 @@ Methodology:
         RE_PV_Rooftop_Lim
         
         RE_WIND_Onshore_Lim_{group}
-        RE_WIND_Onshore_BAU
+        RE_WIND_Onshore_BAU_{group}
         RE_WIND_Offshore_Lim_{group}
      Have created new folders with the renewable data processed as required.
 """
