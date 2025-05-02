@@ -18,10 +18,12 @@ class HYDRO_Asset(Asset_STEVFNs):
     asset_name = "HYDRO"
     source_node_type = "NULL"
     target_node_type = "EL"
-    target_node_type_2 = "HYDRO"
+    target_node_type_2 = "HYDRO_POWER"
+    target_node_type_3 = "HYDRO_ENERGY"
     period = 1
     transport_time = 0
     target_node_time_2 = 0
+    target_node_time_3 = 0
     
     @staticmethod
     def cost_fun(flows, params):
@@ -34,15 +36,22 @@ class HYDRO_Asset(Asset_STEVFNs):
     
     @staticmethod
     def conversion_fun_2(flows, params):
+        # Limits the asset by installed capacity
         existing_capacity = params["existing_capacity"]
         return existing_capacity - cp.max(flows)
+    
+    @staticmethod
+    def conversion_fun_3(flows, params):
+        # Limits the asset by total energy produced 
+        capacity_factor = params["capacity_factor"]
+        return capacity_factor - cp.sum(flows)
     
     def __init__(self):
         super().__init__()
         self.cost_fun_params = {"usage_constant": cp.Parameter(nonneg=True)}
-        self.conversion_fun_params_2 = {"existing_capacity": cp.Parameter(nonneg=True),
+        self.conversion_fun_params_2 = {"existing_capacity": cp.Parameter(nonneg=True)}
+        self.conversion_fun_params_3 = {"existing_capacity": cp.Parameter(nonneg=True),
                                         "capacity_factor": cp.Parameter(nonneg=True)}
-        
         
     def define_structure(self, asset_structure):
         self.asset_structure = asset_structure
@@ -56,6 +65,8 @@ class HYDRO_Asset(Asset_STEVFNs):
                                            self.period)
         self.source_node_location_2 = "NULL"
         self.target_node_location_2 = asset_structure["Location_1"]
+        self.source_node_location_3 = "NULL"
+        self.target_node_location_3 = asset_structure["Location_1"]
         self.number_of_edges = len(self.source_node_times)
         self.flows = cp.Variable(self.number_of_edges, nonneg = True)
 
@@ -63,6 +74,7 @@ class HYDRO_Asset(Asset_STEVFNs):
     def build_edges(self):
         super().build_edges()
         self.build_edge_2()
+        self.build_edge_3()
 
     def build_edge(self, edge_number):
         source_node_time = self.source_node_times[edge_number]
@@ -99,6 +111,26 @@ class HYDRO_Asset(Asset_STEVFNs):
         new_edge.conversion_fun = self.conversion_fun_2
         new_edge.conversion_fun_params = self.conversion_fun_params_2
         
+    def build_edge_3(self):
+        source_node_type = "NULL"
+        source_node_location = self.source_node_location_3
+        source_node_time = 0
+        target_node_type = self.target_node_type_3
+        target_node_location = self.target_node_location_3
+        target_node_time = self.target_node_time_3
+        
+        new_edge = Edge_STEVFNs()
+        self.edges += [new_edge]
+        if source_node_type != "NULL":
+            new_edge.attach_source_node(self.network.extract_node(
+                source_node_location, source_node_type, source_node_time))
+        if target_node_type != "NULL":
+            new_edge.attach_target_node(self.network.extract_node(
+                target_node_location, target_node_type, target_node_time))
+        new_edge.flow = self.flows
+        new_edge.conversion_fun = self.conversion_fun_3
+        new_edge.conversion_fun_params = self.conversion_fun_params_3
+        
     def _update_usage_constants(self):
         simulation_factor = 8760/self.network.system_structure_properties["simulated_timesteps"]
         N = np.ceil(self.network.system_parameters_df.loc["project_life", "value"]/8760)
@@ -107,27 +139,28 @@ class HYDRO_Asset(Asset_STEVFNs):
         self.cost_fun_params["usage_constant"].value = (self.cost_fun_params["usage_constant"].value * 
                                                         NPV_factor * simulation_factor)
 
-    def _update_existing_capacity(self):
-        self.conversion_fun_params_2["existing_capacity"].value =  self.conversion_fun_params_2["existing_capacity"].value * self.conversion_fun_params_2["capacity_factor"].value
+    def _update_energy_limit(self):
+        self.conversion_fun_params_3["capacity_factor"].value = (self.conversion_fun_params_3["existing_capacity"].value * 
+                                                                 self.conversion_fun_params_3["capacity_factor"].value * 
+                                                                 self.number_of_edges)
 
     def _update_parameters(self):
         for parameter_name, parameter in self.cost_fun_params.items():
             parameter.value = self.parameters_df[parameter_name]
-            
         for parameter_name, parameter in self.conversion_fun_params.items():
             parameter.value = self.parameters_df[parameter_name]
-        
         for parameter_name, parameter in self.conversion_fun_params_2.items():
+            parameter.value = self.parameters_df[parameter_name]
+        for parameter_name, parameter in self.conversion_fun_params_3.items():
             parameter.value = self.parameters_df[parameter_name]
             
         #Update O&M cost parameters based on NPV#
         self._update_usage_constants()
-        #Update existing capacity with CF
-        self._update_existing_capacity()
+        #Update total energy production by capacity factor
+        self._update_energy_limit()
         
     def get_plot_data(self):
-        capacity_factor = self.conversion_fun_params["capacity_factor"].value
-        return self.flows * capacity_factor
+        return self.flows
         
         
     

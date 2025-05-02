@@ -20,9 +20,9 @@ from Code.Plotting import GMPA_plot_mitigation_curve
 
 
 #### Define Input Files ####
-# case_study_name = "Least_Cost_Emissions_hydro"
+# case_study_name = "BAU_No_Action_hydro"
 # case_study_name = "Autarky_CL"
-case_study_name = "Autarky_KR_Hydro_test"
+case_study_name = "Autarky_BR_Hydro_test"
 # case_study_name = "KH-BN_Collab"
 # case_study_name = "TH-PH-MY_Autarky"
 # case_study_name = "TH-PH-MY_Collab"
