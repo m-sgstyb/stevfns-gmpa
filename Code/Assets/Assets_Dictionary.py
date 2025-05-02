@@ -43,6 +43,7 @@ from .RE_WIND_Onshore_Lim_7 import RE_WIND_Onshore_Lim_7_Asset
 from .RE_WIND_Onshore_Lim_8 import RE_WIND_Onshore_Lim_8_Asset
 from .RE_WIND_Onshore_Lim_9 import RE_WIND_Onshore_Lim_9_Asset
 
+from .RE_WIND_Offshore_Lim import RE_WIND_Offshore_Lim_Asset
 from .RE_WIND_Offshore_Lim_0 import RE_WIND_Offshore_Lim_0_Asset
 from .RE_WIND_Offshore_Lim_1 import RE_WIND_Offshore_Lim_1_Asset
 from .RE_WIND_Offshore_Lim_2 import RE_WIND_Offshore_Lim_2_Asset
@@ -53,6 +54,8 @@ from .RE_WIND_Offshore_Lim_6 import RE_WIND_Offshore_Lim_6_Asset
 from .RE_WIND_Offshore_Lim_7 import RE_WIND_Offshore_Lim_7_Asset
 from .RE_WIND_Offshore_Lim_8 import RE_WIND_Offshore_Lim_8_Asset
 from .RE_WIND_Offshore_Lim_9 import RE_WIND_Offshore_Lim_9_Asset
+
+from .HYDRO import HYDRO_Asset
 from .PP_NGS_CCGT_CO2 import PP_NGS_CCGT_CO2_Asset
 from .PP_NGS_SCGT_CO2 import PP_NGS_SCGT_CO2_Asset
 from .PP_COAL_CO2 import PP_COAL_CO2_Asset
@@ -84,6 +87,7 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               RE_PV_Openfield_Lim_Asset.asset_name: RE_PV_Openfield_Lim_Asset,
               RE_PV_Openfield_BAU_Asset.asset_name: RE_PV_Openfield_BAU_Asset,
               RE_PV_Rooftop_Lim_Asset.asset_name: RE_PV_Rooftop_Lim_Asset,
+              
               RE_WIND_Onshore_Lim_Asset.asset_name: RE_WIND_Onshore_Lim_Asset,
               RE_WIND_Onshore_Lim_0_Asset.asset_name: RE_WIND_Onshore_Lim_0_Asset,
               RE_WIND_Onshore_Lim_1_Asset.asset_name: RE_WIND_Onshore_Lim_1_Asset,
@@ -96,6 +100,8 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               RE_WIND_Onshore_Lim_8_Asset.asset_name: RE_WIND_Onshore_Lim_8_Asset,
               RE_WIND_Onshore_Lim_9_Asset.asset_name: RE_WIND_Onshore_Lim_9_Asset,
               RE_WIND_Onshore_BAU_Asset.asset_name: RE_WIND_Onshore_BAU_Asset,
+              
+              RE_WIND_Offshore_Lim_Asset.asset_name: RE_WIND_Offshore_Lim_Asset,
               RE_WIND_Offshore_Lim_0_Asset.asset_name: RE_WIND_Offshore_Lim_0_Asset,
               RE_WIND_Offshore_Lim_1_Asset.asset_name: RE_WIND_Offshore_Lim_1_Asset,
               RE_WIND_Offshore_Lim_2_Asset.asset_name: RE_WIND_Offshore_Lim_2_Asset,
@@ -106,6 +112,7 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               RE_WIND_Offshore_Lim_7_Asset.asset_name: RE_WIND_Offshore_Lim_7_Asset,
               RE_WIND_Offshore_Lim_8_Asset.asset_name: RE_WIND_Offshore_Lim_8_Asset,
               RE_WIND_Offshore_Lim_9_Asset.asset_name: RE_WIND_Offshore_Lim_9_Asset,
+              HYDRO_Asset.asset_name: HYDRO_Asset,
               PP_NGS_CCGT_CO2_Asset.asset_name: PP_NGS_CCGT_CO2_Asset,
               PP_NGS_SCGT_CO2_Asset.asset_name: PP_NGS_SCGT_CO2_Asset,
               PP_COAL_CO2_Asset.asset_name: PP_COAL_CO2_Asset,

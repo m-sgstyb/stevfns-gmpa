@@ -229,7 +229,7 @@ def dpacc_subplots(total_data_filename, capacities_data_filename, plot_filename,
 
 #%%
 ###### Autarky Case Studies #########
-# case_study_name = "Autarky_CL"
+case_study_name = "Autarky_KR_Hydro_test"
 
 ###### Two Country Case Studies #########
 # case_study_name = "BN-MY_Collab"
@@ -241,7 +241,7 @@ def dpacc_subplots(total_data_filename, capacities_data_filename, plot_filename,
 # case_study_name = "VN-MY-LA-SG_Autarky"
 # case_study_name = "ID-KH-BN_Collab"
 # 
-case_study_name = "BN-TH-PH-MY_Collab"
+# case_study_name = "BN-TH-PH-MY_Collab"
 # case_study_name = "SG-KH-VN-ID_Collab"
 
 ###### Four Country Case Studies #########
