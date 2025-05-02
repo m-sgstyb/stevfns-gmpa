@@ -20,9 +20,8 @@ from Code.Plotting import GMPA_plot_mitigation_curve
 
 
 #### Define Input Files ####
-# case_study_name = "BAU_No_Action_hydro"
+# case_study_name = "BAU_No_Action"
 # case_study_name = "Autarky_CL"
-case_study_name = "Autarky_BR_Hydro_test"
 # case_study_name = "KH-BN_Collab"
 # case_study_name = "TH-PH-MY_Autarky"
 # case_study_name = "TH-PH-MY_Collab"
@@ -139,7 +138,7 @@ GMPA_plot_mitigation_curve.mitigation_curve(
     unrounded_results_filename,
     dpacc_name,
     case_study_name,
-    countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY"],  # or omit this to auto-include all
+    countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR"],  # or omit this to auto-include all
 )
 GMPA_plot_mitigation_curve.dpacc_subplots(
     unrounded_results_filename,
