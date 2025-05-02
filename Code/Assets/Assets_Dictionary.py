@@ -31,6 +31,17 @@ from .RE_PV_Rooftop_Lim import RE_PV_Rooftop_Lim_Asset
 from .RE_PV_Openfield_Lim import RE_PV_Openfield_Lim_Asset
 from .RE_PV_Openfield_BAU import RE_PV_Openfield_BAU_Asset
 from .RE_WIND_Onshore_BAU import RE_WIND_Onshore_BAU_Asset
+from .RE_WIND_Onshore_BAU_0 import RE_WIND_Onshore_BAU_0_Asset
+from .RE_WIND_Onshore_BAU_1 import RE_WIND_Onshore_BAU_1_Asset
+from .RE_WIND_Onshore_BAU_2 import RE_WIND_Onshore_BAU_2_Asset
+from .RE_WIND_Onshore_BAU_3 import RE_WIND_Onshore_BAU_3_Asset
+from .RE_WIND_Onshore_BAU_4 import RE_WIND_Onshore_BAU_4_Asset
+from .RE_WIND_Onshore_BAU_5 import RE_WIND_Onshore_BAU_5_Asset
+from .RE_WIND_Onshore_BAU_6 import RE_WIND_Onshore_BAU_6_Asset
+from .RE_WIND_Onshore_BAU_7 import RE_WIND_Onshore_BAU_7_Asset
+from .RE_WIND_Onshore_BAU_8 import RE_WIND_Onshore_BAU_8_Asset
+from .RE_WIND_Onshore_BAU_9 import RE_WIND_Onshore_BAU_9_Asset
+
 from .RE_WIND_Onshore_Lim import RE_WIND_Onshore_Lim_Asset
 from .RE_WIND_Onshore_Lim_0 import RE_WIND_Onshore_Lim_0_Asset
 from .RE_WIND_Onshore_Lim_1 import RE_WIND_Onshore_Lim_1_Asset
@@ -87,7 +98,6 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               RE_PV_Openfield_Lim_Asset.asset_name: RE_PV_Openfield_Lim_Asset,
               RE_PV_Openfield_BAU_Asset.asset_name: RE_PV_Openfield_BAU_Asset,
               RE_PV_Rooftop_Lim_Asset.asset_name: RE_PV_Rooftop_Lim_Asset,
-              
               RE_WIND_Onshore_Lim_Asset.asset_name: RE_WIND_Onshore_Lim_Asset,
               RE_WIND_Onshore_Lim_0_Asset.asset_name: RE_WIND_Onshore_Lim_0_Asset,
               RE_WIND_Onshore_Lim_1_Asset.asset_name: RE_WIND_Onshore_Lim_1_Asset,
@@ -100,7 +110,16 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               RE_WIND_Onshore_Lim_8_Asset.asset_name: RE_WIND_Onshore_Lim_8_Asset,
               RE_WIND_Onshore_Lim_9_Asset.asset_name: RE_WIND_Onshore_Lim_9_Asset,
               RE_WIND_Onshore_BAU_Asset.asset_name: RE_WIND_Onshore_BAU_Asset,
-              
+              RE_WIND_Onshore_BAU_0_Asset.asset_name: RE_WIND_Onshore_BAU_0_Asset,
+              RE_WIND_Onshore_BAU_1_Asset.asset_name: RE_WIND_Onshore_BAU_1_Asset,
+              RE_WIND_Onshore_BAU_2_Asset.asset_name: RE_WIND_Onshore_BAU_2_Asset,
+              RE_WIND_Onshore_BAU_3_Asset.asset_name: RE_WIND_Onshore_BAU_3_Asset,
+              RE_WIND_Onshore_BAU_4_Asset.asset_name: RE_WIND_Onshore_BAU_4_Asset,
+              RE_WIND_Onshore_BAU_5_Asset.asset_name: RE_WIND_Onshore_BAU_5_Asset,
+              RE_WIND_Onshore_BAU_6_Asset.asset_name: RE_WIND_Onshore_BAU_6_Asset,
+              RE_WIND_Onshore_BAU_7_Asset.asset_name: RE_WIND_Onshore_BAU_7_Asset,
+              RE_WIND_Onshore_BAU_8_Asset.asset_name: RE_WIND_Onshore_BAU_8_Asset,
+              RE_WIND_Onshore_BAU_9_Asset.asset_name: RE_WIND_Onshore_BAU_9_Asset,
               RE_WIND_Offshore_Lim_Asset.asset_name: RE_WIND_Offshore_Lim_Asset,
               RE_WIND_Offshore_Lim_0_Asset.asset_name: RE_WIND_Offshore_Lim_0_Asset,
               RE_WIND_Offshore_Lim_1_Asset.asset_name: RE_WIND_Offshore_Lim_1_Asset,

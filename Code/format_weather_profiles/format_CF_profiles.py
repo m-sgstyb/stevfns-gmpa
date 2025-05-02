@@ -170,8 +170,6 @@ def get_pv_inputs(countries, scenario):
         bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
                                   'maximum_size'] = float(bau_capacity_value)
         
-        
-
         # === CAPEX values ===
         capex_of = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
                                       f'{country}', 'pvopenfield', 'capex_binned.csv'), header=None)
@@ -221,7 +219,7 @@ def get_pv_inputs(countries, scenario):
                                   'maximum_size'] = float(max_cap_rt_value)
         
         
-        # === BAU parameters update CAPEX ===
+        # === BAU parameters update CAPEX and max capacity ===
         bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
                                   'sizing_constant'] = float(capex_of_value) / 1000
         
@@ -339,6 +337,38 @@ def get_wind_inputs(countries, scenario):
             # print(wind_on_parameters_df)
             wind_on_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Onshore_Lim_{group}", 'parameters.csv'), index=False)
            
+        
+            # === Copy to BAU version ===
+            # 1. Save CF profile to RE_WIND_Onshore_BAU
+            wind_on_bau_folder = os.path.join(stevfns_inputs, f"RE_WIND_Onshore_BAU_{group}", "profiles", "WINDOUT")
+            wind_on_bau_dir = os.path.join(wind_on_bau_folder, f'lat{lat}')
+            os.makedirs(wind_on_bau_dir, exist_ok=True)
+            wind_on_bau_filename = os.path.join(wind_on_bau_dir, f'WINDOUT_lat{lat}_lon{lon}.csv')
+            WindOnshore_CF_df[group].to_csv(wind_on_bau_filename, index=False, header=False)
+  
+            # 2. Copy parameters.csv from Lim and overwrite maximum_size from new BAU capacity file
+            bau_parameters_filename = os.path.join(stevfns_inputs, f"RE_WIND_Onshore_BAU_{group}", 'parameters.csv')
+            wind_on_parameters_bau_df = pd.read_csv(bau_parameters_filename)
+  
+            # Load max capacity BAU from external file (only once per run - could optimize globally)
+            max_bau_file = os.path.join(root_dir, 'onshorebau_max_cap.csv')
+            if not os.path.exists(max_bau_file):
+                raise FileNotFoundError(f"Missing BAU capacity file: {max_bau_file}")
+            max_cap_bau_df = pd.read_csv(max_bau_file)  # Columns: country, group0, group1, ..., group9
+            max_cap_bau_df = max_cap_bau_df.set_index('country')
+            try:
+                wind_on_max_bau_value = float(max_cap_bau_df.loc[country, f'{group}'])
+            except KeyError:
+                raise ValueError(f"Missing BAU max cap for {country}, {group} in {max_bau_file}")
+  
+            wind_on_parameters_bau_df.loc[wind_on_parameters_bau_df['location_name'] == country,
+                                          'sizing_constant'] = wind_on_capex_value  # same as Lim
+            wind_on_parameters_bau_df.loc[wind_on_parameters_bau_df['location_name'] == country,
+                                          'maximum_size'] = wind_on_max_bau_value   # BAU-specific value
+            wind_on_parameters_bau_df.to_csv(bau_parameters_filename, index=False)
+        
+        
+        
         if country not in land_locked_countries:
             offshore_wind_folder = os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", "profiles", "WINDOUT")
             
@@ -389,6 +419,9 @@ def get_wind_inputs(countries, scenario):
                 # print(wind_on_parameters_df)
                 wind_off_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", 'parameters.csv'), index=False)
          
+        
+         
+            
         # === ADDRESS MISSING GROUPS IN PARAMETERS.CSV IN CASE THEY ARE ACCIDENTALLY ADDED TO NETWORK STRUCTURE ===
         max_defined_group_on = wind_on_capex_df['group'].astype(int).max()
         max_defined_group_off = wind_off_capex_df['group'].astype(int).max() if country not in land_locked_countries else -1
@@ -540,12 +573,12 @@ def get_average_wind_inputs(countries, scenario):
 #%%
 
 #Phase 1 and 2
-# countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
-#               'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
+countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
+              'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
 
 
 #Phase 2, milestone 2
-countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
+# countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
 
 
 
