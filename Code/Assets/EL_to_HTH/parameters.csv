@@ -23,4 +23,10 @@ Type,sizing_constant,sizing_constant_unit,usage_constant_1,usage_constant_1_unit
 21,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,CO
 22,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,PE
 23,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,CL
-24,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,MZ
+24,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,FR
+25,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,DE
+26,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,US
+27,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,RU
+28,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,CN
+29,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,TR
+30,0.227,G$/GWp,3.60E-10,G$/GWh,1,131400,h,JP

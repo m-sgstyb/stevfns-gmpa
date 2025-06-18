@@ -145,9 +145,13 @@ class Network_STEVFNs:
             self.lat_lon_df.loc[location, "lon"] = location_parameters_df.iloc[counter1]["lon"]
         #update Assets#
         for counter1 in range(len(asset_parameters_df)):
-            asset_number = asset_parameters_df.iloc[counter1]["Asset_Number"]
-            asset_type = asset_parameters_df.iloc[counter1]["Asset_Type"]
-            self.assets[asset_number].update(asset_type)
+            try:
+                asset_number = asset_parameters_df.iloc[counter1]["Asset_Number"]
+                asset_type = asset_parameters_df.iloc[counter1]["Asset_Type"]
+                self.assets[asset_number].update(asset_type)
+            except Exception as e:
+                print(f"Asset type {asset_type} for asset number {asset_number} failed due to exception: {e}")
+                    
         return
     
 

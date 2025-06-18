@@ -20,7 +20,7 @@ from Code.Plotting import GMPA_plot_mitigation_curve
 
 
 #### Define Input Files ####
-# case_study_name = "BAU_No_Action"
+case_study_name = "Least_Cost_Emissions"
 # case_study_name = "Autarky_CL"
 # case_study_name = "KH-BN_Collab"
 # case_study_name = "TH-PH-MY_Autarky"
@@ -132,21 +132,21 @@ total_cap_df.to_csv(capacities_filename, index=False, header=True)
 
 #### Plot data
 # Run the plotting script after main processing
-dpacc_name = os.path.join(case_study_folder, "mitigation_curve.png")
-subplots_name = os.path.join(case_study_folder, "dpacc_subplots.png")
-GMPA_plot_mitigation_curve.mitigation_curve(
-    unrounded_results_filename,
-    dpacc_name,
-    case_study_name,
-    countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR"],  # or omit this to auto-include all
-)
-GMPA_plot_mitigation_curve.dpacc_subplots(
-    unrounded_results_filename,
-    capacities_filename,
-    subplots_name,
-    case_study_name,
-    countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY"],  # or omit this to auto-include all
-)
+# dpacc_name = os.path.join(case_study_folder, "mitigation_curve.png")
+# subplots_name = os.path.join(case_study_folder, "dpacc_subplots.png")
+# GMPA_plot_mitigation_curve.mitigation_curve(
+#     unrounded_results_filename,
+#     dpacc_name,
+#     case_study_name,
+#     countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR"],  # or omit this to auto-include all
+# )
+# GMPA_plot_mitigation_curve.dpacc_subplots(
+#     unrounded_results_filename,
+#     capacities_filename,
+#     subplots_name,
+#     case_study_name,
+#     countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY"],  # or omit this to auto-include all
+# )
 
         
 final_time = time.time()
