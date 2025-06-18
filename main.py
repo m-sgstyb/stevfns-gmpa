@@ -36,6 +36,7 @@ network_structure_filename = os.path.join(case_study_folder, "Network_Structure.
 results_filename = os.path.join(case_study_folder, "total_data.csv")
 unrounded_results_filename = os.path.join(case_study_folder, "total_data_unrounded.csv")
 capacities_filename = os.path.join(case_study_folder, "capacities_total_data.csv")
+website_total_data_filename = os.path.join(case_study_folder, "website_total_data.csv")
 
 
 ### Read Input Files ###
@@ -115,19 +116,23 @@ for counter1 in range(len(scenario_folders_list)):
     t_df = GMPA_Results.export_total_data(my_network, location_parameters_df, asset_parameters_df)
     t1_df = GMPA_Results.export_total_data_not_rounded(my_network, location_parameters_df, asset_parameters_df)
     capacities_df = GMPA_Results.export_total_data_capacities(my_network, location_parameters_df, asset_parameters_df)
+    web_td_df = GMPA_Results.export_total_data_website(my_network, location_parameters_df, asset_parameters_df)
     if counter1 == 0:
         total_df = t_df
         total_df_1 = t1_df
         total_cap_df = capacities_df
+        web_total_df = web_td_df
     else:
         total_df = pd.concat([total_df, t_df], ignore_index=True)
         total_df_1 = pd.concat([total_df_1, t1_df], ignore_index=True)
         total_cap_df = pd.concat([total_cap_df, capacities_df], ignore_index=True)
+        web_total_df = pd.concat([web_total_df, web_td_df], ignore_index=True)
         
 # #### Save Result
 total_df.to_csv(results_filename, index=False, header=True)
 total_df_1.to_csv(unrounded_results_filename, index=False, header=True)
 total_cap_df.to_csv(capacities_filename, index=False, header=True)
+web_total_df.to_csv(website_total_data_filename, index=False, header=True)
     
 
 #### Plot data
