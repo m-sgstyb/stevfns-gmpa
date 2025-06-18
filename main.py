@@ -9,12 +9,14 @@ Created on Thu Nov  4 17:38:43 2021
 import pandas as pd
 import time
 import os
-from os.path import normpath, basename
 import cvxpy as cp
-import subprocess
+import warnings
+
+warnings.simplefilter(action='ignore', category=FutureWarning) # To silence pandas concat future warning
+"""FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  total_data_df = pd.concat([total_data_df, t_df], ignore_index=True)"""
 
 from Code.Network.Network import Network_STEVFNs
-from Code.Plotting import DPhil_Plotting
 from Code.Results import GMPA_Results
 from Code.Plotting import GMPA_plot_mitigation_curve
 
@@ -44,6 +46,7 @@ website_total_data_filename = os.path.join(case_study_folder, "website_total_dat
 network_structure_df = pd.read_csv(network_structure_filename)
 
 ### Build Network ###
+print("========================== Building ==========================")
 start_time0 = time.time()
 my_network = Network_STEVFNs()
 my_network.build(network_structure_df)
@@ -64,13 +67,13 @@ for counter1 in range(len(scenario_folders_list)):
     asset_parameters_df = pd.read_csv(asset_parameters_filename)
     location_parameters_df = pd.read_csv(location_parameters_filename)
     system_parameters_df = pd.read_csv(system_parameters_filename)
-    
-    
+    my_network.scenario_name = os.path.basename(scenario_folder)
+    print(f"\n================== Updating for Scenario {my_network.scenario_name} ==================\n")
     ### Update Network Parameters ###
     start_time = time.time()
     
     my_network.update(location_parameters_df, asset_parameters_df, system_parameters_df)
-    my_network.scenario_name = os.path.basename(scenario_folder)
+    # my_network.scenario_name = os.path.basename(scenario_folder)
     
     end_time = time.time()
     print("Time taken to update network = ", end_time - start_time, "s")
@@ -80,13 +83,12 @@ for counter1 in range(len(scenario_folders_list)):
     my_network.problem.solve(solver = cp.CLARABEL, max_iter=10000, ignore_dpp=True) # ignore_dpp=True because problem has too many params
     end_time = time.time()
     
-    ### Plot Results ############
-    print("Scenario: ", my_network.scenario_name)
+    ### Print status, key results and save output files ############
+    print(f"----------------- Scenario {my_network.scenario_name} Main Results ----------------------\n")
     print("Time taken to solve problem = ", end_time - start_time, "s")
     print(my_network.problem.solution.status)
     if my_network.problem.value == float("inf"):
         continue
-    print("------------------Scenario Main Results------------------------\n")
     print("Total cost to satisfy all demand = ", my_network.problem.value, " Billion USD")
     print("Total emissions = ", my_network.assets[0].asset_size(), "MtCO2e")
 
@@ -135,7 +137,7 @@ if case_study_name not in base_cases:
 
         
 final_time = time.time()
-print("------------------All Scenarios Run------------------------\n",
+print("------------------  All Scenarios Run  ------------------------\n",
       "Time to build network, run all scenarios, export and plot data",
       (final_time - start_time0)/60, "min")
    
