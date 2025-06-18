@@ -579,14 +579,14 @@ def get_average_wind_inputs(countries, scenario):
 #%%
 
 #Phase 1 and 2
-countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
-              'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
+# countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
+#               'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
 
 # countries = ['BRA']
 
 #Phase 2, milestone 2
-# countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
+countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
 
 get_pv_inputs(countries, 'high')
-get_wind_inputs(countries, 'high')
+# get_wind_inputs(countries, 'high')
 
