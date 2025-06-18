@@ -271,16 +271,6 @@ def get_wind_inputs(countries, scenario):
         WindOnshore_CF_df = WindOnshore_CF_df.T
         WindOnshore_CF_df = WindOnshore_CF_df.astype(float)
         WindOnshore_CF_df.columns = list(range(len(WindOnshore_CF_df.columns)))
-        # print(WindOnshore_CF_df)
-        # if country not in land_locked_countries:
-            # # Extract and format CF profile for Offshore wind only for not land locked countries
-            # WindOffshore_CF_df = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
-            #                                         f'{country}', 'windoffshore', 'capacity_factor_binned.csv'), header=None)
-            # WindOffshore_CF_df = WindOffshore_CF_df.drop([0,1], axis=1) # remove region and group columns
-            # WindOffshore_CF_df = WindOffshore_CF_df.drop([0], axis=0)  # remove only datetime row
-            # WindOffshore_CF_df = WindOffshore_CF_df.T
-            # WindOffshore_CF_df = WindOffshore_CF_df.astype(float)
-            # WindOffshore_CF_df.columns = list(range(len(WindOffshore_CF_df.columns)))
 
         for group in range(len(WindOnshore_CF_df.columns)):
             
@@ -458,6 +448,18 @@ def get_wind_inputs(countries, scenario):
                 os.makedirs(wind_off_dir, exist_ok=True)
                 wind_off_filename = os.path.join(wind_off_dir, f'WINDOUT_lat{lat}_lon{lon}.csv')
                 pd.Series(dummy_profile).to_csv(wind_off_filename, index=False, header=False)
+                
+            if country in land_locked_countries:
+                wind_off_parameters_df = pd.read_csv(os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", 'parameters.csv'))
+                wind_off_parameters_df.loc[wind_on_parameters_df['location_name'] == country, 'sizing_constant'] = 100
+                wind_off_parameters_df.loc[wind_on_parameters_df['location_name'] == country, 'maximum_size'] = 0
+                # === Save dummy zeros profile ===
+                WindOffshore_CF_df = np.zeros(8760)
+                wind_off_dir = os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", "profiles", "WINDOUT", f"lat{lat}")
+                os.makedirs(wind_off_dir, exist_ok=True)
+                wind_off_filename = os.path.join(wind_off_dir, f'WINDOUT_lat{lat}_lon{lon}.csv')
+                pd.Series(WindOffshore_CF_df).to_csv(wind_off_filename, index=False, header=False)
+                
 
         print("finished wind country: ", country)
     return
@@ -582,11 +584,11 @@ def get_average_wind_inputs(countries, scenario):
 # countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
 #               'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
 
-# countries = ['BRA']
+countries = ['LAO']
 
 #Phase 2, milestone 2
-countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
+# countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
 
-get_pv_inputs(countries, 'high')
-# get_wind_inputs(countries, 'high')
+# get_pv_inputs(countries, 'high')
+get_wind_inputs(countries, 'high')
 

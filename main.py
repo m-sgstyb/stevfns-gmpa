@@ -43,23 +43,15 @@ website_total_data_filename = os.path.join(case_study_folder, "website_total_dat
 
 network_structure_df = pd.read_csv(network_structure_filename)
 
-
-
 ### Build Network ###
 start_time0 = time.time()
-
-
 my_network = Network_STEVFNs()
 my_network.build(network_structure_df)
 
-
 end_time = time.time()
 print("Time taken to build network = ", end_time - start_time0, "s")
-total_df = pd.DataFrame()
-total_df_1 = pd.DataFrame()
-
-
-
+# total_df = pd.DataFrame()
+# total_df_1 = pd.DataFrame()
 
 for counter1 in range(len(scenario_folders_list)):
 # for counter1 in range(1):
@@ -77,27 +69,16 @@ for counter1 in range(len(scenario_folders_list)):
     ### Update Network Parameters ###
     start_time = time.time()
     
-    
     my_network.update(location_parameters_df, asset_parameters_df, system_parameters_df)
     my_network.scenario_name = os.path.basename(scenario_folder)
-    
     
     end_time = time.time()
     print("Time taken to update network = ", end_time - start_time, "s")
     
     ### Run Simulation ###
     start_time = time.time()
-    
-    
-    # my_network.solve_problem()
-    # my_network.problem.solve(solver = cp.ECOS, warm_start=True, max_iters=100000000, verbose=True,
-                              # ignore_dpp=True,# Uncomment to disable DPP. DPP will make the first scenario run slower, but subsequent scenarios will run significantly faster.
-                              # )
-    my_network.problem.solve(solver = cp.CLARABEL, max_iter=10000)
-    # my_network.problem.solve(solver = cp.SCS, warm_start=True, max_iters=100000, ignore_dpp=True, verbose=False)
-    # my_network.problem.solve(solver = cp.MOSEK)
+    my_network.problem.solve(solver = cp.CLARABEL, max_iter=10000, ignore_dpp=True) # ignore_dpp=True because problem has too many params
     end_time = time.time()
-
     
     ### Plot Results ############
     print("Scenario: ", my_network.scenario_name)
@@ -105,13 +86,10 @@ for counter1 in range(len(scenario_folders_list)):
     print(my_network.problem.solution.status)
     if my_network.problem.value == float("inf"):
         continue
-    # print("Total cost to satisfy all demand = ", my_network.problem.value, " Billion USD")
-    # print("Total emissions = ", my_network.assets[0].asset_size(), "MtCO2e")
-    # DPhil_Plotting.plot_all(my_network)
-    # DPhil_Plotting.plot_asset_sizes(my_network)
-    # DPhil_Plotting.plot_asset_costs(my_network)
+    print("------------------Scenario Main Results------------------------\n")
+    print("Total cost to satisfy all demand = ", my_network.problem.value, " Billion USD")
+    print("Total emissions = ", my_network.assets[0].asset_size(), "MtCO2e")
 
-    
     ### Export cost results to pandas dataframe per scenario and concat all scenarios
     t_df = GMPA_Results.export_total_data(my_network, location_parameters_df, asset_parameters_df)
     t1_df = GMPA_Results.export_total_data_not_rounded(my_network, location_parameters_df, asset_parameters_df)
@@ -137,32 +115,27 @@ web_total_df.to_csv(website_total_data_filename, index=False, header=True)
 
 #### Plot data
 # Run the plotting script after main processing
-# dpacc_name = os.path.join(case_study_folder, "mitigation_curve.png")
-# subplots_name = os.path.join(case_study_folder, "dpacc_subplots.png")
-# GMPA_plot_mitigation_curve.mitigation_curve(
-#     unrounded_results_filename,
-#     dpacc_name,
-#     case_study_name,
-#     countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR"],  # or omit this to auto-include all
-# )
-# GMPA_plot_mitigation_curve.dpacc_subplots(
-#     unrounded_results_filename,
-#     capacities_filename,
-#     subplots_name,
-#     case_study_name,
-#     countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY"],  # or omit this to auto-include all
-# )
+base_cases = ["BAU_No_Action", "Least_Cost_Emissions"]
+if case_study_name not in base_cases:
+    dpacc_name = os.path.join(case_study_folder, "mitigation_curve.png")
+    subplots_name = os.path.join(case_study_folder, "dpacc_subplots.png")
+    GMPA_plot_mitigation_curve.mitigation_curve(
+        website_total_data_filename,
+        dpacc_name,
+        case_study_name,
+        # countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR"],  # or omit this to auto-include all
+    )
+    GMPA_plot_mitigation_curve.dpacc_subplots(
+        website_total_data_filename,
+        capacities_filename,
+        subplots_name,
+        case_study_name,
+        # countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY"],  # or omit this to auto-include all
+    )
 
         
 final_time = time.time()
 print("------------------All Scenarios Run------------------------\n",
       "Time to build network, run all scenarios, export and plot data",
       (final_time - start_time0)/60, "min")
-
-
-
-
-
-
-
    
