@@ -166,10 +166,12 @@ def main(root_dir, selected_countries=None):
             name   = "-".join(combo)
             f_aut  = output_dir / f"{name}_Autarky"
             f_col  = output_dir / f"{name}_Collab"
-
+                
             union  = union_networks([single_frames[c] for c in combo])
             coll   = add_transport_assets(union, combo, loc_map)
 
+            f_aut.mkdir(parents=True, exist_ok=True)
+            f_col.mkdir(parents=True, exist_ok=True)
             write_network_csv(union, f_aut)
             write_network_csv(coll,  f_col)
 
@@ -178,15 +180,14 @@ def main(root_dir, selected_countries=None):
                 (f_aut, union),
                 (f_col, coll),
             ):
-                if not folder.exists():
-                    # First-time creation
+                bau = folder / "BAU"
+                if not bau.exists():
+                    print(f"⧉  Creating new folder structure for {folder.name}")
                     write_network_csv(net_df, folder)
-                    bau = folder / "BAU"
                     bau.mkdir(parents=True, exist_ok=True)
                     copy_bau_static(country_folders[combo[0]], bau)
                 else:
                     print(f"↻  Updating parameters in existing folder {folder.name}")
-                    bau = folder / "BAU"
             
                 co2_type = resolve_co2_type(combo, co2_params_df)
                 write_asset_parameters(build_asset_parameters(net_df, co2_type), bau)
@@ -211,7 +212,8 @@ def main(root_dir, selected_countries=None):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python generate_case_studies.py <root_dir> [CC1 CC2 CC3 ...]")
+        print("General Usage: python generate_case_studies.py <root_dir> [CC1 CC2 CC3 ...]\n")
+        print("If you are in STEVFNs/Code/Automations, replace CC with specific country codes and type command:\n python generate_case_studies.py . CC CC CC")
         sys.exit(1)
 
     root_dir = sys.argv[1]
