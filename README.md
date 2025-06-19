@@ -80,4 +80,8 @@ If in another folder, the user may type out the path to the Automations folder a
 > As the number of assets in a network increases, so does the build and sovle time of the problem. The current version of GMPA samples only 720 hours of a year to allow for quick solves. Increasing the sample size will impact running times. A few estimates of how long it should take for 720 hours:
 > 1. Single country case studies should take under 2 minutes to solve all 11 scenarios
 > 2. Two countries without collaboration should take under 5 minutes to solve all 11 scenarios
+<<<<<<< HEAD
 > 3. Four countries collaborating should take around 11 minutes to solve all 11 scenarios
+=======
+> 3. Four countries collaborating should take around 11 minutes to solve all 11 scenarios
+>>>>>>> refs/remotes/origin/GMPA
