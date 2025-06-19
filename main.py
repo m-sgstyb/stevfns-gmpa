@@ -22,8 +22,8 @@ from Code.Plotting import GMPA_plot_mitigation_curve
 
 
 #### Define Input Files ####
-case_study_name = "Least_Cost_Emissions"
-# case_study_name = "Autarky_CL"
+case_study_name = "BAU_No_Action"
+# case_study_name = "Autarky_AU"
 # case_study_name = "KH-BN_Collab"
 # case_study_name = "TH-PH-MY_Autarky"
 # case_study_name = "TH-PH-MY_Collab"
