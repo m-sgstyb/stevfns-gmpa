@@ -6,7 +6,8 @@ This is the STEVFNs model generator branch containing modelling details for the 
 
 ## Workflow
 ---
-> [!NOTE ]
+
+> [!NOTE]
 > The workflow detailed below relates to case study creation and running the model; it assumes that all data inputs for assets (costs, renewable energy profiles, etc.) have been already been created. It also assumes that the countries we are modelling for are already in the Location Parameters, and that the scenarios for said countries in baseline case studies have been created. Comprehensive documentation of how this is done will be prepared for upcoming phases of the project.
 
 
