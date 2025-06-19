@@ -158,13 +158,13 @@ def get_pv_inputs(countries, scenario):
         max_cap_rt_value = max_capacity_df.loc[country, 'pvrooftop']
         
         # === Capacity update for BAU openfield asset ===
-        bau_capacity_df = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis', 'bau_capacities.csv'), header=None)
+        bau_capacity_df = pd.read_csv(os.path.join(root_dir, 'pvbau_max_cap.csv'), header=None)
         bau_capacity_df.columns = bau_capacity_df.iloc[0]
         bau_capacity_df = bau_capacity_df.drop(0).reset_index(drop=True)
-        bau_capacity_df = bau_capacity_df.set_index('location')
+        bau_capacity_df = bau_capacity_df.set_index('country')
         bau_capacity_df = bau_capacity_df.T
-        bau_capacity_value = bau_capacity_df.loc[country, 'pvopenfield']
-        
+        #print(bau_capacity_df.loc['pv_bau_capacity_GWp'].where(bau_capacity_df["country"] == country))
+        bau_capacity_value = bau_capacity_df.loc['pv_bau_capacity_GWp', country]
         bau_params_filename = os.path.join(stevfns_inputs, "RE_PV_Openfield_BAU", 'parameters.csv')
         bau_parameters_df = pd.read_csv(bau_params_filename)
         bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
@@ -218,8 +218,7 @@ def get_pv_inputs(countries, scenario):
         pv_roof_parameters_df.loc[pv_roof_parameters_df['location_name'] == country,
                                   'maximum_size'] = float(max_cap_rt_value)
         
-        
-        # === BAU parameters update CAPEX and max capacity ===
+        # === BAU parameters update CAPEX ===
         bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
                                   'sizing_constant'] = float(capex_of_value) / 1000
         
@@ -576,19 +575,17 @@ def get_average_wind_inputs(countries, scenario):
 
     return
 
-
-
 #%%
 
 #Phase 1 and 2
 # countries = ['KOR', 'VNM', 'THA', 'KHM', 'IDN', 'SGP', 'BRA', 'BRN', 'CHL', 'COL', 'EGY', 'KEN',
 #               'LAO', 'MAR', 'MYS', 'NGA', 'PER', 'PHL', 'ZAF']
 
-countries = ['LAO']
+#countries = ['LAO']
 
 #Phase 2, milestone 2
-# countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
+countries = ['AUS', 'USA', 'CHN', 'RUS', 'FRA', 'DEU', 'IND', 'SAU', 'MMR', 'TUR', 'JPN']
 
-# get_pv_inputs(countries, 'high')
+get_pv_inputs(countries, 'high')
 get_wind_inputs(countries, 'high')
 
