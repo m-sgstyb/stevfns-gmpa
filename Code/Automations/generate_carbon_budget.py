@@ -69,7 +69,6 @@ def read_country_emissions():
 
     return country_emissions
 
-
 def load_existing_cases(output_file):
     existing_cases = {}
     if os.path.exists(output_file):
@@ -107,10 +106,40 @@ def initialize_output_file(output_file):
             writer = csv.writer(out_f)
             writer.writerow(["Type", "maximum_budget", "maximum_budget_unit", "case_study"])
 
+def update_existing_case_values(output_file, case_study, new_values):
+    if not os.path.exists(output_file):
+        return
+
+    with open(output_file, mode='r', encoding='utf-8') as f:
+        rows = list(csv.reader(f))
+
+    header = rows[0]
+    updated_rows = []
+    value_idx = 0
+
+    for row in rows[1:]:
+        if row[3] == case_study and value_idx < len(new_values):
+            val = new_values[value_idx]
+            formatted_val = f"{val:.2E}" if abs(val) >= 1000 else f"{val:.6f}"
+            row[1] = formatted_val  # Replace only the maximum_budget
+            value_idx += 1
+        updated_rows.append(row)
+
+    # If the case doesn't exist, append new rows
+    if value_idx == 0:
+        return False  # Signal that it was not updated (new case)
+
+    with open(output_file, mode='w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerow(header)
+        writer.writerows(updated_rows)
+    return True
+
+
 def prompt_for_collaboration():
     resp = input("Do you want to generate parameters for a collaboration? (y/n): ").strip().lower()
     if resp.startswith("y"):
-        combo = input("Enter comma-separated list of countries (e.g., ID,SG): ")
+        combo = input("Enter comma-separated list of maximum 4 countries (e.g., ID,SG): ")
         return [c.strip().upper() for c in combo.split(",") if c.strip()]
     return None
 
@@ -127,11 +156,15 @@ def main():
     # Process all single-country cases
     for country in country_emissions:
         case_study = country
+        #updated = update_existing_case_values(output_file, case_study, values)
         if case_study not in existing_cases or len(existing_cases[case_study]) < 11:
             print(f"Generating parameters for: {country}")
             values = process_combination([country], country_emissions)
             type_index = write_parameters(output_file, case_study, values, type_index)
-
+        elif case_study in existing_cases:
+             print(f"Updating parameters for: {country}")
+             values = process_combination([country], country_emissions)
+             updated = update_existing_case_values(output_file, case_study, values)
     # Ask if the user wants to add collaborations
     combo = prompt_for_collaboration()
     if combo:
@@ -144,16 +177,19 @@ def main():
                     combo_sorted = sorted(sub_combo)
                     case_study = "-".join(combo_sorted)
 
-                    if case_study in existing_cases and len(existing_cases[case_study]) >= 11:
-                        print(f"Skipping existing case: {case_study}")
-                        continue
-
-                    print(f"Generating collaboration: {case_study}")
-                    try:
-                        values = process_combination(combo_sorted, country_emissions)
-                        type_index = write_parameters(output_file, case_study, values, type_index)
-                    except KeyError as e:
-                        print(f"⚠️ Country not found in emissions data: {e}")
+                    if case_study in existing_cases:
+                        print(f"Updating collaboration: {case_study}")
+                        try:
+                            values = process_combination(combo_sorted, country_emissions)
+                            updated = update_existing_case_values(output_file, case_study, values)
+                        except KeyError as e:
+                            print(f"⚠️ Country not found in emissions data: {e}")
+                    else:
+                        try:
+                            print(f"Generating collaboration: {case_study}")
+                            type_index = write_parameters(output_file, case_study, values, type_index)
+                        except KeyError as e:
+                            print(f"⚠️ Country not found in emissions data: {e}")
 
     print("✅ Done! Parameters written to parameters.csv")
 
