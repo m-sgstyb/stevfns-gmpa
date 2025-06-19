@@ -189,6 +189,9 @@ def main(root_dir, selected_countries=None):
                 else:
                     print(f"↻  Updating parameters in existing folder {folder.name}")
             
+                # Reset asset numbers before building parameters
+                net_df = net_df.copy()
+                net_df["Asset_Number"] = range(len(net_df))
                 co2_type = resolve_co2_type(combo, co2_params_df)
                 write_asset_parameters(build_asset_parameters(net_df, co2_type), bau)
             

@@ -166,8 +166,11 @@ def main():
              values = process_combination([country], country_emissions)
              updated = update_existing_case_values(output_file, case_study, values)
     # Ask if the user wants to add collaborations
-    combo = prompt_for_collaboration()
-    if combo:
+    while True:
+        combo = prompt_for_collaboration()
+        if not combo:
+            break
+    #if combo:
         if len(combo) > 4:
             print("⚠️ Please enter no more than 4 countries for collaboration.")
         else:

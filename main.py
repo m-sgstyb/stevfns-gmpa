@@ -22,13 +22,13 @@ from Code.Plotting import GMPA_plot_mitigation_curve
 
 
 #### Define Input Files ####
-case_study_name = "BAU_No_Action"
-# case_study_name = "Autarky_AU"
-# case_study_name = "KH-BN_Collab"
+#case_study_name = "BAU_No_Action"
+# case_study_name = "Autarky_DE"
+# case_study_name = "DE-FR_Autarky"
 # case_study_name = "TH-PH-MY_Autarky"
 # case_study_name = "TH-PH-MY_Collab"
-# case_study_name = "SG-KH-VN-ID_Collab"
-# case_study_name = "VN-MY-LA-SG_Collab"
+# case_study_name = "MY-PH-TH_Collab"
+case_study_name = "DE-FR-MA-TR_Collab"
 
 base_folder = os.path.dirname(__file__)
 data_folder = os.path.join(base_folder, "Data")
@@ -125,14 +125,16 @@ if case_study_name not in base_cases:
         website_total_data_filename,
         dpacc_name,
         case_study_name,
-        # countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR"],  # or omit this to auto-include all
+        countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR","AU",
+                   "DE", "FR", "TR", "MA"],  # or omit this to auto-include all
     )
     GMPA_plot_mitigation_curve.dpacc_subplots(
         website_total_data_filename,
         capacities_filename,
         subplots_name,
         case_study_name,
-        # countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY"],  # or omit this to auto-include all
+        countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY","AU",
+                   "DE", "FR", "TR", "MA"],  # or omit this to auto-include all
     )
 
         
