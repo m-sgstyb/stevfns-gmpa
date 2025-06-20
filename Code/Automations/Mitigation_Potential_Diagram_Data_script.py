@@ -11,10 +11,12 @@ import matplotlib.pyplot as plt
 import os
 
 
+script_path = os.path.dirname(__file__) # script in STEVFNs/Code/Automations
+root_dir = os.path.dirname(os.path.dirname(script_path)) # STEVFNs repo root dir
+base_folder = os.path.join(root_dir, "Data", "Case_Study")
+results_folder = os.path.join(root_dir, "Code", "Results")
 
-base_folder = os.path.dirname(__file__)
-
-total_no_action_filename = os.path.join(base_folder, "total_data_no_action.csv")
+total_no_action_filename = os.path.join(base_folder, "BAU_No_Action", "total_data_unrounded.csv")
 total_autarky_filename = os.path.join(base_folder, "total_data_unrounded_autarky.csv")
 total_collaboration_filename = os.path.join(base_folder, "total_data_unrounded_collaboration.csv")
 combined_autarky_filename = os.path.join(base_folder, "combined_data_autarky.csv")
@@ -23,13 +25,14 @@ heatmap_autarky_filename = os.path.join(base_folder, "heatmap_autarky.csv")
 heatmap_collaboration_filename = os.path.join(base_folder, "heatmap_collaboration.csv")
 
 
-website_folder = os.path.join(base_folder, "website")
+website_folder = os.path.join(results_folder, "Results_for_Website")
 if not(os.path.isdir(website_folder)):
     os.mkdir(website_folder)
 total_autarky_website_filename = os.path.join(website_folder, "total_data_autarky.csv")
 total_collaboration_website_filename = os.path.join(website_folder, "total_data_collaboration.csv")
 combined_autarky_website_filename = os.path.join(website_folder, "combined_data_autarky.csv")
 combined_collaboration_website_filename = os.path.join(website_folder, "combined_data_collaboration.csv")
+heatmap_autarky_website_filename = os.path.join(website_folder, "heatmap_autarky.csv")
 heatmap_collaboration_website_filename = os.path.join(website_folder, "heatmap_collaboration.csv")
 
 
@@ -146,9 +149,6 @@ def generate_combined_df(total_autarky_df, total_collaboration_df, total_no_acti
                                       "average_abatement_cost": [average_abatement_cost],
                                       })
                         combined_autarky_df = pd.concat([combined_autarky_df, t_df_6], ignore_index=True)
-                        
-                        
-                        
                         previous_autarky_cost = autarky_cost
                         previous_autarky_emissions = autarky_emissions
                     
@@ -217,7 +217,7 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
     heatmap_columns += marginal_columns
     average_columns = []
     for counter1 in range(len(average_cutoffs)):
-        average_columns += ["Mitigation_Potential_at_Average_" + str(marginal_cutoffs[counter1]) + "($/tCO2e)",]
+        average_columns += ["Mitigation_Potential_at_Average_" + str(average_cutoffs[counter1]) + "($/tCO2e)",]
     heatmap_columns += average_columns
     heatmap_autarky_df = pd.DataFrame(columns = heatmap_columns)
     heatmap_collaboration_df = pd.DataFrame(columns = heatmap_columns)
@@ -296,7 +296,10 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                     maximum_potential_emissions = float(t_df_4_2["emissions"])
                     # maximum_potential_cost = float(t_df_4_2["cost"])
                     mitigation_potential = BAU_emissions - maximum_potential_emissions
-                    mitigation_cost = float(t_df_4_2["average_abatement_cost"])
+                    if float(t_df_4_2["emissions"])<(1e-10):
+                        mitigation_cost = float(t_df_4_2["average_abatement_cost"])
+                    else:
+                        mitigation_cost = ""
                     mitigation_potential_list = []
                     for marginal_cutoff in marginal_cutoffs:
                         con_5 = t_df_4["marginal_abatement_cost"] <= marginal_cutoff
@@ -332,12 +335,24 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                     t_df_8 = pd.DataFrame(t_dict)
                     heatmap_autarky_df = pd.concat([heatmap_autarky_df, t_df_8], ignore_index=True)
                     
-                    con_4_2a = t_df_4a["emissions"] == t_df_4a["emissions"].min()
+                    # Debug in case some countries or combos have weird results that lead to empty series when checking con_4_2a
+                    try:
+                        con_4_2a = t_df_4a["emissions"] == t_df_4a["emissions"].min()
+                        # print(f"===This is loop for\n country1: {country_1}\n country2: {country_2}\n country3: {country_3}\n country4: {country_4}")
+                        # print("con_4_2a type:", type(con_4_2a))
+                        # print("con_4_2a dtype:", con_4_2a.dtype)
+                        # print("con_4_2a head:\n", con_4_2a.head())
+                    except Exception as e:
+                        print("Error while checking con_4_2a:", e)
+                    # con_4_2a = t_df_4a["emissions"] == t_df_4a["emissions"].min()
                     t_df_4_2a = t_df_4a[con_4_2a]
                     maximum_potential_emissions = float(t_df_4_2a["emissions"])
                     # maximum_potential_cost = float(t_df_4_2["cost"])
                     mitigation_potential = BAU_emissions - maximum_potential_emissions
-                    mitigation_cost = float(t_df_4_2a["average_abatement_cost"])
+                    if float(t_df_4_2a["emissions"])<(1e-10):
+                        mitigation_cost = float(t_df_4_2a["average_abatement_cost"])
+                    else:
+                        mitigation_cost = ""
                     mitigation_potential_list = []
                     for marginal_cutoff in marginal_cutoffs:
                         con_5a = t_df_4a["marginal_abatement_cost"] <= marginal_cutoff
@@ -375,26 +390,21 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
     return (heatmap_autarky_df, heatmap_collaboration_df)
 
 
-def data_for_website(data_df, final_columns, columns_to_round, rounded=False):
+def data_for_website(data_df, final_columns, columns_to_round):
     website_data_df = pd.DataFrame(columns = final_columns)
     for column_name in final_columns:
         website_data_df[column_name] = data_df[column_name]
-        
-    if rounded == True:
-        for column_name in columns_to_round:
-            website_data_df[column_name] = round(website_data_df[column_name],1)
-    else:
-    
-        for column_name in columns_to_round:
-            website_data_df[column_name] = website_data_df[column_name]
-    
+    # for column_name in columns_to_round:
+    #     website_data_df[column_name] = round(website_data_df[column_name],1)
     return website_data_df
 
 def generate_data_for_website(total_autarky_df, 
                               total_collaboration_df,
                               combined_autarky_df,
                               combined_collaboration_df,
-                              heatmap_collaboration_df):
+                              heatmap_autarky_df,
+                              heatmap_collaboration_df,
+                              average_cutoffs = [50,100,200],):
     final_columns_total_data = ["country_1", 
                   "country_2",
                   "country_3",
@@ -432,34 +442,39 @@ def generate_data_for_website(total_autarky_df,
                                                   final_columns_combined_data,
                                                   columns_to_round_combined_data)
     
+    average_columns = []
+    for counter1 in range(len(average_cutoffs)):
+        average_columns += ["Mitigation_Potential_at_Average_" + str(average_cutoffs[counter1]) + "($/tCO2e)",]
+    
     final_columns_heatmap = ["country_1", 
                   "country_2",
                   "country_3",
                   "country_4",
                   "Mitigation_Cost($/tCO2e)",
-                  "Mitigation_Potential(MtCO2e)",
-                  "Mitigation_Potential_at_Average_0($/tCO2e)",
-                  "Mitigation_Potential_at_Average_10($/tCO2e)",
-                  "Mitigation_Potential_at_Average_20($/tCO2e)",
-                  "Mitigation_Potential_at_Average_50($/tCO2e)",
                   "BAU_Emissions(MtCO2e)",
+                  "Mitigation_Potential(MtCO2e)",
                   ]
     columns_to_round_heatmap = ["Mitigation_Cost($/tCO2e)",
-                                "Mitigation_Potential(MtCO2e)",
-                                "Mitigation_Potential_at_Average_0($/tCO2e)",
-                                "Mitigation_Potential_at_Average_10($/tCO2e)",
-                                "Mitigation_Potential_at_Average_20($/tCO2e)",
-                                "Mitigation_Potential_at_Average_50($/tCO2e)",
-                                "BAU_Emissions(MtCO2e)",]
+    "BAU_Emissions(MtCO2e)",
+    "Mitigation_Potential(MtCO2e)",
+    ]
+    
+    final_columns_heatmap += average_columns
+    columns_to_round_heatmap += average_columns
+    
+    heatmap_autarky_website_df = data_for_website(heatmap_autarky_df, 
+                                                  final_columns_heatmap,
+                                                  columns_to_round_heatmap)
     
     heatmap_collaboration_website_df = data_for_website(heatmap_collaboration_df, 
                                                   final_columns_heatmap,
-                                                  columns_to_round_heatmap,
-                                                  rounded=True)
+                                                  columns_to_round_heatmap)
+    
     return (total_autarky_website_df, 
             total_collaboration_website_df,
             combined_autarky_website_df,
             combined_collaboration_website_df,
+            heatmap_autarky_website_df,
             heatmap_collaboration_website_df)
 
 
@@ -476,11 +491,8 @@ total_collaboration_df = pd.read_csv(total_collaboration_filename, keep_default_
 (combined_autarky_df, combined_collaboration_df) = generate_combined_df(total_autarky_df, total_collaboration_df, total_no_action_df)
 
 
-# marginal_cutoffs = [0, 50, 100, 200]
-# average_cutoffs = [0, 50, 100, 200]
-
-marginal_cutoffs = [0, 10, 20, 50]
-average_cutoffs = [0, 10, 20, 50]
+marginal_cutoffs = [0, 50, 100, 200] #[0.01, 0.025, 0.05, 0.1] value in [$/tCO2e]
+average_cutoffs = [0, 10, 20, 50] #[0.01, 0.025, 0.05, 0.1] value in [$/tCO2e]
 
 (heatmap_autarky_df, heatmap_collaboration_df) = generate_heatmap_df(combined_autarky_df, combined_collaboration_df, 
                                                                       total_no_action_df,
@@ -490,20 +502,22 @@ average_cutoffs = [0, 10, 20, 50]
  total_collaboration_website_df,
  combined_autarky_website_df,
  combined_collaboration_website_df,
+ heatmap_autarky_website_df,
  heatmap_collaboration_website_df) = generate_data_for_website(total_autarky_df, 
                                                                total_collaboration_df,
                                                                combined_autarky_df,
                                                                combined_collaboration_df,
-                                                               heatmap_collaboration_df)
+                                                               heatmap_autarky_df,
+                                                               heatmap_collaboration_df,
+                                                               average_cutoffs)
                                                               
 
-
 ###### Save Data #############
-combined_autarky_df.to_csv(combined_autarky_filename, index =False)
-combined_collaboration_df.to_csv(combined_collaboration_filename, index =False)
+# combined_autarky_df.to_csv(combined_autarky_filename, index =False)
+# combined_collaboration_df.to_csv(combined_collaboration_filename, index =False)
 
-heatmap_autarky_df.to_csv(heatmap_autarky_filename, index=False)
-heatmap_collaboration_df.to_csv(heatmap_collaboration_filename, index=False)
+# heatmap_autarky_df.to_csv(heatmap_autarky_filename, index=False)
+# heatmap_collaboration_df.to_csv(heatmap_collaboration_filename, index=False)
 
 
 ## Save data for website ###
@@ -512,6 +526,7 @@ total_autarky_website_df.to_csv(total_autarky_website_filename, index=False)
 total_collaboration_website_df.to_csv(total_collaboration_website_filename, index=False)
 combined_autarky_website_df.to_csv(combined_autarky_website_filename, index=False)
 combined_collaboration_website_df.to_csv(combined_collaboration_website_filename, index=False)
+heatmap_autarky_website_df.to_csv(heatmap_autarky_website_filename, index=False)
 heatmap_collaboration_website_df.to_csv(heatmap_collaboration_website_filename, index=False)
 
 

@@ -1,5 +1,5 @@
 # GMPA - STEVFNs modelling
-![Logo](gmpa_logo.png)
+![Logo](img/gmpa_logo.png)
 
 This is the STEVFNs model generator branch containing modelling details for the GMPA. For the general details of the model generator and how to install, see main. To run case studies in this branch, you need to clone the STEVFNs repository as instructed and fetch all remote branches. You will then be able to pull GMPA branch and have a local version of it to work with. 
 
@@ -78,10 +78,32 @@ If in another folder, the user may type out the path to the Automations folder a
 
 > [!TIP]
 > As the number of assets in a network increases, so does the build and sovle time of the problem. The current version of GMPA samples only 720 hours of a year to allow for quick solves. Increasing the sample size will impact running times. A few estimates of how long it should take for 720 hours:
-> 1. Single country case studies should take under 2 minutes to solve all 11 scenarios
-> 2. Two countries without collaboration should take under 5 minutes to solve all 11 scenarios
-<<<<<<< HEAD
-> 3. Four countries collaborating should take around 11 minutes to solve all 11 scenarios
-=======
-> 3. Four countries collaborating should take around 11 minutes to solve all 11 scenarios
->>>>>>> refs/remotes/origin/GMPA
+> (a) Using CLI to run python main.py without a memory-intensive IDE such as Spyder,
+>       1. Single country case studies should take under 2 minutes to solve all 11 scenarios
+>       2. Two countries without collaboration should take under 5 minutes to solve all 11 scenarios
+>       3. Four countries collaborating should take around 11 minutes to solve all 11 scenarios
+> (b) Using Spyder
+>       1. Four countries collaborating should take around 25 minutes to solve all 11 scenarios
+
+### 6. Review results 
+Running main.py will save a mitigation plot in the case study folder, along with other result files. The mitigation plot should look something like this: 
+![Logo](img/mitigation_curve_example.png)
+
+Systems cost decrease with higher emissions values, and they tend to have an "elbow" when approaching zero emissions (going left on the X-axis), as costs increase more rapidly when investment is needed in more expensive technologies to completely decarbonise the system modelled.
+If the result plot looks off, e.g. has an unexpected "_dip_" or "_peak_", this is likely due to the solver used. 
+The default is to use the open-source solver Clarabel, but these unexpected results can generally be resolved by using MOSEK.
+MOSEK requires to be installed and a user license, and can be downloaded at [MOSEK Downloads](https://www.mosek.com/downloads/).
+
+Please contact Aniq or Mónica with any issues.
+
+If the results are sensible, they should be consolidated and formatted for web upload.
+
+### 7. Preparing results for webtool
+
+Once all the required case studies have been run and have total_data_unrounded.csv result files, all results can be compiled and processed for upload by running the STEVFNs/Code/Automations/prepare_data_for_website.py script. Simply run it through an IDE, or through terminal, once in the Automations folder:
+```
+python prepare_data_for_website.py
+```
+This will create files and a folder in the STEVFNs/Code/Results/Results_for_Website folder.
+All files in the /To_Upload folder here are needed for the results to display in the webtool. 
+

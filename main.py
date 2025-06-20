@@ -36,9 +36,9 @@ case_study_folder = os.path.join(data_folder, "Case_Study", case_study_name)
 scenario_folders_list = [x[0] for x in os.walk(case_study_folder)][1:]
 network_structure_filename = os.path.join(case_study_folder, "Network_Structure.csv")
 results_filename = os.path.join(case_study_folder, "total_data.csv")
-unrounded_results_filename = os.path.join(case_study_folder, "total_data_unrounded.csv")
+website_total_data_filename = os.path.join(case_study_folder, "total_data_unrounded.csv")
 capacities_filename = os.path.join(case_study_folder, "capacities_total_data.csv")
-website_total_data_filename = os.path.join(case_study_folder, "website_total_data.csv")
+unrounded_results_filename = os.path.join(case_study_folder, "internal_total_data.csv")
 
 
 ### Read Input Files ###
@@ -81,6 +81,7 @@ for counter1 in range(len(scenario_folders_list)):
     ### Run Simulation ###
     start_time = time.time()
     my_network.problem.solve(solver = cp.CLARABEL, max_iter=10000, ignore_dpp=True) # ignore_dpp=True because problem has too many params
+    my_network.problem.solve(solver = cp.MOSEK, ignore_dpp=True)
     end_time = time.time()
     
     ### Print status, key results and save output files ############
@@ -112,6 +113,7 @@ for counter1 in range(len(scenario_folders_list)):
 total_df.to_csv(results_filename, index=False, header=True)
 total_df_1.to_csv(unrounded_results_filename, index=False, header=True)
 total_cap_df.to_csv(capacities_filename, index=False, header=True)
+# Exports total_data_unrounded with wind bins aggregated into one asset
 web_total_df.to_csv(website_total_data_filename, index=False, header=True)
     
 
@@ -126,7 +128,7 @@ if case_study_name not in base_cases:
         dpacc_name,
         case_study_name,
         countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR","AU",
-                   "DE", "FR", "TR", "MA"],  # or omit this to auto-include all
+                   "DE", "FR", "TR", "MA"],
     )
     GMPA_plot_mitigation_curve.dpacc_subplots(
         website_total_data_filename,
@@ -134,7 +136,7 @@ if case_study_name not in base_cases:
         subplots_name,
         case_study_name,
         countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY","AU",
-                   "DE", "FR", "TR", "MA"],  # or omit this to auto-include all
+                   "DE", "FR", "TR", "MA"],
     )
 
         
