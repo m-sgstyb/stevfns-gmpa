@@ -10,6 +10,7 @@ import pandas as pd
 import time
 import os
 import cvxpy as cp
+import sys
 import warnings
 
 warnings.simplefilter(action='ignore', category=FutureWarning) # To silence pandas concat future warning
@@ -22,13 +23,10 @@ from Code.Plotting import GMPA_plot_mitigation_curve
 
 
 #### Define Input Files ####
-#case_study_name = "BAU_No_Action"
-# case_study_name = "Autarky_DE"
-# case_study_name = "DE-FR_Autarky"
-# case_study_name = "TH-PH-MY_Autarky"
-# case_study_name = "TH-PH-MY_Collab"
-# case_study_name = "MY-PH-TH_Collab"
-case_study_name = "DE-FR-MA-TR_Collab"
+# case_study_name = "DE-FR-MA-TR_Collab"
+case_study_name = os.getenv("CASE_STUDY_NAME")
+if not case_study_name:
+    raise ValueError("CASE_STUDY_NAME environment variable not set. Exiting.")
 
 base_folder = os.path.dirname(__file__)
 data_folder = os.path.join(base_folder, "Data")
@@ -80,8 +78,15 @@ for counter1 in range(len(scenario_folders_list)):
     
     ### Run Simulation ###
     start_time = time.time()
-    my_network.problem.solve(solver = cp.CLARABEL, max_iter=10000, ignore_dpp=True) # ignore_dpp=True because problem has too many params
-    my_network.problem.solve(solver = cp.MOSEK, ignore_dpp=True)
+    solver_name = os.getenv("SOLVER_NAME", "CLARABEL").upper() # Make Clarabel default if running without wrapper run_cases.py
+    if solver_name == "CLARABEL":
+        my_network.problem.solve(solver=cp.CLARABEL, max_iter=10000, ignore_dpp=True)
+    elif solver_name == "MOSEK":
+        my_network.problem.solve(solver=cp.MOSEK, ignore_dpp=True)
+    else:
+        raise ValueError(f"Unknown solver: {solver_name}")
+    # my_network.problem.solve(solver = cp.CLARABEL, max_iter=10000, ignore_dpp=True) # ignore_dpp=True because problem has too many params
+    # my_network.problem.solve(solver = cp.MOSEK, ignore_dpp=True)
     end_time = time.time()
     
     ### Print status, key results and save output files ############
