@@ -50,8 +50,8 @@ def run_case(case_name, solver_name, error_log):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run GMPA scenarios via CLI.")
     parser.add_argument("input", nargs="+", help="1–4 ISO country codes or 'bau' / 'least'")
-    parser.add_argument("--solver", choices=["mosek", "clarabel"], default="mosek",
-                        help="Choose solver (default: mosek)")
+    parser.add_argument("--solver", choices=["mosek", "clarabel"], default="clarabel",
+                        help="Choose solver (default: clarabel)")
     parser.add_argument("--sub", action="store_true",
                         help="Only run the specific country combo provided (no sub-combinations)")
     args = parser.parse_args()
