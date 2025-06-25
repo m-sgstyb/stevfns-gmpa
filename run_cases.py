@@ -36,16 +36,6 @@ def generate_case_study_names(countries, sub_only=False):
         raise ValueError("Enter 1, 2, 3, or 4 ISO country codes.")
     return case_study_names
 
-# def run_case(case_name, solver_name):
-#     print(f"\n--- Running: {case_name} with {solver_name} solver ---\n")
-#     env = os.environ.copy()
-#     env["CASE_STUDY_NAME"] = case_name
-#     env["SOLVER_NAME"] = solver_name.upper()
-#     try:
-#         subprocess.run(["python", "main.py"], check=True, env=env)
-#     except subprocess.CalledProcessError as e:
-#         print(f"Error in {case_name}: {e}. Continuing...\n")
-        
 def run_case(case_name, solver_name, error_log):
     print(f"\n--- Running: {case_name} with {solver_name} solver ---\n")
     env = os.environ.copy()
@@ -66,14 +56,23 @@ if __name__ == "__main__":
                         help="Only run the specific country combo provided (no sub-combinations)")
     args = parser.parse_args()
 
-    # Handle special base scenarios
+    error_log = []
+
     if len(args.input) == 1 and args.input[0].lower() in ["bau", "least"]:
         mapping = {
             "bau": "BAU_No_Action",
             "least": "Least_Cost_Emissions"
         }
         case_study_name = mapping[args.input[0].lower()]
-        run_case(case_study_name, args.solver)
+        run_case(case_study_name, args.solver, error_log)
+        
+        # Print summary for base scenario
+        if error_log:
+            print("\nSUMMARY OF FAILED CASE STUDIES:")
+            for case_name, error in error_log:
+                print(f"- {case_name}: {error}")
+        else:
+            print("\nBase scenario completed successfully.")
         sys.exit(0)
 
     # Handle combinations

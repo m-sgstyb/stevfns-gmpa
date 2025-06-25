@@ -1,15 +1,58 @@
 # GMPA - STEVFNs modelling
 ![Logo](img/gmpa_logo.png)
 
-This is the STEVFNs model generator branch containing modelling details for the GMPA. For the general details of the model generator and how to install, see main. To run case studies in this branch, you need to clone the STEVFNs repository as instructed and fetch all remote branches. You will then be able to pull GMPA branch and have a local version of it to work with. 
+## Set up
+This is the STEVFNs model generator branch containing modelling details for the GMPA. For the general details of the model generator see main branch.
+To run case studies in this branch, you need to clone the STEVFNs repository as instructed and fetch all remote branches. You will then be able to pull GMPA branch and have a local version of it to work with. 
 
+You will need to have the conda package manager installed for a clean handling of environments and dependencies for the model. See [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html) for details on this.
 
-## Workflow
+### 1. Clone and fetch
+In your terminal, navigate to a local directory where you will want to keep the STEVFNs repository folder. Once there, run
+
+```
+git clone https://github.com/OmNomNomzzz/STEVFNs.git
+```
+
+This should take a minute or two and will create a STEVFNs folder in that directory with all the files from the main branch in the repository. To fetch all branches online, navigate into that folder through `cd STEVFNs` and run:
+```
+git fetch
+```
+```
+git checkout -b GMPA origin/GMPA
+```
+
+This should display:
+```
+branch 'GMPA' set up to track 'origin/GMPA'.
+Switched to a new branch 'GMPA'
+```
+Once you are in your local GMPA branch, you will need to create a conda environment with a few dependencies to be able to run the models. This can be done through conda and the environment.yaml file.
+
+```
+ conda env create -f env/environment.yaml
+```
+This will create the stevfns environment with CVXPY and other required dependencies to run the model. You can activate the environment as 
+```
+conda activate stevfns
+```
+Once active, you will be able to run all the scripts described in the New Workflow below.
+
+> [!IMPORTANT]
+> Basic git handling is required to collaborate in this branch. By running the model as described below for case studies assigned to you, there should not be any merge conflicts onto the branch.
+> Ensure that ONLY ONE person in the team has already done steps 1. and 2. for all the collaborations in the modelling tracker.
+> Ensure that you DO NOT change any python script directly, and you are only adding result files when running the case studies.
+> ALWAYS run `git pull` from your STEVFNs repo in GMPA branch and ensure you're working in the correct branch before doing anything.
+> Once done with runs, commit and push your updates to the remote branch.
+
+## New Workflow
 
 > [!NOTE]
-> The workflow detailed below relates to case study creation and running the model; it assumes that all data inputs for assets (costs, renewable energy profiles, etc.) have been already been created. It also assumes that the countries we are modelling for are already in the Location Parameters, and that the scenarios for said countries in baseline case studies have been created. Comprehensive documentation of how this is done will be prepared for upcoming phases of the project.
+> The workflow detailed below relates to case study creation and running the model as of June, 2025; it assumes that all data inputs for assets (costs, renewable energy profiles, etc.) have been already been created. It also assumes that the countries we are modelling for are already in the Location Parameters, and that the scenarios for said countries in baseline case studies have been created. Comprehensive documentation of how this is done will be prepared for upcoming phases of the project.
 
 ### 1. Run baseline case studies
+This step should be done first by a single person in the team, and all others running case studies should pull these changes before running case studies.
+
 The assumptions for GMPA at its latest stage use a BAU and Least Cost baseline to generate a specific country's emissions reduction profile. In STEVFNs/Data/Case_Study there will be two folders named BAU_No_Action and Least_Cost_Emissions. In these, scenario folders for the countries currently covered in GMPA can be found. By running BAU and LC, we obtain the emissions data to create 11 scenarios of emissions reduction towards 0 MtCO<sub>2</sub>e
 
 The python wrapper, run_cases.py has been created to run main.py through CLI commands and not edit this script to avoid conflicts when several people are working on the modelling.
@@ -17,7 +60,7 @@ The python wrapper, run_cases.py has been created to run main.py through CLI com
 To run the baseline case studies, BAU_No_Action and Least_Cost_Emissions:
 
 1. In terminal, navigate to your local STEVFNs folder
-2. Run conda activate your_env_name to ensure you're in the environment with required dependencies
+2. Run conda activate stevfns to ensure you're in the environment with required dependencies
 3. Run the following commands (wait until one case study ends to run the next)
 (a) for BAU_No_Action
 ```
@@ -33,6 +76,8 @@ There is a solver flag included in the wrapper to manually define which solver t
 Running these two case studies will have created total_data_unrounded.csv and total_data.csv inside the case study folders, which will be used to create the emission reduction profiles in step 2. 
 
 ### 2. Create emissions reduction profiles
+This step should be done first by a single person in the team, and all others running case studies should pull these changes before running case studies.
+
 Based on the BAU (assumes a more limited technology mix) and Least cost (assumes extensive technology mix including e.g. short term and long term storage) emissions, we need to create the "carbon budget" scenarios. We model 11 scenarios from the baseline to 0 for all case studies. These can be calculated through STEVFNs/Code/Automations/generate_carbon_budget.py script.
 
 To run:
@@ -46,25 +91,19 @@ python generate_carbon_budget.py
 ```
 DE,FR,TR,MA
 ```
-This will create all the possible collaborations between these countries, which will be printed in the terminal. The CO2_Budget profile should also be saved in STEVFNs/Code/Assets/CO2_Budget/parameters.csv file.
+This will create *all the possible* sub-collaborations (two-, three-, and four-country combos) between these countries, which will be printed in the terminal. The CO2_Budget profile should also be saved in STEVFNs/Code/Assets/CO2_Budget/parameters.csv file.
 
 > [!NOTE] 
-> To create collaboration emissions reduction profiles, the individual countries' emissions should have been calculated in BAU_No_Action and Least_Cost_Emissions case studies. 
+> To create collaboration emissions reduction profiles, the individual countries' emissions should have been calculated in BAU_No_Action and Least_Cost_Emissions case studies (i.e. there should be a scenario folder for that individual country and the case studies ran). 
 
-### 3. Update CO2_Budget Asset type in Asset_Parameters.csv
 
-Each scenario in the case studies has an Asset_Parameters.csv to define which asset data to use for each country and scenario modelled. The CO2_Budget values that are created in step 2 need to be updated in the single country and multi-country case study folders/scenario folder/Asset_Paramters.csv.
+### 3. Create collaboration case study folders
+> [!IMPORTANT] 
+> To create the case study folders for multiple countries, both in autarky and collaboration formats, the CO<sub>2</sub> budget for those collaborations must have already been created. 
+> If they have not been created, the script will create the folders with a network struture but will exit without generating the scenario folders. 
+> The user must then re-run generate_carbon_budget.py, allow for all single country values to be updated, and say yes when prompted to create for a collaboration.
 
-* In the terminal, navigate to STEVFNs/Code/Automations, and run
-```
-python update_co2_budget_asset_types.py
-```
-
-### 4. Create collaboration case study folders
-> [!NOTE] 
-> To create the case study folders for multiple countries, both in autarky and collaboration formats, the CO<sub>2</sub> budget for those collaborations must have already been created. If they have not, the user must re-run generate_carbon_budget.py, allow for all single country values to be updated and say yes when prompted to create for a collaboration.
-
-To follow on the example of modelling the possible combinations of Germany, France, Turkey and Morocco done in step 2:
+To follow on the example of modelling the possible sub-combinations of Germany, France, Turkey and Morocco done in step 2 for their emission reduction profile:
 
 * In the terminal, navigate to STEVFNs/Code/Automations, and run
 ```
@@ -77,7 +116,27 @@ For this command to work as written, user needs to be in local/path/to/STEVFNs/C
 python generate_collab_case_studies.py <root_dir> [DE FR TR ...]
 ```
 If in another folder, the user may type out the path to the Automations folder in place of `<root_dir>` and the list of countries afterwards (no need for brackets).
- 
+
+This step will create ready-to-run case study folders for those combinations, both in Autarky (no trade between them) and collaboration (electricity and ammonia trade between them). 
+
+### 4. As a sense-check, update CO2_Budget Asset type in Asset_Parameters.csv
+> [!IMPORTANT]
+> June/July 2025:
+> When several people are running case studies at the same time AVOID, running this script unless previously agreed upon and everyone in the team is aware to pull any changes to their local branches.
+> This will avoid potential merge conflicts
+
+This step is especially important if a new individual country has been added as Autarky_XX and BAU_No_Action and Least_Cost_Emissions case studies have been re-ran to include this new country.
+It requires to go through step 2, and then running this helper automation script will only ensure that all values in CO2_Budget/parameters.csv for Type are correctly mapped to theie country/collaboration scenarios in all case studies, not only the new one.
+
+* In the terminal, navigate to STEVFNs/Code/Automations, and run
+```
+python update_co2_budget_asset_types.py
+```
+> [!NOTE] 
+> July, 2025:
+> For Phase II, milestone 2, running this step should not be necessary, as all individual countries for this deliverable have been created, and any collaboration generated through step 3 should already correctly map the values.
+> However, should something change in emissions reduction, it could be a good sense check to run and ensure these are mapped correctly.
+
 ### 5. Run case studies
 
 
@@ -102,9 +161,43 @@ This will solve all of them with CLARABEL, if you wish to use MOSEK, specify wit
 >       2. Two countries without collaboration should take under 5 minutes to solve all 11 scenarios
 >       3. Four countries collaborating should take around 11 minutes to solve all 11 scenarios
 
-Therefore, to run all comabinations of a set of four countries, it should take about two hours to finish, as it will have to run 16 case studies all together.
+Therefore, to run all comabinations of a set of four countries, it should take about two hours to finish, as it will have to run 16 case studies all together. These may be left running overnight, or in the background.
 
-The results should be reviewed to confirm whether or not a specific case study should be run again. In these cases, there may be times where a specific three country combination needs to be run again with MOSEK instead of CLARABEL, for example. Please see the table below for example commands depending on the situation
+##### Issues when running - troubleshooting
+> [!NOTE]
+> This command is thought of to be able to run many case studies in a set of countries that are collaborating in the background or overnight consecutively and review results later. The wrapper is designed to skip any case study that, for any reason, does not run and continue with the rest.
+>
+> If this happens, an error_log will display at the end of the run in the terminal, see below:
+
+There may be times when one of the case studies in the loop does not run. For example, when running python run_cases.py DE FR TR MA in initial testing displayed this error log once the run ended:
+
+```
+SUMMARY OF FAILED CASE STUDIES:
+- MA-TR_Autarky: Command '['python', 'main.py']' returned non-zero exit status 1.
+- MA-TR_Collab: Command '['python', 'main.py']' returned non-zero exit status 1.
+```
+
+Of the 16 case studies between those countries, only these two had a problem. The exepction "returned non-zero exit status 1" does not give enough information to solve the issue in this case. To troubleshoot that separately, we need to run the command `python run_cases.py TR MA`, which will only run the `_Autarky` and `_Collab` versions of MA-TR combination, instead of the whole set again.
+
+In the case of this example, doing this quickly returned internal STEVFNs exceptions as:
+```
+Asset type 29 for asset number 15 failed due to exception: single positional indexer is out-of-bounds
+Asset type 29 for asset number 16 failed due to exception: single positional indexer is out-of-bounds
+Asset type 29 for asset number 17 failed due to exception: single positional indexer is out-of-bounds
+...
+Asset type 0 for asset number 48 failed due to exception: single positional indexer is out-of-bounds
+Asset type 0 for asset number 49 failed due to exception: single positional indexer is out-of-bounds
+
+```
+Checking directly in the folders for MA-TR_Autarky/BAU and  MA-TR_Collab/BAU, it was found that the Location_Parameters.csv had not been updated to include all locations up to this phase. Once this was updated, running `python run_cases.py TR MA` as successful, now displaying `All case studies completed successfully.`.
+
+> [!TIP]
+> If you are unable to track down the specific issue in a situation such as this, please contact Mónica or Aniq for support; when contacting:
+>   * Include the problematic case study(ies)
+>   * Include the error messages shown
+
+Even when the script does run all case studies, results need to be reviewed (see step 6 for more detail) to ensure the data is sensible. If there is a case study with "weird" results, it may need further detailed review and to be run again with tailored parameters or a different solver.
+In these cases, there may be times where a specific three or two country combination needs to be run again with MOSEK instead of CLARABEL, for example. Please see the table below for example commands depending on the situation where you may run some specific case studies individually.
 
 | Command                                       | What it does                                            |
 | --------------------------------------------- | ---------------------------------------------           |
@@ -113,6 +206,7 @@ The results should be reviewed to confirm whether or not a specific case study s
 | `python run_cases.py DE FR --solver mosek`    | Runs DE-FR\_Autarky and DE-FR\_Collab with MOSEK solver |
 | `python run_cases.py DE FR MA TR`             | Runs all 2-, 3-, and 4-country combinations             |
 | `python run_cases.py DE FR MA TR --sub`       | Runs only `DE-FR-MA-TR_Autarky` and `_Collab`           |
+
 
 
 ### 6. Review results 

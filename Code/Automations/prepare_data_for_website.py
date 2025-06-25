@@ -57,26 +57,4 @@ if not os.path.isfile(readable_script):
 subprocess.run([sys.executable, readable_script], cwd=website_dir, check=True)
 print("✅ readable_names_total_data_script.py completed")
 
-# --- Step 5: Collect files for upload ---
-# to_upload_dir = os.path.join(results_dir, "To_Upload")
-# os.makedirs(to_upload_dir, exist_ok=True)
-
-# upload_files = [
-#     # from website root
-#     os.path.join(website_dir, "combined_data_autarky.csv"),
-#     os.path.join(website_dir, "combined_data_collaboration.csv"),
-#     os.path.join(website_dir, "heatmap_collaboration.csv"),
-#     # Copy the replaced total_data files with readable names
-#     os.path.join(website_dir, "total_data_autarky.csv"),
-#     os.path.join(website_dir, "total_data_collaboration.csv"),
-# ]
-
-# for src in upload_files:
-#     if os.path.isfile(src):
-#         dst = os.path.join(to_upload_dir, os.path.basename(src))
-#         shutil.copy(src, dst)
-#         print(f"Copied {os.path.basename(src)} → Results_for_Website/To_Upload")
-#     else:
-#         print(f" ⚠️ WARNING: {src} not found; skipping", file=sys.stderr)
-
 print("✅ All files collected in To_Upload/")
