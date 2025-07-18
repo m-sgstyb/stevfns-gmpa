@@ -293,11 +293,11 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                     # BAU_cost = float(t_df_4_1["cost"])
                     con_4_2 = t_df_4["emissions"] == t_df_4["emissions"].min()
                     t_df_4_2 = t_df_4[con_4_2]
-                    maximum_potential_emissions = float(t_df_4_2["emissions"])
+                    maximum_potential_emissions = float(t_df_4_2["emissions"].iloc[0])
                     # maximum_potential_cost = float(t_df_4_2["cost"])
                     mitigation_potential = BAU_emissions - maximum_potential_emissions
-                    if float(t_df_4_2["emissions"])<(1e-10):
-                        mitigation_cost = float(t_df_4_2["average_abatement_cost"])
+                    if float(t_df_4_2["emissions"].iloc[0])<(1e-10):
+                        mitigation_cost = float(t_df_4_2["average_abatement_cost"].iloc[0])
                     else:
                         mitigation_cost = ""
                     mitigation_potential_list = []
@@ -307,7 +307,7 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                         con_6 = t_df_5["emissions"] == t_df_5["emissions"].min()
                         t_df_6 = t_df_5[con_6]
                         if len(t_df_6)>0:
-                            mitigation_potential_list += [BAU_emissions - float(t_df_6["emissions"]),]
+                            mitigation_potential_list += [BAU_emissions - float(t_df_6["emissions"].iloc[0]),]
                         else:
                             mitigation_potential_list += [0,]
                     mitigation_potential_average_list = []
@@ -317,7 +317,7 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                         con_6 = t_df_5["emissions"] == t_df_5["emissions"].min()
                         t_df_6 = t_df_5[con_6]
                         if len(t_df_6)>0:
-                            mitigation_potential_average_list += [BAU_emissions - float(t_df_6["emissions"]),]
+                            mitigation_potential_average_list += [BAU_emissions - float(t_df_6["emissions"].iloc[0]),]
                         else:
                             mitigation_potential_average_list += [0,]
                     t_dict = {"country_1": [country_1], 
@@ -346,11 +346,11 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                         print("Error while checking con_4_2a:", e)
                     # con_4_2a = t_df_4a["emissions"] == t_df_4a["emissions"].min()
                     t_df_4_2a = t_df_4a[con_4_2a]
-                    maximum_potential_emissions = float(t_df_4_2a["emissions"])
+                    maximum_potential_emissions = float(t_df_4_2a["emissions"].iloc[0])
                     # maximum_potential_cost = float(t_df_4_2["cost"])
                     mitigation_potential = BAU_emissions - maximum_potential_emissions
-                    if float(t_df_4_2a["emissions"])<(1e-10):
-                        mitigation_cost = float(t_df_4_2a["average_abatement_cost"])
+                    if float(t_df_4_2a["emissions"].iloc[0])<(1e-10):
+                        mitigation_cost = float(t_df_4_2a["average_abatement_cost"].iloc[0])
                     else:
                         mitigation_cost = ""
                     mitigation_potential_list = []
@@ -360,7 +360,7 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                         con_6a = t_df_5a["emissions"] == t_df_5a["emissions"].min()
                         t_df_6a = t_df_5a[con_6a]
                         if len(t_df_6a)>0:
-                            mitigation_potential_list += [BAU_emissions - float(t_df_6a["emissions"]),]
+                            mitigation_potential_list += [BAU_emissions - float(t_df_6a["emissions"].iloc[0]),]
                         else:
                             mitigation_potential_list += [0,]
                     mitigation_potential_average_list = []
@@ -370,7 +370,7 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                         con_6a = t_df_5a["emissions"] == t_df_5a["emissions"].min()
                         t_df_6a = t_df_5a[con_6a]
                         if len(t_df_6a)>0:
-                            mitigation_potential_average_list += [BAU_emissions - float(t_df_6a["emissions"]),]
+                            mitigation_potential_average_list += [BAU_emissions - float(t_df_6a["emissions"].iloc[0]),]
                         else:
                             mitigation_potential_average_list += [0,]
                     t_dict = {"country_1": [country_1], 
