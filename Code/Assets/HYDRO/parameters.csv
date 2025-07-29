@@ -19,7 +19,7 @@ Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,exi
 17,0,G$/GWp,9.36E-06,G$/GWh,5.96,GWp,0.5,876000,h,KR
 18,0,G$/GWp,1.14E-05,G$/GWh,2.778,GWp,0.5,876000,h,EG
 19,0,G$/GWp,1.14E-05,G$/GWh,2.638,GWp,0.5,876000,h,NG
-20,0,G$/GWp,9.36E-06,G$/GWh,99.828,GWp,0.5,876000,h,BR
+20,0,G$/GWp,1.14E-05,G$/GWh,99.828,GWp,0.5,876000,h,BR
 21,0,G$/GWp,1.14E-05,G$/GWh,10.586,GWp,0.5,876000,h,CO
 22,0,G$/GWp,1.14E-05,G$/GWh,5.351,GWp,0.5,876000,h,PE
 23,0,G$/GWp,1.14E-05,G$/GWh,5.551,GWp,0.5,876000,h,CL

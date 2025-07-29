@@ -296,7 +296,8 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                     maximum_potential_emissions = float(t_df_4_2["emissions"].iloc[0])
                     # maximum_potential_cost = float(t_df_4_2["cost"])
                     mitigation_potential = BAU_emissions - maximum_potential_emissions
-                    if float(t_df_4_2["emissions"].iloc[0])<(1e-10):
+                    #################################### DEBUG LINE BELOW SHOULD BE 10 BEFORE THIS TIME
+                    if float(t_df_4_2["emissions"].iloc[0])<(1e-4):
                         mitigation_cost = float(t_df_4_2["average_abatement_cost"].iloc[0])
                     else:
                         mitigation_cost = ""
@@ -349,7 +350,8 @@ def generate_heatmap_df(combined_autarky_df, combined_collaboration_df, total_no
                     maximum_potential_emissions = float(t_df_4_2a["emissions"].iloc[0])
                     # maximum_potential_cost = float(t_df_4_2["cost"])
                     mitigation_potential = BAU_emissions - maximum_potential_emissions
-                    if float(t_df_4_2a["emissions"].iloc[0])<(1e-10):
+                    #################################### DEBUG LINE BELOW SHOULD BE 10 BEFORE THIS TIME
+                    if float(t_df_4_2a["emissions"].iloc[0])<(1e-4):
                         mitigation_cost = float(t_df_4_2a["average_abatement_cost"].iloc[0])
                     else:
                         mitigation_cost = ""
