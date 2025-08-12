@@ -50,6 +50,42 @@ Once active, you will be able to run all the scripts described in the New Workfl
 > [!NOTE]
 > The workflow detailed below relates to case study creation and running the model as of June, 2025; it assumes that all data inputs for assets (costs, renewable energy profiles, etc.) have been already been created. It also assumes that the countries we are modelling for are already in the Location Parameters, and that the scenarios for said countries in baseline case studies have been created. Comprehensive documentation of how this is done will be prepared for upcoming phases of the project.
 
+### 0. Update Autarky_XX folders
+This step updates all `Asset_Parameters.csv`, `Location_Parameters.csv`, and `System_Parameters.csv` files in every emissions-constraint scenario folder (`90`, `80`, ..., `0`) for one or more Autarky case studies.
+
+#### Prerequisites
+
+Before running this update, ensure:
+
+1. You have manually created or updated the Network_Structure.csv file in the Autarky_XX folder(s) you need to update scenarios for
+2. You have also manually created or updated the `Asset_Parameters.csv`, `Location_Parameters.csv`, and `System_Parameters.csv` in the BAU scenario folder
+3. **Data structure requirements**  
+- The `Asset_Parameters.csv` file in each `Autarky_XX/BAU` folder must have the correct **energy mix**, **location parameters**, and **asset type values** for the case study.  
+- The `Network_Structure.csv` file in each `Autarky_XX` folder must also have the correct **energy mix**, **locations**, and **start time, end time** matching the intended configuration.  
+
+These must be verified and updated before running this step, as the script will replicate these values into all scenario folders.
+
+### Parameters
+
+XX,YY,ZZ — Comma-separated list of two-letter ISO country codes (case-insensitive, no spaces required but allowed).
+
+Example:
+
+```
+python update_autarky.py SG,MY,ZA
+```
+This will update:
+```
+STEVFNs/Data/Case_Study/Autarky_SG
+STEVFNs/Data/Case_Study/Autarky_MY
+STEVFNs/Data/Case_Study/Autarky_ZA
+```
+creating or overwriting scenario folders:
+```
+90, 80, 70, ..., 0
+```
+inside each Autarky folder, copying data from the BAU folder.
+
 ### 1. Run baseline case studies
 This step should be done first by a single person in the team, and all others running case studies should pull these changes before running case studies.
 
