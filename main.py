@@ -80,7 +80,7 @@ for counter1 in range(len(scenario_folders_list)):
     start_time = time.time()
     solver_name = os.getenv("SOLVER_NAME", "CLARABEL").upper() # Make Clarabel default if running without wrapper run_cases.py
     if solver_name == "CLARABEL":
-        my_network.problem.solve(solver=cp.CLARABEL, max_iter=10000, ignore_dpp=True)
+        my_network.problem.solve(solver=cp.CLARABEL, max_iter=100000, ignore_dpp=True)
     elif solver_name == "MOSEK":
         my_network.problem.solve(solver=cp.MOSEK, ignore_dpp=True)
     else:
