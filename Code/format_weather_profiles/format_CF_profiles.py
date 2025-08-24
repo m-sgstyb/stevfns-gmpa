@@ -169,6 +169,8 @@ def get_pv_inputs(countries, scenario):
         bau_parameters_df = pd.read_csv(bau_params_filename)
         bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
                                   'maximum_size'] = float(bau_capacity_value)
+        bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
+                                  'lifespan'] = int(25*8760)
         
         # === CAPEX values ===
         capex_of = pd.read_csv(os.path.join(raw_data_folder, 'res_analysis',
@@ -209,6 +211,8 @@ def get_pv_inputs(countries, scenario):
                                   'sizing_constant'] = float(capex_of_value) / 1000
         pv_open_parameters_df.loc[pv_open_parameters_df['location_name'] == country,
                                   'maximum_size'] = float(max_cap_of_value)
+        pv_open_parameters_df.loc[pv_open_parameters_df['location_name'] == country,
+                                  'lifespan'] = int(25*8760)
         
         pv_roof_filename = os.path.join(stevfns_inputs, "RE_PV_Rooftop_Lim", 'parameters.csv')
         pv_roof_parameters_df = pd.read_csv(pv_roof_filename)
@@ -217,6 +221,8 @@ def get_pv_inputs(countries, scenario):
                                   'sizing_constant'] = float(capex_rt_value) / 1000
         pv_roof_parameters_df.loc[pv_roof_parameters_df['location_name'] == country,
                                   'maximum_size'] = float(max_cap_rt_value)
+        pv_roof_parameters_df.loc[pv_roof_parameters_df['location_name'] == country,
+                                  'lifespan'] = int(24*8760)
         
         # === BAU parameters update CAPEX ===
         bau_parameters_df.loc[bau_parameters_df['location_name'] == country,
@@ -321,7 +327,8 @@ def get_wind_inputs(countries, scenario):
             
             wind_on_parameters_df.loc[wind_on_parameters_df['location_name'] == country,
                                       'maximum_size'] = wind_on_max_cap_value
-
+            wind_on_parameters_df.loc[wind_on_parameters_df['location_name'] == country,
+                                      'lifespan'] = int(25*8760)
             # print(wind_on_parameters_df)
             wind_on_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Onshore_Lim_{group}", 'parameters.csv'), index=False)
            
@@ -353,6 +360,8 @@ def get_wind_inputs(countries, scenario):
                                           'sizing_constant'] = wind_on_capex_value  # same as Lim
             wind_on_parameters_bau_df.loc[wind_on_parameters_bau_df['location_name'] == country,
                                           'maximum_size'] = wind_on_max_bau_value   # BAU-specific value
+            wind_on_parameters_bau_df.loc[wind_on_parameters_bau_df['location_name'] == country,
+                                      'lifespan'] = int(25*8760)
             wind_on_parameters_bau_df.to_csv(bau_parameters_filename, index=False)
         
         
@@ -413,7 +422,8 @@ def get_wind_inputs(countries, scenario):
 
                 wind_off_parameters_df.loc[wind_off_parameters_df['location_name'] == country,
                                           'maximum_size'] = wind_off_max_cap_value
-                
+                wind_off_parameters_df.loc[wind_off_parameters_df['location_name'] == country,
+                                          'lifespan'] = int(25*8760)
                 # print(wind_on_parameters_df)
                 wind_off_parameters_df.to_csv(os.path.join(stevfns_inputs, f"RE_WIND_Offshore_Lim_{group}", 'parameters.csv'), index=False)
             
