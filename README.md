@@ -72,7 +72,7 @@ XX,YY,ZZ — Comma-separated list of two-letter ISO country codes (case-insensit
 Example:
 
 ```
-python update_autarky.py SG,MY,ZA
+python update_aut_scenarios.py SG,MY,ZA
 ```
 This will update:
 ```
