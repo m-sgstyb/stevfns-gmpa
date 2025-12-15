@@ -71,6 +71,7 @@ for counter1 in range(len(scenario_folders_list)):
     start_time = time.time()
     
     my_network.update(location_parameters_df, asset_parameters_df, system_parameters_df)
+    my_network.update_problem()
     # my_network.scenario_name = os.path.basename(scenario_folder)
     
     end_time = time.time()

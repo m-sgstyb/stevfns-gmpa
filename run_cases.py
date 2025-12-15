@@ -42,7 +42,7 @@ def run_case(case_name, solver_name, error_log):
     env["CASE_STUDY_NAME"] = case_name
     env["SOLVER_NAME"] = solver_name.upper()
     try:
-        subprocess.run(["python", "main.py"], check=True, env=env)
+        subprocess.run([sys.executable, "main.py"], check=True, env=env)
     except subprocess.CalledProcessError as e:
         print(f"Error in {case_name}: {e}. Continuing...\n")
         error_log.append((case_name, str(e)))
