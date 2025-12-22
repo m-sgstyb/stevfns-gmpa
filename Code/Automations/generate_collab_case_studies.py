@@ -80,8 +80,12 @@ def write_network_csv(df, folder: Path):
 
 # ─────────────── BAU static files ─────────────── #
 
-def copy_bau_static(src_country_folder: Path, dst_bau: Path):
-    src_bau = src_country_folder / "BAU"
+def copy_bau_static(case_study_dir: Path, dst_bau: Path):
+    """
+    Copies static parameter files (Location and System) from the global base source.
+    Source: Data/Case_Study/0_BASEAUTARKY/BAU/
+    """
+    src_bau = case_study_dir / "0_BASEAUTARKY" / "BAU"
     for fname in ("Location_Parameters.csv", "System_Parameters.csv"):
         shutil.copy(src_bau / fname, dst_bau / fname)
 
@@ -185,7 +189,7 @@ def main(root_dir, selected_countries=None):
                     print(f"⧉  Creating new folder structure for {folder.name}")
                     write_network_csv(net_df, folder)
                     bau.mkdir(parents=True, exist_ok=True)
-                    copy_bau_static(country_folders[combo[0]], bau)
+                    copy_bau_static(case_study_dir, bau)
                 else:
                     print(f"↻  Updating parameters in existing folder {folder.name}")
             
