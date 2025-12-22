@@ -1,3 +1,9 @@
+"""
+Script to add a new country to the STEVFNs model.
+This involves updating location parameters, processing assets (demand and RE profiles),
+setting up case study folders (BAU, Least Cost, Autarky), and running initial simulations.
+"""
+
 import pandas as pd
 import os
 import shutil
@@ -5,6 +11,10 @@ import subprocess
 import sys
 
 def add_new_country():
+    """
+    Main function to add a new country based on 'new_country_input.csv'.
+    Updates global location parameters and triggers asset/case study processing.
+    """
     # File paths
     input_csv_path = 'new_country_input.csv'
     location_params_path = 'Data/Case_Study/0_BASEAUTARKY/BAU/Location_Parameters.csv'
@@ -183,6 +193,10 @@ def add_new_country():
         print(f"Error running prepare_data_for_website.py: {e}")
 
 def process_autarky_case(new_country_df, country_id_map):
+    """
+    Sets up the Autarky case study folder for the new country by copying
+    from the base template and updating location/asset parameters.
+    """
     base_source_dir = 'Data/Case_Study/0_BASEAUTARKY'
     
     if not os.path.exists(base_source_dir):
@@ -236,6 +250,10 @@ def process_autarky_case(new_country_df, country_id_map):
 
 
 def process_case_study_folder(new_country_df, country_id_map, folder_name):
+    """
+    Copies a standard case study folder (e.g., BAU_No_Action) from a source country (JP)
+    to the new country and updates its parameters.
+    """
     base_dir = os.path.join('Data/Case_Study', folder_name)
     source_country = 'JP'
     
@@ -292,6 +310,10 @@ def process_case_study_folder(new_country_df, country_id_map, folder_name):
                 print(f"Error updating {loc_params_path}: {e}")
 
 def process_assets(assets_csv_path, new_country_df):
+    """
+    Processes asset parameters and profiles (Demand and RE) for the new country.
+    Copies and renames profile files based on coordinates and country codes.
+    """
     try:
         assets_df = pd.read_csv(assets_csv_path)
     except Exception as e:
