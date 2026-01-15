@@ -25,12 +25,12 @@ flowchart TD
 
     subgraph Phase2["PHASE 2: Collab Case Study Generation"]
         P2A[generate_collab_case_studies.py]
-        P2B[/"READ: Autarky_{CC}/Network_Structure.csv (per country)"/]
+        P2B[/"READ: Autarky_CC/Network_Structure.csv per country"/]
         P2C[/"READ: Code/Assets/CO2_Budget/parameters.csv"/]
         P2D[/"READ: 0_BASEAUTARKY/BAU/Location_Parameters.csv"/]
         P2E[/"READ: 0_BASEAUTARKY/BAU/System_Parameters.csv"/]
-        P2F[("CREATED: {CC1-CC2}_Autarky/<br/>Network_Structure.csv, BAU/*.csv, 0-90/*.csv")]
-        P2G[("CREATED: {CC1-CC2}_Collab/<br/>Network_Structure.csv, BAU/*.csv, 0-90/*.csv")]
+        P2F[("CREATED: CC1-CC2_Autarky/<br/>Network_Structure.csv, BAU/*.csv, 0-90/*.csv")]
+        P2G[("CREATED: CC1-CC2_Collab/<br/>Network_Structure.csv, BAU/*.csv, 0-90/*.csv")]
         P2A --> P2B
         P2A --> P2C
         P2A --> P2D
@@ -43,15 +43,15 @@ flowchart TD
     end
 
     subgraph Phase3["PHASE 3: Collab Simulations"]
-        P3A[run_cases.py CC1 CC2 ...]
+        P3A[run_cases.py CC1 CC2]
         P3B[main.py]
-        P3C[/"READ: {combo}_Autarky/Network_Structure.csv"/]
-        P3D[/"READ: {combo}_Collab/Network_Structure.csv"/]
-        P3E[/"READ: {scenario}/*_Parameters.csv"/]
-        P3F[/"READ: Code/Assets/{asset}/parameters.csv"/]
-        P3G[/"READ: Code/Assets/{asset}/profiles/*.csv"/]
-        P3H[("CREATED: {combo}_Autarky/{scenario}/<br/>total_data*.csv, capacities_total_data.csv, *.png")]
-        P3I[("CREATED: {combo}_Collab/{scenario}/<br/>total_data*.csv, capacities_total_data.csv, *.png")]
+        P3C[/"READ: combo_Autarky/Network_Structure.csv"/]
+        P3D[/"READ: combo_Collab/Network_Structure.csv"/]
+        P3E[/"READ: scenario/*_Parameters.csv"/]
+        P3F[/"READ: Code/Assets/asset/parameters.csv"/]
+        P3G[/"READ: Code/Assets/asset/profiles/*.csv"/]
+        P3H[("CREATED: combo_Autarky/scenario/<br/>total_data*.csv, capacities_total_data.csv, *.png")]
+        P3I[("CREATED: combo_Collab/scenario/<br/>total_data*.csv, capacities_total_data.csv, *.png")]
         P3A --> P3B
         P3B --> P3C
         P3B --> P3D
@@ -114,7 +114,7 @@ flowchart TD
 flowchart LR
     S1[run_collab_workflow.py] --> S2[generate_carbon_budget.py]
     S2 --> S3[generate_collab_case_studies.py]
-    S3 --> S4[run_cases.py CC1 CC2 ...]
+    S3 --> S4[run_cases.py]
     S4 --> S5[main.py]
     S5 --> S6[prepare_data_for_website.py]
     S6 --> S7[Consolidate.py]

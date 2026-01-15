@@ -19,19 +19,19 @@ flowchart TD
     end
 
     subgraph Phase2["PHASE 2: Asset Processing"]
-        P2A[/"READ: Code/Assets/{asset}/parameters.csv"/]
-        P2B[/"READ: {profile_path} from input CSV"/]
-        P2C[("MODIFIED: Code/Assets/{asset}/parameters.csv<br/>Appends Type row, sets profile_filename")]
-        P2D[("CREATED: Code/Assets/{asset}/profiles/<br/>{country}_{year}_GW.csv (Demand)<br/>OR {RE_type}_lat_lon.csv (RE)")]
+        P2A[/"READ: Code/Assets/asset/parameters.csv"/]
+        P2B[/"READ: profile_path from input CSV"/]
+        P2C[("MODIFIED: Code/Assets/asset/parameters.csv<br/>Appends Type row, sets profile_filename")]
+        P2D[("CREATED: Code/Assets/asset/profiles/<br/>country_year_GW.csv or RE_type_lat_lon.csv")]
         P2A --> P2C
         P2B --> P2C
         P2C --> P2D
     end
 
     subgraph Phase3["PHASE 3: Case Study Folder Setup"]
-        P3A[/"READ: Data/Case_Study/{folder}/JP/* (template)"/]
-        P3B[("CREATED: Data/Case_Study/BAU_No_Action/{country}/<br/>Network_Structure.csv, BAU/*.csv, 0/*.csv")]
-        P3C[("CREATED: Data/Case_Study/Least_Cost_Emissions/{country}/<br/>Network_Structure.csv, BAU/*.csv, 0/*.csv")]
+        P3A[/"READ: Data/Case_Study/folder/JP/* template"/]
+        P3B[("CREATED: Data/Case_Study/BAU_No_Action/country/<br/>Network_Structure.csv, BAU/*.csv, 0/*.csv")]
+        P3C[("CREATED: Data/Case_Study/Least_Cost_Emissions/country/<br/>Network_Structure.csv, BAU/*.csv, 0/*.csv")]
         P3A --> P3B
         P3A --> P3C
     end
@@ -55,18 +55,18 @@ flowchart TD
     end
 
     subgraph Phase6["PHASE 6: Autarky Case Study Setup"]
-        P6A[/"READ: Data/Case_Study/0_BASEAUTARKY/* (template)"/]
-        P6B[("CREATED: Data/Case_Study/Autarky_{country}/<br/>Network_Structure.csv, BAU/*.csv, 0-90/ (empty)")]
+        P6A[/"READ: Data/Case_Study/0_BASEAUTARKY/* template"/]
+        P6B[("CREATED: Data/Case_Study/Autarky_country/<br/>Network_Structure.csv, BAU/*.csv, 0-90/ empty")]
         P6A --> P6B
     end
 
     subgraph Phase7["PHASE 7: Autarky Scenario Updates"]
         P7A[update_aut_scenarios.py]
-        P7B[/"READ: Autarky_{country}/BAU/*.csv"/]
-        P7C[("CREATED: Autarky_{country}/{0-90}/*.csv")]
+        P7B[/"READ: Autarky_country/BAU/*.csv"/]
+        P7C[("CREATED: Autarky_country/0-90/*.csv")]
         P7D[update_co2_budget_asset_types.py]
         P7E[/"READ: Code/Assets/CO2_Budget/parameters.csv"/]
-        P7F[("MODIFIED: Autarky_{country}/{scenario}/Asset_Parameters.csv")]
+        P7F[("MODIFIED: Autarky_country/scenario/Asset_Parameters.csv")]
         P7A --> P7B
         P7B --> P7C
         P7C --> P7D
@@ -75,10 +75,10 @@ flowchart TD
     end
 
     subgraph Phase8["PHASE 8: Autarky Simulations"]
-        P8A[run_cases.py {country}]
+        P8A[run_cases.py country]
         P8B[main.py]
-        P8C[/"READ: Autarky_{country}/*_Parameters.csv, Asset profiles"/]
-        P8D[("CREATED: Autarky_{country}/{scenario}/total_data*.csv, *.png")]
+        P8C[/"READ: Autarky_country/*_Parameters.csv, Asset profiles"/]
+        P8D[("CREATED: Autarky_country/scenario/total_data*.csv, *.png")]
         P8A --> P8B
         P8B --> P8C
         P8C --> P8D
@@ -131,7 +131,7 @@ flowchart LR
     S5 --> S6[generate_carbon_budget.py]
     S6 --> S7[update_aut_scenarios.py]
     S7 --> S8[update_co2_budget_asset_types.py]
-    S8 --> S9[run_cases.py {country}]
+    S8 --> S9[run_cases.py country]
     S9 --> S10[main.py]
     S10 --> S11[prepare_data_for_website.py]
     S11 --> S12[Consolidate.py]
