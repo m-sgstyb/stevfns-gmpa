@@ -1,5 +1,23 @@
 # STEVFNs: Add New Country Workflow
 
+## Update vs Add Behavior
+
+The `add_country.py` script handles both **new countries** and **existing countries**:
+
+| Scenario | Behavior |
+|----------|----------|
+| **New Country** | Creates all folders, assigns new Location ID, appends to all parameter files |
+| **Existing Country** | Updates coordinates in place, preserves existing Location ID and Type IDs, updates files without recreating folders |
+
+When a country already exists:
+- Global `Location_Parameters.csv` is updated with new lat/lon (Location ID preserved)
+- Asset `parameters.csv` files are updated in place (Type ID preserved)
+- Case study folders (`BAU_No_Action/{country}`, `Least_Cost_Emissions/{country}`) are updated in place
+- `Autarky_{country}` folder is updated in place (existing simulation results preserved)
+- All simulations are re-run with updated parameters
+
+---
+
 ## Overview Flowchart
 
 ```mermaid
@@ -157,7 +175,8 @@ flowchart LR
 **What it does:**
 - Reads new country data (country_code, lat, lon) from input CSV
 - Checks if country already exists in Location_Parameters.csv
-- Appends new entries with auto-incremented Location IDs
+- **For existing countries:** Updates lat/lon coordinates in place (preserves existing Location ID)
+- **For new countries:** Appends new entries with auto-incremented Location IDs
 - Returns mapping: `country_id_map = {country_code: location_id}`
 
 ---
@@ -178,7 +197,8 @@ flowchart LR
 - For each asset in `new_country_assets_input.csv`:
   - **Demand Assets:** Copies profile to `profiles/{country}_{year}_GW.csv`, updates parameters.csv with profile_filename
   - **RE Assets:** Calculates rounded coordinates (r_lat, r_lon), copies profile to appropriate location
-  - Auto-increments Type ID in parameters.csv
+  - **For existing countries:** Updates existing rows in parameters.csv (preserves Type ID)
+  - **For new countries:** Auto-increments Type ID and appends to parameters.csv
 
 ---
 
@@ -197,8 +217,9 @@ flowchart LR
 | CREATED | `Data/Case_Study/Least_Cost_Emissions/{country}/*` (same structure) |
 
 **What it does:**
-- Copies JP template folder structure for new country
-- Updates Asset_Parameters.csv: `Location_1`, `Location_2` → country_id
+- **For new countries:** Copies JP template folder structure
+- **For existing countries:** Updates files in place (preserves existing simulation results)
+- Updates Asset_Parameters.csv: `Asset_Type` → country_id (except CO2_Budget)
 - Updates Location_Parameters.csv: lat, lon, location_name → new country values
 
 ---
@@ -262,10 +283,11 @@ flowchart LR
 | CREATED | `Data/Case_Study/Autarky_{country}/20/` ... `90/` (empty) |
 
 **What it does:**
-- Copies 0_BASEAUTARKY template to `Autarky_{country}`
+- **For new countries:** Copies 0_BASEAUTARKY template to `Autarky_{country}`
+- **For existing countries:** Updates files in place (preserves existing folder structure)
 - Updates Network_Structure.csv: `Location_1`, `Location_2` → country_id
 - Updates BAU/Asset_Parameters.csv: locations and Asset_Type → country_id
-- Creates empty scenario folders (0, 10, 20, ..., 90)
+- Creates empty scenario folders (0, 10, 20, ..., 90) - only for new countries
 
 ---
 
