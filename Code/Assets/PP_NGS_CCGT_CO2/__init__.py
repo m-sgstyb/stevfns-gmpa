@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov  3 13:25:54 2021
+Created on Thu Feb  5 14:16:50 2026
 
-@author: aniqahsan
+@author: Mónica Sagastuy-Breña
+Script for natural gas, combined cycle power plants.
+Based on geneeric PP_CO2 @author: aniqahsan
 """
 
 import numpy as np
@@ -11,10 +13,11 @@ import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
 from ...Network import Edge_STEVFNs
 
-
-
 class PP_NGS_CCGT_CO2_Asset(Asset_STEVFNs):
-    """Class of Conventional Generators"""
+    """
+    Class of Conventional Generators: Natural Gas Combined Cycle Turbine
+      
+    """
     asset_name = "PP_NGS_CCGT_CO2"
     source_node_type = "NULL"
     target_node_type = "EL"
