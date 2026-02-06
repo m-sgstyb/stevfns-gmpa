@@ -23,8 +23,8 @@ from Code.Plotting import GMPA_plot_mitigation_curve
 
 
 #### Define Input Files ####
-# case_study_name = "DE-FR-MA-TR_Collab"
-case_study_name = os.getenv("CASE_STUDY_NAME")
+case_study_name = "01_testing_new_assets"
+# case_study_name = os.getenv("CASE_STUDY_NAME")
 if not case_study_name:
     raise ValueError("CASE_STUDY_NAME environment variable not set. Exiting.")
 
