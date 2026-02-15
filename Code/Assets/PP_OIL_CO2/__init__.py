@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov  3 13:25:54 2021
+Created on Tue Feb 10 11:27:40 2026
 
-@author: aniqahsan
+@author: Mónica Sagastuy-Breña
+Script for oil power plants
+Based on geneeric PP_CO2 @author: aniqahsan
 """
-
 import numpy as np
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
 from ...Network import Edge_STEVFNs
 
-class PP_CO2_Asset(Asset_STEVFNs):
-    """Class of Conventional Generators"""
-    asset_name = "PP_CO2"
+class PP_OIL_CO2_Asset(Asset_STEVFNs):
+    """
+    Class of Conventional Thermal Generators: Fuel oil
+    """
+    asset_name = "PP_OIL_CO2"
     source_node_type = "NULL"
     target_node_type = "EL"
     target_node_type_2 = "CO2_Budget"
@@ -111,9 +114,10 @@ class PP_CO2_Asset(Asset_STEVFNs):
         
     def _update_parameters(self):
         super()._update_parameters()
+        # Update emissions edge values
         for parameter_name, parameter in self.conversion_fun_params_2.items():
             parameter.value = self.parameters_df[parameter_name]
-        #Update cost parameters based on NPV#
+        # Update cost parameters based on NPV
         self._update_sizing_constant()
         self._update_usage_constants()
         self._update_co2_emissions_factor()

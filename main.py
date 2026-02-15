@@ -20,7 +20,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning) # To silence pand
 from Code.Network.Network import Network_STEVFNs
 from Code.Results import GMPA_Results
 from Code.Plotting import GMPA_plot_mitigation_curve
-
+from Code.Plotting import testing_plots
 
 #### Define Input Files ####
 case_study_name = "01_testing_new_assets"
@@ -114,6 +114,9 @@ for counter1 in range(len(scenario_folders_list)):
         total_cap_df = pd.concat([total_cap_df, capacities_df], ignore_index=True)
         web_total_df = pd.concat([web_total_df, web_td_df], ignore_index=True)
         
+        
+    
+        
 # #### Save Result
 total_df.to_csv(results_filename, index=False, header=True)
 total_df_1.to_csv(unrounded_results_filename, index=False, header=True)
@@ -144,6 +147,13 @@ if case_study_name not in base_cases:
                    "DE", "FR", "TR", "MA"],
     )
 
+
+if "testing" in case_study_name:
+    output_folder = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots")
+    testing_plots.simple_plot_pp_phs_demand_generic(my_network, location_parameters_df, output_folder,
+                                          cmap_name="tab20", expected_timesteps=720, verbose=False)
+    csv_results = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots", "hourly_flows.csv")
+    testing_plots.export_results_csv(my_network, csv_results, hours=720)
         
 final_time = time.time()
 print("------------------  All Scenarios Run  ------------------------\n",
