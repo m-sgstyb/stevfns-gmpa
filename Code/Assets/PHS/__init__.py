@@ -398,7 +398,7 @@ class Reservoir_Asset(Asset_STEVFNs):
         N = np.ceil(self.network.system_parameters_df.loc["project_life", "value"]/self.parameters_df["lifespan"])
         r = (1 + self.network.system_parameters_df.loc["discount_rate", "value"])**(-self.parameters_df["lifespan"]/8760)
         NPV_factor = (1-r**N)/(1-r)
-        self.cost_fun_params["turbine_sizing_constant"].value = self.cost_fun_params["turbine_sizing_constant"].value * NPV_factor
+        self.cost_fun_params["reservoir_sizing_constant"].value = self.cost_fun_params["reservoir_sizing_constant"].value * NPV_factor
         return
      
     def _update_usage_constant(self):
@@ -406,7 +406,7 @@ class Reservoir_Asset(Asset_STEVFNs):
         N = np.ceil(self.network.system_parameters_df.loc["project_life", "value"]/8760)
         r = (1 + self.network.system_parameters_df.loc["discount_rate", "value"])**-1
         NPV_factor = (1-r**N)/(1-r)
-        self.cost_fun_params["turbine_usage_constant"].value = (self.cost_fun_params["turbine_usage_constant"].value * 
+        self.cost_fun_params["reservoir_usage_constant"].value = (self.cost_fun_params["reservoir_usage_constant"].value * 
                                                         NPV_factor * simulation_factor)
         return
         

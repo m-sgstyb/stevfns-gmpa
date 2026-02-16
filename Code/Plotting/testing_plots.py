@@ -10,317 +10,321 @@ Script with plotting functions for testing assets
 """
 
 import os
-from collections import defaultdict
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib import cm
 
-def simple_plot_pp_phs_demand_generic(my_network, location_parameters_df, output_folder,
-                                      cmap_name="tab20", expected_timesteps=None, verbose=False):
+def plot_stacked_from_df(
+    df,
+    output_folder,
+    filename="stacked_plot.png",
+    time_col_candidates=("time", "timestep"),
+    demand_col_candidates=("demand", "el_demand", "load"),
+    phs_turb_substrs=("turb", "turbine"),
+    phs_pump_substrs=("pump", "pumping"),
+    cmap_name="Set1",
+    expected_timesteps=None,
+    figsize=(12,5),
+    skip_zero_columns=True,
+    verbose=False
+):
     """
-    Generic single-run plotting for PP (many subtypes), PHS, and Demand.
-    - Skips assets with 'co2_budget' in the name (case-insensitive)
-    - Reads flows from obj.flows.value (or obj.flows)
-    - Detects PHS by 'phs' in asset_name OR by assets_dictionary keys/values containing pump/turb substrings
-    - Each PP subtype (e.g. PP_COAL_CO2) gets its own color from the colormap.
-    - PHS turbine drawn as opaque filled area; pumping as same color with lower alpha.
-    - Saves one PNG per location with demand.
+    Plot stacked generation from df, with PHS pumping drawn as negative area below zero.
+
+    Parameters:
+      - df: pandas DataFrame produced by export_results_csv
+      - skip_zero_columns: if True, columns that are entirely zero are omitted from the stack/legend
     """
+
     os.makedirs(output_folder, exist_ok=True)
 
-    def _asset_name_lower(asset):
-        return (getattr(asset, "asset_name", "") or "").strip()
-
-    def _asset_name_key(asset):
-        # normalized lowercase key for quick contains checks
-        return _asset_name_lower(asset).lower()
-
-    def _safe_get_flows_value(obj):
-        """Return a 1D numpy array from obj.flows.value if possible, else obj.flows if possible, else None."""
-        if obj is None:
-            return None
-        if not hasattr(obj, "flows"):
-            return None
-        flows = getattr(obj, "flows")
-        # prefer `.value`
-        if hasattr(flows, "value"):
-            try:
-                arr = np.asarray(flows.value).astype(float).flatten()
-                return arr
-            except Exception:
-                pass
-        try:
-            arr = np.asarray(flows).astype(float).flatten()
-            return arr
-        except Exception:
-            return None
-
-    # Storage: per-location maps
-    pp_by_loc = defaultdict(lambda: defaultdict(list))   # loc -> { pp_subtype_label -> [arrays...] }
-    phs_pump_by_loc = defaultdict(list)                  # loc -> [pump arrays]
-    phs_turb_by_loc = defaultdict(list)                  # loc -> [turbine arrays]
-    demand_by_loc = {}                                   # loc -> demand array
-
-    # ---- Collect all arrays ----
-    for idx, asset in enumerate(my_network.assets):
-        name_raw = _asset_name_lower(asset)
-        name = name_raw  # keep case for subtype display
-        name_key = _asset_name_key(asset)
-        if not name:
-            if verbose:
-                print(f"asset idx {idx}: no name, skipping")
-            continue
-
-        # skip CO2_BUDGET assets
-        if "co2_budget" in name_key:
-            if verbose:
-                print(f"asset '{name}' -> skipped (CO2_BUDGET)")
-            continue
-
-        # find location id
-        loc = getattr(asset, "target_node_location", getattr(asset, "node_location", None))
-        if loc is None:
-            if verbose:
-                print(f"asset '{name}' -> no location, skipping")
-            continue
-
-        # Demand (detect by 'demand' substring)
-        if "demand" in name_key:
-            arr = _safe_get_flows_value(asset)
-            if arr is not None:
-                demand_by_loc[loc] = arr
-                if verbose:
-                    print(f"asset '{name}' -> stored demand (loc {loc}, len {len(arr)})")
-            else:
-                if verbose:
-                    print(f"asset '{name}' -> demand asset but no flows found")
-            continue
-
-        # Detect PHS: name contains 'phs' OR assets_dictionary keys/values include 'pump'/'turb'
-        ad = getattr(asset, "assets_dictionary", None)
-        ad_is_dict = isinstance(ad, dict)
-        is_phs = False
-        pump_obj = None
-        turb_obj = None
-
-        if "phs" in name_key:
-            is_phs = True
-
-        if ad_is_dict:
-            # quick key substring match
-            for k in ad.keys():
-                kl = k.lower()
-                if "pump" in kl and pump_obj is None:
-                    pump_obj = ad[k]
-                    is_phs = True
-                if "turb" in kl and turb_obj is None:
-                    turb_obj = ad[k]
-                    is_phs = True
-            # if keys didn't match, try values: pick first value with .flows for pump/turb roles
-            if not (pump_obj and turb_obj):
-                for k, v in ad.items():
-                    if pump_obj is None and hasattr(v, "flows"):
-                        # prefer ones whose key contains pump
-                        pump_obj = pump_obj or v
-                    if turb_obj is None and hasattr(v, "flows"):
-                        turb_obj = turb_obj or v
-
-        if is_phs:
-            # attempt to extract arrays from chosen objects
-            pump_arr = _safe_get_flows_value(pump_obj)
-            turb_arr = _safe_get_flows_value(turb_obj)
-            if verbose:
-                print(f"asset '{name}' -> PHS detected (loc {loc}) pump={'yes' if pump_arr is not None else 'no'} turb={'yes' if turb_arr is not None else 'no'}")
-            if pump_arr is not None:
-                phs_pump_by_loc[loc].append(pump_arr)
-            if turb_arr is not None:
-                phs_turb_by_loc[loc].append(turb_arr)
-            continue
-
-        # Otherwise, classify as PP if name contains 'pp' OR startswith 'pp_'
-        if "pp" in name_key or name_key.startswith("pp_") or name_key.startswith("pp"):
-            # Use the raw asset name (normalized) as the PP subtype label so different PPs get different colors
-            # Normalize label to a short readable token: remove spaces and keep as-is
-            pp_label = name.strip()
-            arr = _safe_get_flows_value(asset)
-            if arr is not None:
-                pp_by_loc[loc][pp_label].append(arr)
-                if verbose:
-                    print(f"asset '{name}' -> PP subtype '{pp_label}' stored (loc {loc}, len {len(arr)})")
-            else:
-                if verbose:
-                    print(f"asset '{name}' -> classified as PP but no flows found")
-            continue
-
-        # If not matched, optionally try to treat other generation-like assets as PP (heuristic)
-        # e.g., names containing 'plant' or 'generator'
-        if "plant" in name_key or "generator" in name_key:
-            pp_label = name.strip()
-            arr = _safe_get_flows_value(asset)
-            if arr is not None:
-                pp_by_loc[loc][pp_label].append(arr)
-                if verbose:
-                    print(f"asset '{name}' -> treated as PP subtype '{pp_label}' (fallback)")
-            continue
-
-        # else ignore
+    # 1) detect time column
+    cols_lower = [c.lower() for c in df.columns]
+    time_col = None
+    for cand in time_col_candidates:
+        if cand in cols_lower:
+            time_col = df.columns[cols_lower.index(cand)]
+            break
+    if time_col is None:
+        time_col = df.columns[0]
         if verbose:
-            print(f"asset '{name}' -> ignored (not demand, not PHS, not PP)")
+            print(f"No explicit time column found; using first column '{time_col}' as time.")
 
-    # ---- Now produce plots per location that have demand ----
-    saved_paths = []
-    all_locs_with_data = sorted(
-        set(demand_by_loc.keys())
-        | set(pp_by_loc.keys())
-        | set(phs_pump_by_loc.keys())
-        | set(phs_turb_by_loc.keys())
-    )
+    # 2) detect demand column
+    demand_col = None
+    for cand in demand_col_candidates:
+        if cand in cols_lower:
+            demand_col = df.columns[cols_lower.index(cand)]
+            break
+
+    # 3) detect PHS turbine and pump columns
+    phs_turb_cols = [c for c in df.columns if any(s in c.lower() for s in phs_turb_substrs)]
+    phs_pump_cols = [c for c in df.columns if any(s in c.lower() for s in phs_pump_substrs)]
+    # prefer to filter by 'phs' too if available
+    phs_like = [c for c in df.columns if "phs" in c.lower()]
+    if phs_like:
+        phs_turb_cols = [c for c in phs_turb_cols if "phs" in c.lower()] or phs_turb_cols
+        phs_pump_cols = [c for c in phs_pump_cols if "phs" in c.lower()] or phs_pump_cols
+
+    # 4) determine generation columns (exclude time, demand, soc/reservoir and phs pump/turb)
+    excluded = {time_col}
+    if demand_col is not None:
+        excluded.add(demand_col)
+    for c in df.columns:
+        if c.lower() in ("soc", "state_of_charge", "reservoir"):
+            excluded.add(c)
+    excluded.update(phs_turb_cols)
+    excluded.update(phs_pump_cols)
+
+    gen_cols = [c for c in df.columns if c not in excluded]
 
     if verbose:
-        print("Locations with any data:", all_locs_with_data)
+        print("time_col:", time_col)
+        print("demand_col:", demand_col)
+        print("phs_turb_cols:", phs_turb_cols)
+        print("phs_pump_cols:", phs_pump_cols)
+        print("gen_cols (stacked):", gen_cols)
 
-    for loc in all_locs_with_data:
-        if loc not in demand_by_loc:
+    # 5) plotting length and helper to normalize/pad/truncate
+    T = expected_timesteps if expected_timesteps is not None else int(len(df))
+    x = np.arange(T)
+
+    def _series(c):
+        arr = np.asarray(df[c].values).astype(float).flatten()
+        if arr.shape[0] >= T:
+            return arr[:T]
+        return np.pad(arr, (0, T - arr.shape[0]), constant_values=0.0)
+
+    # 6) prepare stacked arrays (filter zeros if skip_zero_columns)
+    stacked_arrays = []
+    labels = []
+    for c in gen_cols:
+        series = _series(c)
+        if skip_zero_columns and not np.any(series):
             if verbose:
-                print(f"loc {loc} has flows but no demand -> skipping plot")
+                print(f"skipping zero-only column: {c}")
             continue
+        stacked_arrays.append(series)
+        labels.append(c)
 
-        demand = demand_by_loc[loc]
-        T = int(len(demand)) if expected_timesteps is None else int(expected_timesteps)
+    # 7) colors
+    cmap = cm.get_cmap(cmap_name)
+    n = max(1, len(stacked_arrays))
+    colors = [cmap(i / max(1, n - 1)) for i in range(n)]
 
-        def _norm(a):
-            a = np.asarray(a).flatten()
-            if a.shape[0] == T:
-                return a.astype(float)
-            if a.shape[0] > T:
-                return a[:T].astype(float)
-            return np.pad(a.astype(float), (0, T - a.shape[0]), constant_values=0.0)
+    # 8) compute PHS totals
+    phs_turb_total = np.zeros(T, dtype=float)
+    for c in phs_turb_cols:
+        s = _series(c)
+        phs_turb_total += s
 
-        # Build PP totals per subtype and collect labels for color mapping
-        pp_subtypes = sorted(pp_by_loc.get(loc, {}).keys())
-        # flatten per-subtype totals
-        pp_totals_by_subtype = {}
-        for subtype in pp_subtypes:
-            total = np.zeros(T, dtype=float)
-            for arr in pp_by_loc[loc][subtype]:
-                total += _norm(arr)
-            pp_totals_by_subtype[subtype] = total
+    phs_pump_total = np.zeros(T, dtype=float)
+    for c in phs_pump_cols:
+        s = _series(c)
+        phs_pump_total += s
 
-        # PHS totals
-        turb_total = np.zeros(T, dtype=float)
-        for a in phs_turb_by_loc.get(loc, []):
-            turb_total += _norm(a)
-        pump_total = np.zeros(T, dtype=float)
-        for a in phs_pump_by_loc.get(loc, []):
-            pump_total += _norm(a)
+    # 9) draw plot
+    plt.figure(figsize=figsize)
+    bottom = np.zeros(T, dtype=float)
 
-        # Setup color mapping for PP subtypes (consistent order)
-        n_pp = max(1, len(pp_subtypes))
-        cmap = plt.get_cmap(cmap_name)
-        pp_colors = {}
-        for i, subtype in enumerate(pp_subtypes):
-            pp_colors[subtype] = cmap(float(i) / max(1, n_pp - 1))
+    # plot stacked generation layers
+    for i, (arr, label) in enumerate(zip(stacked_arrays, labels)):
+        if not np.any(arr):
+            continue
+        c = colors[i % len(colors)]
+        plt.fill_between(x, bottom, bottom + arr, color=c, label=label, edgecolor='none', alpha=1.0)
+        bottom += arr
 
-        # Choose PHS base color: if there is a PP subtype called "PHS" use that color; else pick next cmap entry
-        if "PHS" in pp_subtypes:
-            phs_color = pp_colors["PHS"]
-        else:
-            # pick a color distinct from PP colors
-            phs_color = cmap(float(len(pp_subtypes)) / max(1, n_pp - 1))
+    # plot phs turbine (discharge) on top of stack (positive)
+    if np.any(phs_turb_total):
+        # choose a PHS color distinct from the PP colors (or reuse a neutral one)
+        phs_color = "#3D1186"
+        plt.fill_between(x, bottom, bottom + phs_turb_total, color=phs_color,
+                         label="PHS Turbine (discharge)", edgecolor='none', alpha=1.0)
+        bottom += phs_turb_total
 
-        # Start plotting
-        x = np.arange(T)
-        bottom = np.zeros(T, dtype=float)
+    # plot phs pumping as negative area below zero
+    if np.any(phs_pump_total):
+        # plotting negative area: from 0 down to -phs_pump_total
+        phs_color = "#3D1186"
+        neg = -phs_pump_total
+        plt.fill_between(x, 0.0, neg, where=(neg < 0), facecolor=phs_color, alpha=0.35,
+                         label="PHS Pumping (charge)", edgecolor='none', hatch='//')
 
-        plt.figure(figsize=(12, 5))
+    # demand line
+    if demand_col is not None:
+        demand = _series(demand_col)
+        plt.plot(x, demand, color="red", linestyle="--", linewidth=1.4, label="Demand")
 
-        # Plot PP subtypes in stable order
-        for subtype in pp_subtypes:
-            arr = pp_totals_by_subtype[subtype]
-            if not np.any(arr):
-                continue
-            c = pp_colors.get(subtype, cmap(0))
-            label = subtype
-            plt.fill_between(x, bottom, bottom + arr, color=c, label=label, edgecolor='none', alpha=1.0)
-            bottom += arr
+    # aesthetics
+    plt.xlabel("Timestep")
+    plt.ylabel("Power (MW)")
+    plt.title("Stacked generation by technology (pumping shown negative)")
+    plt.grid(True, linestyle=":", alpha=0.4)
 
-        # Plot PHS turbine (generation) using phs_color at full alpha
-        if np.any(turb_total):
-            plt.fill_between(x, bottom, bottom + turb_total, color=phs_color, label="PHS Turbine (discharge)", edgecolor='none', alpha=1.0)
-            bottom += turb_total
+    # legend: dedupe labels
+    handles, labels_ = plt.gca().get_legend_handles_labels()
+    by_label = dict(zip(labels_, handles))
+    plt.legend(by_label.values(), by_label.keys(), loc="upper right", fontsize="small", ncol=2)
 
-        # Plot PHS pumping as translucent fill (same base color but lower alpha) to indicate directionality
-        if np.any(pump_total):
-            plt.fill_between(x, bottom, bottom + pump_total, color=phs_color, label="PHS Pumping (charge)", edgecolor='none', alpha=0.35)
+    plt.tight_layout()
+    outpath = os.path.join(output_folder, filename)
+    plt.savefig(outpath, dpi=300)
+    plt.close()
 
-        # Demand line
-        plt.plot(x, _norm(demand), color="red", linestyle="--", linewidth=1.4, label="Demand")
-
-        plt.xlabel("Timestep")
-        plt.ylabel("Power")
-        loc_name = location_parameters_df.iloc[loc]["location_name"]
-        plt.title(f"{loc_name} — PP subtypes + PHS vs Demand")
-        plt.grid(True, linestyle=":", alpha=0.4)
-        plt.legend(loc="upper right", fontsize="small", ncol=2)
-        plt.tight_layout()
-
-        outpath = os.path.join(output_folder, f"stacked_{loc_name}.png")
-        plt.savefig(outpath, dpi=300)
-        plt.close()
-        saved_paths.append(outpath)
-        if verbose:
-            print(f"[✓] Saved: {outpath}")
-
-    # warn about locations with flows but no demand
-    all_locations_with_any = set(list(pp_by_loc.keys()) + list(phs_pump_by_loc.keys()) + list(phs_turb_by_loc.keys()) + list(demand_by_loc.keys()))
-    locations_without_plots = sorted([loc for loc in all_locations_with_any if loc not in demand_by_loc])
-    if locations_without_plots:
-        print("⚠️ The following location IDs had flows but no demand asset (no plot created):", locations_without_plots)
-
-    return saved_paths
-
+    if verbose:
+        print("Saved stacked plot to:", outpath)
+    return outpath
 
 
 def export_results_csv(network, filepath, hours=720):
     """
-    Very simple results export.
-    Assumes all flows are already numpy arrays.
+    Export hourly flows for all assets in the network into a CSV.
+    - One column per asset (asset.asset_name). If duplicate names occur, a suffix is appended.
+    - For assets with a gen_profile (e.g. Nuclear or RE), uses flows * gen_profile.
+    - For Multi_Asset (assets_dictionary), exports each subasset as AssetName_SubassetName.
+    - Skips SOC for PHS (or any subasset named 'Reservoir' or 'SOC' by convention).
+    - Attempts several fallbacks (scalar flows, vector flows, get_plot_data).
     """
 
-    # --- DEMAND ---
-    demand = None
-    for asset in network.assets:
-        if "Demand" in asset.asset_name:
-            demand = asset.flows.value[:hours]
-            break
+    cols = {"time": np.arange(hours)}
+    name_counts = {}  # to ensure unique column names
 
-    # --- POWER PLANTS (sum all PP assets) ---
-    pp = np.zeros(hours)
-    for asset in network.assets:
-        if asset.asset_name.startswith("PP"):
-            pp += asset.flows.value[:hours]
-
-    # --- PHS ---
-    pumping = None
-    turbine = None
-    soc = None
+    def unique_name(base):
+        cnt = name_counts.get(base, 0)
+        name_counts[base] = cnt + 1
+        return base if cnt == 0 else f"{base}_{cnt}"
 
     for asset in network.assets:
-        if asset.asset_name == "PHS":
-            pumping = asset.assets_dictionary["Pumping"].flows.value[:hours]
-            turbine = asset.assets_dictionary["Turbine"].flows.value[:hours]
-            soc = asset.assets_dictionary["Reservoir"].flows.value[:hours]
-            break
+        # --- SKIP CO2_Budget entirely ---
+        if asset.asset_name == "CO2_Budget":
+            continue
+        base_name = str(asset.asset_name)
+        # Helper: attempt to construct a series from a (possibly scalar) cvxpy variable/parameter
+        def to_series_from_value(val):
+            """Take a numeric scalar or array-like and return np.array of length `hours` (or shorter)."""
+            if val is None:
+                return None
+            # cvxpy Parameter/Variable .value may be numpy array or scalar
+            try:
+                if np.isscalar(val):
+                    return np.full(hours, float(val))
+                arr = np.array(val)
+                # If arr is 0-d, treat as scalar
+                if arr.ndim == 0:
+                    return np.full(hours, float(arr))
+                return arr[:hours]
+            except Exception:
+                return None
 
-    # --- BUILD DATAFRAME ---
-    df = pd.DataFrame({
-        "time": np.arange(hours),
-        "demand": demand,
-        "pp": pp,
-        "pumping": pumping,
-        "turbine": turbine,
-        "soc": soc
-    })
+        # 1) If asset has a gen_profile (Parameter with .value) and flows scalar or vector:
+        try:
+            gen_profile_val = None
+            if hasattr(asset, "gen_profile"):
+                gp = getattr(asset, "gen_profile")
+                # cp.Parameter has .value; if not set, skip
+                gen_profile_val = getattr(gp, "value", None)
+                if gen_profile_val is not None:
+                    gen_profile_val = np.array(gen_profile_val)[:hours]
+            # get flows.value if present
+            fv = getattr(asset, "flows", None)
+            fv_val = getattr(fv, "value", None) if fv is not None else None
+
+            # Case A: gen_profile present and numeric:
+            if gen_profile_val is not None:
+                # flows may be scalar or vector; handle both
+                if fv_val is None:
+                    # no numeric flows -> cannot compute; try get_plot_data below
+                    flow_series = None
+                else:
+                    # scalar flows -> multiply scalar * gen_profile
+                    if np.isscalar(fv_val) or (isinstance(fv_val, np.ndarray) and fv_val.ndim == 0):
+                        flow_series = float(fv_val) * gen_profile_val
+                    else:
+                        # fv_val is an array: multiply elementwise (truncate to hours)
+                        flow_series = np.array(fv_val)[:hours] * gen_profile_val
+                if flow_series is not None:
+                    colname = unique_name(base_name)
+                    cols[colname] = flow_series
+                    continue  # next asset
+
+            # Case B: No gen_profile — try to read flows.value direct
+            if fv_val is not None:
+                series = to_series_from_value(fv_val)
+                if series is not None:
+                    colname = unique_name(base_name)
+                    cols[colname] = series[:hours]
+                    continue
+
+            # Case C: Multi-asset aggregator (e.g. PHS). Export subassets individually
+            if hasattr(asset, "assets_dictionary") and isinstance(asset.assets_dictionary, dict):
+                for subname, sub in asset.assets_dictionary.items():
+                    # Skip reservoir SOC column if user doesn't want it (common name 'Reservoir' or 'SOC')
+                    if subname.lower().startswith("reservoir") or subname.lower() == "soc":
+                        continue
+                    sval = getattr(sub, "flows", None)
+                    sval_val = getattr(sval, "value", None) if sval is not None else None
+                    # If sub has gen_profile, handle analogous to above
+                    s_gp_val = getattr(sub, "gen_profile", None)
+                    s_gp_val = getattr(s_gp_val, "value", None) if s_gp_val is not None else None
+                    if s_gp_val is not None and sval_val is not None:
+                        # multiply scalar or vector appropriately
+                        if np.isscalar(sval_val):
+                            series = float(sval_val) * np.array(s_gp_val)[:hours]
+                        else:
+                            series = np.array(sval_val)[:hours] * np.array(s_gp_val)[:hours]
+                    elif sval_val is not None:
+                        series = to_series_from_value(sval_val)
+                    else:
+                        # fallback to sub.get_plot_data if present
+                        series = None
+                        if hasattr(sub, "get_plot_data"):
+                            try:
+                                pdv = sub.get_plot_data()
+                                series = np.array(pdv)[:hours]
+                            except Exception:
+                                series = None
+                    if series is not None:
+                        colname = unique_name(f"{base_name}_{subname}")
+                        cols[colname] = series[:hours]
+                continue
+
+            # Case D: fallback to asset.get_plot_data() if available
+            if hasattr(asset, "get_plot_data"):
+                try:
+                    pdv = asset.get_plot_data()
+                    if pdv is not None:
+                        series = np.array(pdv)[:hours]
+                        colname = unique_name(base_name)
+                        cols[colname] = series
+                        continue
+                except Exception:
+                    pass
+            # If we reach here, we couldn't extract flows for this asset
+            print(f"export_results_csv: skipping asset '{base_name}' — no numeric flow data found.")
+        except Exception as e:
+            print(f"export_results_csv: error extracting asset '{base_name}': {e}")
+            continue
+        
+    # for name, arr in cols.items():
+    #     print("COLUMN:", name)
+    #     if arr is None:
+    #         print("  -> value is None")
+    #         continue
+    #     try:
+    #         a = np.array(arr)
+    #         print("  dtype:", a.dtype, "shape:", a.shape)
+    #         # show first/last few values
+    #         print("  sample:", a.flatten()[:3], "...", a.flatten()[-3:])
+    #     except Exception as e:
+    #         print("  -> cannot convert to array:", e)
+    # Construct DataFrame in deterministic column order: time first, then sorted asset columns
+    df = pd.DataFrame(cols)
+    # Ensure time is first col
+    cols_order = ["time"] + [c for c in df.columns if c != "time"]
+    df = df[cols_order]
 
     df.to_csv(filepath, index=False)
     return df
+

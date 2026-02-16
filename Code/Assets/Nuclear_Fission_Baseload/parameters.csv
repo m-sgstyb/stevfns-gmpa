@@ -1,0 +1,11 @@
+﻿Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,capacity_factor,lifespan,lifespan_units,
+0,0,G$/GWp,2.90E-05,G$/GWh,0.9,525600,h,SG
+1,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,ID
+2,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,MY
+3,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,BN
+4,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,KH
+5,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,MM
+6,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,PH
+7,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,TH
+8,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,VN
+9,1,G$/GWp,9.00E-01,G$/GWh,0.9,525600,h,LA

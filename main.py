@@ -150,10 +150,9 @@ if case_study_name not in base_cases:
 
 if "testing" in case_study_name:
     output_folder = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots")
-    testing_plots.simple_plot_pp_phs_demand_generic(my_network, location_parameters_df, output_folder,
-                                          cmap_name="tab20", expected_timesteps=720, verbose=False)
     csv_results = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots", "hourly_flows.csv")
-    testing_plots.export_results_csv(my_network, csv_results, hours=720)
+    results_df = testing_plots.export_results_csv(my_network, csv_results, hours=720)
+    testing_plots.plot_stacked_from_df(results_df, output_folder)
         
 final_time = time.time()
 print("------------------  All Scenarios Run  ------------------------\n",
