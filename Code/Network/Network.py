@@ -149,7 +149,6 @@ class Network_STEVFNs:
             try:
                 asset_number = asset_parameters_df.iloc[counter1]["Asset_Number"]
                 asset_type = asset_parameters_df.iloc[counter1]["Asset_Type"]
-                print(asset_number, asset_type)
                 self.assets[asset_number].update(asset_type)
             except Exception as e:
                 print(f"Asset type {asset_type} for asset number {asset_number} failed due to exception: {e}")

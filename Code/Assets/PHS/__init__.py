@@ -452,11 +452,6 @@ class PHS_Asset(Multi_Asset):
         """Propagate parameter updates to subassets like BESS."""
         for asset_name, asset in self.assets_dictionary.items():
             asset.update(self.parameters_df)   
-            
-        # Cache capacity values for sizing
-        self.pump_cap = self.assets_dictionary["Pumping"].component_size()
-        self.turbine_cap = self.assets_dictionary["Turbine"].component_size()
-        self.reservoir_cap = self.assets_dictionary["Reservoir"].component_size()
         return
 
     # def asset_size(self):
@@ -484,4 +479,8 @@ class PHS_Asset(Multi_Asset):
         Returns the reservoir capacity as the asset size, maximum of hourly
         storage to storage flows
         """
-        return self.assets_dictionary["Reservoir"].component_size()  # GWh
+        # Cache capacity values to access sizing results per component quickly
+        self.pump_cap = self.assets_dictionary["Pumping"].component_size()
+        self.turbine_cap = self.assets_dictionary["Turbine"].component_size()
+        self.reservoir_cap = self.assets_dictionary["Reservoir"].component_size()
+        return self.reservoir_cap  # GWh

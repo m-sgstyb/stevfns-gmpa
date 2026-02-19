@@ -34,7 +34,7 @@ class EL_to_H2_Asset(Asset_STEVFNs):
     def conversion_fun(flows, params):
         """
         Convert electricity (GWh) -> H2 mass (tonnes).
-        conversion factor: tonnes H2 per MWh electricity 
+        conversion factor: tonnes H2 per GWh electricity 
         """
         conversion_factor = params["conversion_factor"]
         return conversion_factor * flows
@@ -57,7 +57,7 @@ class EL_to_H2_Asset(Asset_STEVFNs):
         return
 
     def build_edge(self, edge_number):
-        # standard single-edge-per-timestep pattern
+        # standard parent class edge-per-timestep pattern
         super().build_edge(edge_number)
         return
 
@@ -73,13 +73,13 @@ class EL_to_H2_Asset(Asset_STEVFNs):
         N = np.ceil(self.network.system_parameters_df.loc["project_life", "value"]/8760)
         r = (1 + self.network.system_parameters_df.loc["discount_rate", "value"])**-1
         NPV_factor = (1-r**N)/(1-r)
-        self.cost_fun_params["usage_constant_1"].value = (self.cost_fun_params["usage_constant_1"].value * 
+        self.cost_fun_params["usage_constant"].value = (self.cost_fun_params["usage_constant"].value * 
                                                         NPV_factor * simulation_factor)
         return
     
     def _update_parameters(self):
         super()._update_parameters()
-        #Update cost parameters based on NPV#
+        # Update cost parameters based on NPV
         self._update_sizing_constant()
         self._update_usage_constant()
         return

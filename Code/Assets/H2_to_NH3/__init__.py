@@ -34,23 +34,23 @@ class H2_to_NH3_Asset(Asset_STEVFNs):
         """
         Convert H2 mass -> NH3 mass using stoichiometry and HB process conversion efficiency.
         params expects:
-          - 'h2_to_nh3_stoich' : NH3_per_H2_mass (tonnes NH3 per tonne H2)  (this is the inverse of 0.176..)
-          - 'hb_yield' : fraction (0-1) capturing process inefficiency or losses in HB conversion
+          - 'conversion_factor_stoich' : NH3_per_H2_mass (tonnes NH3 per tonne H2)
+          - 'conversion_factor_yield' : fraction (0-1) capturing overall conversion assuming recycling H2 and N2 into the reactor
         """
-        nh3_per_h2_stoich = params["nh3_per_tonne_h2"]
-        hb_yield = params["hb_yield"]
-        return flows * nh3_per_h2_stoich * hb_yield
+        conversion_factor_stoich = params["conversion_factor_stoich"]
+        conversion_factor_yield = params["conversion_factor_yield"]
+        return flows * conversion_factor_stoich * conversion_factor_yield
 
     def __init__(self):
         super().__init__()
         self.cost_fun_params = {
-            "hb_sizing_constant": cp.Parameter(nonneg=True, name="hb_sizing_constant"),
-            "hb_usage_constant": cp.Parameter(nonneg=True, name="hb_usage_constant")
+            "sizing_constant": cp.Parameter(nonneg=True, name=f"sizing_constant_{self.asset_name}"),
+            "usage_constant": cp.Parameter(nonneg=True, name=f"usage_constant_{self.asset_name}")
         }
-        # We set stoichiometric and yield parameters
+        # Set stoichiometric and yield parameters
         self.conversion_fun_params = {
-            "nh3_per_tonne_h2": cp.Parameter(nonneg=True, name="nh3_per_tonne_h2"),
-            "hb_yield": cp.Parameter(nonneg=True, name="hb_yield")
+            "conversion_factor_stoich": cp.Parameter(nonneg=True, name=f"conversion_factor_stoich_{self.asset_name}"),
+            "conversion_factor_yield": cp.Parameter(nonneg=True, name=f"conversion_factor_yield_{self.asset_name}") # process efficiency
         }
         return
 
