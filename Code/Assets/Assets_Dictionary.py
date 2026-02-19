@@ -39,10 +39,11 @@ from .PP_NGS_CCGT_CO2 import PP_NGS_CCGT_CO2_Asset
 from .PP_NGS_SCGT_CO2 import PP_NGS_SCGT_CO2_Asset
 from .PP_COAL_CO2 import PP_COAL_CO2_Asset
 from .PP_OIL_CO2 import PP_OIL_CO2_Asset
-
+# PV Assets
 from .RE_PV_Rooftop_Lim import RE_PV_Rooftop_Lim_Asset
 from .RE_PV_Openfield_Lim import RE_PV_Openfield_Lim_Asset
 from .RE_PV_Openfield_BAU import RE_PV_Openfield_BAU_Asset
+## Wind Assets
 from .RE_WIND_Onshore_BAU import RE_WIND_Onshore_BAU_Asset
 from .RE_WIND_Onshore_BAU_0 import RE_WIND_Onshore_BAU_0_Asset
 from .RE_WIND_Onshore_BAU_1 import RE_WIND_Onshore_BAU_1_Asset
@@ -54,7 +55,6 @@ from .RE_WIND_Onshore_BAU_6 import RE_WIND_Onshore_BAU_6_Asset
 from .RE_WIND_Onshore_BAU_7 import RE_WIND_Onshore_BAU_7_Asset
 from .RE_WIND_Onshore_BAU_8 import RE_WIND_Onshore_BAU_8_Asset
 from .RE_WIND_Onshore_BAU_9 import RE_WIND_Onshore_BAU_9_Asset
-
 from .RE_WIND_Onshore_Lim import RE_WIND_Onshore_Lim_Asset
 from .RE_WIND_Onshore_Lim_0 import RE_WIND_Onshore_Lim_0_Asset
 from .RE_WIND_Onshore_Lim_1 import RE_WIND_Onshore_Lim_1_Asset
@@ -66,7 +66,6 @@ from .RE_WIND_Onshore_Lim_6 import RE_WIND_Onshore_Lim_6_Asset
 from .RE_WIND_Onshore_Lim_7 import RE_WIND_Onshore_Lim_7_Asset
 from .RE_WIND_Onshore_Lim_8 import RE_WIND_Onshore_Lim_8_Asset
 from .RE_WIND_Onshore_Lim_9 import RE_WIND_Onshore_Lim_9_Asset
-
 from .RE_WIND_Offshore_Lim import RE_WIND_Offshore_Lim_Asset
 from .RE_WIND_Offshore_Lim_0 import RE_WIND_Offshore_Lim_0_Asset
 from .RE_WIND_Offshore_Lim_1 import RE_WIND_Offshore_Lim_1_Asset
@@ -83,6 +82,13 @@ from .HYDRO import HYDRO_Asset
 from .PHS import PHS_Asset
 from .FF_to_HTH import FF_to_HTH_Asset
 from .Nuclear_Fission_Baseload import Nuclear_Fission_Baseload_Asset
+
+from .VEH_Pass_Demand import VEH_Pass_Demand_Asset
+from .VEH_EL_Pass import VEH_EL_Pass_Asset
+from .VEH_ICE_Pass import VEH_ICE_Pass_Asset
+from .VEH_Freight_Demand import VEH_Freight_Demand_Asset
+from. VEH_EL_Freight import VEH_EL_Freight_Asset
+from. VEH_ICE_Freight import VEH_ICE_Freight_Asset
 
 
 
@@ -156,4 +162,10 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               PHS_Asset.asset_name: PHS_Asset,
               FF_to_HTH_Asset.asset_name: FF_to_HTH_Asset,
               Nuclear_Fission_Baseload_Asset.asset_name: Nuclear_Fission_Baseload_Asset,
+              VEH_Pass_Demand_Asset.asset_name: VEH_Pass_Demand_Asset,
+              VEH_EL_Pass_Asset.asset_name: VEH_EL_Pass_Asset,
+              VEH_ICE_Pass_Asset.asset_name: VEH_ICE_Pass_Asset,
+              VEH_Freight_Demand_Asset.asset_name: VEH_Freight_Demand_Asset,
+              VEH_EL_Freight_Asset.asset_name: VEH_EL_Freight_Asset,
+              VEH_ICE_Freight_Asset.asset_name: VEH_ICE_Freight_Asset,
               }

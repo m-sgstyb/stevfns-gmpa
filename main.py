@@ -49,6 +49,7 @@ start_time0 = time.time()
 my_network = Network_STEVFNs()
 my_network.build(network_structure_df)
 
+
 end_time = time.time()
 print("Time taken to build network = ", end_time - start_time0, "s")
 # total_df = pd.DataFrame()
