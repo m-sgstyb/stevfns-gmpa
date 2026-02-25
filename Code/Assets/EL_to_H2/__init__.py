@@ -53,7 +53,7 @@ class EL_to_H2_Asset(Asset_STEVFNs):
     def define_structure(self, asset_structure):
         super().define_structure(asset_structure)
         self.target_node_location = self.source_node_location
-        self.flows = cp.Variable(self.number_of_edges, nonneg=True)  # electricity input MWh/h
+        self.flows = cp.Variable(self.number_of_edges, nonneg=True)  # electricity input GWh/h
         return
 
     def build_edge(self, edge_number):

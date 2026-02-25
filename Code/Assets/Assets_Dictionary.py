@@ -90,6 +90,9 @@ from .VEH_Freight_Demand import VEH_Freight_Demand_Asset
 from. VEH_EL_Freight import VEH_EL_Freight_Asset
 from. VEH_ICE_Freight import VEH_ICE_Freight_Asset
 
+from .CEM_Demand import CEM_Demand_Asset
+from .CEM_Production import CEM_Production_Asset
+from .CEM_Production_EL import CEM_Production_EL_Asset
 
 
 ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
@@ -168,4 +171,7 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               VEH_Freight_Demand_Asset.asset_name: VEH_Freight_Demand_Asset,
               VEH_EL_Freight_Asset.asset_name: VEH_EL_Freight_Asset,
               VEH_ICE_Freight_Asset.asset_name: VEH_ICE_Freight_Asset,
+              CEM_Demand_Asset.asset_name: CEM_Demand_Asset,
+              CEM_Production_Asset.asset_name: CEM_Production_Asset,
+              CEM_Production_EL_Asset.asset_name: CEM_Production_EL_Asset
               }

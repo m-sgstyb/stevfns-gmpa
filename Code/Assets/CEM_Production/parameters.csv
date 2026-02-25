@@ -1,0 +1,2 @@
+Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,lifespan,lifespan_units,process_CO2_factor,process_CO2_factor_unit,hth_sizing_constant,hth_sizing_constant_unit,hth_usage_constant,hth_usage_constant_unit,fuel_co2_factor,fuel_co2_factor_unit,electricity_intensity,electricity_intensity_unit,heat_factor,heat_factor_unit,location_name
+0,0.5,G$/Mt cement,7.51E-05,G$/Mt cement,219000,h,0.0004057,MtCO2e/Mt cement,0.1,G$/GW,0.00001,G$/GWh,0.0002,MtCO2e/GWh,40,GWh/Mt cement,708.33339,GWh/Mt cement,SG
