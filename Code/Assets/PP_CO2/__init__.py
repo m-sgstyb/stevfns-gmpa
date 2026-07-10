@@ -11,8 +11,6 @@ import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
 from ...Network import Edge_STEVFNs
 
-
-
 class PP_CO2_Asset(Asset_STEVFNs):
     """Class of Conventional Generators"""
     asset_name = "PP_CO2"

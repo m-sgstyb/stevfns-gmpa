@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov  3 13:25:54 2021
+Created on Thu Feb  5 14:03:50 2026
 
-@author: aniqahsan
+@author: Mónica Sagastuy-Breña
+Script for coal power plants.
+Based on geneeric PP_CO2 @author: aniqahsan
 """
 
 import numpy as np
@@ -14,7 +16,9 @@ from ...Network import Edge_STEVFNs
 
 
 class PP_COAL_CO2_Asset(Asset_STEVFNs):
-    """Class of Conventional Generators"""
+    """
+    Class of Conventional Generators: Coal power plant
+    """
     asset_name = "PP_COAL_CO2"
     source_node_type = "NULL"
     target_node_type = "EL"

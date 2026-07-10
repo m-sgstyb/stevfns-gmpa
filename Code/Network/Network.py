@@ -11,6 +11,7 @@ Created on Thu Nov  4 10:19:15 2021
 import os
 import pandas as pd
 import cvxpy as cp
+import traceback
 from . import Node_STEVFNs
 from ..Assets.Assets_Dictionary import ASSET_DICT
 
@@ -34,6 +35,11 @@ class Network_STEVFNs:
     
     def generate_node(self, node_location, node_type, node_time):
         new_node = Node_STEVFNs()
+        #------NEW: Set human-readable attributes for inspection/debugging --- #
+        new_node.location = node_location
+        new_node.node_type = node_type
+        new_node.node_time = node_time
+        #----- END NEW ------------------ #
         node_df = pd.Series([new_node], 
                             index = pd.MultiIndex.from_tuples([(node_location, node_type, node_time)], 
                                     names = ["location", "type", "time"]))
@@ -145,9 +151,13 @@ class Network_STEVFNs:
             self.lat_lon_df.loc[location, "lon"] = location_parameters_df.iloc[counter1]["lon"]
         #update Assets#
         for counter1 in range(len(asset_parameters_df)):
-            asset_number = asset_parameters_df.iloc[counter1]["Asset_Number"]
-            asset_type = asset_parameters_df.iloc[counter1]["Asset_Type"]
-            self.assets[asset_number].update(asset_type)
+            try:
+                asset_number = asset_parameters_df.iloc[counter1]["Asset_Number"]
+                asset_type = asset_parameters_df.iloc[counter1]["Asset_Type"]
+                self.assets[asset_number].update(asset_type)
+            except Exception as e:
+                print(f"Asset type {asset_type} for asset number {asset_number} failed due to exception: {e}")
+                    
         return
     
 

@@ -217,6 +217,3 @@ class BESS_Asset(Multi_Asset):
         asset_size = effective_component_sizes.max()
         return asset_size
     
-    
-    
-    

@@ -12,12 +12,20 @@ from .CG import CG_Asset
 from .EL_to_HTH import EL_to_HTH_Asset
 from .RE import RE_Asset
 from .BESS import BESS_Asset
+from .EL_Transport import EL_Transport_Asset
+
 from .EL_to_NH3 import EL_to_NH3_Asset
 from .NH3_to_EL import NH3_to_EL_Asset
 from .NH3_Storage import NH3_Storage_Asset
 from .NH3_to_HTH import NH3_to_HTH_Asset
-from .EL_Transport import EL_Transport_Asset
 from .NH3_Transport import NH3_Transport_Asset
+
+from .EL_to_H2 import EL_to_H2_Asset
+from .H2_to_EL import H2_to_EL_Asset
+from .H2_to_NH3 import H2_to_NH3_Asset
+from .H2_Storage import H2_Storage_Asset
+from .H2_Transport import H2_Transport_Asset
+
 from .RE_PV import RE_PV_Asset
 from .RE_WIND import RE_WIND_Asset
 from .RE_max import RE_max_Asset
@@ -27,14 +35,64 @@ from .RE_PV_Constant import RE_PV_Constant_Asset
 from .RE_WIND_Constant import RE_WIND_Constant_Asset
 from .CO2_Budget import CO2_Budget_Asset
 from .PP_CO2 import PP_CO2_Asset
-from .RE_PV_Rooftop_Lim import RE_PV_Rooftop_Lim_Asset
-from .RE_PV_Openfield_Lim import RE_PV_Openfield_Lim_Asset
-from .RE_WIND_Onshore_Lim import RE_WIND_Onshore_Lim_Asset
-from .RE_WIND_Offshore_Lim import RE_WIND_Offshore_Lim_Asset
 from .PP_NGS_CCGT_CO2 import PP_NGS_CCGT_CO2_Asset
 from .PP_NGS_SCGT_CO2 import PP_NGS_SCGT_CO2_Asset
 from .PP_COAL_CO2 import PP_COAL_CO2_Asset
+from .PP_OIL_CO2 import PP_OIL_CO2_Asset
+# PV Assets
+from .RE_PV_Rooftop_Lim import RE_PV_Rooftop_Lim_Asset
+from .RE_PV_Openfield_Lim import RE_PV_Openfield_Lim_Asset
+from .RE_PV_Openfield_BAU import RE_PV_Openfield_BAU_Asset
+## Wind Assets
+from .RE_WIND_Onshore_BAU import RE_WIND_Onshore_BAU_Asset
+from .RE_WIND_Onshore_BAU_0 import RE_WIND_Onshore_BAU_0_Asset
+from .RE_WIND_Onshore_BAU_1 import RE_WIND_Onshore_BAU_1_Asset
+from .RE_WIND_Onshore_BAU_2 import RE_WIND_Onshore_BAU_2_Asset
+from .RE_WIND_Onshore_BAU_3 import RE_WIND_Onshore_BAU_3_Asset
+from .RE_WIND_Onshore_BAU_4 import RE_WIND_Onshore_BAU_4_Asset
+from .RE_WIND_Onshore_BAU_5 import RE_WIND_Onshore_BAU_5_Asset
+from .RE_WIND_Onshore_BAU_6 import RE_WIND_Onshore_BAU_6_Asset
+from .RE_WIND_Onshore_BAU_7 import RE_WIND_Onshore_BAU_7_Asset
+from .RE_WIND_Onshore_BAU_8 import RE_WIND_Onshore_BAU_8_Asset
+from .RE_WIND_Onshore_BAU_9 import RE_WIND_Onshore_BAU_9_Asset
+from .RE_WIND_Onshore_Lim import RE_WIND_Onshore_Lim_Asset
+from .RE_WIND_Onshore_Lim_0 import RE_WIND_Onshore_Lim_0_Asset
+from .RE_WIND_Onshore_Lim_1 import RE_WIND_Onshore_Lim_1_Asset
+from .RE_WIND_Onshore_Lim_2 import RE_WIND_Onshore_Lim_2_Asset
+from .RE_WIND_Onshore_Lim_3 import RE_WIND_Onshore_Lim_3_Asset
+from .RE_WIND_Onshore_Lim_4 import RE_WIND_Onshore_Lim_4_Asset
+from .RE_WIND_Onshore_Lim_5 import RE_WIND_Onshore_Lim_5_Asset
+from .RE_WIND_Onshore_Lim_6 import RE_WIND_Onshore_Lim_6_Asset
+from .RE_WIND_Onshore_Lim_7 import RE_WIND_Onshore_Lim_7_Asset
+from .RE_WIND_Onshore_Lim_8 import RE_WIND_Onshore_Lim_8_Asset
+from .RE_WIND_Onshore_Lim_9 import RE_WIND_Onshore_Lim_9_Asset
+from .RE_WIND_Offshore_Lim import RE_WIND_Offshore_Lim_Asset
+from .RE_WIND_Offshore_Lim_0 import RE_WIND_Offshore_Lim_0_Asset
+from .RE_WIND_Offshore_Lim_1 import RE_WIND_Offshore_Lim_1_Asset
+from .RE_WIND_Offshore_Lim_2 import RE_WIND_Offshore_Lim_2_Asset
+from .RE_WIND_Offshore_Lim_3 import RE_WIND_Offshore_Lim_3_Asset
+from .RE_WIND_Offshore_Lim_4 import RE_WIND_Offshore_Lim_4_Asset
+from .RE_WIND_Offshore_Lim_5 import RE_WIND_Offshore_Lim_5_Asset
+from .RE_WIND_Offshore_Lim_6 import RE_WIND_Offshore_Lim_6_Asset
+from .RE_WIND_Offshore_Lim_7 import RE_WIND_Offshore_Lim_7_Asset
+from .RE_WIND_Offshore_Lim_8 import RE_WIND_Offshore_Lim_8_Asset
+from .RE_WIND_Offshore_Lim_9 import RE_WIND_Offshore_Lim_9_Asset
+
+from .HYDRO import HYDRO_Asset
+from .PHS import PHS_Asset
 from .FF_to_HTH import FF_to_HTH_Asset
+from .Nuclear_Fission_Baseload import Nuclear_Fission_Baseload_Asset
+
+from .VEH_Pass_Demand import VEH_Pass_Demand_Asset
+from .VEH_EL_Pass import VEH_EL_Pass_Asset
+from .VEH_ICE_Pass import VEH_ICE_Pass_Asset
+from .VEH_Freight_Demand import VEH_Freight_Demand_Asset
+from. VEH_EL_Freight import VEH_EL_Freight_Asset
+from. VEH_ICE_Freight import VEH_ICE_Freight_Asset
+
+from .CEM_Demand import CEM_Demand_Asset
+from .CEM_Production import CEM_Production_Asset
+from .CEM_Production_EL import CEM_Production_EL_Asset
 
 
 ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
@@ -43,12 +101,17 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               EL_to_HTH_Asset.asset_name: EL_to_HTH_Asset,
               RE_Asset.asset_name: RE_Asset,
               BESS_Asset.asset_name: BESS_Asset,
+              EL_Transport_Asset.asset_name: EL_Transport_Asset,
               EL_to_NH3_Asset.asset_name: EL_to_NH3_Asset,
               NH3_to_EL_Asset.asset_name: NH3_to_EL_Asset,
               NH3_Storage_Asset.asset_name: NH3_Storage_Asset,
               NH3_to_HTH_Asset.asset_name: NH3_to_HTH_Asset,
-              EL_Transport_Asset.asset_name: EL_Transport_Asset,
               NH3_Transport_Asset.asset_name: NH3_Transport_Asset,
+              EL_to_H2_Asset.asset_name: EL_to_H2_Asset,
+              H2_to_EL_Asset.asset_name: H2_to_EL_Asset,
+              H2_to_NH3_Asset.asset_name: H2_to_NH3_Asset,
+              H2_Storage_Asset.asset_name: H2_Storage_Asset,
+              H2_Transport_Asset.asset_name: H2_Transport_Asset,
               RE_PV_Asset.asset_name: RE_PV_Asset,
               RE_WIND_Asset.asset_name: RE_WIND_Asset,
               RE_max_Asset.asset_name: RE_max_Asset,
@@ -58,12 +121,57 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               RE_WIND_Constant_Asset.asset_name: RE_WIND_Constant_Asset,
               CO2_Budget_Asset.asset_name: CO2_Budget_Asset,
               PP_CO2_Asset.asset_name: PP_CO2_Asset,
-              RE_PV_Openfield_Lim_Asset.asset_name: RE_PV_Openfield_Lim_Asset,
-              RE_PV_Rooftop_Lim_Asset.asset_name: RE_PV_Rooftop_Lim_Asset,
-              RE_WIND_Onshore_Lim_Asset.asset_name: RE_WIND_Onshore_Lim_Asset,
-              RE_WIND_Offshore_Lim_Asset.asset_name: RE_WIND_Offshore_Lim_Asset,
               PP_NGS_CCGT_CO2_Asset.asset_name: PP_NGS_CCGT_CO2_Asset,
               PP_NGS_SCGT_CO2_Asset.asset_name: PP_NGS_SCGT_CO2_Asset,
               PP_COAL_CO2_Asset.asset_name: PP_COAL_CO2_Asset,
+              PP_OIL_CO2_Asset.asset_name: PP_OIL_CO2_Asset,
+              RE_PV_Openfield_Lim_Asset.asset_name: RE_PV_Openfield_Lim_Asset,
+              RE_PV_Openfield_BAU_Asset.asset_name: RE_PV_Openfield_BAU_Asset,
+              RE_PV_Rooftop_Lim_Asset.asset_name: RE_PV_Rooftop_Lim_Asset,
+              RE_WIND_Onshore_Lim_Asset.asset_name: RE_WIND_Onshore_Lim_Asset,
+              RE_WIND_Onshore_Lim_0_Asset.asset_name: RE_WIND_Onshore_Lim_0_Asset,
+              RE_WIND_Onshore_Lim_1_Asset.asset_name: RE_WIND_Onshore_Lim_1_Asset,
+              RE_WIND_Onshore_Lim_2_Asset.asset_name: RE_WIND_Onshore_Lim_2_Asset,
+              RE_WIND_Onshore_Lim_3_Asset.asset_name: RE_WIND_Onshore_Lim_3_Asset,
+              RE_WIND_Onshore_Lim_4_Asset.asset_name: RE_WIND_Onshore_Lim_4_Asset,
+              RE_WIND_Onshore_Lim_5_Asset.asset_name: RE_WIND_Onshore_Lim_5_Asset,
+              RE_WIND_Onshore_Lim_6_Asset.asset_name: RE_WIND_Onshore_Lim_6_Asset,
+              RE_WIND_Onshore_Lim_7_Asset.asset_name: RE_WIND_Onshore_Lim_7_Asset,
+              RE_WIND_Onshore_Lim_8_Asset.asset_name: RE_WIND_Onshore_Lim_8_Asset,
+              RE_WIND_Onshore_Lim_9_Asset.asset_name: RE_WIND_Onshore_Lim_9_Asset,
+              RE_WIND_Onshore_BAU_Asset.asset_name: RE_WIND_Onshore_BAU_Asset,
+              RE_WIND_Onshore_BAU_0_Asset.asset_name: RE_WIND_Onshore_BAU_0_Asset,
+              RE_WIND_Onshore_BAU_1_Asset.asset_name: RE_WIND_Onshore_BAU_1_Asset,
+              RE_WIND_Onshore_BAU_2_Asset.asset_name: RE_WIND_Onshore_BAU_2_Asset,
+              RE_WIND_Onshore_BAU_3_Asset.asset_name: RE_WIND_Onshore_BAU_3_Asset,
+              RE_WIND_Onshore_BAU_4_Asset.asset_name: RE_WIND_Onshore_BAU_4_Asset,
+              RE_WIND_Onshore_BAU_5_Asset.asset_name: RE_WIND_Onshore_BAU_5_Asset,
+              RE_WIND_Onshore_BAU_6_Asset.asset_name: RE_WIND_Onshore_BAU_6_Asset,
+              RE_WIND_Onshore_BAU_7_Asset.asset_name: RE_WIND_Onshore_BAU_7_Asset,
+              RE_WIND_Onshore_BAU_8_Asset.asset_name: RE_WIND_Onshore_BAU_8_Asset,
+              RE_WIND_Onshore_BAU_9_Asset.asset_name: RE_WIND_Onshore_BAU_9_Asset,
+              RE_WIND_Offshore_Lim_Asset.asset_name: RE_WIND_Offshore_Lim_Asset,
+              RE_WIND_Offshore_Lim_0_Asset.asset_name: RE_WIND_Offshore_Lim_0_Asset,
+              RE_WIND_Offshore_Lim_1_Asset.asset_name: RE_WIND_Offshore_Lim_1_Asset,
+              RE_WIND_Offshore_Lim_2_Asset.asset_name: RE_WIND_Offshore_Lim_2_Asset,
+              RE_WIND_Offshore_Lim_3_Asset.asset_name: RE_WIND_Offshore_Lim_3_Asset,
+              RE_WIND_Offshore_Lim_4_Asset.asset_name: RE_WIND_Offshore_Lim_4_Asset,
+              RE_WIND_Offshore_Lim_5_Asset.asset_name: RE_WIND_Offshore_Lim_5_Asset,
+              RE_WIND_Offshore_Lim_6_Asset.asset_name: RE_WIND_Offshore_Lim_6_Asset,
+              RE_WIND_Offshore_Lim_7_Asset.asset_name: RE_WIND_Offshore_Lim_7_Asset,
+              RE_WIND_Offshore_Lim_8_Asset.asset_name: RE_WIND_Offshore_Lim_8_Asset,
+              RE_WIND_Offshore_Lim_9_Asset.asset_name: RE_WIND_Offshore_Lim_9_Asset,
+              HYDRO_Asset.asset_name: HYDRO_Asset,
+              PHS_Asset.asset_name: PHS_Asset,
               FF_to_HTH_Asset.asset_name: FF_to_HTH_Asset,
+              Nuclear_Fission_Baseload_Asset.asset_name: Nuclear_Fission_Baseload_Asset,
+              VEH_Pass_Demand_Asset.asset_name: VEH_Pass_Demand_Asset,
+              VEH_EL_Pass_Asset.asset_name: VEH_EL_Pass_Asset,
+              VEH_ICE_Pass_Asset.asset_name: VEH_ICE_Pass_Asset,
+              VEH_Freight_Demand_Asset.asset_name: VEH_Freight_Demand_Asset,
+              VEH_EL_Freight_Asset.asset_name: VEH_EL_Freight_Asset,
+              VEH_ICE_Freight_Asset.asset_name: VEH_ICE_Freight_Asset,
+              CEM_Demand_Asset.asset_name: CEM_Demand_Asset,
+              CEM_Production_Asset.asset_name: CEM_Production_Asset,
+              CEM_Production_EL_Asset.asset_name: CEM_Production_EL_Asset
               }
