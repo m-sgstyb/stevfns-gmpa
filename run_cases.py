@@ -14,6 +14,10 @@ import argparse
 import sys
 
 def generate_case_study_names(countries, sub_only=False):
+    """
+    For GMPA-standardised ISO-2 country code case study names
+    """
+
     countries = sorted([c.upper() for c in countries])
     case_study_names = []
 
@@ -36,6 +40,14 @@ def generate_case_study_names(countries, sub_only=False):
         raise ValueError("Enter 1, 2, 3, or 4 ISO country codes.")
     return case_study_names
 
+def print_summary(error_log, success_message):
+    if error_log:
+        print("\nSUMMARY OF FAILED CASE STUDIES:")
+        for case_name, error in error_log:
+            print(f"- {case_name}: {error}")
+    else:
+        print(f"\n{success_message}")
+
 def run_case(case_name, solver_name, error_log):
     print(f"\n--- Running: {case_name} with {solver_name} solver ---\n")
     env = os.environ.copy()
@@ -49,15 +61,37 @@ def run_case(case_name, solver_name, error_log):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run GMPA scenarios via CLI.")
-    parser.add_argument("input", nargs="+", help="1–4 ISO country codes or 'bau' / 'least'")
+    parser.add_argument(
+        "input",
+        nargs="+",
+        help=(
+            "1-4 ISO country codes, 'bau' / 'least', or (with --name) "
+            "one or more literal, case-sensitive case study names."
+        ),
+    )
     parser.add_argument("--solver", choices=["mosek", "clarabel"], default="clarabel",
-                        help="Choose solver (default: clarabel)")
+                         help="Choose solver (default: clarabel)")
     parser.add_argument("--sub", action="store_true",
-                        help="Only run the specific country combo provided (no sub-combinations)")
+                         help="Only run the specific country combo provided (no sub-combinations)")
+    parser.add_argument(
+        "--name", "--literal", dest="literal_name", action="store_true",
+        help=(
+            "Treat the input(s) as exact, case-sensitive case study name(s) "
+            "to run directly, skipping country-code parsing/generation entirely."
+        ),
+    )
     args = parser.parse_args()
-
+ 
     error_log = []
-
+ 
+    # --- Literal case study name mode (custom case study names) ---
+    if args.literal_name:
+        for case_name in args.input:
+            run_case(case_name, args.solver, error_log)
+        print_summary(error_log, "All case studies completed successfully.")
+        sys.exit(1 if error_log else 0)
+ 
+    # --- GMPA 'bau' / 'least' mode ---
     if len(args.input) == 1 and args.input[0].lower() in ["bau", "least"]:
         mapping = {
             "bau": "BAU_No_Action",
@@ -65,32 +99,18 @@ if __name__ == "__main__":
         }
         case_study_name = mapping[args.input[0].lower()]
         run_case(case_study_name, args.solver, error_log)
-        
-        # Print summary for base scenario
-        if error_log:
-            print("\nSUMMARY OF FAILED CASE STUDIES:")
-            for case_name, error in error_log:
-                print(f"- {case_name}: {error}")
-        else:
-            print("\nBase scenario completed successfully.")
-        sys.exit(0)
-
-    # Handle combinations
+        print_summary(error_log, "Base scenario completed successfully.")
+        sys.exit(1 if error_log else 0)
+ 
+    # --- GMPA country-code combination mode ---
     try:
         case_study_list = generate_case_study_names(args.input, sub_only=args.sub)
     except ValueError as e:
         print(f"Input error: {e}")
         sys.exit(1)
-        
-    error_log = []
-
+ 
     for case in case_study_list:
         run_case(case, args.solver, error_log)
-    
-    # Print summary of errors
-    if error_log:
-        print("\nSUMMARY OF FAILED CASE STUDIES:")
-        for case_name, error in error_log:
-            print(f"- {case_name}: {error}")
-    else:
-        print("\nAll case studies completed successfully.")
+ 
+    print_summary(error_log, "All case studies completed successfully.")
+    sys.exit(1 if error_log else 0)

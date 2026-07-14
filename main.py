@@ -98,61 +98,61 @@ for counter1 in range(len(scenario_folders_list)):
     print("Total cost to satisfy all demand = ", my_network.problem.value, " Billion USD")
     print("Total emissions = ", my_network.assets[0].asset_size(), "MtCO2e")
 
-    ### Export cost results to pandas dataframe per scenario and concat all scenarios
-    t_df = GMPA_Results.export_total_data(my_network, location_parameters_df, asset_parameters_df)
-    t1_df = GMPA_Results.export_total_data_not_rounded(my_network, location_parameters_df, asset_parameters_df)
-    capacities_df = GMPA_Results.export_total_data_capacities(my_network, location_parameters_df, asset_parameters_df)
-    web_td_df = GMPA_Results.export_total_data_website(my_network, location_parameters_df, asset_parameters_df)
-    if counter1 == 0:
-        total_df = t_df
-        total_df_1 = t1_df
-        total_cap_df = capacities_df
-        web_total_df = web_td_df
-    else:
-        total_df = pd.concat([total_df, t_df], ignore_index=True)
-        total_df_1 = pd.concat([total_df_1, t1_df], ignore_index=True)
-        total_cap_df = pd.concat([total_cap_df, capacities_df], ignore_index=True)
-        web_total_df = pd.concat([web_total_df, web_td_df], ignore_index=True)
+    ### Export GMPA cost results to pandas dataframe per scenario and concat all scenarios
+   #t_df = GMPA_Results.export_total_data(my_network, location_parameters_df, asset_parameters_df)
+   #t1_df = GMPA_Results.export_total_data_not_rounded(my_network, location_parameters_df, asset_parameters_df)
+   #capacities_df = GMPA_Results.export_total_data_capacities(my_network, location_parameters_df, asset_parameters_df)
+   #web_td_df = GMPA_Results.export_total_data_website(my_network, location_parameters_df, asset_parameters_df)
+   #if counter1 == 0:
+   #    total_df = t_df
+   #    total_df_1 = t1_df
+   #    total_cap_df = capacities_df
+   #    web_total_df = web_td_df
+   #else:
+   #    total_df = pd.concat([total_df, t_df], ignore_index=True)
+   #    total_df_1 = pd.concat([total_df_1, t1_df], ignore_index=True)
+   #    total_cap_df = pd.concat([total_cap_df, capacities_df], ignore_index=True)
+   #    web_total_df = pd.concat([web_total_df, web_td_df], ignore_index=True)
         
         
     
         
-# #### Save Result
-total_df.to_csv(results_filename, index=False, header=True)
-total_df_1.to_csv(unrounded_results_filename, index=False, header=True)
-total_cap_df.to_csv(capacities_filename, index=False, header=True)
-# Exports total_data_unrounded with wind bins aggregated into one asset
-web_total_df.to_csv(website_total_data_filename, index=False, header=True)
+# #### Save Results (GMPA-standardised)
+#total_df.to_csv(results_filename, index=False, header=True)
+#total_df_1.to_csv(unrounded_results_filename, index=False, header=True)
+#total_cap_df.to_csv(capacities_filename, index=False, header=True)
+## Exports total_data_unrounded with wind bins aggregated into one asset
+#web_total_df.to_csv(website_total_data_filename, index=False, header=True)
     
 
 #### Plot data
 # Run the plotting script after main processing
-base_cases = ["BAU_No_Action", "Least_Cost_Emissions"]
-if case_study_name not in base_cases:
-    dpacc_name = os.path.join(case_study_folder, "mitigation_curve.png")
-    subplots_name = os.path.join(case_study_folder, "dpacc_subplots.png")
-    GMPA_plot_mitigation_curve.mitigation_curve(
-        website_total_data_filename,
-        dpacc_name,
-        case_study_name,
-        countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR","AU",
-                   "DE", "FR", "TR", "MA"],
-    )
-    GMPA_plot_mitigation_curve.dpacc_subplots(
-        website_total_data_filename,
-        capacities_filename,
-        subplots_name,
-        case_study_name,
-        countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY","AU",
-                   "DE", "FR", "TR", "MA"],
-    )
-
-
-if "testing" in case_study_name:
-    output_folder = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots")
-    csv_results = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots", "hourly_flows.csv")
-    results_df = testing_plots.export_results_csv(my_network, csv_results, hours=720)
-    testing_plots.plot_stacked_from_df(results_df, output_folder)
+#base_cases = ["BAU_No_Action", "Least_Cost_Emissions"]
+#if case_study_name not in base_cases:
+#    dpacc_name = os.path.join(case_study_folder, "mitigation_curve.png")
+#    subplots_name = os.path.join(case_study_folder, "dpacc_subplots.png")
+#    GMPA_plot_mitigation_curve.mitigation_curve(
+#        website_total_data_filename,
+#        dpacc_name,
+#        case_study_name,
+#        countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR","AU",
+#                   "DE", "FR", "TR", "MA"],
+#    )
+#    GMPA_plot_mitigation_curve.dpacc_subplots(
+#        website_total_data_filename,
+#        capacities_filename,
+#        subplots_name,
+#        case_study_name,
+#        countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY","AU",
+#                   "DE", "FR", "TR", "MA"],
+#    )
+#
+#
+#if "testing" in case_study_name:
+#    output_folder = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots")
+#    csv_results = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots", "hourly_flows.csv")
+#    results_df = testing_plots.export_results_csv(my_network, csv_results, hours=720)
+#    testing_plots.plot_stacked_from_df(results_df, output_folder)
         
 final_time = time.time()
 print("------------------  All Scenarios Run  ------------------------\n",
