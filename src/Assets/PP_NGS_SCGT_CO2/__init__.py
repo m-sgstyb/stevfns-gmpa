@@ -11,7 +11,7 @@ Based on geneeric PP_CO2 @author: aniqahsan
 import numpy as np
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 class PP_NGS_SCGT_CO2_Asset(Asset_STEVFNs):
     """

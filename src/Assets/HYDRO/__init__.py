@@ -9,7 +9,7 @@ Created on Sun Apr 13 12:23:59 2025
 import numpy as np
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 class HYDRO_Asset(Asset_STEVFNs):
     """Class for hydropower plant asset with only existing capacity,

@@ -13,7 +13,7 @@ import pandas as pd
 import cvxpy as cp
 import traceback
 from . import Node_STEVFNs
-from ..Assets.Assets_Dictionary import ASSET_DICT
+from ..assets.Assets_Dictionary import ASSET_DICT
 
 class Network_STEVFNs:
     """This is the NETWORK class of STEVFNs"""

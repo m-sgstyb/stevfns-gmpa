@@ -11,7 +11,7 @@ import cvxpy as cp
 import pandas as pd
 import os
 from ..Base_Assets import Asset_STEVFNs
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 
 class EL_Demand_Constant_Asset(Asset_STEVFNs):

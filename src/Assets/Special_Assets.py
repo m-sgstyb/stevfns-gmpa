@@ -9,7 +9,7 @@ Created on Wed Nov  3 12:59:27 2021
 import numpy as np
 import cvxpy as cp
 from .Base_Assets import *
-from ..Network import *
+from ..network import *
 
 ####### Define Classes #######
 

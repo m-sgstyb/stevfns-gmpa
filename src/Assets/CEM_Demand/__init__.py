@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 class CEM_Demand_Asset(Asset_STEVFNs):
     """

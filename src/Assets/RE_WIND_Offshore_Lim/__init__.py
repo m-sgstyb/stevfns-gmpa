@@ -10,7 +10,7 @@ import os
 import numpy as np
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 
 class RE_WIND_Offshore_Lim_Asset(Asset_STEVFNs):

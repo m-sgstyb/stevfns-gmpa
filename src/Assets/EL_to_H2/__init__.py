@@ -9,7 +9,7 @@ Created on Mon Feb 16 14:34:48 2026
 import cvxpy as cp
 import numpy as np
 from ..Base_Assets import Asset_STEVFNs
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 
 class EL_to_H2_Asset(Asset_STEVFNs):

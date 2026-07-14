@@ -9,7 +9,7 @@ Created on Mon Nov  1 16:36:27 2021
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
 import numpy as np
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 
 class NH3_Transport_Asset(Asset_STEVFNs):

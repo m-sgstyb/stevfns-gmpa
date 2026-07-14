@@ -9,7 +9,7 @@ Created on Sun Feb 15 15:55:49 2026
 import cvxpy as cp
 import numpy as np
 from ..Base_Assets import Asset_STEVFNs
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 
 class Nuclear_Fission_Baseload_Asset(Asset_STEVFNs):

@@ -10,7 +10,7 @@ import cvxpy as cp
 import numpy as np
 import pandas as pd
 import os
-from ..Network import Edge_STEVFNs
+from ..network import Edge_STEVFNs
 import matplotlib.pyplot as plt
 
 ####### Define Classes #######
@@ -77,7 +77,7 @@ class Asset_STEVFNs:
         return
     
     def _load_parameters_df(self, asset_type):
-        self.parameters_folder = os.path.join(self.network.base_folder, "Code", "Assets", 
+        self.parameters_folder = os.path.join(self.network.base_folder, "src", "assets", 
                                            self.asset_name)
         parameters_filename = os.path.join(self.parameters_folder, "parameters.csv")
         self.parameters_df = pd.read_csv(parameters_filename).iloc[asset_type]

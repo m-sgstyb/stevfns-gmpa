@@ -10,7 +10,7 @@ Based on NH3_Transport asset author: aniqahsan
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
 import numpy as np
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 
 class H2_Transport_Asset(Asset_STEVFNs):

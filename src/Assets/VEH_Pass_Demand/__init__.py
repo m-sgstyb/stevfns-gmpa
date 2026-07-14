@@ -9,7 +9,7 @@ Created on Mon Feb 16 10:59:19 2026
 import numpy as np
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 class VEH_Pass_Demand_Asset(Asset_STEVFNs):
     """

@@ -10,7 +10,7 @@ import numpy as np
 import cvxpy as cp
 from ..Base_Assets import Asset_STEVFNs
 from ..Base_Assets import Multi_Asset
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 class CEM_Milling_Asset(Asset_STEVFNs):
     """

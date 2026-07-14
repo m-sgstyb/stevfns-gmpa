@@ -10,7 +10,7 @@ import cvxpy as cp
 import numpy as np
 from ..Base_Assets import Asset_STEVFNs
 from ..Base_Assets import Multi_Asset
-from ...Network import Edge_STEVFNs
+from ...network import Edge_STEVFNs
 
 
 class Pumping_Asset(Asset_STEVFNs):
