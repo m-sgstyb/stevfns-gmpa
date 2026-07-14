@@ -1,2 +1,18 @@
+# Python build artifacts
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# Bytecode
+__pycache__/
 *.pyc
+
+# macOS Finder metadata
 *.DS_Store
+
+# Ruff linter cache
+.ruff_cache/
