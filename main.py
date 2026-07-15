@@ -20,7 +20,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning) # To silence pand
 from src.network.network import Network_STEVFNs
 from src.results import GMPA_Results
 from src.plotting import GMPA_plot_mitigation_curve
-from src.plotting import testing_plots
+from src.plotting import DPhil_Plotting
 
 #### Define Input Files ####
 case_study_name = os.getenv("CASE_STUDY_NAME")
@@ -153,7 +153,11 @@ for counter1 in range(len(scenario_folders_list)):
 #    csv_results = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots", "hourly_flows.csv")
 #    results_df = testing_plots.export_results_csv(my_network, csv_results, hours=720)
 #    testing_plots.plot_stacked_from_df(results_df, output_folder)
+
         
+    DPhil_Plotting.plot_asset_sizes(my_network)
+    DPhil_Plotting.plot_asset_costs(my_network)
+
 final_time = time.time()
 print("------------------  All Scenarios Run  ------------------------\n",
       "Time to build network, run all scenarios, export and plot data",
