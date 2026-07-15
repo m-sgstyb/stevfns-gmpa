@@ -22,9 +22,6 @@ dev = [
   "pre-commit",
 ]
 
-[project.scripts]
-stevfns = "model.main:main"
-
 [tool.uv]
 package = false
 
