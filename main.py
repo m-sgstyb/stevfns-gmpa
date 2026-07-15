@@ -17,10 +17,10 @@ warnings.simplefilter(action='ignore', category=FutureWarning) # To silence pand
 """FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
   total_data_df = pd.concat([total_data_df, t_df], ignore_index=True)"""
 
-from Code.Network.Network import Network_STEVFNs
-from Code.Results import GMPA_Results
-from Code.Plotting import GMPA_plot_mitigation_curve
-from Code.Plotting import testing_plots
+from src.network.network import Network_STEVFNs
+from src.results import GMPA_Results
+from src.plotting import GMPA_plot_mitigation_curve
+from src.plotting import testing_plots
 
 #### Define Input Files ####
 case_study_name = os.getenv("CASE_STUDY_NAME")
