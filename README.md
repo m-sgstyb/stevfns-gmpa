@@ -60,7 +60,7 @@ The repository natively includes some input data and a case study defined for a 
 To run this case, from the repository root in your terminal, run
 
 ```
-uv run python run_cases.py --name test_collab
+uv run python run_cases.py --name test-collab
 ```
 
 Your terminal should quickly solve and display something like this: 
