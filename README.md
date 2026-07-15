@@ -94,7 +94,9 @@ Once you have been able to run the pre-defined minimal case study, you can creat
 
 In Data/Case_Study, create a new folder with your case study name. If you have selected a country, for example Indonesia, this may be something representative like `id-test`, or if you want multiple countries for collaboration, it could be `id-sg-collab`. Think of names that are simple but descriptive. 
 
-> [!NOTE] Case Study folder naming convention
+> [!NOTE]
+> Case Study folder naming convention
+> 
 > For CLI ergonomics and visual separation, we recommend adhering to kebab-case (words separated by dashes) convention for naming new case study folders:
 > - lower case only: try not to use capital leters ( use `id-sg-collab` instead of `ID-SG-Collab`)
 > - avoid spaces or underscores
