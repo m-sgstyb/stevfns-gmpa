@@ -3,6 +3,8 @@
 
 This is the STEVFNs model generator fork from the original [STEVFNs model](https://github.com/OmNomNomzzz/STEVFNs/tree/main) containing modelling details used in the Global Mitigation Potential Atlas ([GMPA](https://mitigationatlas.org/)).
 
+This repository has shifted package management to use `uv`, so setup will differ from the current (as of July 2026) original repository until changes are pushed upstream.s
+
 To set up case studies and run different tests, you need to clone this repository as instructed, and follow the setup instructions that follow. 
 
 ## Set up and first run
@@ -26,34 +28,42 @@ This should take a minute or two and will create a stevfns-gmpa folder in that d
 
 ### 2. Create your local branch
 
-To avoid editing directly in the main branch, create your on local branch to test the model and roun your own case studies. Choose a branch name, such as "testing" or "custom_runs", from your command line replace <branch-name> with your chosen name and, run
+To avoid editing directly in the main branch, create your own local branch to test the model and run your own case studies. Choose a branch name, such as "my-test" or "custom-runs": from your command line replace `<branch-name>` in the following prompt with your chosen name and, run
 
 ```
 git checkout -b <branch-name>
 ```
-This will create a new branch where you can start playing with the model.
+
+If named "my-test", the command is
+```
+git checkout -b my-test
+```
+This will create a new branch where you can start testing the model and creating your own case studies
 
 ### 3. Set up required: virtual environment
 
-This project relies on Python dependencies that are stored in pyproject.toml file. To create a virtual environment and install required dependencies there, run
+This project relies on Python dependencies that are stored in pyproject.toml file. To automatically create a virtual environment and install required dependencies there, run
 
 ```
 uv sync
 ```
+
 > [!NOTE]
 > You should have installed `uv` as instructed in step 0. for this to work
 
+
+
 ### 4. Quick run pre-defined test_collab case study
 
-The repository automatically comes with a case study defined for a two-country collaboration. This is located in Case_Study/test_collab. 
+The repository natively includes some input data and a case study defined for a two-country collaboration. This is located in Case_Study/test_collab. 
 
-To run this case, from the repo root in your terminal, run
+To run this case, from the repository root in your terminal, run
 
 ```
 uv run python run_cases.py --name test_collab
 ```
 
-Your terminal should start displaying this: 
+Your terminal should quickly solve and display something like this: 
 ```console
 --- Running: test_collab with clarabel solver ---
 
@@ -82,19 +92,26 @@ Once you have been able to run the pre-defined minimal case study, you can creat
 
 ### 1. Create a Case Study folder
 
-In Data/Case_Study, create a new folder with your case study name. If you have selected a country, this may be something like "ID_test", or if you want multiple countries for collaboration, it could be "ID-SG_collab". Think of names that are simple but descriptive. 
+In Data/Case_Study, create a new folder with your case study name. If you have selected a country, for example Indonesia, this may be something representative like `id-test`, or if you want multiple countries for collaboration, it could be `id-sg-collab`. Think of names that are simple but descriptive. 
+
+> [!NOTE]
+> Case Study folder naming convention
+> 
+> For CLI ergonomics and visual separation, we recommend adhering to kebab-case (words separated by dashes) convention for naming new case study folders:
+> - lower case only: try not to use capital leters ( use `id-sg-collab` instead of `ID-SG-Collab`)
+> - avoid spaces or underscores
 
 ### Necessary details
 
-A case study needs four basic parts before it runs:
+A case study needs four basic parts before it can be run:
 
-1. Network_Structure.csv file 
+1. Network_Structure.csv file: defines in which locations and which technologies will be modelled
 2. At least one scenario folder (appropriately named) with:
 	a. Asset_Paramters.csv
 	b. Location_Parameters.csv
 	c. System_Parameters.csv
 
-For your initial test, System_Parameters.csv and Location_Parameters.csv can be copied from test_collab case study scenario. These include all the locations where asset data is available in the repository so you can use without additional data collection, as well as pre-determined system details (1-hour timesteps, 30-year project and 5% discount rates).
+For your initial test, System_Parameters.csv and Location_Parameters.csv can be copied from test_collab case study scenario. These include all the locations where asset data is readily available in the repository so you can use without additional data collection, as well as pre-determined system details (1-hour timesteps, 30-year project and 5% discount rates).
 
 #### Network_Structure.csv
 
@@ -118,9 +135,36 @@ The `Network_Structure.csv` file defines where and which assets may be installed
 
 - End_Time: End_Time - Start_Time determines how many timesteps will be sampled in total from profile assets, and therefore how many total timesteps will be modelled. In this example, 192 - 0 = 192. This is equivalent to sampling 8 days out of a year, which will be sampled from input profiles evenly throught the annual profile to capture seasonal differences.
 
-- Period: This is how often the source is delivered (in this case, 1 hour as the smalles timestep in the model). For example, fuel shipping may only be dispatched every certain amount of days. For ammonia transport for example, ships do not depart every hour, so this parameter would be higher (See the full `Network_Structure.csv` in test_collab for NH3_Transport).
+- Period: This is how often the source is delivered (in this case, 1 hour as the smallest timestep in the model). For example, fuel shipping may only be dispatched every certain amount of days. For ammonia transport for example, ships do not depart every hour, so this parameter would be higher (See the full `Network_Structure.csv` in test_collab for NH3_Transport).
 
 - Transport_Time: This is the time it takes to transport energy from one location to another. We assume electricity can be instantaneously generated and delivered. For ammonia transport for example, it takes a long time (magnitude of days) from the shipping to get from one point to another (See the full `Network_Structure.csv` in test_collab for NH3_Transport).
+
+##### Technology selection
+
+For your first model, choose a few assets from the following list to build a network.
+
+1. BESS
+2. EL_Demand
+3. EL_Transport (HVDC cables)
+4. EL_to_HTH
+5. EL_to_NH3
+6. FF_to_HTH
+7. NH3_Storage
+8. NH3_Transport
+9. NH3_to_EL
+10. NH3_to_HTH
+11. PP_CO2
+12. RE_PV_Openfield_Lim
+13. RE_PV_Rooftop_Lim
+14. RE_Wind_Offshore_Lim (any or several of the 0-9 types of this asset)
+15. RE_Wind_Onshore_Lim (any or several of the 0-9 types of this asset)
+
+These assets currently have data availability for all the locations in the `Location_Parameters.csv` found in the included test scenario folder, so can be immediately used under those assumptions.
+
+If you want to use another available asset in the src/assets folder, check their `parameters.csv` file to check what data is available and can be run as-is.
+
+Otherwise, data collection and definition will be required.
+
 
 #### scenario_folder/Asset_Parameters.csv
 
@@ -132,7 +176,7 @@ The first four columns of the `Asset_Paramters.csv` should be exactly the same a
 | 1            | RE_PV_Openfield_Lim | 0          | 0          | 0          |
 
 
-The fifth column determines which asset type should be considered for installation in that location. This value should match the parameters relevant to your scenario from the `Code/Assets/<asset_name>/parameters.csv` file.
+The fifth column determines which asset type should be considered for installation in that location. This value should match the parameters relevant to your scenario from the `src/assets/<asset_name>/parameters.csv` file.
 
 For example, for `RE_PV_Openfield_Lim` asset, the first row would look like this. 
 
