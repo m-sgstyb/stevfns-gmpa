@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  build-and-test:
+    name: build (${{ matrix.os }}, py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.10", "3.11", "3.12"]
+    env:
+      # Force headless (non-interactive) matplotlib backend
+      # plt.show() calls will not open GUI windows on CI for GitHub Actions.
+      MPLBACKEND: agg
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Installs uv itself and can also provision the Python version below.
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+          cache-suffix: ${{ matrix.os }}-py${{ matrix.python-version }}
+
+      - name: Build environment (sync dependencies)
+        # Uses pyproject.toml + uv.lock. --frozen fails the build if the
+        # lockfile is out of date instead of silently re-resolving it.
+        run: uv sync --frozen --all-extras
+
+      - name: Show resolved environment (debug aid)
+        run: uv pip list
+
+      - name: Run minimal case workflow
+        run: uv run python run_cases.py --name test-collab
