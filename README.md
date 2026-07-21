@@ -1,9 +1,15 @@
 # GMPA - STEVFNs modelling
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/m-sgstyb/stevfns-gmpa?color=green)
+![GitHub repo size](https://img.shields.io/github/repo-size/m-sgstyb/stevfns-gmpa?color=orange)
+[![CI](https://github.com/m-sgstyb/stevfns-gmpa/actions/workflows/ci.yml/badge.svg)](https://github.com/m-sgstyb/stevfns-gmpa/actions/workflows/ci.yml)
+
+
 ![Logo](img/gmpa_logo.png)
 
 This is the STEVFNs model generator fork from the original [STEVFNs model](https://github.com/OmNomNomzzz/STEVFNs/tree/main) containing modelling details used in the Global Mitigation Potential Atlas ([GMPA](https://mitigationatlas.org/)).
 
-This repository has shifted package management to use `uv`, so setup will differ from the current (as of July 2026) original repository until changes are pushed upstream.s
+This repository has shifted package management to use `uv`, so base setup will differ from the current (as of July 2026) original repository until changes are pushed upstream.
 
 To set up case studies and run different tests, you need to clone this repository as instructed, and follow the setup instructions that follow. 
 
@@ -53,19 +59,19 @@ uv sync
 
 
 
-### 4. Quick run pre-defined test_collab case study
+### 4. Quick run pre-defined test-collab case study
 
-The repository natively includes some input data and a case study defined for a two-country collaboration. This is located in Case_Study/test_collab. 
+The repository natively includes some input data and a case study defined for a two-country collaboration. This is located in Case_Study/test-collab. 
 
 To run this case, from the repository root in your terminal, run
 
 ```
-uv run python run_cases.py --name test_collab
+uv run python run_cases.py --name test-collab
 ```
 
 Your terminal should quickly solve and display something like this: 
 ```console
---- Running: test_collab with clarabel solver ---
+--- Running: test-collab with clarabel solver ---
 
 ========================== Building ==========================
 Time taken to build network =  0.6059021949768066 s
@@ -85,6 +91,9 @@ Total emissions =  10.66361512 MtCO2e
 All case studies completed successfully.
 ```
 
+> [!NOTE]
+> A plot window will open after the run completes. Close it to view other result plots and return control to your terminal.
+
 Once you have been able to run the pre-defined minimal case study, you can create your own and run the model.
 
 
@@ -101,7 +110,8 @@ In Data/Case_Study, create a new folder with your case study name. If you have s
 > - lower case only: try not to use capital leters ( use `id-sg-collab` instead of `ID-SG-Collab`)
 > - avoid spaces or underscores
 
-### Necessary details
+#### Necessary details
+---
 
 A case study needs four basic parts before it can be run:
 
@@ -111,9 +121,10 @@ A case study needs four basic parts before it can be run:
 	b. Location_Parameters.csv
 	c. System_Parameters.csv
 
-For your initial test, System_Parameters.csv and Location_Parameters.csv can be copied from test_collab case study scenario. These include all the locations where asset data is readily available in the repository so you can use without additional data collection, as well as pre-determined system details (1-hour timesteps, 30-year project and 5% discount rates).
+For your initial test, System_Parameters.csv and Location_Parameters.csv can be copied from test-collab case study scenario. These include all the locations where asset data is readily available in the repository so you can use without additional data collection, as well as pre-determined system details (1-hour timesteps, 30-year project and 5% discount rates).
 
 #### Network_Structure.csv
+---
 
 The `Network_Structure.csv` file defines where and which assets may be installed by the model.  
 
@@ -129,17 +140,18 @@ The `Network_Structure.csv` file defines where and which assets may be installed
 
 - Location_1: This is where the asset will be located.
 
-- Location_2: This is equal to Location_1 if the asset is only in one location. For collaboration/linking assets, for example HVDC cables or ammonia shipping that connect two locations and can trade, Location_2 must be different to Location_1. (See the full `Network_Structure.csv` in test_collab)
+- Location_2: This is equal to Location_1 if the asset is only in one location. For collaboration/linking assets, for example HVDC cables or ammonia shipping that connect two locations and can trade, Location_2 must be different to Location_1. (See the full `Network_Structure.csv` in test-collab)
 
 - Start_Time: This is the timestep where the model will start sampling profile data from (demand or capacity factor profiles). Default is 0
 
 - End_Time: End_Time - Start_Time determines how many timesteps will be sampled in total from profile assets, and therefore how many total timesteps will be modelled. In this example, 192 - 0 = 192. This is equivalent to sampling 8 days out of a year, which will be sampled from input profiles evenly throught the annual profile to capture seasonal differences.
 
-- Period: This is how often the source is delivered (in this case, 1 hour as the smallest timestep in the model). For example, fuel shipping may only be dispatched every certain amount of days. For ammonia transport for example, ships do not depart every hour, so this parameter would be higher (See the full `Network_Structure.csv` in test_collab for NH3_Transport).
+- Period: This is how often the source is delivered (in this case, 1 hour as the smallest timestep in the model). For example, fuel shipping may only be dispatched every certain amount of days. For ammonia transport for example, ships do not depart every hour, so this parameter would be higher (See the full `Network_Structure.csv` in test-collab for NH3_Transport).
 
-- Transport_Time: This is the time it takes to transport energy from one location to another. We assume electricity can be instantaneously generated and delivered. For ammonia transport for example, it takes a long time (magnitude of days) from the shipping to get from one point to another (See the full `Network_Structure.csv` in test_collab for NH3_Transport).
+- Transport_Time: This is the time it takes to transport energy from one location to another. We assume electricity can be instantaneously generated and delivered. For ammonia transport for example, it takes a long time (magnitude of days) from the shipping to get from one point to another (See the full `Network_Structure.csv` in test-collab for NH3_Transport).
 
 ##### Technology selection
+---
 
 For your first model, choose a few assets from the following list to build a network.
 
@@ -167,6 +179,7 @@ Otherwise, data collection and definition will be required.
 
 
 #### scenario_folder/Asset_Parameters.csv
+---
 
 The first four columns of the `Asset_Paramters.csv` should be exactly the same as the `Network_Structure.csv`.
 
@@ -187,7 +200,7 @@ For example, for `RE_PV_Openfield_Lim` asset, the first row would look like this
 
 In this case, the Type 0 open field PV asset is for Singapore (see location_name column). Therefore, it would follow that Location_1 and Location_2 columns from this case study network structure would correspond to the location for Singapore. Because the data already comes from pre-defined `Location_Parameters.csv`, this was intentional.
 
-If you look at the `Location_Parameters.csv` from the test_collab case study, scenario BAU, you'll see row 0 for locations has the coordinates for SG. These coordinates have two purposes in the model setup:
+If you look at the `Location_Parameters.csv` from the test-collab case study, scenario BAU, you'll see row 0 for locations has the coordinates for SG. These coordinates have two purposes in the model setup:
 
 1. Estimate distances between locations, "as the bird flies" for the estimation of shipping and HVDC transport distances
 2. To find the correct capacity factor profiles for PV and Wind asset types, as these have a conventional naming format related to their coordinates.
@@ -197,12 +210,25 @@ If you look at the `Location_Parameters.csv` from the test_collab case study, sc
 > For the data currently in the repository, these represent country averages obtained through a modelling pipleine from GLAES/RESkit
 
 #### scenario_folder/Location_Parameters.csv
+---
 
 This file defines the coordinates for locations and their abbreviation for ease of use. Currently, as GMPA models country-level, these are alpha-2 ISO 3166 country codes.
 
 #### scenario_folder/System_Parameters.csv
+---
 
 This file defines system-wide parameters, project lifetime in hours, discount rate for NPV cost calculations, and the timestep size.
 
+### 2. Run your custom case study
 
+Once your case study has its necessary file tree in place, run it the same way as the pre-fdefined example, using your case study folder's name :
+
+```
+uv run python run_cases.py --name <your-case-study-name>
+```
+For example, if you created `id-sg-collab`:
+ 
+```
+uv run python run_cases.py --name id-sg-collab
+```
 
