@@ -77,7 +77,7 @@ def main():
  
         end_time = time.time()
         print("Time taken to update network = ", end_time - start_time, "s")
- 
+    
         ### Run Simulation ###
         start_time = time.time()
         solver_name = os.getenv("SOLVER_NAME", "CLARABEL").upper() # Make Clarabel default if running without wrapper run_cases.py
@@ -90,7 +90,15 @@ def main():
         # my_network.problem.solve(solver = cp.CLARABEL, max_iter=10000, ignore_dpp=True) # ignore_dpp=True because problem has too many params
         # my_network.problem.solve(solver = cp.MOSEK, ignore_dpp=True)
         end_time = time.time()
- 
+
+        ### Diagnostics
+        for idx, node in my_network.nodes_df.items():
+            n_in, n_out = len(node.input_edges), len(node.output_edges)
+            if n_in == 0 or n_out == 0:
+                location, node_type, node_time = idx
+                print(f"location={location} type={node_type} time={node_time}: "
+                    f"inputs={n_in} outputs={n_out}")
+
         ### Print status, key results and save output files ############
         print(f"----------------- Scenario {my_network.scenario_name} Main Results ----------------------\n")
         print("Time taken to solve problem = ", end_time - start_time, "s")
@@ -98,8 +106,9 @@ def main():
         if my_network.problem.value == float("inf"):
             continue
         print("Total cost to satisfy all demand = ", my_network.problem.value, " Billion USD")
-        print("Total emissions = ", my_network.assets[0].asset_size(), "MtCO2e")
- 
+        print("Total emissions = ", my_network.assets[3].asset_size(), "MtCO2e")
+        print("Installed PV capacity = ", my_network.assets[1].asset_size(), "GWp")
+        print("demand values", my_network.assets[0].asset_size(), "GWh")
         ### Export GMPA cost results to pandas dataframe per scenario and concat all scenarios
        #t_df = GMPA_Results.export_total_data(my_network, location_parameters_df, asset_parameters_df)
        #t1_df = GMPA_Results.export_total_data_not_rounded(my_network, location_parameters_df, asset_parameters_df)
