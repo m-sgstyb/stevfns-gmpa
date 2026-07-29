@@ -10,7 +10,7 @@ import os
 import pandas as pd
 import cvxpy as cp
 import traceback
-from . import Node_STEVFNs
+from .node import Node_STEVFNs
 from ..assets.Assets_Dictionary import ASSET_DICT
 
 class Network_STEVFNs:
