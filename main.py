@@ -108,7 +108,6 @@ def main():
         print("Total cost to satisfy all demand = ", my_network.problem.value, " Billion USD")
         print("Total emissions = ", my_network.assets[3].asset_size(), "MtCO2e")
         print("Installed PV capacity = ", my_network.assets[1].asset_size(), "GWp")
-        print("demand values", my_network.assets[0].asset_size(), "GWh")
         ### Export GMPA cost results to pandas dataframe per scenario and concat all scenarios
        #t_df = GMPA_Results.export_total_data(my_network, location_parameters_df, asset_parameters_df)
        #t1_df = GMPA_Results.export_total_data_not_rounded(my_network, location_parameters_df, asset_parameters_df)
@@ -164,7 +163,6 @@ def main():
     #    csv_results = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots", "hourly_flows.csv")
     #    results_df = testing_plots.export_results_csv(my_network, csv_results, hours=720)
     #    testing_plots.plot_stacked_from_df(results_df, output_folder)
- 
     final_time = time.time()
     print("------------------  All Scenarios Run  ------------------------\n",
           "Time to build network, run all scenarios, export and plot data",
