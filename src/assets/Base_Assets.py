@@ -1,27 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Nov  3 12:33:27 2021
 
-@author: aniqahsan
-"""
 
 import cvxpy as cp
 import numpy as np
 import pandas as pd
 import os
 from ..network import Edge_STEVFNs
-import matplotlib.pyplot as plt
 
 ####### Define Classes #######
 
 class Asset_STEVFNs:
-    """Base Class of assets"""
+    """Base Class of STEVFNs assets"""
+
     asset_name = "Asset_STEVFNs"
     source_node_type = "NULL"
     target_node_type = "NULL"
+
     cost_fun = staticmethod(lambda flows, params: cp.Constant(0))
     conversion_fun = staticmethod(lambda flow, params: flow)
+
     def __init__(self):
         self.cost_fun_params = dict()
         self.conversion_fun_params = dict()
@@ -31,8 +29,9 @@ class Asset_STEVFNs:
         self.cost = self.cost_fun(self.flows, self.cost_fun_params)
         return
     
-    
     def build_edge(self, edge_number):
+        """Standard build edge method for hourly Edges
+        in self.number_of_edges (number of sampled timesteps)"""
         source_node_time = self.source_node_times[edge_number]
         target_node_time = self.target_node_times[edge_number]
         new_edge = Edge_STEVFNs()
@@ -55,6 +54,8 @@ class Asset_STEVFNs:
         return
     
     def get_plot_data(self):
+        """Returns asset.flows.value for plotting.
+        Legacy from plotting from single year model version"""
         return self.flows.value
     
     def build(self):
@@ -72,8 +73,8 @@ class Asset_STEVFNs:
         self.target_node_times = np.arange(asset_structure["Start_Time"], 
                                            asset_structure["End_Time"], 
                                            asset_structure["Period"])
-        self.number_of_edges = len(self.source_node_times)
-        self.flows = cp.Constant(np.zeros(self.number_of_edges))
+        self.number_of_edges = len(self.source_node_times) # Total hourly timesteps sampled
+        self.flows = cp.Constant(np.zeros(self.number_of_edges)) # hourly flows definition
         return
     
     def _load_parameters_df(self, asset_type):
@@ -84,6 +85,7 @@ class Asset_STEVFNs:
         return
     
     def _update_parameters(self):
+        """ Defines values per parameter"""
         for parameter_name, parameter in self.cost_fun_params.items():
             parameter.value = self.parameters_df[parameter_name]
         for parameter_name, parameter in self.conversion_fun_params.items():
@@ -91,44 +93,84 @@ class Asset_STEVFNs:
         return
     
     def update(self, asset_type):
+        """Update param values in every scenario run"""
         self._load_parameters_df(asset_type)
         self._update_parameters()
         return
+
+    def _compute_period_counts(self):
+        """Sets num_years, reinvestment_period, num_periods from system
+        parameters for time dependence"""
+        self.num_years = int(self.network.system_parameters_df.loc["project_life", "value"] / 8760)
+        self.reinvestment_period = int(self.network.system_parameters_df.loc["reinvestment_period", "value"] / 8760)
+        self.num_periods = int(np.ceil(self.num_years / self.reinvestment_period))
+        return
+
+    def _get_year_change_indices(self):
+        """Hourly indices at which each year starts with sampled timesteps.
+        Requires self.number_of_edges and _compute_period_counts() already run."""
+        hours_per_day = 24
+        days_per_year = int((self.number_of_edges / hours_per_day) / self.num_years)
+        hours_per_year = days_per_year * hours_per_day
+        self.year_change_indices = [i * hours_per_year for i in range(self.num_years)]
+        return list(self.year_change_indices)
+
+    def _get_period_change_indices(self):
+        """Hourly indices at which each reinvestment period starts with sampled timesteps.
+        Requires self.number_of_edges and _compute_period_counts() already run."""
+        hours_per_day = 24
+        days_per_year = int((self.number_of_edges / hours_per_day) / self.num_years)
+        hours_per_year = days_per_year * hours_per_day
+        hours_per_period = hours_per_year * self.reinvestment_period
+        self.period_change_indices = [i * hours_per_period for i in range(self.num_periods)]
+        return self.period_change_indices
+
+    def _period_index_for_edge(self, edge_number):
+        period_index = 0
+        for i, idx in enumerate(self.period_change_indices):
+            if edge_number >= idx:
+                period_index = i
+            else:
+                break
+        return period_index
+    def _years_in_period(self, period_index):
+        """Number of modelled years falling within a given reinvestment
+        period. Handles a possibly-truncated final period (e.g. project_life
+        = 27 years, reinvestment_period = 5 years -> last period is 2 years,
+        not 5), so 'average per year' figures in results aren't silently inflated/
+        deflated for that period."""
+        period_start_year = period_index * self.reinvestment_period
+        period_end_year = min(period_start_year + self.reinvestment_period, self.num_years)
+        return period_end_year - period_start_year
     
     def size(self):
+        """ Returns size of asset
+        Defaults as maximum of asset.flows; can be overridden 
+        Based on asset (child class) design
+        """
         return self.flows.value.max()
     
-    def get_asset_sizes(self):
-        # Returns the size of the asset as a dict #
-        asset_size = self.size()
-        asset_identity = self.asset_name + r"_location_" + str(self.source_node_location)
-        return {asset_identity: asset_size}
-    
-    def plot_asset_usage(self):
-        plt.plot(self.flows.value)
-        plt.show()
-        return
-    
     def component_size(self):
-        # Returns size of component (i.e. asset) #
+        """ Returns size of component (same as asset if only 1 component)
+        Defaults as maximum of asset.flows; can be overridden 
+        Based on asset (child class) design
+        """
         return self.flows.value.max()
     
     def asset_size(self):
-        # Returns size of asset #
+        """ Returns size of component directly """
         return self.component_size()
     
     def get_component_size(self):
-        # Returns the size of component as a dict #
+        """ Returns the size of component as a dict """
         component_size = self.component_size()
         component_identity = self.asset_name
         return {component_identity: component_size}
     
-    def get_component_sizes(self):
-        # Returns the size of components of the asset as a dict #
-        return self.get_component_size()
-    
     def get_asset_size(self):
-        # Returns the size of asset as a dict #
+        """ Returns the size of asset as a dict 
+        Default is: asset_size = component size = max(flows)
+        """
         asset_size = self.asset_size()
         asset_identity = self.asset_name
         return {asset_identity: asset_size}
@@ -138,7 +180,7 @@ class Multi_Asset(Asset_STEVFNs):
     """Class that contains multiple assets"""
     asset_name = "Multi_Asset"
     cost_fun = staticmethod(lambda costs_dictionary, cost_fun_params: cp.Constant(0))
-    assets_class_dictionary = dict()#dictionary that contains assetclasses
+    assets_class_dictionary = dict() # dictionary that contains assetclasses
     def __init__(self):
         super().__init__()
         self.assets_dictionary = dict()

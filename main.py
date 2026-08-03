@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Nov  4 17:38:43 2021
 
-@author: aniqahsan
-"""
 
 import pandas as pd
 import time
@@ -158,12 +154,8 @@ def main():
     #    )
     #
     #
-    #if "testing" in case_study_name:
-    #    output_folder = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots")
-    #    csv_results = os.path.join(base_folder, "Code", "Plotting", "Testing_Plots", "hourly_flows.csv")
-    #    results_df = testing_plots.export_results_csv(my_network, csv_results, hours=720)
-    #    testing_plots.plot_stacked_from_df(results_df, output_folder)
     final_time = time.time()
+
     print("------------------  All Scenarios Run  ------------------------\n",
           "Time to build network, run all scenarios, export and plot data",
           (final_time - start_time0)/60, "min")
