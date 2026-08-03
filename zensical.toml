@@ -1,0 +1,113 @@
+[project]
+site_name = "STEVFNs Documentation"
+site_url = "https://stevfns-documentation.readthedocs.io"
+repo_url = "https://github.com/m-sgstyb/stevfns-gmpa"
+repo_name = "m.sgstyb/stevfns-gmpa"
+copyright = "Copyright © 2026 MOYA Analytics"
+
+nav = [
+  { "Home" = [
+    "index.md",
+    { "Introduction" = "home/introduction.md" },
+    { "Installation" = "home/installation.md" },
+    { "Quick Start" = "home/quick-start.md" },
+    { "Workflow" = "home/workflow.md" },
+    { "Licenses" = "home/licenses.md" },
+  ]},
+  { "Model Details" = [
+    { "Generalised asset model" = "model-details/generalised-model.md" },
+    { "Time dependence" = "model-details/time-dep.md" },
+  ]},
+  { "Custom Data" = [
+    { "Data Templates" = "custom-data/data-templates.md" },
+    { "Configuration" = "custom-data/config.md" },
+  ]},
+  { "Tutorials" = [
+    { "STEVFNs theory" = "tutorials/stevfns-theory.md" },
+  ]},
+]
+
+extra_css = [
+  "assets/stylesheets/extra.css",
+]
+
+extra_javascript = [
+  "assets/javascripts/mathjax.js",
+  "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
+  "assets/javascripts/mermaid-init.js",
+]
+
+[project.theme]
+variant = "modern"
+font.text = "Roboto"
+font.code = "Roboto Mono"
+features = [
+  "navigation.tabs",
+  "navigation.sections",
+  "navigation.footer",
+  "content.code.copy",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "purple"
+accent = "teal"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "purple"
+accent = "teal"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to light mode"
+
+[project.extra]
+social = [
+  { icon = "fontawesome/brands/github", link = "https://github.com/MOYA-Analytics", name = "GitHub Organization" },
+  { icon = "fontawesome/brands/linkedin", link = "https://www.linkedin.com/company/moya-analytics/", name = "LinkedIn" },
+]
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+title = "On this page"
+permalink = true
+toc_depth = 4
+[project.markdown_extensions.footnotes]
+
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
+
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.tilde]
+[project.markdown_extensions.pymdownx.mark]
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+base_path = [".", "doc"]
+
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.tables]

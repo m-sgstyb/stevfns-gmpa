@@ -16,3 +16,9 @@ __pycache__/
 
 # Ruff linter cache
 .ruff_cache/
+
+# Zensical docs build
+site/
+
+# VS Code
+.vscode/

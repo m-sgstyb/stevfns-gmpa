@@ -20,6 +20,7 @@ dependencies = [
 dev = [
   "ruff",
   "pre-commit",
+  "zensical>=0.0.31",
 ]
 
 [tool.uv]
