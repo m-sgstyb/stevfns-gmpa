@@ -1,0 +1,42 @@
+﻿Asset_Class,Readable_Name
+BESS,BESS
+CEM_Demand,Cement demand
+CEM_Production,Cement production
+CEM_Production_EL,Cement production electric
+CO2_Budget,Emissions Budget
+EL_Demand,Electricity demand
+EL_to_H2,Electrolyser
+EL_to_HTH,Electric kiln
+EL_to_NH3,Electrolyser + Haber Bosch
+EL_Transport,HVDC
+FF_to_HTH,Fossil fired kiln
+H2_Storage,H2 Storage
+H2_to_EL,Hydrogen fuel cell
+H2_to_NH3,Haber Bosch
+H2_Transport,H2 Shipping
+HTH_Demand,High Temp. Heating demand
+HYDRO,Hydropower (flex)
+NH3_Storage,Ammonia storage
+NH3_to_EL,Ammonia fuel cell
+NH3_to_HTH,Ammonia fired kiln
+NH3_Transport,Ammonia shipping
+Nuclear_Fission_Baseload,Nuclear
+PHS,PHS
+PHS_ramp,PHS ramp
+PP_CO2,Generic fossil power plant
+PP_COAL_CO2,Coal power plant
+PP_NGS_CCGT_CO2,Nat gas CCGT
+PP_NGS_SCGT_CO2,Nat gas SCGT
+PP_OIL_CO2,Fuel oil power plant
+RE_PV_Openfield_BAU,Openfield PV
+RE_PV_Openfield_Lim,Openfield PV
+RE_PV_Rooftop_Lim,Rooftop PV
+RE_WIND_Offshore_Lim,Offshore wind
+RE_WIND_Onshore_BAU,Onshore wind
+RE_WIND_Onshore_Lim,Onshore wind
+VEH_EL_Freight,Electric freight vehicle
+VEH_EL_Pass,Electric passenger vehicle
+VEH_Freight_Demand,Freight activity
+VEH_ICE_Freight,ICE Freight vehicle
+VEH_ICE_Pass,ICE Passenger vehicle
+VEH_Pass_Demand,Passenger activity

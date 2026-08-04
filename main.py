@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 import pandas as pd
 import time
 import os
@@ -10,14 +9,20 @@ import sys
 import warnings
  
 warnings.simplefilter(action='ignore', category=FutureWarning) # To silence pandas concat future warning
-"""FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
-  total_data_df = pd.concat([total_data_df, t_df], ignore_index=True)"""
+"""FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated.
+In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes.
+To retain the old behavior, exclude the relevant entries before the concat operation.
+total_data_df = pd.concat([total_data_df, t_df], ignore_index=True)"""
  
 from src.network.network import Network_STEVFNs
 from src.results import GMPA_Results
 from src.plotting import GMPA_plot_mitigation_curve
 from src.plotting import testing_plots
- 
+from src.results.compile_results import (
+    load_readable_names, compile_scenario_results, split_by_metric,
+    join_capacities, aggregate_emissions_by_country, aggregate_costs_by_technology,
+    compile_hourly_flows, append_and_save,
+)
 
 def main():
     #### Define Input Files ####
@@ -69,7 +74,7 @@ def main():
         start_time = time.time()
  
         my_network.update(location_parameters_df, asset_parameters_df, system_parameters_df)
-        # my_network.scenario_name = os.path.basename(scenario_folder)
+        my_network.scenario_name = os.path.basename(scenario_folder)
  
         end_time = time.time()
         print("Time taken to update network = ", end_time - start_time, "s")
@@ -87,13 +92,13 @@ def main():
         # my_network.problem.solve(solver = cp.MOSEK, ignore_dpp=True)
         end_time = time.time()
 
-        ### Diagnostics
-        for idx, node in my_network.nodes_df.items():
-            n_in, n_out = len(node.input_edges), len(node.output_edges)
-            if n_in == 0 or n_out == 0:
-                location, node_type, node_time = idx
-                print(f"location={location} type={node_type} time={node_time}: "
-                    f"inputs={n_in} outputs={n_out}")
+        ### Node diagnostics
+        # for idx, node in my_network.nodes_df.items():
+        #     n_in, n_out = len(node.input_edges), len(node.output_edges)
+        #     if n_in == 0 or n_out == 0:
+        #         location, node_type, node_time = idx
+        #         print(f"location={location} type={node_type} time={node_time}: "
+        #             f"inputs={n_in} outputs={n_out}")
 
         ### Print status, key results and save output files ############
         print(f"----------------- Scenario {my_network.scenario_name} Main Results ----------------------\n")
@@ -103,57 +108,46 @@ def main():
             continue
         print("Total cost to satisfy all demand = ", my_network.problem.value, " Billion USD")
         print("Total emissions = ", my_network.assets[3].asset_size(), "MtCO2e")
-        print("Installed PV capacity = ", my_network.assets[1].asset_size(), "GWp")
-        ### Export GMPA cost results to pandas dataframe per scenario and concat all scenarios
-       #t_df = GMPA_Results.export_total_data(my_network, location_parameters_df, asset_parameters_df)
-       #t1_df = GMPA_Results.export_total_data_not_rounded(my_network, location_parameters_df, asset_parameters_df)
-       #capacities_df = GMPA_Results.export_total_data_capacities(my_network, location_parameters_df, asset_parameters_df)
-       #web_td_df = GMPA_Results.export_total_data_website(my_network, location_parameters_df, asset_parameters_df)
-       #if counter1 == 0:
-       #    total_df = t_df
-       #    total_df_1 = t1_df
-       #    total_cap_df = capacities_df
-       #    web_total_df = web_td_df
-       #else:
-       #    total_df = pd.concat([total_df, t_df], ignore_index=True)
-       #    total_df_1 = pd.concat([total_df_1, t1_df], ignore_index=True)
-       #    total_cap_df = pd.concat([total_cap_df, capacities_df], ignore_index=True)
-       #    web_total_df = pd.concat([web_total_df, web_td_df], ignore_index=True)
- 
- 
- 
- 
-    # #### Save Results (GMPA-standardised)
-    #total_df.to_csv(results_filename, index=False, header=True)
-    #total_df_1.to_csv(unrounded_results_filename, index=False, header=True)
-    #total_cap_df.to_csv(capacities_filename, index=False, header=True)
-    ## Exports total_data_unrounded with wind bins aggregated into one asset
-    #web_total_df.to_csv(website_total_data_filename, index=False, header=True)
- 
- 
-    #### Plot data
-    # Run the plotting script after main processing
-    #base_cases = ["BAU_No_Action", "Least_Cost_Emissions"]
-    #if case_study_name not in base_cases:
-    #    dpacc_name = os.path.join(case_study_folder, "mitigation_curve.png")
-    #    subplots_name = os.path.join(case_study_folder, "dpacc_subplots.png")
-    #    GMPA_plot_mitigation_curve.mitigation_curve(
-    #        website_total_data_filename,
-    #        dpacc_name,
-    #        case_study_name,
-    #        countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY", "FR","AU",
-    #                   "DE", "FR", "TR", "MA"],
-    #    )
-    #    GMPA_plot_mitigation_curve.dpacc_subplots(
-    #        website_total_data_filename,
-    #        capacities_filename,
-    #        subplots_name,
-    #        case_study_name,
-    #        countries=["KE", "NG", "CO", "PE", "KR", "VN", "LA", "TH", "PH", "ID", "MY","AU",
-    #                   "DE", "FR", "TR", "MA"],
-    #    )
-    #
-    #
+
+        # --- Export results --- #
+        
+        readable_names_df = load_readable_names(
+        os.path.join(base_folder, "src", "results", "readable_names.csv"))
+        dpacc_trajectories_filename = os.path.join(data_folder, "dpacc-trajectories.csv")
+        hourly_flows_filename = os.path.join(data_folder, "hourly-flows.csv")
+
+        scenario_results_df = compile_scenario_results(
+            my_network=my_network,
+            network_structure_df=network_structure_df,
+            location_parameters_df=location_parameters_df,
+            readable_names_df=readable_names_df,
+            scenario_id=my_network.scenario_name,
+            case_id=case_study_name, # change for just collab name later or re define the convention for GMPA results
+            start_year=2025,
+        )
+
+        costs_df, emissions_df = split_by_metric(scenario_results_df)
+        capacities_df = join_capacities(scenario_results_df)
+        emissions_by_country_df = aggregate_emissions_by_country(emissions_df)
+        technology_trajectories_df = aggregate_costs_by_technology(costs_df)
+        append_and_save(technology_trajectories_df, dpacc_trajectories_filename)
+
+        hourly_flows_df = compile_hourly_flows(
+            my_network=my_network,
+            network_structure_df=network_structure_df,
+            location_parameters_df=location_parameters_df,
+            readable_names_df=readable_names_df,
+            scenario_id=my_network.scenario_name,
+            case_id=case_study_name,
+            start_year=2025,
+        )
+        append_and_save(hourly_flows_df, hourly_flows_filename)
+        append_and_save(costs_df, os.path.join(data_folder, "costs-over-time.csv"))
+        append_and_save(capacities_df, os.path.join(data_folder, "installed-cap-over-time.csv"))
+        append_and_save(emissions_df, os.path.join(data_folder, "emissions-over-time.csv"))
+        append_and_save(emissions_by_country_df, os.path.join(data_folder, "emissions-over-time-by-country.csv"))
+        print("pv carryover", my_network.assets[1].carryover_out.value)
+    
     final_time = time.time()
 
     print("------------------  All Scenarios Run  ------------------------\n",
