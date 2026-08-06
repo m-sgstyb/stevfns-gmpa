@@ -14,13 +14,17 @@ nav = [
     { "Workflow" = "home/workflow.md" },
     { "Licenses" = "home/licenses.md" },
   ]},
-  { "Model Details" = [
-    { "Generalised asset model" = "model-details/generalised-model.md" },
-    { "Time dependence" = "model-details/time-dep.md" },
+  { "Setup" = [
+    { "Case Study Setup" = "setup/case-study-setup.md"},
   ]},
   { "Custom Data" = [
     { "Data Templates" = "custom-data/data-templates.md" },
     { "Configuration" = "custom-data/config.md" },
+  ]}, 
+  { "Model Details" = [
+    { "Architecture" = "model-details/architecture.md"},
+    { "Generalised asset model" = "model-details/generalised-model.md" },
+    { "Time dependence" = "model-details/time-dep.md" },
   ]},
   { "Tutorials" = [
     { "STEVFNs theory" = "tutorials/stevfns-theory.md" },
@@ -69,6 +73,9 @@ social = [
   { icon = "fontawesome/brands/github", link = "https://github.com/MOYA-Analytics", name = "GitHub Organization" },
   { icon = "fontawesome/brands/linkedin", link = "https://www.linkedin.com/company/moya-analytics/", name = "LinkedIn" },
 ]
+
+[project.markdown_extensions]
+pymdownx.blocks.caption = {}
 
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.details]

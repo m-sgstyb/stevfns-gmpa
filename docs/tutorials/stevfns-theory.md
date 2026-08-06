@@ -6,14 +6,15 @@ Aside from this documentation, you may consult resources such as webinar tutoria
 
 Visit the YouTube playlist for the [ARNECC Energy-Climate Training Programme](https://www.youtube.com/playlist?list=PLHfrgqvEgWgM) for the webinar series delivered in July 2026. This series contains basics of energy modelling, introduction to the theoretical concepts of STEVFNs, and data collection guidance. It includes guidance on 3 assignments that can be useful to get you started on the model. 
 
-!!! note 
+!!! warning 
     Please note that this forked STEVFNs repository is under development, and involves some refactoring. The documentation will be maintained to update specific workflows that may differ from those taught in the Training Programme
 
 
 Similarly, Dr. Aniq Ahsan developed a short series of seminars on the STEVFNs tool when it was originally developed.
-    1. [STEVFNs Tool Demo](https://www.youtube.com/watch?v=_n2w6Zzfofw)
-    2. [STEVFNs Asset Model Seminar](https://www.youtube.com/watch?v=caSYzciVFKw&t=5s)
-    3. [Modelling Using Flows of Generalized Coordinates in Space-Time Type](https://www.youtube.com/watch?v=GIrBYSPbma0&t=7s)
+
+1. [STEVFNs Tool Demo](https://www.youtube.com/watch?v=_n2w6Zzfofw)
+2. [STEVFNs Asset Model Seminar](https://www.youtube.com/watch?v=caSYzciVFKw&t=5s)
+3. [Modelling Using Flows of Generalized Coordinates in Space-Time Type](https://www.youtube.com/watch?v=GIrBYSPbma0&t=7s)
 
 ## Thesis
 
