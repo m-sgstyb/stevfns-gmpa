@@ -6,18 +6,18 @@ import cvxpy as cp
 from ..Base_Stock_Assets import Stock_Asset_STEVFNs
 from ...network import Edge_STEVFNs
 
-class PP_CO2_Asset(Stock_Asset_STEVFNs):
+class PP_COAL_CO2_Asset(Stock_Asset_STEVFNs):
     """
-    Generic fossil generator with an explicit new-build capacity stock and a
+    Coal fossil generator with an explicit new-build capacity stock and a
     separate hourly dispatch variable, capped per period at available
     operating stock (carryover_out).
     """
-    asset_name = "PP_CO2"
+    asset_name = "PP_Coal_CO2"
     source_node_type = "NULL"
     target_node_type = "EL"
     target_node_type_2 = "CO2_Budget"
-    target_node_type_3 = "PP_CO2_Capacity"
-    stock_node_type = "PP_CO2_Stock"
+    target_node_type_3 = "PP_Coal_CO2_Capacity"
+    stock_node_type = "PP_Coal_CO2_Stock"
     decommission_mode = "decay_rate" # For pre-model existing capacity value only
     period = 1
     transport_time = 0

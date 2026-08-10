@@ -11,7 +11,9 @@ from ..network import Edge_STEVFNs
 ####### Define Classes #######
 
 class Asset_STEVFNs:
-    """Base Class of STEVFNs assets"""
+    """
+    Base Class of STEVFNs generalised asset models
+    """
 
     asset_name = "Asset_STEVFNs"
     source_node_type = "NULL"
@@ -133,6 +135,7 @@ class Asset_STEVFNs:
             else:
                 break
         return period_index
+    
     def _years_in_period(self, period_index):
         """Number of modelled years falling within a given reinvestment
         period. Handles a possibly-truncated final period (e.g. project_life
@@ -174,6 +177,96 @@ class Asset_STEVFNs:
         asset_size = self.asset_size()
         asset_identity = self.asset_name
         return {asset_identity: asset_size}
+
+    # ------------------------------------------------------------------
+    # Result-extraction interface
+    # ------------------------------------------------------------------
+
+    def get_period_costs(self):
+        """Per-period annualised cost, length num_periods, in the same
+        cost units used in the objective (Billion USD). None if this
+        asset class doesn't track a per-period cost breakdown."""
+        return None
+
+    def get_period_emissions(self):
+        """Per-period annualised emissions, length num_periods (MtCO2e).
+        None if this asset class doesn't emit."""
+        return None
+
+    def get_new_capacity(self):
+        """Per-period new installed capacity, length num_periods.
+        None if this asset class has no capacity concept (e.g. a fixed
+        demand asset)."""
+        return None
+
+    def get_operating_stock(self):
+        """Per-period new operating capacity, length num_periods.
+        None if this asset class has no capacity concept (e.g. a fixed
+        demand asset)."""
+        return None
+
+
+
+    def get_results_country(self, location_lookup):
+        """Resolves this asset's reporting location to an ISO-2 code via
+        location_lookup (dict: Network_Structure location index ->
+        Location_Parameters.csv location_name). Falls back from source to
+        target location. NOTE: for assets that span two locations (e.g.
+        *Transport* asset classes), this only reports the source-side
+        country -- see caveats in compile_results.py."""
+
+        source_loc = getattr(self, "source_node_location", None)
+        target_loc = getattr(self, "target_node_location", None)
+        for loc in (source_loc, target_loc):
+            if loc is not None and loc != "NULL" and loc in location_lookup:
+                return location_lookup[loc]
+        return None
+
+    def get_results_technology_name(self, readable_names_df):
+        """Looks up this asset's readable technology name from
+        readable_names.csv (columns: Asset_Class, Readable_Name). Falls
+        back to the raw asset_name if there's no matching row, so a
+        missing readable_names.csv entry never silently drops data."""
+
+        matches = readable_names_df.loc[readable_names_df["Asset_Class"] == self.asset_name]
+        if len(matches) == 0:
+            return self.asset_name
+        return matches.iloc[0]["Readable_Name"]
+
+    def get_results_records(self, readable_names_df, location_lookup,
+                             start_year, reinvestment_period_years):
+        """Builds long-format result rows for this asset:
+        [{country, year, technology, metric, unit, value}, ...]
+        matching the costsovertime.csv / emissionsovertime.csv schema
+        (scenario_id/scenario_type/case_id are added later by the
+        compiler, since those are scenario-level, not asset-level).
+        """
+        technology = self.get_results_technology_name(readable_names_df)
+        country = self.get_results_country(location_lookup)
+
+        metric_specs = [
+            ("cost", "Billion USD", self.get_period_costs),
+            ("emissions", "MtCO2e", self.get_period_emissions),
+            ("new_capacity", getattr(self, "capacity_unit", "GWp"), self.get_new_capacity),
+            ("stock_capacity", getattr(self, "capacity_unit", "GWp"), self.get_operating_stock)
+        ]
+
+        records = []
+        for metric_name, unit, getter in metric_specs:
+            values = getter()
+            if values is None:
+                continue
+            for period_index, value in enumerate(values):
+                year = start_year + period_index * reinvestment_period_years
+                records.append({
+                    "country": country,
+                    "year": year,
+                    "technology": technology,
+                    "metric": metric_name,
+                    "unit": unit,
+                    "value": value,
+                })
+        return records
 
             
 class Multi_Asset(Asset_STEVFNs):

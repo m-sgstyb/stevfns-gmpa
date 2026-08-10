@@ -13,7 +13,7 @@ class RE_PV_Openfield_Lim_Asset(Stock_Asset_STEVFNs):
     target_node_type = "EL"
     stock_node_type = "PV_Open_Stock"
     tech_node_type = "PV_Open_Tech_Potential"
-    decommission_mode = "decay_rate"
+    decommission_mode = "decay_rate" # scalar step wise period decommission for existing capacity
     period = 1
     transport_time = 0
 
@@ -30,7 +30,7 @@ class RE_PV_Openfield_Lim_Asset(Stock_Asset_STEVFNs):
 
         self._define_period_structure(asset_structure)
         # self.flows stays cp.Constant(0), usage_constant_1 stays cp.Constant(0) --
-        # PV has no hourly dispatch decision variable and no usage cost.
+        # RE assets have no hourly dispatch decision variable and no usage cost.
 
         self.tech_potential_param = cp.Parameter(nonneg=True,
                                                    name=f"tech_potential_{self.asset_name}")
@@ -134,8 +134,7 @@ class RE_PV_Openfield_Lim_Asset(Stock_Asset_STEVFNs):
         return values
 
     def _update_parameters(self):
-        print("running update parameters in pv openfield")
-        sizing_constant = self._load_cost_profile()
+        sizing_constant = self._load_cost_profile() # load profile with learning curve
         self._update_sizing_constant(sizing_constant)
         self._update_new_capacity_decom_mask()
         self._update_existing_capacity_vec()
