@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stevfns-gmpa"
-version = "0.1.0"
+version = "0.0.1"
 description = "STEVFNs tool for GMPA use"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -27,7 +27,8 @@ dev = [
 package = false
 
 [tool.ruff]
-line-length = 88
+line-length = 120
+indetn-widrh = 4
 target-version = "py311"
 
 [tool.ruff.lint]

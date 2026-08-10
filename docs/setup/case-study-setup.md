@@ -2,8 +2,8 @@
 ---
  🚧 This site is currently under construction. Further detail will be added soon  🚧
 
-Once the installation has taken place as described in [Installation](../home/installation.md), and successfully 
-running the [Quick-Start](../home/quick-start.md) the following can be set up.
+After successful [Installation](../home/installation.md), and 
+running of [Quick-Start](../home/quick-start.md) example, the following can be set up.
 
 ### Create a Case Study folder
 

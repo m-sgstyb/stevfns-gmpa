@@ -4,14 +4,16 @@
 This project uses `uv` with `pyproject.toml` as the source of truth for dependencies. 
 
 There are two main setup paths depending on type of user:
+
 - Model users only need the runtime environment to run the model
 - Collaborators/ developers also need the development tools used for linting, formatting and checks.
 
 ## Pre-requisites
 Before installing the project, make sure you have:
+
 - Python installed 
-- `uv` installed. For detailed documentation on `uv`, see [Astral's uv documentation](https://docs.astral.sh/uv/) 
-- Git installed. For detailed documentation on git, see [git's installation page](https://git-scm.com/install/)
+- `uv` installed. For detailed documentation on `uv` and installation guidance, see [Astral's uv documentation](https://docs.astral.sh/uv/) 
+- Git installed. For detailed documentation on git and installation guidance, see [git's installation page](https://git-scm.com/install/)
 
 
 If you are cloning the repository for development, also make sure you have access to the repository and can run commands from a terminal.
@@ -41,7 +43,7 @@ This will create or update the local virtual environment and install project dep
 ### For collaborators / developers
 Collaborators should install the full development environment, including linting and formatting tools.
 
-The project includes a development dependency group for tools such as Ruff and pre-commit. Once that is defined, run:
+The project includes a development dependency group for tools such as Ruff and pre-commit, as well as Zensical for development of the full documentation.
 ```
 uv sync
 ```
@@ -87,8 +89,14 @@ If you have an old environment from a previous setup, you may need to delete .ve
 ### Development tools
 
 This project uses:
-- Ruff for linting and formatting (for more details, [https://docs.astral.sh/ruff/](https://docs.astral.sh/ruff/))
-- pre-commit for automated checks (for more details, [https://pre-commit.com/](https://pre-commit.com/))
 
+- Ruff for linting and formatting (for more details, [Ruff](https://docs.astral.sh/ruff/))
+- pre-commit for automated checks (for more details, [pre-commit](https://pre-commit.com/))
 
+#### Documentation
 
+- Zensical as the toolchain to build the documentation site (for more details, [Zensical](https://zensical.org/))
+
+[Zensical Studio](https://zensical.org/studio/) is an authoring tool, available as an extension to VS Code (v0.2.7), while integrations for other editors are under development.
+It supports the authoring process treating Docs-as-Code, allowing a live preview with Python Markdown through VS Code.
+If you are supporting with development of the technical documentation development, installing Zensical Studio is recommended.

@@ -1,6 +1,6 @@
 # Quick Start
 
-Once the repository has been installed locally with [Installation](installation.md), and running `uv sync` to set up the virtual environment, create your own local branch for testing.
+Once the repository has been installed locally via the instructions at [Installation](installation.md), and running `uv sync` to set up the virtual environment, create your own local branch for testing.
 Follow the next steps for initial setup and testing.
 
 ### Create your local branch
@@ -18,20 +18,6 @@ git checkout -b my-test
 ```
 This will create a new branch where you can start testing the model and creating your own case studies
 
-### Set up required: virtual environment
-
-This project relies on Python dependencies that are stored in pyproject.toml file.
-To automatically create a virtual environment and install required dependencies there, run
-
-```
-uv sync
-```
-
-!!! note
-    You should have installed `uv` as instructed in the [Installation](installation.md) page, and likely already have synced
-    the virtual environment.
-
-
 
 ### Quick run pre-defined test-collab case study
 
@@ -44,6 +30,7 @@ uv run python run_cases.py --name test-collab
 ```
 
 Your terminal should quickly solve and display something like this: 
+
 ```console
 --- Running: test-collab with clarabel solver ---
 
