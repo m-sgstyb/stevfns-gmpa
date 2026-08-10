@@ -56,7 +56,7 @@ class CO2_Budget_Asset(Asset_STEVFNs):
         return
 
     def _load_budget_trajectory(self):
-        """Reads this location's budget trajectory for the current scenario
+        """Reads the location's budget trajectory for the current scenario
         from a CSV shaped as: scenario_name, co2_budget, co2_budget_unit,
         case_study. Filters by the network's current scenario (matching
         the scenario folder name) and this asset's case_study parameter

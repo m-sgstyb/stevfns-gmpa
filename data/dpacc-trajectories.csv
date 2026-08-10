@@ -1,0 +1,3 @@
+scenario_id,scenario_type,case_id,country,technology_name,technology_cost
+1.5C,autarky,time-dep,SG,Generic fossil power plant [SG],16.17788398639868
+1.5C,autarky,time-dep,SG,Openfield PV [SG],0.7135520219726557

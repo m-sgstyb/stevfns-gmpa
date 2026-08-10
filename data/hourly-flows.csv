@@ -1,0 +1,2881 @@
+scenario_id,scenario_type,case_id,country,technology,year,hour,flow
+1.5C,autarky,time-dep,SG,Openfield PV,2025,0,0.14559143999846277
+1.5C,autarky,time-dep,SG,Openfield PV,2025,1,0.9246720799902368
+1.5C,autarky,time-dep,SG,Openfield PV,2025,2,2.887482349969513
+1.5C,autarky,time-dep,SG,Openfield PV,2025,3,4.180688759955858
+1.5C,autarky,time-dep,SG,Openfield PV,2025,4,5.383936489943154
+1.5C,autarky,time-dep,SG,Openfield PV,2025,5,6.067534469935936
+1.5C,autarky,time-dep,SG,Openfield PV,2025,6,5.443458939942525
+1.5C,autarky,time-dep,SG,Openfield PV,2025,7,5.422228169942749
+1.5C,autarky,time-dep,SG,Openfield PV,2025,8,4.0807960799569125
+1.5C,autarky,time-dep,SG,Openfield PV,2025,9,2.939441459968964
+1.5C,autarky,time-dep,SG,Openfield PV,2025,10,1.4529075799846594
+1.5C,autarky,time-dep,SG,Openfield PV,2025,11,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,12,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,13,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,14,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,15,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,16,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,17,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,18,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,19,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,20,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,21,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,22,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,23,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,24,0.5712429299939685
+1.5C,autarky,time-dep,SG,Openfield PV,2025,25,2.083162979978005
+1.5C,autarky,time-dep,SG,Openfield PV,2025,26,3.611109089961872
+1.5C,autarky,time-dep,SG,Openfield PV,2025,27,4.656591059950833
+1.5C,autarky,time-dep,SG,Openfield PV,2025,28,5.771239569939064
+1.5C,autarky,time-dep,SG,Openfield PV,2025,29,5.852923869938202
+1.5C,autarky,time-dep,SG,Openfield PV,2025,30,5.805477399938702
+1.5C,autarky,time-dep,SG,Openfield PV,2025,31,4.948543749947751
+1.5C,autarky,time-dep,SG,Openfield PV,2025,32,4.293294819954669
+1.5C,autarky,time-dep,SG,Openfield PV,2025,33,2.551890329973056
+1.5C,autarky,time-dep,SG,Openfield PV,2025,34,1.5437845699836998
+1.5C,autarky,time-dep,SG,Openfield PV,2025,35,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,36,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,37,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,38,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,39,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,40,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,41,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,42,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,43,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,44,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,45,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,46,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,47,0.001603739999983067
+1.5C,autarky,time-dep,SG,Openfield PV,2025,48,0.14559143999846277
+1.5C,autarky,time-dep,SG,Openfield PV,2025,49,0.9246720799902368
+1.5C,autarky,time-dep,SG,Openfield PV,2025,50,2.887482349969513
+1.5C,autarky,time-dep,SG,Openfield PV,2025,51,4.180688759955858
+1.5C,autarky,time-dep,SG,Openfield PV,2025,52,5.383936489943154
+1.5C,autarky,time-dep,SG,Openfield PV,2025,53,6.067534469935936
+1.5C,autarky,time-dep,SG,Openfield PV,2025,54,5.443458939942525
+1.5C,autarky,time-dep,SG,Openfield PV,2025,55,5.422228169942749
+1.5C,autarky,time-dep,SG,Openfield PV,2025,56,4.0807960799569125
+1.5C,autarky,time-dep,SG,Openfield PV,2025,57,2.939441459968964
+1.5C,autarky,time-dep,SG,Openfield PV,2025,58,1.4529075799846594
+1.5C,autarky,time-dep,SG,Openfield PV,2025,59,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,60,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,61,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,62,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,63,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,64,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,65,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,66,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,67,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,68,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,69,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,70,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,71,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,72,0.5712429299939685
+1.5C,autarky,time-dep,SG,Openfield PV,2025,73,2.083162979978005
+1.5C,autarky,time-dep,SG,Openfield PV,2025,74,3.611109089961872
+1.5C,autarky,time-dep,SG,Openfield PV,2025,75,4.656591059950833
+1.5C,autarky,time-dep,SG,Openfield PV,2025,76,5.771239569939064
+1.5C,autarky,time-dep,SG,Openfield PV,2025,77,5.852923869938202
+1.5C,autarky,time-dep,SG,Openfield PV,2025,78,5.805477399938702
+1.5C,autarky,time-dep,SG,Openfield PV,2025,79,4.948543749947751
+1.5C,autarky,time-dep,SG,Openfield PV,2025,80,4.293294819954669
+1.5C,autarky,time-dep,SG,Openfield PV,2025,81,2.551890329973056
+1.5C,autarky,time-dep,SG,Openfield PV,2025,82,1.5437845699836998
+1.5C,autarky,time-dep,SG,Openfield PV,2025,83,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,84,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,85,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,86,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,87,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,88,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,89,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,90,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,91,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,92,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,93,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,94,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,95,0.001603739999983067
+1.5C,autarky,time-dep,SG,Openfield PV,2025,96,0.14559143999846277
+1.5C,autarky,time-dep,SG,Openfield PV,2025,97,0.9246720799902368
+1.5C,autarky,time-dep,SG,Openfield PV,2025,98,2.887482349969513
+1.5C,autarky,time-dep,SG,Openfield PV,2025,99,4.180688759955858
+1.5C,autarky,time-dep,SG,Openfield PV,2025,100,5.383936489943154
+1.5C,autarky,time-dep,SG,Openfield PV,2025,101,6.067534469935936
+1.5C,autarky,time-dep,SG,Openfield PV,2025,102,5.443458939942525
+1.5C,autarky,time-dep,SG,Openfield PV,2025,103,5.422228169942749
+1.5C,autarky,time-dep,SG,Openfield PV,2025,104,4.0807960799569125
+1.5C,autarky,time-dep,SG,Openfield PV,2025,105,2.939441459968964
+1.5C,autarky,time-dep,SG,Openfield PV,2025,106,1.4529075799846594
+1.5C,autarky,time-dep,SG,Openfield PV,2025,107,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,108,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,109,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,110,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,111,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,112,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,113,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,114,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,115,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,116,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,117,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,118,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,119,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,120,0.5712429299939685
+1.5C,autarky,time-dep,SG,Openfield PV,2025,121,2.083162979978005
+1.5C,autarky,time-dep,SG,Openfield PV,2025,122,3.611109089961872
+1.5C,autarky,time-dep,SG,Openfield PV,2025,123,4.656591059950833
+1.5C,autarky,time-dep,SG,Openfield PV,2025,124,5.771239569939064
+1.5C,autarky,time-dep,SG,Openfield PV,2025,125,5.852923869938202
+1.5C,autarky,time-dep,SG,Openfield PV,2025,126,5.805477399938702
+1.5C,autarky,time-dep,SG,Openfield PV,2025,127,4.948543749947751
+1.5C,autarky,time-dep,SG,Openfield PV,2025,128,4.293294819954669
+1.5C,autarky,time-dep,SG,Openfield PV,2025,129,2.551890329973056
+1.5C,autarky,time-dep,SG,Openfield PV,2025,130,1.5437845699836998
+1.5C,autarky,time-dep,SG,Openfield PV,2025,131,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,132,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,133,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,134,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,135,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,136,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,137,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,138,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,139,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,140,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,141,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,142,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,143,0.001603739999983067
+1.5C,autarky,time-dep,SG,Openfield PV,2025,144,0.14559143999846277
+1.5C,autarky,time-dep,SG,Openfield PV,2025,145,0.9246720799902368
+1.5C,autarky,time-dep,SG,Openfield PV,2025,146,2.887482349969513
+1.5C,autarky,time-dep,SG,Openfield PV,2025,147,4.180688759955858
+1.5C,autarky,time-dep,SG,Openfield PV,2025,148,5.383936489943154
+1.5C,autarky,time-dep,SG,Openfield PV,2025,149,6.067534469935936
+1.5C,autarky,time-dep,SG,Openfield PV,2025,150,5.443458939942525
+1.5C,autarky,time-dep,SG,Openfield PV,2025,151,5.422228169942749
+1.5C,autarky,time-dep,SG,Openfield PV,2025,152,4.0807960799569125
+1.5C,autarky,time-dep,SG,Openfield PV,2025,153,2.939441459968964
+1.5C,autarky,time-dep,SG,Openfield PV,2025,154,1.4529075799846594
+1.5C,autarky,time-dep,SG,Openfield PV,2025,155,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,156,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,157,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,158,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,159,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,160,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,161,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,162,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,163,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,164,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,165,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,166,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,167,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,168,0.5712429299939685
+1.5C,autarky,time-dep,SG,Openfield PV,2025,169,2.083162979978005
+1.5C,autarky,time-dep,SG,Openfield PV,2025,170,3.611109089961872
+1.5C,autarky,time-dep,SG,Openfield PV,2025,171,4.656591059950833
+1.5C,autarky,time-dep,SG,Openfield PV,2025,172,5.771239569939064
+1.5C,autarky,time-dep,SG,Openfield PV,2025,173,5.852923869938202
+1.5C,autarky,time-dep,SG,Openfield PV,2025,174,5.805477399938702
+1.5C,autarky,time-dep,SG,Openfield PV,2025,175,4.948543749947751
+1.5C,autarky,time-dep,SG,Openfield PV,2025,176,4.293294819954669
+1.5C,autarky,time-dep,SG,Openfield PV,2025,177,2.551890329973056
+1.5C,autarky,time-dep,SG,Openfield PV,2025,178,1.5437845699836998
+1.5C,autarky,time-dep,SG,Openfield PV,2025,179,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,180,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,181,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,182,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,183,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,184,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,185,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,186,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,187,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,188,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,189,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,190,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,191,0.001603739999983067
+1.5C,autarky,time-dep,SG,Openfield PV,2025,192,0.14559143999846277
+1.5C,autarky,time-dep,SG,Openfield PV,2025,193,0.9246720799902368
+1.5C,autarky,time-dep,SG,Openfield PV,2025,194,2.887482349969513
+1.5C,autarky,time-dep,SG,Openfield PV,2025,195,4.180688759955858
+1.5C,autarky,time-dep,SG,Openfield PV,2025,196,5.383936489943154
+1.5C,autarky,time-dep,SG,Openfield PV,2025,197,6.067534469935936
+1.5C,autarky,time-dep,SG,Openfield PV,2025,198,5.443458939942525
+1.5C,autarky,time-dep,SG,Openfield PV,2025,199,5.422228169942749
+1.5C,autarky,time-dep,SG,Openfield PV,2025,200,4.0807960799569125
+1.5C,autarky,time-dep,SG,Openfield PV,2025,201,2.939441459968964
+1.5C,autarky,time-dep,SG,Openfield PV,2025,202,1.4529075799846594
+1.5C,autarky,time-dep,SG,Openfield PV,2025,203,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,204,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,205,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,206,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,207,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,208,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,209,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,210,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,211,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,212,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,213,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,214,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,215,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,216,0.5712429299939685
+1.5C,autarky,time-dep,SG,Openfield PV,2025,217,2.083162979978005
+1.5C,autarky,time-dep,SG,Openfield PV,2025,218,3.611109089961872
+1.5C,autarky,time-dep,SG,Openfield PV,2025,219,4.656591059950833
+1.5C,autarky,time-dep,SG,Openfield PV,2025,220,5.771239569939064
+1.5C,autarky,time-dep,SG,Openfield PV,2025,221,5.852923869938202
+1.5C,autarky,time-dep,SG,Openfield PV,2025,222,5.805477399938702
+1.5C,autarky,time-dep,SG,Openfield PV,2025,223,4.948543749947751
+1.5C,autarky,time-dep,SG,Openfield PV,2025,224,4.293294819954669
+1.5C,autarky,time-dep,SG,Openfield PV,2025,225,2.551890329973056
+1.5C,autarky,time-dep,SG,Openfield PV,2025,226,1.5437845699836998
+1.5C,autarky,time-dep,SG,Openfield PV,2025,227,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,228,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,229,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,230,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,231,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,232,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,233,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,234,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,235,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,236,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,237,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,238,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2025,239,0.001603739999983067
+1.5C,autarky,time-dep,SG,Openfield PV,2030,0,0.1455914399980548
+1.5C,autarky,time-dep,SG,Openfield PV,2030,1,0.9246720799876457
+1.5C,autarky,time-dep,SG,Openfield PV,2030,2,2.8874823499614215
+1.5C,autarky,time-dep,SG,Openfield PV,2030,3,4.180688759944143
+1.5C,autarky,time-dep,SG,Openfield PV,2030,4,5.383936489928066
+1.5C,autarky,time-dep,SG,Openfield PV,2030,5,6.067534469918933
+1.5C,autarky,time-dep,SG,Openfield PV,2030,6,5.443458939927272
+1.5C,autarky,time-dep,SG,Openfield PV,2030,7,5.422228169927555
+1.5C,autarky,time-dep,SG,Openfield PV,2030,8,4.080796079945477
+1.5C,autarky,time-dep,SG,Openfield PV,2030,9,2.9394414599607273
+1.5C,autarky,time-dep,SG,Openfield PV,2030,10,1.4529075799805882
+1.5C,autarky,time-dep,SG,Openfield PV,2030,11,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,12,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,13,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,14,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,15,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,16,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,17,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,18,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,19,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,20,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,21,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,22,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,23,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,24,0.5712429299923678
+1.5C,autarky,time-dep,SG,Openfield PV,2030,25,2.0831629799721676
+1.5C,autarky,time-dep,SG,Openfield PV,2030,26,3.611109089951753
+1.5C,autarky,time-dep,SG,Openfield PV,2030,27,4.656591059937784
+1.5C,autarky,time-dep,SG,Openfield PV,2030,28,5.7712395699228916
+1.5C,autarky,time-dep,SG,Openfield PV,2030,29,5.852923869921801
+1.5C,autarky,time-dep,SG,Openfield PV,2030,30,5.8054773999224345
+1.5C,autarky,time-dep,SG,Openfield PV,2030,31,4.948543749933884
+1.5C,autarky,time-dep,SG,Openfield PV,2030,32,4.293294819942639
+1.5C,autarky,time-dep,SG,Openfield PV,2030,33,2.551890329965905
+1.5C,autarky,time-dep,SG,Openfield PV,2030,34,1.543784569979374
+1.5C,autarky,time-dep,SG,Openfield PV,2030,35,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,36,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,37,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,38,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,39,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,40,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,41,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,42,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,43,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,44,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,45,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,46,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,47,0.001603739999978573
+1.5C,autarky,time-dep,SG,Openfield PV,2030,48,0.1455914399980548
+1.5C,autarky,time-dep,SG,Openfield PV,2030,49,0.9246720799876457
+1.5C,autarky,time-dep,SG,Openfield PV,2030,50,2.8874823499614215
+1.5C,autarky,time-dep,SG,Openfield PV,2030,51,4.180688759944143
+1.5C,autarky,time-dep,SG,Openfield PV,2030,52,5.383936489928066
+1.5C,autarky,time-dep,SG,Openfield PV,2030,53,6.067534469918933
+1.5C,autarky,time-dep,SG,Openfield PV,2030,54,5.443458939927272
+1.5C,autarky,time-dep,SG,Openfield PV,2030,55,5.422228169927555
+1.5C,autarky,time-dep,SG,Openfield PV,2030,56,4.080796079945477
+1.5C,autarky,time-dep,SG,Openfield PV,2030,57,2.9394414599607273
+1.5C,autarky,time-dep,SG,Openfield PV,2030,58,1.4529075799805882
+1.5C,autarky,time-dep,SG,Openfield PV,2030,59,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,60,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,61,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,62,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,63,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,64,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,65,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,66,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,67,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,68,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,69,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,70,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,71,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,72,0.5712429299923678
+1.5C,autarky,time-dep,SG,Openfield PV,2030,73,2.0831629799721676
+1.5C,autarky,time-dep,SG,Openfield PV,2030,74,3.611109089951753
+1.5C,autarky,time-dep,SG,Openfield PV,2030,75,4.656591059937784
+1.5C,autarky,time-dep,SG,Openfield PV,2030,76,5.7712395699228916
+1.5C,autarky,time-dep,SG,Openfield PV,2030,77,5.852923869921801
+1.5C,autarky,time-dep,SG,Openfield PV,2030,78,5.8054773999224345
+1.5C,autarky,time-dep,SG,Openfield PV,2030,79,4.948543749933884
+1.5C,autarky,time-dep,SG,Openfield PV,2030,80,4.293294819942639
+1.5C,autarky,time-dep,SG,Openfield PV,2030,81,2.551890329965905
+1.5C,autarky,time-dep,SG,Openfield PV,2030,82,1.543784569979374
+1.5C,autarky,time-dep,SG,Openfield PV,2030,83,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,84,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,85,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,86,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,87,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,88,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,89,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,90,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,91,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,92,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,93,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,94,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,95,0.001603739999978573
+1.5C,autarky,time-dep,SG,Openfield PV,2030,96,0.1455914399980548
+1.5C,autarky,time-dep,SG,Openfield PV,2030,97,0.9246720799876457
+1.5C,autarky,time-dep,SG,Openfield PV,2030,98,2.8874823499614215
+1.5C,autarky,time-dep,SG,Openfield PV,2030,99,4.180688759944143
+1.5C,autarky,time-dep,SG,Openfield PV,2030,100,5.383936489928066
+1.5C,autarky,time-dep,SG,Openfield PV,2030,101,6.067534469918933
+1.5C,autarky,time-dep,SG,Openfield PV,2030,102,5.443458939927272
+1.5C,autarky,time-dep,SG,Openfield PV,2030,103,5.422228169927555
+1.5C,autarky,time-dep,SG,Openfield PV,2030,104,4.080796079945477
+1.5C,autarky,time-dep,SG,Openfield PV,2030,105,2.9394414599607273
+1.5C,autarky,time-dep,SG,Openfield PV,2030,106,1.4529075799805882
+1.5C,autarky,time-dep,SG,Openfield PV,2030,107,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,108,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,109,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,110,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,111,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,112,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,113,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,114,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,115,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,116,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,117,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,118,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,119,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,120,0.5712429299923678
+1.5C,autarky,time-dep,SG,Openfield PV,2030,121,2.0831629799721676
+1.5C,autarky,time-dep,SG,Openfield PV,2030,122,3.611109089951753
+1.5C,autarky,time-dep,SG,Openfield PV,2030,123,4.656591059937784
+1.5C,autarky,time-dep,SG,Openfield PV,2030,124,5.7712395699228916
+1.5C,autarky,time-dep,SG,Openfield PV,2030,125,5.852923869921801
+1.5C,autarky,time-dep,SG,Openfield PV,2030,126,5.8054773999224345
+1.5C,autarky,time-dep,SG,Openfield PV,2030,127,4.948543749933884
+1.5C,autarky,time-dep,SG,Openfield PV,2030,128,4.293294819942639
+1.5C,autarky,time-dep,SG,Openfield PV,2030,129,2.551890329965905
+1.5C,autarky,time-dep,SG,Openfield PV,2030,130,1.543784569979374
+1.5C,autarky,time-dep,SG,Openfield PV,2030,131,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,132,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,133,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,134,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,135,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,136,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,137,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,138,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,139,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,140,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,141,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,142,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,143,0.001603739999978573
+1.5C,autarky,time-dep,SG,Openfield PV,2030,144,0.1455914399980548
+1.5C,autarky,time-dep,SG,Openfield PV,2030,145,0.9246720799876457
+1.5C,autarky,time-dep,SG,Openfield PV,2030,146,2.8874823499614215
+1.5C,autarky,time-dep,SG,Openfield PV,2030,147,4.180688759944143
+1.5C,autarky,time-dep,SG,Openfield PV,2030,148,5.383936489928066
+1.5C,autarky,time-dep,SG,Openfield PV,2030,149,6.067534469918933
+1.5C,autarky,time-dep,SG,Openfield PV,2030,150,5.443458939927272
+1.5C,autarky,time-dep,SG,Openfield PV,2030,151,5.422228169927555
+1.5C,autarky,time-dep,SG,Openfield PV,2030,152,4.080796079945477
+1.5C,autarky,time-dep,SG,Openfield PV,2030,153,2.9394414599607273
+1.5C,autarky,time-dep,SG,Openfield PV,2030,154,1.4529075799805882
+1.5C,autarky,time-dep,SG,Openfield PV,2030,155,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,156,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,157,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,158,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,159,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,160,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,161,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,162,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,163,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,164,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,165,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,166,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,167,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,168,0.5712429299923678
+1.5C,autarky,time-dep,SG,Openfield PV,2030,169,2.0831629799721676
+1.5C,autarky,time-dep,SG,Openfield PV,2030,170,3.611109089951753
+1.5C,autarky,time-dep,SG,Openfield PV,2030,171,4.656591059937784
+1.5C,autarky,time-dep,SG,Openfield PV,2030,172,5.7712395699228916
+1.5C,autarky,time-dep,SG,Openfield PV,2030,173,5.852923869921801
+1.5C,autarky,time-dep,SG,Openfield PV,2030,174,5.8054773999224345
+1.5C,autarky,time-dep,SG,Openfield PV,2030,175,4.948543749933884
+1.5C,autarky,time-dep,SG,Openfield PV,2030,176,4.293294819942639
+1.5C,autarky,time-dep,SG,Openfield PV,2030,177,2.551890329965905
+1.5C,autarky,time-dep,SG,Openfield PV,2030,178,1.543784569979374
+1.5C,autarky,time-dep,SG,Openfield PV,2030,179,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,180,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,181,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,182,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,183,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,184,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,185,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,186,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,187,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,188,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,189,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,190,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,191,0.001603739999978573
+1.5C,autarky,time-dep,SG,Openfield PV,2030,192,0.1455914399980548
+1.5C,autarky,time-dep,SG,Openfield PV,2030,193,0.9246720799876457
+1.5C,autarky,time-dep,SG,Openfield PV,2030,194,2.8874823499614215
+1.5C,autarky,time-dep,SG,Openfield PV,2030,195,4.180688759944143
+1.5C,autarky,time-dep,SG,Openfield PV,2030,196,5.383936489928066
+1.5C,autarky,time-dep,SG,Openfield PV,2030,197,6.067534469918933
+1.5C,autarky,time-dep,SG,Openfield PV,2030,198,5.443458939927272
+1.5C,autarky,time-dep,SG,Openfield PV,2030,199,5.422228169927555
+1.5C,autarky,time-dep,SG,Openfield PV,2030,200,4.080796079945477
+1.5C,autarky,time-dep,SG,Openfield PV,2030,201,2.9394414599607273
+1.5C,autarky,time-dep,SG,Openfield PV,2030,202,1.4529075799805882
+1.5C,autarky,time-dep,SG,Openfield PV,2030,203,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,204,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,205,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,206,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,207,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,208,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,209,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,210,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,211,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,212,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,213,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,214,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,215,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,216,0.5712429299923678
+1.5C,autarky,time-dep,SG,Openfield PV,2030,217,2.0831629799721676
+1.5C,autarky,time-dep,SG,Openfield PV,2030,218,3.611109089951753
+1.5C,autarky,time-dep,SG,Openfield PV,2030,219,4.656591059937784
+1.5C,autarky,time-dep,SG,Openfield PV,2030,220,5.7712395699228916
+1.5C,autarky,time-dep,SG,Openfield PV,2030,221,5.852923869921801
+1.5C,autarky,time-dep,SG,Openfield PV,2030,222,5.8054773999224345
+1.5C,autarky,time-dep,SG,Openfield PV,2030,223,4.948543749933884
+1.5C,autarky,time-dep,SG,Openfield PV,2030,224,4.293294819942639
+1.5C,autarky,time-dep,SG,Openfield PV,2030,225,2.551890329965905
+1.5C,autarky,time-dep,SG,Openfield PV,2030,226,1.543784569979374
+1.5C,autarky,time-dep,SG,Openfield PV,2030,227,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,228,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,229,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,230,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,231,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,232,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,233,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,234,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,235,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,236,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,237,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,238,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2030,239,0.001603739999978573
+1.5C,autarky,time-dep,SG,Openfield PV,2035,0,0.14559143999797328
+1.5C,autarky,time-dep,SG,Openfield PV,2035,1,0.924672079987128
+1.5C,autarky,time-dep,SG,Openfield PV,2035,2,2.8874823499598046
+1.5C,autarky,time-dep,SG,Openfield PV,2035,3,4.180688759941802
+1.5C,autarky,time-dep,SG,Openfield PV,2035,4,5.383936489925052
+1.5C,autarky,time-dep,SG,Openfield PV,2035,5,6.067534469915536
+1.5C,autarky,time-dep,SG,Openfield PV,2035,6,5.4434589399242235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,7,5.422228169924519
+1.5C,autarky,time-dep,SG,Openfield PV,2035,8,4.080796079943193
+1.5C,autarky,time-dep,SG,Openfield PV,2035,9,2.9394414599590815
+1.5C,autarky,time-dep,SG,Openfield PV,2035,10,1.4529075799797746
+1.5C,autarky,time-dep,SG,Openfield PV,2035,11,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,12,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,13,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,14,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,15,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,16,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,17,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,18,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,19,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,20,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,21,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,22,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,23,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,24,0.571242929992048
+1.5C,autarky,time-dep,SG,Openfield PV,2035,25,2.0831629799710014
+1.5C,autarky,time-dep,SG,Openfield PV,2035,26,3.611109089949731
+1.5C,autarky,time-dep,SG,Openfield PV,2035,27,4.656591059935177
+1.5C,autarky,time-dep,SG,Openfield PV,2035,28,5.77123956991966
+1.5C,autarky,time-dep,SG,Openfield PV,2035,29,5.8529238699185235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,30,5.805477399919184
+1.5C,autarky,time-dep,SG,Openfield PV,2035,31,4.948543749931114
+1.5C,autarky,time-dep,SG,Openfield PV,2035,32,4.293294819940234
+1.5C,autarky,time-dep,SG,Openfield PV,2035,33,2.5518903299644764
+1.5C,autarky,time-dep,SG,Openfield PV,2035,34,1.5437845699785095
+1.5C,autarky,time-dep,SG,Openfield PV,2035,35,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,36,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,37,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,38,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,39,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,40,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,41,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,42,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,43,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,44,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,45,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,46,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,47,0.001603739999977675
+1.5C,autarky,time-dep,SG,Openfield PV,2035,48,0.14559143999797328
+1.5C,autarky,time-dep,SG,Openfield PV,2035,49,0.924672079987128
+1.5C,autarky,time-dep,SG,Openfield PV,2035,50,2.8874823499598046
+1.5C,autarky,time-dep,SG,Openfield PV,2035,51,4.180688759941802
+1.5C,autarky,time-dep,SG,Openfield PV,2035,52,5.383936489925052
+1.5C,autarky,time-dep,SG,Openfield PV,2035,53,6.067534469915536
+1.5C,autarky,time-dep,SG,Openfield PV,2035,54,5.4434589399242235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,55,5.422228169924519
+1.5C,autarky,time-dep,SG,Openfield PV,2035,56,4.080796079943193
+1.5C,autarky,time-dep,SG,Openfield PV,2035,57,2.9394414599590815
+1.5C,autarky,time-dep,SG,Openfield PV,2035,58,1.4529075799797746
+1.5C,autarky,time-dep,SG,Openfield PV,2035,59,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,60,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,61,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,62,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,63,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,64,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,65,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,66,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,67,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,68,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,69,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,70,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,71,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,72,0.571242929992048
+1.5C,autarky,time-dep,SG,Openfield PV,2035,73,2.0831629799710014
+1.5C,autarky,time-dep,SG,Openfield PV,2035,74,3.611109089949731
+1.5C,autarky,time-dep,SG,Openfield PV,2035,75,4.656591059935177
+1.5C,autarky,time-dep,SG,Openfield PV,2035,76,5.77123956991966
+1.5C,autarky,time-dep,SG,Openfield PV,2035,77,5.8529238699185235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,78,5.805477399919184
+1.5C,autarky,time-dep,SG,Openfield PV,2035,79,4.948543749931114
+1.5C,autarky,time-dep,SG,Openfield PV,2035,80,4.293294819940234
+1.5C,autarky,time-dep,SG,Openfield PV,2035,81,2.5518903299644764
+1.5C,autarky,time-dep,SG,Openfield PV,2035,82,1.5437845699785095
+1.5C,autarky,time-dep,SG,Openfield PV,2035,83,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,84,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,85,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,86,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,87,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,88,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,89,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,90,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,91,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,92,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,93,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,94,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,95,0.001603739999977675
+1.5C,autarky,time-dep,SG,Openfield PV,2035,96,0.14559143999797328
+1.5C,autarky,time-dep,SG,Openfield PV,2035,97,0.924672079987128
+1.5C,autarky,time-dep,SG,Openfield PV,2035,98,2.8874823499598046
+1.5C,autarky,time-dep,SG,Openfield PV,2035,99,4.180688759941802
+1.5C,autarky,time-dep,SG,Openfield PV,2035,100,5.383936489925052
+1.5C,autarky,time-dep,SG,Openfield PV,2035,101,6.067534469915536
+1.5C,autarky,time-dep,SG,Openfield PV,2035,102,5.4434589399242235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,103,5.422228169924519
+1.5C,autarky,time-dep,SG,Openfield PV,2035,104,4.080796079943193
+1.5C,autarky,time-dep,SG,Openfield PV,2035,105,2.9394414599590815
+1.5C,autarky,time-dep,SG,Openfield PV,2035,106,1.4529075799797746
+1.5C,autarky,time-dep,SG,Openfield PV,2035,107,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,108,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,109,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,110,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,111,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,112,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,113,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,114,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,115,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,116,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,117,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,118,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,119,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,120,0.571242929992048
+1.5C,autarky,time-dep,SG,Openfield PV,2035,121,2.0831629799710014
+1.5C,autarky,time-dep,SG,Openfield PV,2035,122,3.611109089949731
+1.5C,autarky,time-dep,SG,Openfield PV,2035,123,4.656591059935177
+1.5C,autarky,time-dep,SG,Openfield PV,2035,124,5.77123956991966
+1.5C,autarky,time-dep,SG,Openfield PV,2035,125,5.8529238699185235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,126,5.805477399919184
+1.5C,autarky,time-dep,SG,Openfield PV,2035,127,4.948543749931114
+1.5C,autarky,time-dep,SG,Openfield PV,2035,128,4.293294819940234
+1.5C,autarky,time-dep,SG,Openfield PV,2035,129,2.5518903299644764
+1.5C,autarky,time-dep,SG,Openfield PV,2035,130,1.5437845699785095
+1.5C,autarky,time-dep,SG,Openfield PV,2035,131,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,132,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,133,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,134,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,135,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,136,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,137,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,138,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,139,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,140,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,141,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,142,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,143,0.001603739999977675
+1.5C,autarky,time-dep,SG,Openfield PV,2035,144,0.14559143999797328
+1.5C,autarky,time-dep,SG,Openfield PV,2035,145,0.924672079987128
+1.5C,autarky,time-dep,SG,Openfield PV,2035,146,2.8874823499598046
+1.5C,autarky,time-dep,SG,Openfield PV,2035,147,4.180688759941802
+1.5C,autarky,time-dep,SG,Openfield PV,2035,148,5.383936489925052
+1.5C,autarky,time-dep,SG,Openfield PV,2035,149,6.067534469915536
+1.5C,autarky,time-dep,SG,Openfield PV,2035,150,5.4434589399242235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,151,5.422228169924519
+1.5C,autarky,time-dep,SG,Openfield PV,2035,152,4.080796079943193
+1.5C,autarky,time-dep,SG,Openfield PV,2035,153,2.9394414599590815
+1.5C,autarky,time-dep,SG,Openfield PV,2035,154,1.4529075799797746
+1.5C,autarky,time-dep,SG,Openfield PV,2035,155,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,156,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,157,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,158,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,159,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,160,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,161,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,162,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,163,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,164,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,165,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,166,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,167,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,168,0.571242929992048
+1.5C,autarky,time-dep,SG,Openfield PV,2035,169,2.0831629799710014
+1.5C,autarky,time-dep,SG,Openfield PV,2035,170,3.611109089949731
+1.5C,autarky,time-dep,SG,Openfield PV,2035,171,4.656591059935177
+1.5C,autarky,time-dep,SG,Openfield PV,2035,172,5.77123956991966
+1.5C,autarky,time-dep,SG,Openfield PV,2035,173,5.8529238699185235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,174,5.805477399919184
+1.5C,autarky,time-dep,SG,Openfield PV,2035,175,4.948543749931114
+1.5C,autarky,time-dep,SG,Openfield PV,2035,176,4.293294819940234
+1.5C,autarky,time-dep,SG,Openfield PV,2035,177,2.5518903299644764
+1.5C,autarky,time-dep,SG,Openfield PV,2035,178,1.5437845699785095
+1.5C,autarky,time-dep,SG,Openfield PV,2035,179,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,180,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,181,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,182,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,183,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,184,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,185,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,186,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,187,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,188,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,189,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,190,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,191,0.001603739999977675
+1.5C,autarky,time-dep,SG,Openfield PV,2035,192,0.14559143999797328
+1.5C,autarky,time-dep,SG,Openfield PV,2035,193,0.924672079987128
+1.5C,autarky,time-dep,SG,Openfield PV,2035,194,2.8874823499598046
+1.5C,autarky,time-dep,SG,Openfield PV,2035,195,4.180688759941802
+1.5C,autarky,time-dep,SG,Openfield PV,2035,196,5.383936489925052
+1.5C,autarky,time-dep,SG,Openfield PV,2035,197,6.067534469915536
+1.5C,autarky,time-dep,SG,Openfield PV,2035,198,5.4434589399242235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,199,5.422228169924519
+1.5C,autarky,time-dep,SG,Openfield PV,2035,200,4.080796079943193
+1.5C,autarky,time-dep,SG,Openfield PV,2035,201,2.9394414599590815
+1.5C,autarky,time-dep,SG,Openfield PV,2035,202,1.4529075799797746
+1.5C,autarky,time-dep,SG,Openfield PV,2035,203,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,204,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,205,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,206,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,207,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,208,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,209,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,210,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,211,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,212,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,213,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,214,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,215,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,216,0.571242929992048
+1.5C,autarky,time-dep,SG,Openfield PV,2035,217,2.0831629799710014
+1.5C,autarky,time-dep,SG,Openfield PV,2035,218,3.611109089949731
+1.5C,autarky,time-dep,SG,Openfield PV,2035,219,4.656591059935177
+1.5C,autarky,time-dep,SG,Openfield PV,2035,220,5.77123956991966
+1.5C,autarky,time-dep,SG,Openfield PV,2035,221,5.8529238699185235
+1.5C,autarky,time-dep,SG,Openfield PV,2035,222,5.805477399919184
+1.5C,autarky,time-dep,SG,Openfield PV,2035,223,4.948543749931114
+1.5C,autarky,time-dep,SG,Openfield PV,2035,224,4.293294819940234
+1.5C,autarky,time-dep,SG,Openfield PV,2035,225,2.5518903299644764
+1.5C,autarky,time-dep,SG,Openfield PV,2035,226,1.5437845699785095
+1.5C,autarky,time-dep,SG,Openfield PV,2035,227,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,228,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,229,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,230,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,231,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,232,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,233,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,234,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,235,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,236,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,237,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,238,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2035,239,0.001603739999977675
+1.5C,autarky,time-dep,SG,Openfield PV,2040,0,0.14559143999458377
+1.5C,autarky,time-dep,SG,Openfield PV,2040,1,0.9246720799656007
+1.5C,autarky,time-dep,SG,Openfield PV,2040,2,2.8874823498925815
+1.5C,autarky,time-dep,SG,Openfield PV,2040,3,4.180688759844472
+1.5C,autarky,time-dep,SG,Openfield PV,2040,4,5.383936489799709
+1.5C,autarky,time-dep,SG,Openfield PV,2040,5,6.067534469774278
+1.5C,autarky,time-dep,SG,Openfield PV,2040,6,5.443458939797495
+1.5C,autarky,time-dep,SG,Openfield PV,2040,7,5.422228169798284
+1.5C,autarky,time-dep,SG,Openfield PV,2040,8,4.080796079848188
+1.5C,autarky,time-dep,SG,Openfield PV,2040,9,2.9394414598906486
+1.5C,autarky,time-dep,SG,Openfield PV,2040,10,1.4529075799459494
+1.5C,autarky,time-dep,SG,Openfield PV,2040,11,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,12,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,13,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,14,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,15,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,16,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,17,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,18,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,19,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,20,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,21,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,22,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,23,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,24,0.5712429299787489
+1.5C,autarky,time-dep,SG,Openfield PV,2040,25,2.0831629799225033
+1.5C,autarky,time-dep,SG,Openfield PV,2040,26,3.611109089865661
+1.5C,autarky,time-dep,SG,Openfield PV,2040,27,4.656591059826767
+1.5C,autarky,time-dep,SG,Openfield PV,2040,28,5.7712395697853
+1.5C,autarky,time-dep,SG,Openfield PV,2040,29,5.852923869782262
+1.5C,autarky,time-dep,SG,Openfield PV,2040,30,5.805477399784027
+1.5C,autarky,time-dep,SG,Openfield PV,2040,31,4.948543749815907
+1.5C,autarky,time-dep,SG,Openfield PV,2040,32,4.293294819840282
+1.5C,autarky,time-dep,SG,Openfield PV,2040,33,2.5518903299050657
+1.5C,autarky,time-dep,SG,Openfield PV,2040,34,1.5437845699425687
+1.5C,autarky,time-dep,SG,Openfield PV,2040,35,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,36,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,37,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,38,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,39,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,40,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,41,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,42,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,43,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,44,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,45,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,46,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,47,0.0016037399999403383
+1.5C,autarky,time-dep,SG,Openfield PV,2040,48,0.14559143999458377
+1.5C,autarky,time-dep,SG,Openfield PV,2040,49,0.9246720799656007
+1.5C,autarky,time-dep,SG,Openfield PV,2040,50,2.8874823498925815
+1.5C,autarky,time-dep,SG,Openfield PV,2040,51,4.180688759844472
+1.5C,autarky,time-dep,SG,Openfield PV,2040,52,5.383936489799709
+1.5C,autarky,time-dep,SG,Openfield PV,2040,53,6.067534469774278
+1.5C,autarky,time-dep,SG,Openfield PV,2040,54,5.443458939797495
+1.5C,autarky,time-dep,SG,Openfield PV,2040,55,5.422228169798284
+1.5C,autarky,time-dep,SG,Openfield PV,2040,56,4.080796079848188
+1.5C,autarky,time-dep,SG,Openfield PV,2040,57,2.9394414598906486
+1.5C,autarky,time-dep,SG,Openfield PV,2040,58,1.4529075799459494
+1.5C,autarky,time-dep,SG,Openfield PV,2040,59,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,60,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,61,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,62,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,63,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,64,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,65,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,66,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,67,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,68,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,69,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,70,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,71,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,72,0.5712429299787489
+1.5C,autarky,time-dep,SG,Openfield PV,2040,73,2.0831629799225033
+1.5C,autarky,time-dep,SG,Openfield PV,2040,74,3.611109089865661
+1.5C,autarky,time-dep,SG,Openfield PV,2040,75,4.656591059826767
+1.5C,autarky,time-dep,SG,Openfield PV,2040,76,5.7712395697853
+1.5C,autarky,time-dep,SG,Openfield PV,2040,77,5.852923869782262
+1.5C,autarky,time-dep,SG,Openfield PV,2040,78,5.805477399784027
+1.5C,autarky,time-dep,SG,Openfield PV,2040,79,4.948543749815907
+1.5C,autarky,time-dep,SG,Openfield PV,2040,80,4.293294819840282
+1.5C,autarky,time-dep,SG,Openfield PV,2040,81,2.5518903299050657
+1.5C,autarky,time-dep,SG,Openfield PV,2040,82,1.5437845699425687
+1.5C,autarky,time-dep,SG,Openfield PV,2040,83,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,84,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,85,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,86,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,87,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,88,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,89,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,90,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,91,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,92,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,93,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,94,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,95,0.0016037399999403383
+1.5C,autarky,time-dep,SG,Openfield PV,2040,96,0.14559143999458377
+1.5C,autarky,time-dep,SG,Openfield PV,2040,97,0.9246720799656007
+1.5C,autarky,time-dep,SG,Openfield PV,2040,98,2.8874823498925815
+1.5C,autarky,time-dep,SG,Openfield PV,2040,99,4.180688759844472
+1.5C,autarky,time-dep,SG,Openfield PV,2040,100,5.383936489799709
+1.5C,autarky,time-dep,SG,Openfield PV,2040,101,6.067534469774278
+1.5C,autarky,time-dep,SG,Openfield PV,2040,102,5.443458939797495
+1.5C,autarky,time-dep,SG,Openfield PV,2040,103,5.422228169798284
+1.5C,autarky,time-dep,SG,Openfield PV,2040,104,4.080796079848188
+1.5C,autarky,time-dep,SG,Openfield PV,2040,105,2.9394414598906486
+1.5C,autarky,time-dep,SG,Openfield PV,2040,106,1.4529075799459494
+1.5C,autarky,time-dep,SG,Openfield PV,2040,107,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,108,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,109,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,110,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,111,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,112,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,113,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,114,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,115,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,116,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,117,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,118,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,119,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,120,0.5712429299787489
+1.5C,autarky,time-dep,SG,Openfield PV,2040,121,2.0831629799225033
+1.5C,autarky,time-dep,SG,Openfield PV,2040,122,3.611109089865661
+1.5C,autarky,time-dep,SG,Openfield PV,2040,123,4.656591059826767
+1.5C,autarky,time-dep,SG,Openfield PV,2040,124,5.7712395697853
+1.5C,autarky,time-dep,SG,Openfield PV,2040,125,5.852923869782262
+1.5C,autarky,time-dep,SG,Openfield PV,2040,126,5.805477399784027
+1.5C,autarky,time-dep,SG,Openfield PV,2040,127,4.948543749815907
+1.5C,autarky,time-dep,SG,Openfield PV,2040,128,4.293294819840282
+1.5C,autarky,time-dep,SG,Openfield PV,2040,129,2.5518903299050657
+1.5C,autarky,time-dep,SG,Openfield PV,2040,130,1.5437845699425687
+1.5C,autarky,time-dep,SG,Openfield PV,2040,131,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,132,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,133,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,134,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,135,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,136,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,137,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,138,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,139,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,140,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,141,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,142,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,143,0.0016037399999403383
+1.5C,autarky,time-dep,SG,Openfield PV,2040,144,0.14559143999458377
+1.5C,autarky,time-dep,SG,Openfield PV,2040,145,0.9246720799656007
+1.5C,autarky,time-dep,SG,Openfield PV,2040,146,2.8874823498925815
+1.5C,autarky,time-dep,SG,Openfield PV,2040,147,4.180688759844472
+1.5C,autarky,time-dep,SG,Openfield PV,2040,148,5.383936489799709
+1.5C,autarky,time-dep,SG,Openfield PV,2040,149,6.067534469774278
+1.5C,autarky,time-dep,SG,Openfield PV,2040,150,5.443458939797495
+1.5C,autarky,time-dep,SG,Openfield PV,2040,151,5.422228169798284
+1.5C,autarky,time-dep,SG,Openfield PV,2040,152,4.080796079848188
+1.5C,autarky,time-dep,SG,Openfield PV,2040,153,2.9394414598906486
+1.5C,autarky,time-dep,SG,Openfield PV,2040,154,1.4529075799459494
+1.5C,autarky,time-dep,SG,Openfield PV,2040,155,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,156,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,157,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,158,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,159,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,160,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,161,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,162,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,163,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,164,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,165,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,166,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,167,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,168,0.5712429299787489
+1.5C,autarky,time-dep,SG,Openfield PV,2040,169,2.0831629799225033
+1.5C,autarky,time-dep,SG,Openfield PV,2040,170,3.611109089865661
+1.5C,autarky,time-dep,SG,Openfield PV,2040,171,4.656591059826767
+1.5C,autarky,time-dep,SG,Openfield PV,2040,172,5.7712395697853
+1.5C,autarky,time-dep,SG,Openfield PV,2040,173,5.852923869782262
+1.5C,autarky,time-dep,SG,Openfield PV,2040,174,5.805477399784027
+1.5C,autarky,time-dep,SG,Openfield PV,2040,175,4.948543749815907
+1.5C,autarky,time-dep,SG,Openfield PV,2040,176,4.293294819840282
+1.5C,autarky,time-dep,SG,Openfield PV,2040,177,2.5518903299050657
+1.5C,autarky,time-dep,SG,Openfield PV,2040,178,1.5437845699425687
+1.5C,autarky,time-dep,SG,Openfield PV,2040,179,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,180,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,181,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,182,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,183,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,184,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,185,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,186,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,187,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,188,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,189,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,190,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,191,0.0016037399999403383
+1.5C,autarky,time-dep,SG,Openfield PV,2040,192,0.14559143999458377
+1.5C,autarky,time-dep,SG,Openfield PV,2040,193,0.9246720799656007
+1.5C,autarky,time-dep,SG,Openfield PV,2040,194,2.8874823498925815
+1.5C,autarky,time-dep,SG,Openfield PV,2040,195,4.180688759844472
+1.5C,autarky,time-dep,SG,Openfield PV,2040,196,5.383936489799709
+1.5C,autarky,time-dep,SG,Openfield PV,2040,197,6.067534469774278
+1.5C,autarky,time-dep,SG,Openfield PV,2040,198,5.443458939797495
+1.5C,autarky,time-dep,SG,Openfield PV,2040,199,5.422228169798284
+1.5C,autarky,time-dep,SG,Openfield PV,2040,200,4.080796079848188
+1.5C,autarky,time-dep,SG,Openfield PV,2040,201,2.9394414598906486
+1.5C,autarky,time-dep,SG,Openfield PV,2040,202,1.4529075799459494
+1.5C,autarky,time-dep,SG,Openfield PV,2040,203,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,204,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,205,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,206,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,207,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,208,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,209,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,210,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,211,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,212,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,213,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,214,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,215,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,216,0.5712429299787489
+1.5C,autarky,time-dep,SG,Openfield PV,2040,217,2.0831629799225033
+1.5C,autarky,time-dep,SG,Openfield PV,2040,218,3.611109089865661
+1.5C,autarky,time-dep,SG,Openfield PV,2040,219,4.656591059826767
+1.5C,autarky,time-dep,SG,Openfield PV,2040,220,5.7712395697853
+1.5C,autarky,time-dep,SG,Openfield PV,2040,221,5.852923869782262
+1.5C,autarky,time-dep,SG,Openfield PV,2040,222,5.805477399784027
+1.5C,autarky,time-dep,SG,Openfield PV,2040,223,4.948543749815907
+1.5C,autarky,time-dep,SG,Openfield PV,2040,224,4.293294819840282
+1.5C,autarky,time-dep,SG,Openfield PV,2040,225,2.5518903299050657
+1.5C,autarky,time-dep,SG,Openfield PV,2040,226,1.5437845699425687
+1.5C,autarky,time-dep,SG,Openfield PV,2040,227,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,228,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,229,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,230,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,231,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,232,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,233,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,234,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,235,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,236,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,237,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,238,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2040,239,0.0016037399999403383
+1.5C,autarky,time-dep,SG,Openfield PV,2045,0,0.14559143999103777
+1.5C,autarky,time-dep,SG,Openfield PV,2045,1,0.9246720799430797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,2,2.8874823498222546
+1.5C,autarky,time-dep,SG,Openfield PV,2045,3,4.180688759742647
+1.5C,autarky,time-dep,SG,Openfield PV,2045,4,5.383936489668579
+1.5C,autarky,time-dep,SG,Openfield PV,2045,5,6.067534469626499
+1.5C,autarky,time-dep,SG,Openfield PV,2045,6,5.443458939664915
+1.5C,autarky,time-dep,SG,Openfield PV,2045,7,5.422228169666222
+1.5C,autarky,time-dep,SG,Openfield PV,2045,8,4.080796079748797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,9,2.939441459819056
+1.5C,autarky,time-dep,SG,Openfield PV,2045,10,1.4529075799105629
+1.5C,autarky,time-dep,SG,Openfield PV,2045,11,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,12,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,13,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,14,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,15,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,16,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,17,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,18,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,19,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,20,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,21,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,22,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,23,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,24,0.5712429299648358
+1.5C,autarky,time-dep,SG,Openfield PV,2045,25,2.083162979871766
+1.5C,autarky,time-dep,SG,Openfield PV,2045,26,3.6111090897777096
+1.5C,autarky,time-dep,SG,Openfield PV,2045,27,4.656591059713352
+1.5C,autarky,time-dep,SG,Openfield PV,2045,28,5.771239569644737
+1.5C,autarky,time-dep,SG,Openfield PV,2045,29,5.852923869639709
+1.5C,autarky,time-dep,SG,Openfield PV,2045,30,5.80547739964263
+1.5C,autarky,time-dep,SG,Openfield PV,2045,31,4.948543749695381
+1.5C,autarky,time-dep,SG,Openfield PV,2045,32,4.293294819735716
+1.5C,autarky,time-dep,SG,Openfield PV,2045,33,2.5518903298429123
+1.5C,autarky,time-dep,SG,Openfield PV,2045,34,1.5437845699049686
+1.5C,autarky,time-dep,SG,Openfield PV,2045,35,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,36,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,37,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,38,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,39,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,40,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,41,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,42,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,43,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,44,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,45,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,46,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,47,0.001603739999901278
+1.5C,autarky,time-dep,SG,Openfield PV,2045,48,0.14559143999103777
+1.5C,autarky,time-dep,SG,Openfield PV,2045,49,0.9246720799430797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,50,2.8874823498222546
+1.5C,autarky,time-dep,SG,Openfield PV,2045,51,4.180688759742647
+1.5C,autarky,time-dep,SG,Openfield PV,2045,52,5.383936489668579
+1.5C,autarky,time-dep,SG,Openfield PV,2045,53,6.067534469626499
+1.5C,autarky,time-dep,SG,Openfield PV,2045,54,5.443458939664915
+1.5C,autarky,time-dep,SG,Openfield PV,2045,55,5.422228169666222
+1.5C,autarky,time-dep,SG,Openfield PV,2045,56,4.080796079748797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,57,2.939441459819056
+1.5C,autarky,time-dep,SG,Openfield PV,2045,58,1.4529075799105629
+1.5C,autarky,time-dep,SG,Openfield PV,2045,59,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,60,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,61,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,62,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,63,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,64,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,65,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,66,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,67,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,68,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,69,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,70,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,71,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,72,0.5712429299648358
+1.5C,autarky,time-dep,SG,Openfield PV,2045,73,2.083162979871766
+1.5C,autarky,time-dep,SG,Openfield PV,2045,74,3.6111090897777096
+1.5C,autarky,time-dep,SG,Openfield PV,2045,75,4.656591059713352
+1.5C,autarky,time-dep,SG,Openfield PV,2045,76,5.771239569644737
+1.5C,autarky,time-dep,SG,Openfield PV,2045,77,5.852923869639709
+1.5C,autarky,time-dep,SG,Openfield PV,2045,78,5.80547739964263
+1.5C,autarky,time-dep,SG,Openfield PV,2045,79,4.948543749695381
+1.5C,autarky,time-dep,SG,Openfield PV,2045,80,4.293294819735716
+1.5C,autarky,time-dep,SG,Openfield PV,2045,81,2.5518903298429123
+1.5C,autarky,time-dep,SG,Openfield PV,2045,82,1.5437845699049686
+1.5C,autarky,time-dep,SG,Openfield PV,2045,83,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,84,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,85,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,86,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,87,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,88,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,89,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,90,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,91,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,92,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,93,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,94,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,95,0.001603739999901278
+1.5C,autarky,time-dep,SG,Openfield PV,2045,96,0.14559143999103777
+1.5C,autarky,time-dep,SG,Openfield PV,2045,97,0.9246720799430797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,98,2.8874823498222546
+1.5C,autarky,time-dep,SG,Openfield PV,2045,99,4.180688759742647
+1.5C,autarky,time-dep,SG,Openfield PV,2045,100,5.383936489668579
+1.5C,autarky,time-dep,SG,Openfield PV,2045,101,6.067534469626499
+1.5C,autarky,time-dep,SG,Openfield PV,2045,102,5.443458939664915
+1.5C,autarky,time-dep,SG,Openfield PV,2045,103,5.422228169666222
+1.5C,autarky,time-dep,SG,Openfield PV,2045,104,4.080796079748797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,105,2.939441459819056
+1.5C,autarky,time-dep,SG,Openfield PV,2045,106,1.4529075799105629
+1.5C,autarky,time-dep,SG,Openfield PV,2045,107,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,108,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,109,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,110,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,111,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,112,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,113,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,114,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,115,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,116,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,117,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,118,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,119,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,120,0.5712429299648358
+1.5C,autarky,time-dep,SG,Openfield PV,2045,121,2.083162979871766
+1.5C,autarky,time-dep,SG,Openfield PV,2045,122,3.6111090897777096
+1.5C,autarky,time-dep,SG,Openfield PV,2045,123,4.656591059713352
+1.5C,autarky,time-dep,SG,Openfield PV,2045,124,5.771239569644737
+1.5C,autarky,time-dep,SG,Openfield PV,2045,125,5.852923869639709
+1.5C,autarky,time-dep,SG,Openfield PV,2045,126,5.80547739964263
+1.5C,autarky,time-dep,SG,Openfield PV,2045,127,4.948543749695381
+1.5C,autarky,time-dep,SG,Openfield PV,2045,128,4.293294819735716
+1.5C,autarky,time-dep,SG,Openfield PV,2045,129,2.5518903298429123
+1.5C,autarky,time-dep,SG,Openfield PV,2045,130,1.5437845699049686
+1.5C,autarky,time-dep,SG,Openfield PV,2045,131,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,132,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,133,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,134,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,135,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,136,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,137,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,138,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,139,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,140,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,141,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,142,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,143,0.001603739999901278
+1.5C,autarky,time-dep,SG,Openfield PV,2045,144,0.14559143999103777
+1.5C,autarky,time-dep,SG,Openfield PV,2045,145,0.9246720799430797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,146,2.8874823498222546
+1.5C,autarky,time-dep,SG,Openfield PV,2045,147,4.180688759742647
+1.5C,autarky,time-dep,SG,Openfield PV,2045,148,5.383936489668579
+1.5C,autarky,time-dep,SG,Openfield PV,2045,149,6.067534469626499
+1.5C,autarky,time-dep,SG,Openfield PV,2045,150,5.443458939664915
+1.5C,autarky,time-dep,SG,Openfield PV,2045,151,5.422228169666222
+1.5C,autarky,time-dep,SG,Openfield PV,2045,152,4.080796079748797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,153,2.939441459819056
+1.5C,autarky,time-dep,SG,Openfield PV,2045,154,1.4529075799105629
+1.5C,autarky,time-dep,SG,Openfield PV,2045,155,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,156,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,157,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,158,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,159,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,160,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,161,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,162,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,163,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,164,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,165,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,166,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,167,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,168,0.5712429299648358
+1.5C,autarky,time-dep,SG,Openfield PV,2045,169,2.083162979871766
+1.5C,autarky,time-dep,SG,Openfield PV,2045,170,3.6111090897777096
+1.5C,autarky,time-dep,SG,Openfield PV,2045,171,4.656591059713352
+1.5C,autarky,time-dep,SG,Openfield PV,2045,172,5.771239569644737
+1.5C,autarky,time-dep,SG,Openfield PV,2045,173,5.852923869639709
+1.5C,autarky,time-dep,SG,Openfield PV,2045,174,5.80547739964263
+1.5C,autarky,time-dep,SG,Openfield PV,2045,175,4.948543749695381
+1.5C,autarky,time-dep,SG,Openfield PV,2045,176,4.293294819735716
+1.5C,autarky,time-dep,SG,Openfield PV,2045,177,2.5518903298429123
+1.5C,autarky,time-dep,SG,Openfield PV,2045,178,1.5437845699049686
+1.5C,autarky,time-dep,SG,Openfield PV,2045,179,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,180,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,181,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,182,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,183,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,184,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,185,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,186,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,187,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,188,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,189,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,190,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,191,0.001603739999901278
+1.5C,autarky,time-dep,SG,Openfield PV,2045,192,0.14559143999103777
+1.5C,autarky,time-dep,SG,Openfield PV,2045,193,0.9246720799430797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,194,2.8874823498222546
+1.5C,autarky,time-dep,SG,Openfield PV,2045,195,4.180688759742647
+1.5C,autarky,time-dep,SG,Openfield PV,2045,196,5.383936489668579
+1.5C,autarky,time-dep,SG,Openfield PV,2045,197,6.067534469626499
+1.5C,autarky,time-dep,SG,Openfield PV,2045,198,5.443458939664915
+1.5C,autarky,time-dep,SG,Openfield PV,2045,199,5.422228169666222
+1.5C,autarky,time-dep,SG,Openfield PV,2045,200,4.080796079748797
+1.5C,autarky,time-dep,SG,Openfield PV,2045,201,2.939441459819056
+1.5C,autarky,time-dep,SG,Openfield PV,2045,202,1.4529075799105629
+1.5C,autarky,time-dep,SG,Openfield PV,2045,203,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,204,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,205,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,206,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,207,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,208,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,209,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,210,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,211,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,212,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,213,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,214,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,215,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,216,0.5712429299648358
+1.5C,autarky,time-dep,SG,Openfield PV,2045,217,2.083162979871766
+1.5C,autarky,time-dep,SG,Openfield PV,2045,218,3.6111090897777096
+1.5C,autarky,time-dep,SG,Openfield PV,2045,219,4.656591059713352
+1.5C,autarky,time-dep,SG,Openfield PV,2045,220,5.771239569644737
+1.5C,autarky,time-dep,SG,Openfield PV,2045,221,5.852923869639709
+1.5C,autarky,time-dep,SG,Openfield PV,2045,222,5.80547739964263
+1.5C,autarky,time-dep,SG,Openfield PV,2045,223,4.948543749695381
+1.5C,autarky,time-dep,SG,Openfield PV,2045,224,4.293294819735716
+1.5C,autarky,time-dep,SG,Openfield PV,2045,225,2.5518903298429123
+1.5C,autarky,time-dep,SG,Openfield PV,2045,226,1.5437845699049686
+1.5C,autarky,time-dep,SG,Openfield PV,2045,227,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,228,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,229,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,230,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,231,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,232,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,233,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,234,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,235,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,236,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,237,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,238,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2045,239,0.001603739999901278
+1.5C,autarky,time-dep,SG,Openfield PV,2050,0,0.14559143992112014
+1.5C,autarky,time-dep,SG,Openfield PV,2050,1,0.9246720794990227
+1.5C,autarky,time-dep,SG,Openfield PV,2050,2,2.887482348435594
+1.5C,autarky,time-dep,SG,Openfield PV,2050,3,4.1806887577349485
+1.5C,autarky,time-dep,SG,Openfield PV,2050,4,5.383936487083042
+1.5C,autarky,time-dep,SG,Openfield PV,2050,5,6.067534466712677
+1.5C,autarky,time-dep,SG,Openfield PV,2050,6,5.443458937050794
+1.5C,autarky,time-dep,SG,Openfield PV,2050,7,5.422228167062296
+1.5C,autarky,time-dep,SG,Openfield PV,2050,8,4.08079607778907
+1.5C,autarky,time-dep,SG,Openfield PV,2050,9,2.939441458407443
+1.5C,autarky,time-dep,SG,Openfield PV,2050,10,1.4529075792128305
+1.5C,autarky,time-dep,SG,Openfield PV,2050,11,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,12,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,13,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,14,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,15,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,16,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,17,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,18,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,19,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,20,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,21,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,22,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,23,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,24,0.5712429296905068
+1.5C,autarky,time-dep,SG,Openfield PV,2050,25,2.0831629788713655
+1.5C,autarky,time-dep,SG,Openfield PV,2050,26,3.6111090880435404
+1.5C,autarky,time-dep,SG,Openfield PV,2050,27,4.65659105747711
+1.5C,autarky,time-dep,SG,Openfield PV,2050,28,5.771239566873206
+1.5C,autarky,time-dep,SG,Openfield PV,2050,29,5.85292386682895
+1.5C,autarky,time-dep,SG,Openfield PV,2050,30,5.805477396854656
+1.5C,autarky,time-dep,SG,Openfield PV,2050,31,4.948543747318934
+1.5C,autarky,time-dep,SG,Openfield PV,2050,32,4.29329481767394
+1.5C,autarky,time-dep,SG,Openfield PV,2050,33,2.551890328617414
+1.5C,autarky,time-dep,SG,Openfield PV,2050,34,1.5437845691635945
+1.5C,autarky,time-dep,SG,Openfield PV,2050,35,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,36,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,37,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,38,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,39,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,40,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,41,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,42,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,43,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,44,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,45,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,46,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,47,0.0016037399991311113
+1.5C,autarky,time-dep,SG,Openfield PV,2050,48,0.14559143992112014
+1.5C,autarky,time-dep,SG,Openfield PV,2050,49,0.9246720794990227
+1.5C,autarky,time-dep,SG,Openfield PV,2050,50,2.887482348435594
+1.5C,autarky,time-dep,SG,Openfield PV,2050,51,4.1806887577349485
+1.5C,autarky,time-dep,SG,Openfield PV,2050,52,5.383936487083042
+1.5C,autarky,time-dep,SG,Openfield PV,2050,53,6.067534466712677
+1.5C,autarky,time-dep,SG,Openfield PV,2050,54,5.443458937050794
+1.5C,autarky,time-dep,SG,Openfield PV,2050,55,5.422228167062296
+1.5C,autarky,time-dep,SG,Openfield PV,2050,56,4.08079607778907
+1.5C,autarky,time-dep,SG,Openfield PV,2050,57,2.939441458407443
+1.5C,autarky,time-dep,SG,Openfield PV,2050,58,1.4529075792128305
+1.5C,autarky,time-dep,SG,Openfield PV,2050,59,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,60,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,61,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,62,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,63,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,64,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,65,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,66,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,67,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,68,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,69,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,70,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,71,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,72,0.5712429296905068
+1.5C,autarky,time-dep,SG,Openfield PV,2050,73,2.0831629788713655
+1.5C,autarky,time-dep,SG,Openfield PV,2050,74,3.6111090880435404
+1.5C,autarky,time-dep,SG,Openfield PV,2050,75,4.65659105747711
+1.5C,autarky,time-dep,SG,Openfield PV,2050,76,5.771239566873206
+1.5C,autarky,time-dep,SG,Openfield PV,2050,77,5.85292386682895
+1.5C,autarky,time-dep,SG,Openfield PV,2050,78,5.805477396854656
+1.5C,autarky,time-dep,SG,Openfield PV,2050,79,4.948543747318934
+1.5C,autarky,time-dep,SG,Openfield PV,2050,80,4.29329481767394
+1.5C,autarky,time-dep,SG,Openfield PV,2050,81,2.551890328617414
+1.5C,autarky,time-dep,SG,Openfield PV,2050,82,1.5437845691635945
+1.5C,autarky,time-dep,SG,Openfield PV,2050,83,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,84,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,85,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,86,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,87,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,88,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,89,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,90,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,91,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,92,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,93,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,94,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,95,0.0016037399991311113
+1.5C,autarky,time-dep,SG,Openfield PV,2050,96,0.14559143992112014
+1.5C,autarky,time-dep,SG,Openfield PV,2050,97,0.9246720794990227
+1.5C,autarky,time-dep,SG,Openfield PV,2050,98,2.887482348435594
+1.5C,autarky,time-dep,SG,Openfield PV,2050,99,4.1806887577349485
+1.5C,autarky,time-dep,SG,Openfield PV,2050,100,5.383936487083042
+1.5C,autarky,time-dep,SG,Openfield PV,2050,101,6.067534466712677
+1.5C,autarky,time-dep,SG,Openfield PV,2050,102,5.443458937050794
+1.5C,autarky,time-dep,SG,Openfield PV,2050,103,5.422228167062296
+1.5C,autarky,time-dep,SG,Openfield PV,2050,104,4.08079607778907
+1.5C,autarky,time-dep,SG,Openfield PV,2050,105,2.939441458407443
+1.5C,autarky,time-dep,SG,Openfield PV,2050,106,1.4529075792128305
+1.5C,autarky,time-dep,SG,Openfield PV,2050,107,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,108,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,109,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,110,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,111,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,112,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,113,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,114,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,115,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,116,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,117,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,118,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,119,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,120,0.5712429296905068
+1.5C,autarky,time-dep,SG,Openfield PV,2050,121,2.0831629788713655
+1.5C,autarky,time-dep,SG,Openfield PV,2050,122,3.6111090880435404
+1.5C,autarky,time-dep,SG,Openfield PV,2050,123,4.65659105747711
+1.5C,autarky,time-dep,SG,Openfield PV,2050,124,5.771239566873206
+1.5C,autarky,time-dep,SG,Openfield PV,2050,125,5.85292386682895
+1.5C,autarky,time-dep,SG,Openfield PV,2050,126,5.805477396854656
+1.5C,autarky,time-dep,SG,Openfield PV,2050,127,4.948543747318934
+1.5C,autarky,time-dep,SG,Openfield PV,2050,128,4.29329481767394
+1.5C,autarky,time-dep,SG,Openfield PV,2050,129,2.551890328617414
+1.5C,autarky,time-dep,SG,Openfield PV,2050,130,1.5437845691635945
+1.5C,autarky,time-dep,SG,Openfield PV,2050,131,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,132,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,133,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,134,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,135,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,136,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,137,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,138,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,139,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,140,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,141,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,142,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,143,0.0016037399991311113
+1.5C,autarky,time-dep,SG,Openfield PV,2050,144,0.14559143992112014
+1.5C,autarky,time-dep,SG,Openfield PV,2050,145,0.9246720794990227
+1.5C,autarky,time-dep,SG,Openfield PV,2050,146,2.887482348435594
+1.5C,autarky,time-dep,SG,Openfield PV,2050,147,4.1806887577349485
+1.5C,autarky,time-dep,SG,Openfield PV,2050,148,5.383936487083042
+1.5C,autarky,time-dep,SG,Openfield PV,2050,149,6.067534466712677
+1.5C,autarky,time-dep,SG,Openfield PV,2050,150,5.443458937050794
+1.5C,autarky,time-dep,SG,Openfield PV,2050,151,5.422228167062296
+1.5C,autarky,time-dep,SG,Openfield PV,2050,152,4.08079607778907
+1.5C,autarky,time-dep,SG,Openfield PV,2050,153,2.939441458407443
+1.5C,autarky,time-dep,SG,Openfield PV,2050,154,1.4529075792128305
+1.5C,autarky,time-dep,SG,Openfield PV,2050,155,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,156,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,157,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,158,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,159,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,160,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,161,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,162,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,163,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,164,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,165,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,166,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,167,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,168,0.5712429296905068
+1.5C,autarky,time-dep,SG,Openfield PV,2050,169,2.0831629788713655
+1.5C,autarky,time-dep,SG,Openfield PV,2050,170,3.6111090880435404
+1.5C,autarky,time-dep,SG,Openfield PV,2050,171,4.65659105747711
+1.5C,autarky,time-dep,SG,Openfield PV,2050,172,5.771239566873206
+1.5C,autarky,time-dep,SG,Openfield PV,2050,173,5.85292386682895
+1.5C,autarky,time-dep,SG,Openfield PV,2050,174,5.805477396854656
+1.5C,autarky,time-dep,SG,Openfield PV,2050,175,4.948543747318934
+1.5C,autarky,time-dep,SG,Openfield PV,2050,176,4.29329481767394
+1.5C,autarky,time-dep,SG,Openfield PV,2050,177,2.551890328617414
+1.5C,autarky,time-dep,SG,Openfield PV,2050,178,1.5437845691635945
+1.5C,autarky,time-dep,SG,Openfield PV,2050,179,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,180,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,181,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,182,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,183,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,184,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,185,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,186,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,187,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,188,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,189,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,190,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,191,0.0016037399991311113
+1.5C,autarky,time-dep,SG,Openfield PV,2050,192,0.14559143992112014
+1.5C,autarky,time-dep,SG,Openfield PV,2050,193,0.9246720794990227
+1.5C,autarky,time-dep,SG,Openfield PV,2050,194,2.887482348435594
+1.5C,autarky,time-dep,SG,Openfield PV,2050,195,4.1806887577349485
+1.5C,autarky,time-dep,SG,Openfield PV,2050,196,5.383936487083042
+1.5C,autarky,time-dep,SG,Openfield PV,2050,197,6.067534466712677
+1.5C,autarky,time-dep,SG,Openfield PV,2050,198,5.443458937050794
+1.5C,autarky,time-dep,SG,Openfield PV,2050,199,5.422228167062296
+1.5C,autarky,time-dep,SG,Openfield PV,2050,200,4.08079607778907
+1.5C,autarky,time-dep,SG,Openfield PV,2050,201,2.939441458407443
+1.5C,autarky,time-dep,SG,Openfield PV,2050,202,1.4529075792128305
+1.5C,autarky,time-dep,SG,Openfield PV,2050,203,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,204,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,205,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,206,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,207,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,208,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,209,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,210,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,211,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,212,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,213,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,214,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,215,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,216,0.5712429296905068
+1.5C,autarky,time-dep,SG,Openfield PV,2050,217,2.0831629788713655
+1.5C,autarky,time-dep,SG,Openfield PV,2050,218,3.6111090880435404
+1.5C,autarky,time-dep,SG,Openfield PV,2050,219,4.65659105747711
+1.5C,autarky,time-dep,SG,Openfield PV,2050,220,5.771239566873206
+1.5C,autarky,time-dep,SG,Openfield PV,2050,221,5.85292386682895
+1.5C,autarky,time-dep,SG,Openfield PV,2050,222,5.805477396854656
+1.5C,autarky,time-dep,SG,Openfield PV,2050,223,4.948543747318934
+1.5C,autarky,time-dep,SG,Openfield PV,2050,224,4.29329481767394
+1.5C,autarky,time-dep,SG,Openfield PV,2050,225,2.551890328617414
+1.5C,autarky,time-dep,SG,Openfield PV,2050,226,1.5437845691635945
+1.5C,autarky,time-dep,SG,Openfield PV,2050,227,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,228,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,229,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,230,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,231,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,232,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,233,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,234,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,235,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,236,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,237,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,238,0.0
+1.5C,autarky,time-dep,SG,Openfield PV,2050,239,0.0016037399991311113
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,0,10.008634757318813
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,1,8.968759177082616
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,2,6.873263765227809
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,3,5.314687070362379
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,4,3.865895571500164
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,5,3.2021241075690035
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,6,3.696564727516622
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,7,3.4631010295391853
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,8,5.059227587382534
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,9,5.160452700361603
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,10,6.24588092025065
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,11,7.439518681138506
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,12,7.273280974149456
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,13,7.163472581156876
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,14,7.123819550159592
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,15,7.177198630155939
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,16,7.320559588146308
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,17,7.398340534141187
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,18,7.782669912116953
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,19,8.083117878099339
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,20,8.336287230085697
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,21,8.369839795084001
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,22,8.330186764086008
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,23,8.342387696085387
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,24,9.779723298485777
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,25,8.252552088129166
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,26,6.645299918254694
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,27,5.340548125365665
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,28,3.9041000174993123
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,29,3.8254659505071955
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,30,3.779880308511129
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,31,4.45990043544265
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,32,5.292062888365487
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,33,5.978086706288404
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,34,6.55000912422892
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,35,7.793345728116306
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,36,7.5706787071301
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,37,7.460870314137124
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,38,7.4059661171406885
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,39,7.537126143132231
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,40,8.020588098102895
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,41,8.549803551075543
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,42,9.292535325072631
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,43,9.66771400419023
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,44,9.914782892070306
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,45,9.948335457223251
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,46,9.849202877927336
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,47,10.04433917125335
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,48,10.008634758649311
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,49,8.968759177475274
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,50,6.8732637656323305
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,51,5.314687070774889
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,52,3.8658955719181236
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,53,3.2021241079891114
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,54,3.6965647279351725
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,55,3.463101029958582
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,56,5.059227587796363
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,57,5.160452700775889
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,58,6.245880920659615
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,59,7.439518681539445
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,60,7.273280974551567
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,61,7.163472581559769
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,62,7.123819550562771
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,63,7.177198630558735
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,64,7.320559588548083
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,65,7.398340534542416
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,66,7.782669912515535
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,67,8.083117878495928
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,68,8.336287230480687
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,69,8.369839795478788
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,70,8.330186764481036
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,71,8.34238769648034
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,72,9.779723298924692
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,73,8.25255208852551
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,74,6.645299918660339
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,75,5.340548125777749
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,76,3.9041000179169263
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,77,3.825465950925067
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,78,3.7798803089291946
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,79,4.459900435858542
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,80,5.2920628887780365
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,81,5.978086706698393
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,82,6.550009124635849
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,83,7.793345728514815
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,84,7.5706787075301305
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,85,7.460870314537916
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,86,7.4059661175418645
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,87,7.537126143532492
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,88,8.020588098499893
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,89,8.54980355146928
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,90,9.292535325464454
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,91,9.66771400459327
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,92,9.91478289268525
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,93,9.94833545792222
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,94,9.849202878418588
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,95,10.044339171280509
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,96,10.008634760104695
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,97,8.968759177886824
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,98,6.873263766056371
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,99,5.314687071206945
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,100,3.8658955723554533
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,101,3.2021241084286065
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,102,3.696564728373086
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,103,3.4631010303973335
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,104,5.059227588229747
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,105,5.160452701209904
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,106,6.245880921088569
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,107,7.439518681960203
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,108,7.27328097497359
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,109,7.163472581982637
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,110,7.123819550985945
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,111,7.177198630981497
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,112,7.320559588969745
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,113,7.398340534963484
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,114,7.7826699129337245
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,115,8.083117878911937
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,116,8.336287230894932
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,117,8.369839795892808
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,118,8.330186764895323
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,119,8.342387696894546
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,120,9.779723299388907
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,121,8.252552088940938
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,122,6.645299919085449
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,123,5.340548126209321
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,124,3.904100018353912
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,125,3.8254659513623097
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,126,3.7798803093666273
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,127,4.459900436293867
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,128,5.292062889210114
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,129,5.978086707128165
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,130,6.550009125062663
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,131,7.793345728932926
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,132,7.570678707949897
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,133,7.460870314958511
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,134,7.405966117962874
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,135,7.537126143952511
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,136,8.020588098916349
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,137,8.549803551882137
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,138,9.292535325875127
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,139,9.667714005016729
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,140,9.914782893345784
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,141,9.948335458668533
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,142,9.849202878941789
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,143,10.044339171308
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,144,10.008634761697206
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,145,8.968759178318143
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,146,6.873263766500718
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,147,5.314687071659245
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,148,3.865895572812849
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,149,3.2021241088882237
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,150,3.696564728831059
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,151,3.4631010308561465
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,152,5.059227588683367
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,153,5.160452701664329
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,154,6.2458809215382995
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,155,7.439518682401698
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,156,7.273280975416446
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,157,7.163472582426396
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,158,7.123819551430031
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,159,7.177198631425143
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,160,7.320559589412213
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,161,7.398340535405316
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,162,7.782669913372448
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,163,8.083117879348286
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,164,8.336287231329353
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,165,8.36983979632698
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,166,8.330186765329788
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,167,8.34238769732892
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,168,9.779723299880315
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,169,8.252552089376275
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,170,6.645299919530785
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,171,5.340548126661091
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,172,3.9041000188109716
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,173,3.8254659518196257
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,174,3.779880309824135
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,175,4.45990043674931
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,176,5.292062889662425
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,177,5.978086707578458
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,178,6.550009125510167
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,179,7.793345729371564
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,180,7.570678708390328
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,181,7.460870315399831
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,182,7.405966118404644
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,183,7.537126144393213
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,184,8.020588099353187
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,185,8.549803552315034
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,186,9.292535326305561
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,187,9.66771400546184
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,188,9.91478289405622
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,189,9.948335459465493
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,190,9.8492028794998
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,191,10.044339171335839
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,192,10.00863476343973
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,193,8.968759178770119
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,194,6.873263766966136
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,195,5.31468707213249
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,196,3.8658955732910263
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,197,3.2021241093687314
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,198,3.696564729309817
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,199,3.4631010313357566
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,200,5.059227589157916
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,201,5.160452702139835
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,202,6.245880922009574
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,203,7.439518682864852
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,204,7.273280975881048
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,205,7.163472582891954
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,206,7.123819551895934
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,207,7.177198631890581
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,208,7.320559589876404
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,209,7.3983405358688294
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,210,7.782669913832632
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,211,8.083117879805908
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,212,8.336287231784874
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,213,8.369839796782232
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,214,8.33018676578536
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,215,8.342387697784392
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,216,9.779723300400976
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,217,8.252552089832351
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,218,6.645299919997101
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,219,5.340548127133764
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,220,3.9041000192888338
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,221,3.82546595229775
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,222,3.779880310302448
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,223,4.459900437225565
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,224,5.292062890135669
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,225,5.978086708050001
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,226,6.550009125979149
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,227,7.793345729831658
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,228,7.570678708852343
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,229,7.460870315862802
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,230,7.405966118868091
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,231,7.537126144855521
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,232,8.020588099811336
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,233,8.549803552768891
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,234,9.292535326756694
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,235,9.66771400592992
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,236,9.914782894821322
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,237,9.948335460316569
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,238,9.849202880095804
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2025,239,10.04433917136404
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,0,10.008634759555243
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,1,8.968759179551096
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,2,6.873263767661128
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,3,5.314687072796064
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,4,3.865895573932641
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,5,3.202124110003485
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,6,3.6965647299495106
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,7,3.4631010319730398
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,8,5.059227589818281
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,9,5.160452702806596
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,10,6.245880922699687
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,11,7.439518683579717
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,12,7.273280976592579
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,13,7.163472583601498
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,14,7.1238195526048
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,15,7.177198632600365
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,16,7.32055959058884
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,17,7.398340536582828
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,18,7.782669914555875
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,19,8.083117880538586
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,20,8.336287232527457
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,21,8.369839797526286
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,22,8.330186766527678
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,23,8.342387698527238
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,24,9.779723301508216
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,25,8.252552090571202
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,26,6.645299920684714
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,27,5.340548127795931
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,28,3.904100019930335
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,29,3.8254659529383366
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,30,3.779880310942621
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,31,4.459900437875136
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,32,5.292062890798489
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,33,5.978086708730662
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,34,6.550009126673494
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,35,7.793345730555197
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,36,7.57067870957015
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,37,7.4608703165781245
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,38,7.405966119582248
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,39,7.537126145572547
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,40,8.020588100541861
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,41,8.54980355352157
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,42,9.29253532758734
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,43,9.667714007011742
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,44,9.914782894851353
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,45,9.948335459694325
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,46,9.849202881031049
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,47,10.044339171359955
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,48,10.008634761055902
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,49,8.968759180080523
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,50,6.87326376819127
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,51,5.314687073328128
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,52,3.865895574466169
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,53,3.202124110538798
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,54,3.696564730483392
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,55,3.4631010325075007
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,56,5.059227590351018
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,57,5.16045270334137
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,58,6.245880923235868
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,59,7.4395186841144865
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,60,7.2732809771283
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,61,7.163472584137857
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,62,7.123819553141389
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,63,7.177198633136643
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,64,7.3205595911242884
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,65,7.398340537117833
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,66,7.782669915088777
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,67,8.083117881070029
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,68,8.336287233057893
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,69,8.369839798056608
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,70,8.330186767058136
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,71,8.342387699057655
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,72,9.779723302137729
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,73,8.252552091098478
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,74,6.645299921214167
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,75,5.340548128327224
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,76,3.9041000204636385
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,77,3.825465953471803
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,78,3.779880311476211
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,79,4.4599004384078365
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,80,5.292062891330425
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,81,5.978086709264535
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,82,6.550009127208216
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,83,7.793345731088044
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,84,7.570678710104187
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,85,7.460870317112773
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,86,7.405966120117208
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,87,7.53712614610677
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,88,8.02058810107359
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,89,8.549803554051413
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,90,9.29253532812354
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,91,9.66771400759281
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,92,9.914782895598538
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,93,9.948335460549801
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,94,9.849202881710308
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,95,10.044339171356231
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,96,10.008634762660087
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,97,8.96875918063592
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,98,6.873263768745704
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,99,5.314687073883665
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,100,3.8658955750230697
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,101,3.202124111097824
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,102,3.6965647310406884
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,103,3.4631010330654473
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,104,5.05922759090713
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,105,5.160452703899598
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,106,6.245880923796608
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,107,7.43951868467543
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,108,7.273280977690142
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,109,7.1634725847002985
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,110,7.123819553704045
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,111,7.17719863369901
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,112,7.320559591685874
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,113,7.398340537678997
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,114,7.782669915647929
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,115,8.083117881627777
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,116,8.336287233614671
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,117,8.369839798613281
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,118,8.330186767614935
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,119,8.342387699614413
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,120,9.779723302804443
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,121,8.252552091650768
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,122,6.64529992176764
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,123,5.340548128881996
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,124,3.904100021020367
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,125,3.825465954028723
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,126,3.7798803120332565
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,127,4.459900438963837
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,128,5.292062891885822
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,129,5.978086709822393
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,130,6.550009127767631
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,131,7.793345731647143
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,132,7.57067871066443
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,133,7.460870317673601
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,134,7.405966120678332
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,135,7.537126146667191
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,136,8.020588101631613
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,137,8.549803554607635
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,138,9.292535328687066
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,139,9.667714008206406
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,140,9.9147828963918
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,141,9.94833546146809
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,142,9.849202882431301
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,143,10.044339171356903
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,144,10.008634764369075
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,145,8.96875918121806
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,146,6.873263769324945
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,147,5.314687074463216
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,148,3.865895575604083
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,149,3.2021241116814196
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,150,3.6965647316221726
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,151,3.463101033647685
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,152,5.059227591487178
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,153,5.160452704481732
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,154,6.2458809243823
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,155,7.439518685263176
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,156,7.273280978278703
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,157,7.163472585289394
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,158,7.123819554293333
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,159,7.17719863428804
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,160,7.320559592274203
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,161,7.398340538266944
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,162,7.7826699162340365
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,163,8.083117882212585
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,164,8.33628723419859
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,165,8.3698397991971
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,166,8.33018676819887
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,167,8.342387700198312
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,168,9.77972330351039
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,169,8.25255209222871
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,170,6.645299922345664
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,171,5.340548129460822
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,172,3.9041000216012747
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,173,3.8254659546098613
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,174,3.7798803126145253
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,175,4.459900439543788
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,176,5.292062892465235
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,177,5.978086710404669
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,178,6.550009128352179
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,179,7.793345732233201
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,180,7.57067871125154
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,181,7.460870318261243
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,182,7.405966121266242
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,183,7.537126147254462
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,184,8.020588102216674
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,185,8.549803555191067
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,186,9.292535329278934
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,187,9.667714008854185
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,188,9.914782897233545
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,189,9.948335462454711
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,190,9.849202883196355
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,191,10.044339171362434
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,192,10.008634766182787
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,193,8.968759181827608
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,194,6.87326376992946
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,195,5.314687075067355
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,196,3.865895576210028
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,197,3.202124112290514
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,198,3.696564732228682
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,199,3.4631010342550934
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,200,5.059227592091739
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,201,5.1604527050882485
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,202,6.245880924993253
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,203,7.439518685878196
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,204,7.2732809788944115
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,205,7.1634725859055495
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,206,7.123819554909648
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,207,7.17719863490414
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,208,7.320559592889718
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,209,7.3983405388821355
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,210,7.78266991684764
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,211,8.083117882825055
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,212,8.336287234810294
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,213,8.369839799808728
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,214,8.330186768810592
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,215,8.342387700810004
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,216,9.779723304257562
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,217,8.252552092832842
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,218,6.64529992294875
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,219,5.340548130064303
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,220,3.904100022207178
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,221,3.8254659552160466
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,222,3.7798803132208567
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,223,4.4599004401484015
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,224,5.292062893069246
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,225,5.978086711011769
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,226,6.550009128962203
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,227,7.793345732846762
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,228,7.570678711866012
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,229,7.460870318876174
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,230,7.405966121881402
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,231,7.537126147869075
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,232,8.020588102829365
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,233,8.549803555802397
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,234,9.29253532990003
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,235,9.66771400953773
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,236,9.914782898126047
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,237,9.948335463515669
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,238,9.849202884007697
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2030,239,10.044339171373199
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,0,10.008634765704569
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,1,8.968759182467412
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,2,6.873263770570551
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,3,5.314687075698948
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,4,3.8658955768372802
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,5,3.2021241129201936
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,6,3.696564732856028
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,7,3.463101034882677
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,8,5.059227592721943
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,9,5.1604527057197105
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,10,6.245880925637498
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,11,7.439518686536669
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,12,7.2732809795532125
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,13,7.1634725865643905
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,14,7.1238195555684705
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,15,7.177198635562982
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,16,7.3205595935484595
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,17,7.398340539540721
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,18,7.7826699175043235
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,19,8.083117883478904
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,20,8.336287235461077
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,21,8.36983980045909
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,22,8.33018676946145
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,23,8.342387701460709
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,24,9.779723304538356
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,25,8.252552093470305
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,26,6.6452999235873405
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,27,5.340548130695906
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,28,3.9041000228350744
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,29,3.8254659558440633
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,30,3.7798803138488024
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,31,4.4599004407763
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,32,5.292062893700678
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,33,5.978086711649893
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,34,6.5500091296077905
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,35,7.793345733503364
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,36,7.570678712523985
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,37,7.460870319534581
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,38,7.405966122539969
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,39,7.537126148527196
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,40,8.020588103483894
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,41,8.549803556450655
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,42,9.292535330547322
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,43,9.6677140100335
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,44,9.914782898407097
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,45,9.948335464091679
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,46,9.849202884149257
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,47,10.044339172943173
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,48,10.008634767535854
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,49,8.968759183134173
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,50,6.873263771228048
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,51,5.314687076355178
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,52,3.865895577496994
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,53,3.202124113584688
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,54,3.6965647335166123
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,55,3.4631010355445713
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,56,5.059227593378424
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,57,5.160452706377106
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,58,6.245880926299999
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,59,7.439518687207296
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,60,7.273280980224106
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,61,7.163472587235423
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,62,7.123819556239545
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,63,7.177198636234
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,64,7.320559594219282
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,65,7.39834054021142
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,66,7.782669918174245
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,67,8.083117884148148
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,68,8.336287236129879
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,69,8.369839801127858
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,70,8.33018677013026
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,71,8.342387702129505
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,72,9.77972330530978
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,73,8.252552094128792
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,74,6.645299924243347
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,75,5.34054813135187
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,76,3.9041000234949665
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,77,3.8254659565044005
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,78,3.7798803145093194
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,79,4.459900441433723
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,80,5.292062894356861
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,81,5.978086712308509
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,82,6.550009130270077
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,83,7.793345734173262
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,84,7.570678713194362
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,85,7.46087032020517
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,86,7.4059661232106535
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,87,7.53712614919764
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,88,8.020588104153275
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,89,8.54980355711941
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,90,9.292535331229171
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,91,9.667714010762678
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,92,9.91478289936342
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,93,9.948335465269556
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,94,9.849202884979132
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,95,10.044339172998571
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,96,10.008634769467246
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,97,8.968759183829636
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,98,6.873263771912278
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,99,5.314687077038395
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,100,3.8658955781850373
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,101,3.202124114278412
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,102,3.696564734205719
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,103,3.4631010362352503
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,104,5.059227594061925
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,105,5.1604527070609665
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,106,6.2458809269885744
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,107,7.43951868790537
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,108,7.2732809809222365
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,109,7.163472587933551
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,110,7.123819556937665
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,111,7.17719863693213
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,112,7.3205595949174045
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,113,7.398340540909514
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,114,7.782669918872019
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,115,8.083117884845567
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,116,8.336287236827124
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,117,8.369839801825103
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,118,8.330186770827504
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,119,8.342387702826748
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,120,9.779723306119767
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,121,8.252552094814654
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,122,6.6452999249261895
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,123,5.340548132035
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,124,3.9041000241832586
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,125,3.825465957193236
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,126,3.7798803151983655
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,127,4.4599004421188315
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,128,5.292062895040084
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,129,5.978086712993445
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,130,6.550009130958668
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,131,7.793345734871023
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,132,7.570678713892346
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,133,7.46087032090323
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,134,7.405966123908744
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,135,7.537126149895649
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,136,8.020588104850765
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,137,8.549803557816855
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,138,9.292535331941899
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,139,9.667714011527357
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,140,9.914782900374638
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,141,9.948335466532155
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,142,9.849202885852096
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,143,10.044339173057962
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,144,10.008634771495073
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,145,8.968759184554049
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,146,6.873263772623869
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,147,5.31468707774965
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,148,3.865895578902762
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,149,3.202124115002778
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,150,3.6965647349247197
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,151,3.4631010369561057
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,152,5.059227594773547
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,153,5.160452707772273
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,154,6.2458809277036815
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,155,7.439518688630823
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,156,7.273280981647536
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,157,7.163472588658705
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,158,7.123819557662757
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,159,7.177198637657304
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,160,7.320559595642755
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,161,7.398340541634937
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,162,7.78266991959759
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,163,8.083117885571134
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,164,8.33628723755281
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,165,8.369839802550828
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,166,8.330186771553183
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,167,8.34238770355244
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,168,9.779723306969201
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,169,8.252552095528273
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,170,6.64529992563663
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,171,5.340548132746376
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,172,3.9041000249012963
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,173,3.8254659579119203
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,174,3.7798803159173016
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,175,4.45990044283288
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,176,5.292062895751405
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,177,5.978086713705427
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,178,6.550009131673986
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,179,7.7933457355965965
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,180,7.570678714617874
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,181,7.4608703216287005
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,182,7.4059661246341735
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,183,7.5371261506211615
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,184,8.02058810557633
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,185,8.54980355854301
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,186,9.292535332685777
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,187,9.667714012328185
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,188,9.914782901442573
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,189,9.94833546788498
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,190,9.849202886768943
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,191,10.04433917312169
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,192,10.008634773614467
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,193,8.968759185307638
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,194,6.873263773363611
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,195,5.314687078490195
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,196,3.8658955796516863
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,197,3.2021241157593434
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,198,3.6965647356751474
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,199,3.463101037708694
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,200,5.05922759551459
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,201,5.160452708512237
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,202,6.245880928445973
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,203,7.439518689383614
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,204,7.2732809823999744
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,205,7.16347258941087
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,206,7.123819558414814
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,207,7.1771986384095054
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,208,7.320559596395301
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,209,7.398340542387647
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,210,7.782669920350899
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,211,8.083117886324782
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,212,8.33628723830687
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,213,8.369839803304973
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,214,8.330186772307231
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,215,8.342387704306518
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,216,9.779723307858873
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,217,8.2525520962701
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,218,6.645299926375598
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,219,5.340548133487264
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,220,3.904100025650591
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,221,3.8254659586619746
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,222,3.779880316667649
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,223,4.459900443577302
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,224,5.2920628964920935
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,225,5.978086714445392
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,226,6.550009132416617
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,227,7.793345736349917
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,228,7.570678715370891
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,229,7.46087032238153
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,230,7.4059661253868985
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,231,7.5371261513741254
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,232,8.020588106329905
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,233,8.54980355929783
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,234,9.29253533346098
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,235,9.667714013165698
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,236,9.914782902569064
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,237,9.948335469333804
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,238,9.84920288773025
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2035,239,10.044339173190014
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,0,10.008634775447762
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,1,8.968759186080336
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,2,6.873263774207392
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,3,5.314687079374721
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,4,3.8658955805795707
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,5,3.202124116714139
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,6,3.6965647366066112
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,7,3.4631010386426544
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,8,5.05922759639769
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,9,5.160452709363633
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,10,6.24588092925593
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,11,7.439518690159453
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,12,7.273280983176195
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,13,7.163472590187244
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,14,7.1238195591912215
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,15,7.177198639185862
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,16,7.320559597171433
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,17,7.398340543163595
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,18,7.782669921125495
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,19,8.083117887098096
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,20,8.336287239079152
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,21,8.36983980407711
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,22,8.33018677307954
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,23,8.342387705078771
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,24,9.779723307252826
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,25,8.252552097084541
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,26,6.645299927238881
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,27,5.340548134384388
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,28,3.9041000265883614
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,29,3.8254659596027816
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,30,3.779880317607727
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,31,4.459900444487834
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,32,5.292062897379752
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,33,5.97808671528412
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,34,6.5500091332285235
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,35,7.7933457371244685
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,36,7.570678716146313
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,37,7.460870323157307
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,38,7.405966126162828
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,39,7.537126152149663
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,40,8.020588107103482
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,41,8.549803560068893
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,42,9.292535334137716
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,43,9.667714013208444
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,44,9.914782900901997
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,45,9.948335467131797
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,46,9.849202886556425
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,47,10.044339174264241
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,48,10.008634778112256
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,49,8.968759186891878
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,50,6.873263775008957
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,51,5.3146870801823
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,52,3.8658955814009386
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,53,3.2021241175454773
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,54,3.696564737430051
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,55,3.463101039468993
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,56,5.05922759720635
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,57,5.1604527101692526
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,58,6.245880930057873
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,59,7.439518690967394
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,60,7.273280983983665
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,61,7.163472590994375
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,62,7.123819559998227
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,63,7.177198639993038
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,64,7.32055959797904
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,65,7.3983405439714245
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,66,7.78266992193432
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,67,8.083117887907735
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,68,8.336287239889748
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,69,8.36983980488787
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,70,8.330186773890105
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,71,8.342387705889397
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,72,9.779723308059761
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,73,8.25255209788614
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,74,6.64529992804125
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,75,5.340548135192823
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,76,3.904100027410173
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,77,3.8254659604256296
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,78,3.779880318430987
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,79,4.4599004453025515
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,80,5.292062898187675
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,81,5.978086716086807
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,82,6.5500091340305735
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,83,7.793345737933321
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,84,7.570678716954604
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,85,7.460870323965307
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,86,7.405966126970679
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,87,7.537126152957866
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,88,8.020588107912936
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,89,8.549803560880765
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,90,9.292535334962142
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,91,9.667714014027787
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,92,9.914782901868435
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,93,9.94833546834848
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,94,9.849202887387294
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,95,10.044339174423495
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,96,10.008634780922158
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,97,8.968759187734445
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,98,6.8732637758429735
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,99,5.314687081024909
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,100,3.8658955822597605
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,101,3.2021241184152696
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,102,3.696564738291192
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,103,3.4631010403333513
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,104,5.059227598050325
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,105,5.160452711009341
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,106,6.245880930891348
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,107,7.439518691804277
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,108,7.273280984820063
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,109,7.163472591830443
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,110,7.123819560834172
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,111,7.177198640829148
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,112,7.320559598815579
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,113,7.398340544808189
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,114,7.782669922772174
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,115,8.083117888746555
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,116,8.33628724072973
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,117,8.369839805728049
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,118,8.330186774730054
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,119,8.342387706729413
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,120,9.779723308896497
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,121,8.25255209871896
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,122,6.645299928876843
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,123,5.340548136036504
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,124,3.9041000282694647
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,125,3.825465961286077
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,126,3.779880319291898
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,127,4.459900446153788
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,128,5.292062899030717
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,129,5.978086716922502
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,130,6.55000913486396
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,131,7.793345738771205
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,132,7.570678717791857
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,133,7.460870324802251
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,134,7.405966127807464
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,135,7.5371261537950245
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,136,8.02058810875153
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,137,8.54980356172227
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,138,9.292535335817801
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,139,9.667714014877298
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,140,9.914782902879725
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,141,9.948335469633736
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,142,9.84920288825014
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,143,10.044339174597784
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,144,10.008634783874424
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,145,8.968759188609091
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,146,6.8732637767113465
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,147,5.314687081904804
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,148,3.8658955831583373
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,149,3.202124119325787
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,150,3.696564739192326
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,151,3.463101041238018
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,152,5.059227598931907
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,153,5.160452711886194
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,154,6.24588093175835
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,155,7.439518692671278
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,156,7.273280985686655
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,157,7.163472592696767
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,158,7.123819561700398
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,159,7.177198641695505
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,160,7.320559599682286
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,161,7.3983405456750875
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,162,7.782669923640074
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,163,8.083117889615462
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,164,8.33628724159992
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,165,8.36983980659846
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,166,8.330186775600204
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,167,8.342387707599642
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,168,9.77972330976445
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,169,8.25255209958445
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,170,6.645299929747671
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,171,5.340548136917677
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,172,3.9041000291685304
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,173,3.8254659621864127
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,174,3.7798803201927513
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,175,4.459900447043847
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,176,5.292062899911135
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,177,5.978086717793333
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,178,6.550009135730578
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,179,7.793345739639134
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,180,7.570678718659187
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,181,7.460870325669306
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,182,7.4059661286743825
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,183,7.53712615466227
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,184,8.020588109620196
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,185,8.549803562594173
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,186,9.292535336705374
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,187,9.667714015757772
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,188,9.914782903939008
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,189,9.948335470992408
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,190,9.849202889146953
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,191,10.044339174784529
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,192,10.008634786967596
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,193,8.968759189517234
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,194,6.873263777616323
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,195,5.3146870828244985
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,196,3.8658955840991784
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,197,3.202124120279505
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,198,3.696564740135958
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,199,3.463101042185479
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,200,5.0592275998536245
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,201,5.160452712802369
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,202,6.245880932661247
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,203,7.439518693570048
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,204,7.273280986585178
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,205,7.1634725935951415
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,206,7.123819562598726
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,207,7.177198642593899
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,208,7.320559600580875
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,209,7.398340546573794
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,210,7.7826699245394995
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,211,8.083117890515794
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,212,8.336287242501559
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,213,8.369839807500332
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,214,8.330186776501801
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,215,8.342387708501322
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,216,9.779723310665519
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,217,8.252552100484406
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,218,6.645299930656044
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,219,5.34054813783884
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,220,3.9041000301098703
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,221,3.8254659631291363
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,222,3.7798803211360434
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,223,4.459900447975257
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,224,5.292062900831445
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,225,5.978086718701749
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,226,6.550009136632701
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,227,7.793345740538587
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,228,7.57067871955818
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,229,7.460870326568109
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,230,7.4059661295731
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,231,7.537126155561204
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,232,8.020588110520299
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,233,8.549803563497653
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,234,9.292535337625912
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,235,9.667714016670404
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,236,9.91478290505012
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,237,9.94833547243036
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,238,9.84920289008032
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2040,239,10.044339174980728
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,0,10.008634787450937
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,1,8.968759190608807
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,2,6.873263778688937
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,3,5.314687083934046
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,4,3.865895585263625
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,5,3.2021241214768112
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,6,3.6965647413054787
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,7,3.463101043359542
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,8,5.059227600963111
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,9,5.1604527138783265
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,10,6.245880933688709
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,11,7.439518694575413
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,12,7.273280987585315
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,13,7.1634725945922915
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,14,7.123819563594882
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,15,7.177198643591404
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,16,7.320559601582409
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,17,7.39834054757778
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,18,7.782669925558707
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,19,8.083117891550824
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,20,8.336287243552144
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,21,8.369839808553046
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,22,8.330186777552003
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,23,8.342387709552296
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,24,9.77972331102563
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,25,8.252552101581358
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,26,6.645299931746455
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,27,5.340548138961366
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,28,3.9041000312839773
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,29,3.8254659643069866
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,30,3.7798803223135415
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,31,4.459900449117159
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,32,5.29206290194435
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,33,5.978086719761087
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,34,6.550009137664416
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,35,7.793345741558297
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,36,7.570678720568323
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,37,7.46087032757421
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,38,7.405966130577337
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,39,7.537126156570066
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,40,8.020588111551756
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,41,8.5498035645614
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,42,9.292535338638006
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,43,9.667714017332484
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,44,9.914782904330847
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,45,9.948335470866681
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,46,9.84920289008211
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,47,10.044339175905394
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,48,10.00863479135239
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,49,8.968759191600485
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,50,6.873263779680789
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,51,5.314687084946445
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,52,3.865895586302251
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,53,3.2021241225303045
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,54,3.696564742347411
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,55,3.4631010444060064
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,56,5.059227601978375
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,57,5.160452714887025
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,58,6.245880934677797
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,59,7.439518695552915
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,60,7.273280988562742
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,61,7.16347259556976
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,62,7.123819564572381
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,63,7.177198644568864
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,64,7.320559602559841
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,65,7.3983405485552485
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,66,7.782669926536972
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,67,8.08311789253061
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,68,8.336287244534063
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,69,8.369839809535318
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,70,8.330186778533857
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,71,8.342387710534277
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,72,9.779723311927398
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,73,8.252552102567535
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,74,6.645299932743116
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,75,5.340548139975383
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,76,3.9041000323230057
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,77,3.825465965347639
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,78,3.7798803233548974
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,79,4.459900450144421
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,80,5.292062902957497
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,81,5.978086720758449
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,82,6.550009138651817
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,83,7.7933457425366
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,84,7.570678721546014
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,85,7.460870328551737
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,86,7.405966131554811
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,87,7.537126157547697
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,88,8.020588112531145
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,89,8.549803565545883
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,90,9.292535339632165
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,91,9.667714018281323
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,92,9.914782905345211
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,93,9.948335472152593
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,94,9.849202890976999
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,95,10.04433917633696
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,96,10.008634795508124
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,97,8.968759192632964
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,98,6.873263780717901
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,99,5.314687086007409
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,100,3.8658955873916563
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,101,3.2021241236354308
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,102,3.69656474344034
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,103,3.463101045503743
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,104,5.059227603042567
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,105,5.160452715944077
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,106,6.245880935712041
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,107,7.439518696570741
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,108,7.273280989580845
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,109,7.163472596588153
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,110,7.123819565590898
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,111,7.177198645587214
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,112,7.320559603577844
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,113,7.398340549573122
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,114,7.7826699275549345
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,115,8.083117893549689
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,116,8.336287245555054
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,117,8.369839810556643
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,118,8.33018677955479
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,119,8.342387711555327
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,120,9.779723312861725
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,121,8.252552103596363
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,122,6.645299933785939
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,123,5.34054814103807
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,124,3.904100033412802
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,125,3.825465966439163
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,126,3.7798803244471766
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,127,4.459900451221658
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,128,5.292062904019283
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,129,5.978086721802438
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,130,6.550009139683807
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,131,7.7933457435545845
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,132,7.570678722563771
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,133,7.460870329569541
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,134,7.405966132572676
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,135,7.537126158565457
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,136,8.0205881135499
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,137,8.549803566569352
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,138,9.292535340665019
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,139,9.667714019264777
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,140,9.914782906406558
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,141,9.948335473509806
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,142,9.849202891905502
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,143,10.044339176818735
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,144,10.008634799932874
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,145,8.968759193709365
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,146,6.873263781803596
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,147,5.314687087120208
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,148,3.865895588535015
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,149,3.2021241247953283
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,150,3.6965647445874223
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,151,3.463101046655909
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,152,5.059227604158953
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,153,5.160452717052799
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,154,6.245880936794925
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,155,7.439518697632378
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,156,7.273280990643153
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,157,7.163472597651023
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,158,7.123819566653995
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,159,7.177198646650011
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,160,7.3205596046399375
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,161,7.398340550634904
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,162,7.782669928615989
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,163,8.083117894611364
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,164,8.336287246618344
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,165,8.369839811620235
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,166,8.330186780618028
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,167,8.342387712618672
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,168,9.779723313831473
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,169,8.25255210467106
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,170,6.645299934878204
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,171,5.3405481421526755
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,172,3.9041000345565298
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,173,3.825465967584714
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,174,3.779880325593536
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,175,4.459900452352069
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,176,5.292062905132967
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,177,5.9780867228964425
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,178,6.550009140763848
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,179,7.793345744615641
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,180,7.570678723625046
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,181,7.460870330631108
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,182,7.405966133634429
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,183,7.537126159626811
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,184,8.020588114611341
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,185,8.549803567634967
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,186,9.292535341739498
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,187,9.667714020285583
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,188,9.914782907520529
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,189,9.948335474946523
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,190,9.849202892871386
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,191,10.044339177338674
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,192,10.008634804648535
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,193,8.968759194833213
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,194,6.873263782941404
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,195,5.314687088288263
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,196,3.86589558973565
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,197,3.202124126013313
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,198,3.696564745791985
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,199,3.4631010478658246
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,200,5.059227605330938
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,201,5.160452718216674
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,202,6.245880937930139
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,203,7.439518698741664
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,204,7.27328099175353
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,205,7.163472598762255
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,206,7.123819567765559
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,207,7.17719864776113
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,208,7.320559605749981
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,209,7.398340551744439
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,210,7.782669929723911
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,211,8.083117895719347
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,212,8.336287247727595
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,213,8.369839812729754
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,214,8.330186781727233
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,215,8.34238771372797
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,216,9.779723314839764
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,217,8.25255210579514
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,218,6.645299936023389
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,219,5.340548143322589
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,220,3.9041000357575086
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,221,3.8254659687876105
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,222,3.7798803267972936
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,223,4.459900453539008
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,224,5.292062906301964
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,225,5.978086724044026
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,226,6.550009141895623
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,227,7.793345745723541
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,228,7.570678724733657
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,229,7.4608703317402725
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,230,7.405966134743915
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,231,7.537126160735578
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,232,8.020588115719196
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,233,8.54980356874635
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,234,9.292535342859017
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,235,9.667714021346875
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,236,9.914782908693185
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,237,9.948335476471975
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,238,9.84920289387866
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2045,239,10.044339177885687
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,0,10.008634819134102
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,1,8.968759195946628
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,2,6.873263785308614
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,3,5.314687091401778
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,4,3.8658955935085917
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,5,3.2021241301434062
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,6,3.69656474960107
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,7,3.4631010516744114
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,8,5.05922760841071
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,9,5.160452720730529
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,10,6.245880939636939
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,11,7.43951869962326
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,12,7.273280992651086
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,13,7.163472599670034
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,14,7.123819568676966
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,15,7.177198648667644
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,16,7.320559606643058
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,17,7.398340552630042
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,18,7.782669930570501
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,19,8.083117896531656
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,20,8.336287248504995
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,21,8.369839813501812
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,22,8.33018678250558
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,23,8.342387714504412
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,24,9.779723325551128
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,25,8.25255210762645
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,26,6.645299938765013
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,27,5.3405481466661495
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,28,3.9041000397155794
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,29,3.8254659727885083
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,30,3.7798803307773685
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,31,4.459900457073135
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,32,5.292062909471742
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,33,5.978086726314749
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,34,6.550009143624227
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,35,7.79334574656899
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,36,7.5706787256022325
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,37,7.460870332619777
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,38,7.405966135628781
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,39,7.537126161607524
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,40,8.020588116539082
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,41,8.549803569485631
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,42,9.292535343773082
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,43,9.66771402677465
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,44,9.914782920351058
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,45,9.948335496519563
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,46,9.849202907286964
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,47,10.044339171617315
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,48,10.008634821585593
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,49,8.968759197119052
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,50,6.87326378654775
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,51,5.314687092682624
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,52,3.8658955948287432
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,53,3.20212413148323
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,54,3.6965647509258837
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,55,3.463101053005643
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,56,5.059227609697183
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,57,5.160452722009247
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,58,6.245880940879828
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,59,7.439518700826065
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,60,7.2732809938572816
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,61,7.1634726008785
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,62,7.123819569886262
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,63,7.177198649875825
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,64,7.320559607848282
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,65,7.398340553833682
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,66,7.782669931766396
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,67,8.083117897721198
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,68,8.336287249688239
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,69,8.369839814684106
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,70,8.330186783688994
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,71,8.342387715687487
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,72,9.779723327505042
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,73,8.252552108830123
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,74,6.645299940013208
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,75,5.340548147948178
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,76,3.9041000410355005
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,77,3.825465974110643
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,78,3.7798803321006296
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,79,4.4599004583770565
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,80,5.2920629107535575
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,81,5.978086727571829
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,82,6.550009144860929
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,83,7.793345747764667
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,84,7.570678726802393
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,85,7.460870333822149
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,86,7.405966136832264
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,87,7.537126162808358
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,88,8.02058811773001
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,89,8.54980357066223
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,90,9.292535344979823
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,91,9.667714028409003
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,92,9.91478292198777
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,93,9.948335500102642
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,94,9.849202909131785
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,95,10.044339171657377
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,96,10.008634824019984
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,97,8.968759198341672
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,98,6.873263787844856
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,99,5.314687094024618
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,100,3.865895596212385
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,101,3.202124132887554
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,102,3.6965647523144565
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,103,3.463101054401029
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,104,5.0592276110452925
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,105,5.160452723349605
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,106,6.2458809421820884
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,107,7.43951870208406
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,108,7.273280995119256
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,109,7.1634726021431305
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,110,7.123819571151855
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,111,7.177198651140121
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,112,7.320559609109122
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,113,7.398340555092659
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,114,7.782669933016176
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,115,8.083117898963291
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,116,8.33628725092265
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,117,8.369839815917363
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,118,8.33018678492361
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,119,8.34238771692169
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,120,9.779723329556207
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,121,8.252552110087372
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,122,6.645299941319914
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,123,5.340548149291235
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,124,3.9041000424187855
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,125,3.8254659754962597
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,126,3.779880333487455
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,127,4.45990045974353
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,128,5.292062912096549
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,129,5.978086728888903
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,130,6.55000914615623
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,131,7.793345749014187
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,132,7.570678728057263
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,133,7.460870335079634
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,134,7.40596613809106
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,135,7.537126164064028
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,136,8.020588118973787
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,137,8.549803571888662
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,138,9.292535346244168
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,139,9.667714030141205
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,140,9.9147829237156
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,141,9.948335503989597
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,142,9.849202911005204
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,143,10.044339171696944
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,144,10.008634826479502
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,145,8.968759199617898
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,146,6.8732637892026975
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,147,5.314687095430413
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,148,3.8658955976621665
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,149,3.2021241343590496
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,150,3.6965647537694517
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,151,3.463101055863237
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,152,5.059227612457697
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,153,5.1604527247543155
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,154,6.245880943546616
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,155,7.439518703400479
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,156,7.273280996440248
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,157,7.163472603467154
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,158,7.123819572476979
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,159,7.177198652463766
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,160,7.320559610428811
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,161,7.398340556410211
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,162,7.782669934323052
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,163,8.083117900261083
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,164,8.336287252211319
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,165,8.369839817204669
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,166,8.330186786212524
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,167,8.342387718210114
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,168,9.779723331708105
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,169,8.252552111400895
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,170,6.645299942687833
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,171,5.3405481506979555
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,172,3.904100043868084
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,173,3.825465976948014
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,174,3.7798803349405037
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,175,4.4599004611752004
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,176,5.292062913503361
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,177,5.978086730268733
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,178,6.550009147513031
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,179,7.793345750320758
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,180,7.570678729370072
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,181,7.460870336395467
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,182,7.405966139408402
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,183,7.537126165377761
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,184,8.020588120273583
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,185,8.549803573167996
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,186,9.29253534757145
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,187,9.66771403197958
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,188,9.914782925559363
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,189,9.94833550820209
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,190,9.849202912902006
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,191,10.044339171735944
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,192,10.008634829019156
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,193,8.968759200951355
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,194,6.8732637906240335
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,195,5.314687096902671
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,196,3.8658955991807593
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,197,3.202124135900398
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,198,3.6965647552935423
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,199,3.463101057394944
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,200,5.059227613937062
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,201,5.160452726226072
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,202,6.245880944976268
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,203,7.439518704778534
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,204,7.273280997823458
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,205,7.163472604853769
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,206,7.123819573864825
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,207,7.177198653849955
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,208,7.320559611810557
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,209,7.3983405577895445
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,210,7.782669935690228
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,211,8.083117901617742
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,212,8.336287253557362
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,213,8.369839818549137
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,214,8.33018678755885
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,215,8.342387719555875
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,216,9.77972333396382
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,217,8.252552112773405
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,218,6.645299944119676
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,219,5.3405481521709985
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,220,3.904100045386066
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,221,3.825465978468574
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,222,3.7798803364624467
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,223,4.459900462674722
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,224,5.292062914976652
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,225,5.97808673171406
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,226,6.5500091489342
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,227,7.793345751687584
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,228,7.5706787307440315
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,229,7.4608703377728585
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,230,7.405966140787499
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,231,7.537126166752774
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,232,8.02058812163257
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,233,8.549803574503361
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,234,9.29253534896743
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,235,9.667714033932853
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,236,9.914782927547884
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,237,9.94833551276066
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,238,9.849202914816331
+1.5C,autarky,time-dep,SG,Generic fossil power plant,2050,239,10.044339171774306

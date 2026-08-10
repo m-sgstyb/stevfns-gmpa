@@ -1,0 +1,13 @@
+scenario_id,scenario_type,case_id,country,year,technology,unit,new_capacity,stock_capacity
+1.5C,autarky,time-dep,SG,2025,Generic fossil power plant,GWp,5.044339174331469,10.04433917433147
+1.5C,autarky,time-dep,SG,2025,Openfield PV,GWp,9.899999999894415,9.999999999894415
+1.5C,autarky,time-dep,SG,2030,Generic fossil power plant,GWp,0.12500000567453715,10.04433918000601
+1.5C,autarky,time-dep,SG,2030,Openfield PV,GWp,0.000499999971470486,9.999999999866393
+1.5C,autarky,time-dep,SG,2035,Generic fossil power plant,GWp,0.12187501004563815,10.044339190051648
+1.5C,autarky,time-dep,SG,2035,Openfield PV,GWp,0.0004974999941018269,9.999999999860794
+1.5C,autarky,time-dep,SG,2040,Generic fossil power plant,GWp,0.11882813003969422,10.044339195091341
+1.5C,autarky,time-dep,SG,2040,Openfield PV,GWp,0.0004950122669154359,9.999999999627985
+1.5C,autarky,time-dep,SG,2045,Generic fossil power plant,GWp,0.11585743273391967,10.044339205950262
+1.5C,autarky,time-dep,SG,2045,Openfield PV,GWp,0.0004925371933955879,9.999999999384427
+1.5C,autarky,time-dep,SG,2050,Generic fossil power plant,GWp,5.157300130410472,10.044339175701142
+1.5C,autarky,time-dep,SG,2050,Openfield PV,GWp,0.0004900699478188807,9.99999999458211

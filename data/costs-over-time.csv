@@ -1,0 +1,13 @@
+scenario_id,scenario_type,case_id,country,year,technology,metric,unit,value
+1.5C,autarky,time-dep,SG,2025,Openfield PV,cost,Billion USD,0.20094657339075708
+1.5C,autarky,time-dep,SG,2030,Openfield PV,cost,Billion USD,0.1574546911396683
+1.5C,autarky,time-dep,SG,2035,Openfield PV,cost,Billion USD,0.12337569792132733
+1.5C,autarky,time-dep,SG,2040,Openfield PV,cost,Billion USD,0.09667253403978474
+1.5C,autarky,time-dep,SG,2045,Openfield PV,cost,Billion USD,0.07574885110189487
+1.5C,autarky,time-dep,SG,2050,Openfield PV,cost,Billion USD,0.05935367437922334
+1.5C,autarky,time-dep,SG,2025,Generic fossil power plant,cost,Billion USD,4.542349048526761
+1.5C,autarky,time-dep,SG,2030,Generic fossil power plant,cost,Billion USD,3.5652574513810635
+1.5C,autarky,time-dep,SG,2035,Generic fossil power plant,cost,Billion USD,2.7982151185256328
+1.5C,autarky,time-dep,SG,2040,Generic fossil power plant,cost,Billion USD,2.196097828841103
+1.5C,autarky,time-dep,SG,2045,Generic fossil power plant,cost,Billion USD,1.7234679097747096
+1.5C,autarky,time-dep,SG,2050,Generic fossil power plant,cost,Billion USD,1.3524966293494098
