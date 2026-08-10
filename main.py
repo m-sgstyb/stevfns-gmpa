@@ -146,7 +146,6 @@ def main():
         append_and_save(capacities_df, os.path.join(data_folder, "installed-cap-over-time.csv"))
         append_and_save(emissions_df, os.path.join(data_folder, "emissions-over-time.csv"))
         append_and_save(emissions_by_country_df, os.path.join(data_folder, "emissions-over-time-by-country.csv"))
-        print("pv carryover", my_network.assets[1].carryover_out.value)
     
     final_time = time.time()
 

@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 25 11:44:26 2025
-
-@author: Mónica Sagastuy-Breña
-Wrapper script to run main.py through CLI and not edit the script with hard coded details
+Wrapper script to run main.py through CLI and not
+edit the script with hard coded details
 """
 
 import subprocess
