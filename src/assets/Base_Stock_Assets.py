@@ -166,7 +166,9 @@ class Stock_Asset_STEVFNs(Asset_STEVFNs):
         period_end_years = period_start_years + period_years
 
         M = np.zeros((self.num_periods, self.num_periods))
-        terminal_charge_vec = np.zeros(self.num_periods)  # NEW -- indexed by install cohort k
+        # Charge component indexed by install cohort k, for capacity
+        # installed where lifetime exceeds project life
+        terminal_charge_vec = np.zeros(self.num_periods)
 
         for k in range(self.num_periods):
             install_year = period_start_years[k]
@@ -191,7 +193,7 @@ class Stock_Asset_STEVFNs(Asset_STEVFNs):
                     terminal_charge_vec[k] = annual_payment_vec[k] * remaining_discount_factors.sum()
 
         self.cost_fun_params["sizing_constant"].value = M
-        self.cost_fun_params["terminal_charge"].value = terminal_charge_vec   # NEW
+        self.cost_fun_params["terminal_charge"].value = terminal_charge_vec
         return
 
     def _update_existing_capacity_vec(self):
