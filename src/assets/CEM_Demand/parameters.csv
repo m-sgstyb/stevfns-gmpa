@@ -1,2 +1,3 @@
-Type,demand,demand_unit,location_name
-0,1.18,Mt cement/year,SG
+Type,demand,location_name
+0,SG_cem_demand,SG
+1,ID_cem_demand,ID
