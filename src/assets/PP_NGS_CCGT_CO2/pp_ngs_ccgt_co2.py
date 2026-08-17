@@ -42,7 +42,7 @@ class PP_NGS_CCGT_CO2_Asset(Stock_Asset_STEVFNs):
         self.target_node_times = np.arange(asset_structure["Start_Time"] + self.transport_time,
                                             asset_structure["End_Time"] + self.transport_time,
                                             self.period)
-        self.target_node_location_2 = self.source_node_location
+        self.target_node_location_2 = 0 # Global CO2 emissions node
         self.stock_node_location = self.source_node_location
         self.target_node_location_3 = self.source_node_location
 

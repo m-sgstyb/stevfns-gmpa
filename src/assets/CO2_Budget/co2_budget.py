@@ -25,8 +25,8 @@ class CO2_Budget_Asset(Asset_STEVFNs):
 
     def define_structure(self, asset_structure):
         self.asset_structure = asset_structure
-        self.source_node_location = asset_structure["Location_1"]
-        self.target_node_location = self.source_node_location
+        self.source_node_location = 0 # Assume global CO2 budget location
+        self.target_node_location = 0 # Assume global CO2 budget location
 
         self.num_years = int(self.network.system_parameters_df.loc["project_life", "value"] / 8760)
         self.reinvestment_period = int(self.network.system_parameters_df.loc["reinvestment_period", "value"] / 8760)

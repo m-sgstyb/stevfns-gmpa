@@ -12,7 +12,7 @@ class PP_COAL_CO2_Asset(Stock_Asset_STEVFNs):
     separate hourly dispatch variable, capped per period at available
     operating stock (carryover_out).
     """
-    asset_name = "PP_Coal_CO2"
+    asset_name = "PP_COAL_CO2"
     source_node_type = "NULL"
     target_node_type = "EL"
     target_node_type_2 = "CO2_Budget"
@@ -42,7 +42,7 @@ class PP_COAL_CO2_Asset(Stock_Asset_STEVFNs):
         self.target_node_times = np.arange(asset_structure["Start_Time"] + self.transport_time,
                                             asset_structure["End_Time"] + self.transport_time,
                                             self.period)
-        self.target_node_location_2 = self.source_node_location
+        self.target_node_location_2 = 0 # Global CO2 emissions node
         self.stock_node_location = self.source_node_location
         self.target_node_location_3 = self.source_node_location
 
@@ -59,11 +59,11 @@ class PP_COAL_CO2_Asset(Stock_Asset_STEVFNs):
                                 "usage_constant": cp.Parameter(self.number_of_edges, nonneg=True,
                                                                 name=f"usage_cost_{self.asset_name}"),
                                 "terminal_charge": cp.Parameter(shape=(self.num_periods,), nonneg=True,   # limit bias
-                                                                   name=f"terminal_charge_{self.asset_name}"),
+                                                                name=f"terminal_charge_{self.asset_name}"),
         }
 
         self.conversion_fun_params_2 = {"CO2_emissions_factor": cp.Parameter(nonneg=True,
-                                                                               name=f"emissions_factor_{self.asset_name}")}
+                                                                            name=f"emissions_factor_{self.asset_name}")}
         return
 
     def build_edges(self):
@@ -95,8 +95,10 @@ class PP_COAL_CO2_Asset(Stock_Asset_STEVFNs):
         period_flows = self.flows[start:end]
 
         self.period_emissions_sum = cp.sum(self.conversion_fun_2(period_flows, self.conversion_fun_params_2))
+        # Scale by ratio of full-year / sampled days per year
+        # Ratio is equivalent to days per period / sampled days per period
         hours_per_day = 24
-        sampled_days = int((self.number_of_edges / hours_per_day) / self.num_years)
+        sampled_days = int((self.number_of_edges / hours_per_day) / self.num_years) # per year
         self.period_emissions_sum *= (365 / sampled_days)
 
         edge = Edge_STEVFNs()
@@ -109,7 +111,7 @@ class PP_COAL_CO2_Asset(Stock_Asset_STEVFNs):
         return
 
     def _get_year_change_indices(self):
-        """ Year change indices over horizon based on sample size"""
+        """Year change indices over horizon based on sample size"""
         hours_per_day = 24
         days_per_year = int((self.number_of_edges / hours_per_day) / self.num_years)
         hours_per_year = days_per_year * hours_per_day
@@ -117,7 +119,7 @@ class PP_COAL_CO2_Asset(Stock_Asset_STEVFNs):
         return list(self.year_change_indices)
 
     def _update_usage_constant(self):
-        sampled_days = int((self.number_of_edges / 24) / self.num_years)
+        sampled_days = int((self.number_of_edges / 24) / self.num_years) # per year
         simulation_factor = 365 / sampled_days
         discount_rate = self.network.system_parameters_df.loc["discount_rate", "value"]
 
@@ -127,6 +129,7 @@ class PP_COAL_CO2_Asset(Stock_Asset_STEVFNs):
 
         year_indices = self._get_year_change_indices() + [self.number_of_edges]
         expanded_costs = np.zeros(self.number_of_edges)
+        # Expand each re-scaled and discounted NPV of usage costs to hourly profile
         for i, (start, end) in enumerate(zip(year_indices[:-1], year_indices[1:])):
             expanded_costs[start:end] = yearly_costs[i]
 
