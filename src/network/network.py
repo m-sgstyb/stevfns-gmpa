@@ -16,7 +16,9 @@ class Network_STEVFNs:
         self.assets = []
         self.costs = []
         self.constraints = []
-        self.nodes_df = pd.Series([], index = pd.MultiIndex.from_tuples([], names = ["location", "type", "time"]), dtype = "O")
+        self.nodes_df = pd.Series([], index = pd.MultiIndex.from_tuples([],
+                                                                        names = ["location", "type", "time"]),
+                                                                        dtype = "O")
         self.base_folder = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
         self.system_parameters_df = pd.DataFrame({
             "parameter": ["timestep", "discount_rate", "project_life", "reinvestment_period"],
@@ -145,7 +147,7 @@ class Network_STEVFNs:
                 asset_type = asset_parameters_df.iloc[counter1]["Asset_Type"]
                 self.assets[asset_number].update(asset_type)
             except Exception as e:
-                print(f"Asset type {asset_type} for asset number {asset_number} failed due to exception: {e}")
+                print(f"Asset type {asset_type} for asset number {asset_number} failed to update due to exception: {e}")
         return
     
 

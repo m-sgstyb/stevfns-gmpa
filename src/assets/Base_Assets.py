@@ -87,7 +87,7 @@ class Asset_STEVFNs:
         return
     
     def _update_parameters(self):
-        """ Defines values per parameter"""
+        """Defines and updates values per parameter"""
         for parameter_name, parameter in self.cost_fun_params.items():
             parameter.value = self.parameters_df[parameter_name]
         for parameter_name, parameter in self.conversion_fun_params.items():
@@ -147,40 +147,39 @@ class Asset_STEVFNs:
         return period_end_year - period_start_year
     
     def size(self):
-        """ Returns size of asset
+        """Returns size of asset
         Defaults as maximum of asset.flows; can be overridden 
         Based on asset (child class) design
         """
         return self.flows.value.max()
     
     def component_size(self):
-        """ Returns size of component (same as asset if only 1 component)
+        """Returns size of component (same as asset if only 1 component)
         Defaults as maximum of asset.flows; can be overridden 
         Based on asset (child class) design
         """
         return self.flows.value.max()
     
     def asset_size(self):
-        """ Returns size of component directly """
+        """Returns size of component directly, as defined 
+        for self.component_size()"""
         return self.component_size()
     
     def get_component_size(self):
-        """ Returns the size of component as a dict """
+        """Returns the size of component as a dict"""
         component_size = self.component_size()
         component_identity = self.asset_name
         return {component_identity: component_size}
     
     def get_asset_size(self):
-        """ Returns the size of asset as a dict 
+        """Returns the size of asset as a dict 
         Default is: asset_size = component size = max(flows)
         """
         asset_size = self.asset_size()
         asset_identity = self.asset_name
         return {asset_identity: asset_size}
 
-    # ------------------------------------------------------------------
-    # Result-extraction interface
-    # ------------------------------------------------------------------
+    # --- Result-extraction interface ---
 
     def get_period_costs(self):
         """Per-period annualised cost, length num_periods, in the same
@@ -204,8 +203,6 @@ class Asset_STEVFNs:
         None if this asset class has no capacity concept (e.g. a fixed
         demand asset)."""
         return None
-
-
 
     def get_results_country(self, location_lookup):
         """Resolves this asset's reporting location to an ISO-2 code via
@@ -270,7 +267,8 @@ class Asset_STEVFNs:
 
             
 class Multi_Asset(Asset_STEVFNs):
-    """Class that contains multiple assets"""
+    """Class that contains multiple assets
+    From original STEVFNs framework"""
     asset_name = "Multi_Asset"
     cost_fun = staticmethod(lambda costs_dictionary, cost_fun_params: cp.Constant(0))
     assets_class_dictionary = dict() # dictionary that contains assetclasses

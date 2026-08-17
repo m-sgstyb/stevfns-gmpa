@@ -51,7 +51,7 @@ class Stock_Asset_STEVFNs(Asset_STEVFNs):
 
     def _define_period_structure(self, asset_structure):
         """Call from subclass define_structure(). Sets up new_capacity,
-        carryover_out, and default (no-op) flows/usage_constant --
+        carryover_out, and default flows/usage_constant.
         subclasses with real hourly dispatch overwrite the latter two
         afterward."""
         self._compute_period_counts()
@@ -152,6 +152,7 @@ class Stock_Asset_STEVFNs(Asset_STEVFNs):
         Update costs associated with sizing - sizing constant and the terminal charge
         value to limit the bias from installing late in finite horizon
         """
+
         lifetime_periods = self._get_lifetime_periods()
         asset_lifetime = self._asset_lifetime
         interest_rate = float(self.parameters_df["interest_rate"])
