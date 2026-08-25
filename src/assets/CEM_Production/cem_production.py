@@ -146,6 +146,59 @@ class CEM_Production_Asset(Stock_Asset_STEVFNs):
             self.target_node_location, self.target_node_type, self.target_node_times[edge_number])) # hourly production
         edge.flow = self.flows[edge_number] * annualisation_factor # scale by annualisation to approximate annual demand
         return
+
+    def _build_stock_edges(self):
+        """Overwrite stock chain to scale annual production capacity
+        to sample size"""
+        decommission_out = self.decom_mask_param @ self.new_capacity
+        scaling_factor = 1 / self._annualisation_factor()
+        for p in range(self.num_periods):
+            stock_node = self.network.extract_node(self.stock_node_location,
+                                                        self.stock_node_type, p)
+            stock_node.curtailment = False
+    
+            install_edge = Edge_STEVFNs()
+            self.edges.append(install_edge)
+            install_edge.attach_target_node(stock_node)
+            install_edge.flow = self.new_capacity[p]
+    
+            decom_edge = Edge_STEVFNs()
+            self.edges.append(decom_edge)
+            decom_edge.attach_source_node(stock_node)
+            decom_edge.flow = decommission_out[p]
+    
+            if p == 0:
+                # Seed the pre-model existing fleet once
+                existing_edge = Edge_STEVFNs()
+                self.edges.append(existing_edge)
+                existing_edge.attach_target_node(stock_node)
+                existing_edge.flow = self.existing_capacity_vec[0] * scaling_factor
+            else:
+                # existing_capacity_vec[p] is the decayed level of
+                # the pre-model fleet at period p (e.g. existing_capacity *
+                # (1 - decay_rate)**p). Its period-on-period decrement
+                # leaves the node here, decaying total is carried over through
+                # carryover_out balance
+                existing_decom_edge = Edge_STEVFNs()
+                self.edges.append(existing_decom_edge)
+                existing_decom_edge.attach_source_node(stock_node)
+                existing_decom_edge.flow = scaling_factor *\
+                    (self.existing_capacity_vec[p - 1] - self.existing_capacity_vec[p])
+    
+                prev_stock_node = self.network.extract_node(self.stock_node_location,
+                                                                self.stock_node_type, p - 1)
+                carry_in_edge = Edge_STEVFNs()
+                self.edges.append(carry_in_edge)
+                carry_in_edge.attach_source_node(prev_stock_node)
+                carry_in_edge.attach_target_node(stock_node)
+                carry_in_edge.flow = self.carryover_out[p - 1]
+    
+            if p == self.num_periods - 1:
+                carry_out_edge = Edge_STEVFNs()
+                self.edges.append(carry_out_edge)
+                carry_out_edge.attach_source_node(stock_node)
+                carry_out_edge.flow = self.carryover_out[p]
+        return
     
     def _build_process_emissions_edge_for_period(self, period_number):
         """Period-indexed process emissions to CO2 Budget"""
@@ -218,6 +271,55 @@ class CEM_Production_Asset(Stock_Asset_STEVFNs):
         self.cost_fun_params["usage_constant"].value = expanded_costs
         return
 
+    def _update_sizing_constant(self, sizing_constant_vec):
+        """
+        Update sizing constant and re-scale back to sample size
+        Industry capacity in rate of Mt/year 
+        """
+        lifetime_periods = self._get_lifetime_periods()
+        asset_lifetime = self._asset_lifetime
+        interest_rate = float(self.parameters_df["interest_rate"])
+        discount_rate = float(self.network.system_parameters_df.loc["discount_rate", "value"])
+        scaling_factor = self._annualisation_factor()
+        amort_factor = (interest_rate * (1 + interest_rate) ** asset_lifetime) / \
+                        ((1 + interest_rate) ** asset_lifetime - 1)
+        annual_payment_vec = sizing_constant_vec * amort_factor * scaling_factor
+
+        period_start_years = self.period_start_years
+        period_years = np.array([self._years_in_period(p) for p in range(self.num_periods)])
+        period_end_years = period_start_years + period_years
+
+        M = np.zeros((self.num_periods, self.num_periods))
+        # Charge component indexed by install cohort k, for capacity
+        # installed where lifetime exceeds project life
+        terminal_charge_vec = np.zeros(self.num_periods)
+
+        for k in range(self.num_periods):
+            install_year = period_start_years[k]
+            payoff_year = install_year + asset_lifetime
+            for p in range(self.num_periods):
+                y_start = max(period_start_years[p], install_year)
+                y_end = min(period_end_years[p], payoff_year)
+                if y_end <= y_start:
+                    continue
+                years_in_window = np.arange(int(round(y_start)), int(round(y_end)))
+                if years_in_window.size == 0:
+                    continue
+                discount_factors = (1 + discount_rate) ** (-years_in_window.astype(float))
+                M[p, k] = annual_payment_vec[k] * discount_factors.sum()
+
+            # NPV of repayment years that fall beyond the model horizon.
+            horizon_year = self.num_years
+            if payoff_year > horizon_year:
+                remaining_years = np.arange(int(round(horizon_year)), int(round(payoff_year)))
+                if remaining_years.size > 0:
+                    remaining_discount_factors = (1 + discount_rate) ** (-remaining_years.astype(float))
+                    terminal_charge_vec[k] = annual_payment_vec[k] * remaining_discount_factors.sum()
+
+        self.cost_fun_params["sizing_constant"].value = M
+        self.cost_fun_params["terminal_charge"].value = terminal_charge_vec
+        return
+
     def _load_baseline_capex(self):
         baseline_capex = float(self.parameters_df["sizing_constant"])
         return np.full(self.num_periods, baseline_capex)
@@ -286,10 +388,16 @@ class CEM_Production_Asset(Stock_Asset_STEVFNs):
         feeds the standard 'emissions' metric in get_results_records."""
         return self.get_period_process_emissions() + self.get_period_fuel_emissions()
 
-    def get_period_capacity(self):
+    def get_operating_stock(self):
         """Operating production capacity per reinvestment period
-        (Mt cement/year)."""
-        return self.get_operating_stock()
+        (Mt steel/year)."""
+        optimised_capacity = np.array(self.carryover_out.value)
+        return optimised_capacity * self._annualisation_factor()
+
+    def get_new_capacity(self):
+        """New installed capacity per reinvestment period scaled"""
+        optimised_new_capacity = np.array(self.new_capacity.value)
+        return optimised_new_capacity * self._annualisation_factor()
 
     def get_asset_sizes(self):
         asset_identity = self.asset_name + r"_location_" + str(self.target_node_location)
