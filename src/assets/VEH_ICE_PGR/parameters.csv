@@ -1,0 +1,3 @@
+﻿Type,sizing_constant,sizing_constant_unit,load_factor,load_factor_unit,lifespan,lifespan_units,emissions_factor,emissions_factor_unit,existing_capacity,existing_capacity_unit,existing_capacity_decay_rate,interest_rate,loc_name
+0,1,G$/mveh-km,1.2,mpgr/mveh,219000,h,0.0002,MtCO2e/mvehkm,300,mpkm,0.005,0.05,SG
+1,1,G$/mveh-km,1.2,mpgr/mveh,219000,h,0.0002,MtCO2e/mvehkm,300,mpkm,0.005,0.05,ID
