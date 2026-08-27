@@ -76,6 +76,7 @@ class Asset_STEVFNs:
                                            asset_structure["End_Time"], 
                                            asset_structure["Period"])
         self.number_of_edges = len(self.source_node_times) # Total hourly timesteps sampled
+        self.num_years = int(self.network.system_parameters_df.loc["project_life", "value"] / 8760) # Project length in years
         self.flows = cp.Constant(np.zeros(self.number_of_edges)) # hourly flows definition
         return
     

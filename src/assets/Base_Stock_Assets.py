@@ -56,7 +56,7 @@ class Stock_Asset_STEVFNs(Asset_STEVFNs):
         afterward."""
         self._compute_period_counts()
         self.period_start_years = np.arange(self.num_periods) * self.reinvestment_period
-
+        self.num_years = int(self.network.system_parameters_df.loc["project_life", "value"] / 8760)
         self.new_capacity = cp.Variable(shape=(self.num_periods,), nonneg=True,
                                          name=f"new_capacity_{self.asset_name}")
         self.carryover_out = cp.Variable(shape=(self.num_periods,), nonneg=True,

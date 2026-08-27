@@ -76,18 +76,21 @@ from .PHS import PHS_Asset
 from .FF_to_HTH import FF_to_HTH_Asset
 from .Nuclear_Fission_Baseload import Nuclear_Fission_Baseload_Asset
 
-from .VEH_Pass_Demand import VEH_Pass_Demand_Asset
-from .VEH_EL_Pass import VEH_EL_Pass_Asset
-from .VEH_ICE_Pass import VEH_ICE_Pass_Asset
-from .VEH_Freight_Demand import VEH_Freight_Demand_Asset
-from. VEH_EL_Freight import VEH_EL_Freight_Asset
-from. VEH_ICE_Freight import VEH_ICE_Freight_Asset
+from .VEH_PGR_Demand import VEH_PGR_Demand_Asset
+from .VEH_EL_PGR import VEH_EL_PGR_Asset
+from .VEH_ICE_PGR import VEH_ICE_PGR_Asset
+from .VEH_FRT_Demand import VEH_FRT_Demand_Asset
+from .VEH_EL_FRT import VEH_EL_FRT_Asset
+from .VEH_ICE_FRT import VEH_ICE_FRT_Asset
 
 from .CEM_Demand import CEM_Demand_Asset
 from .CEM_Production import CEM_Production_Asset
 from .CEM_Production_EL import CEM_Production_EL_Asset
 from .STL_Demand import STL_Demand_Asset
 from .STL_BF_BOF import STL_BF_BOF_Asset
+from .STL_DRI_EAF_H2 import STL_DRI_EAF_H2_Asset
+from .STL_DRI_EAF_NG import STL_DRI_EAF_NG_Asset
+
 
 
 ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
@@ -153,15 +156,17 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               PHS_Asset.asset_name: PHS_Asset,
               FF_to_HTH_Asset.asset_name: FF_to_HTH_Asset,
               Nuclear_Fission_Baseload_Asset.asset_name: Nuclear_Fission_Baseload_Asset,
-              VEH_Pass_Demand_Asset.asset_name: VEH_Pass_Demand_Asset,
-              VEH_EL_Pass_Asset.asset_name: VEH_EL_Pass_Asset,
-              VEH_ICE_Pass_Asset.asset_name: VEH_ICE_Pass_Asset,
-              VEH_Freight_Demand_Asset.asset_name: VEH_Freight_Demand_Asset,
-              VEH_EL_Freight_Asset.asset_name: VEH_EL_Freight_Asset,
-              VEH_ICE_Freight_Asset.asset_name: VEH_ICE_Freight_Asset,
+              VEH_PGR_Demand_Asset.asset_name: VEH_PGR_Demand_Asset,
+              VEH_EL_PGR_Asset.asset_name: VEH_EL_PGR_Asset,
+              VEH_ICE_PGR_Asset.asset_name: VEH_ICE_PGR_Asset,
+              VEH_FRT_Demand_Asset.asset_name: VEH_FRT_Demand_Asset,
+              VEH_EL_FRT_Asset.asset_name: VEH_EL_FRT_Asset,
+              VEH_ICE_FRT_Asset.asset_name: VEH_ICE_FRT_Asset,
               CEM_Demand_Asset.asset_name: CEM_Demand_Asset,
               CEM_Production_Asset.asset_name: CEM_Production_Asset,
               CEM_Production_EL_Asset.asset_name: CEM_Production_EL_Asset,
               STL_Demand_Asset.asset_name: STL_Demand_Asset,
               STL_BF_BOF_Asset.asset_name: STL_BF_BOF_Asset,
+              STL_DRI_EAF_NG_Asset.asset_name: STL_DRI_EAF_NG_Asset,
+              STL_DRI_EAF_H2_Asset.asset_name: STL_DRI_EAF_H2_Asset,
               }
