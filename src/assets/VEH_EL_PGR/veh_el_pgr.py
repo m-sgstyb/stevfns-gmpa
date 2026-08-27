@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Feb 15 16:18:13 2026
-
-@author: Mónica Sagastuy-Breña
-"""
 
 import os
 import numpy as np
