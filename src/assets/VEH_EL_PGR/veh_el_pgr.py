@@ -13,7 +13,7 @@ import cvxpy as cp
 from ..Base_Vehicle_Assets import Base_Vehicle_Asset_STEVFNs
 from ...network import Edge_STEVFNs
 
-class VEH_EL_PGR_Asset(Base_Vehicle_Asset):
+class VEH_EL_PGR_Asset(Base_Vehicle_Asset_STEVFNs):
     """
     Class of Passenger Electric Vehicle Fleet
     """
