@@ -1,32 +1,32 @@
-Type,sizing_constant,sizing_constant_unit,usage_constant_1,usage_constant_1_unit,conversion_factor,conversion_factor_unit,lifespan,lifespan_units,location_name
-0,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,SG
-1,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,ID
-2,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,MY
-3,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,BN
-4,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,KH
-5,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,MM
-6,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,PH
-7,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,TH
-8,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,VN
-9,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,LA
-10,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,AU
-11,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,SA
-12,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,IN
-13,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,AE
-14,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,MA
-15,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,KE
-16,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,ZA
-17,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,KR
-18,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,EG
-19,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,NG
-20,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,BR
-21,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,CO
-22,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,PE
-23,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,CL
-24,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,FR
-25,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,DE
-26,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,US
-27,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,RU
-28,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,CN
-29,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,TR
-30,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,JP
+Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,conversion_factor,conversion_factor_unit,lifespan,lifespan_units,existing_capacity,existing_capacity_unit,existing_capacity_decay_rate,interest_rate,location_name
+0,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,SG
+1,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,ID
+2,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,MY
+3,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,BN
+4,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,KH
+5,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,MM
+6,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,PH
+7,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,TH
+8,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,VN
+9,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,LA
+10,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,AU
+11,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,SA
+12,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,IN
+13,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,AE
+14,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,MA
+15,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,KE
+16,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,ZA
+17,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,KR
+18,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,EG
+19,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,NG
+20,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,BR
+21,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,CO
+22,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,PE
+23,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,CL
+24,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,FR
+25,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,DE
+26,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,US
+27,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,RU
+28,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,CN
+29,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,TR
+30,2.385,G$/(Gg/h),0.00E+00,G$/Gg,3.11,GWh/Gg,262800,h,0,Gg H2,0,0.1,JP
