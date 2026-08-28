@@ -14,9 +14,9 @@ class STL_BF_BOF_Asset(Stock_Asset_STEVFNs):
     source_node_type = "NULL"
     target_node_type = "STL"     # Steel demand node
     target_node_type_2 = "CO2_Budget"
-    target_node_type_3 = "STL_Production_Capacity"
+    target_node_type_3 = "STL_BF_BOF_Production_Capacity"
     el_node_type = "EL"
-    stock_node_type = "STL_Production_Stock"
+    stock_node_type = "STL_BF_BOF_Production_Stock"
     decommission_mode = "decay_rate"
     capacity_unit = "Mt steel/yr"
     period = 1
