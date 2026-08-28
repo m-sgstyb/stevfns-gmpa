@@ -111,7 +111,7 @@ class STL_DRI_EAF_H2_Asset(Stock_Asset_STEVFNs):
         self._capacity_edges = []
         self._production_edges = []
         self._emissions_edges = []
-
+        self._hydrogen_edges = []
         self._build_capacity_availability_edges()
         for edge_number in range(self.number_of_edges):
             self._build_electricity_edge(edge_number)
@@ -147,11 +147,11 @@ class STL_DRI_EAF_H2_Asset(Stock_Asset_STEVFNs):
         new_edge.flow = self.electricity_fun(self.flows[edge_number], self.electricity_fun_params)
         return
 
-    def _build_hydrogen_edge(self_edge_number):
+    def _build_hydrogen_edge(self, edge_number):
         """Hourly H2 requirements to produce steel"""
         new_edge = Edge_STEVFNs()
         self.edges.append(new_edge)
-        self.hydrogen_edges.append(new_edge)
+        self._hydrogen_edges.append(new_edge)
         new_edge.attach_source_node(self.network.extract_node(
             self.h2_node_location, self.h2_node_type, self.target_node_times[edge_number]))
         new_edge.flow = self.hydrogen_fun(self.flows[edge_number], self.hydrogen_fun_params)
@@ -337,8 +337,8 @@ class STL_DRI_EAF_H2_Asset(Stock_Asset_STEVFNs):
                     float(self.parameters_df["emissions_factor"])
         self.electricity_fun_params["electricity_intensity"].value = \
             float(self.parameters_df["electricity_intensity"])
-        self.hydrogen_req_params["h2_req"].value = \
-            float(self.parameters_df["h2_req"])
+        self.hydrogen_fun_params["h2_factor"].value = \
+            float(self.parameters_df["h2_factor"])
         self.conversion_fun_params["capacity_factor"].value = \
             float(self.parameters_df["capacity_factor"])
         self._update_usage_constant()
