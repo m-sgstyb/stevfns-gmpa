@@ -13,7 +13,8 @@ dependencies = [
   "pandas",
   "matplotlib",
   "cvxpy",
-  "pyyaml"
+  "pyyaml",
+  "highspy>=1.15.1",
 ]
 
 [dependency-groups]

@@ -83,13 +83,11 @@ def main():
         start_time = time.time()
         solver_name = os.getenv("SOLVER_NAME", "CLARABEL").upper() # Make Clarabel default if running without wrapper run_cases.py
         if solver_name == "CLARABEL":
-            my_network.problem.solve(solver=cp.CLARABEL, max_iter=100000, ignore_dpp=True)
-        elif solver_name == "MOSEK":
-            my_network.problem.solve(solver=cp.MOSEK, ignore_dpp=True)
+            my_network.problem.solve(solver=cp.CLARABEL, max_iter=100000, ignore_dpp=True, verbose=True)
+        elif solver_name == "HIGHS":
+            my_network.problem.solve(solver=cp.HIGHS, presolve="off")
         else:
             raise ValueError(f"Unknown solver: {solver_name}")
-        # my_network.problem.solve(solver = cp.CLARABEL, max_iter=10000, ignore_dpp=True) # ignore_dpp=True because problem has too many params
-        # my_network.problem.solve(solver = cp.MOSEK, ignore_dpp=True)
         end_time = time.time()
 
         ### Node diagnostics
@@ -107,7 +105,6 @@ def main():
         if my_network.problem.value == float("inf"):
             continue
         print("Total cost to satisfy all demand = ", my_network.problem.value, " Billion USD")
-        print("Total emissions = ", my_network.assets[3].asset_size(), "MtCO2e")
 
         # --- Export results --- #
         
@@ -152,9 +149,12 @@ def main():
     print("------------------  All Scenarios Run  ------------------------\n",
           "Time to build network, run all scenarios, export and plot data",
           (final_time - start_time0)/60, "min")
- 
- 
- 
+    
+    # bess_flows = my_network.assets[6].get_hourly_flows()
+    # bess_flows_df = pd.DataFrame(bess_flows)
+    # bess_flows_df.to_csv(os.path.join(case_study_folder, "bess_flows.csv"))
+    
+    
 if __name__ == "__main__":
     main()
  
