@@ -25,6 +25,7 @@ nav = [
     { "Architecture" = "model-details/architecture.md"},
     { "Generalised asset model" = "model-details/generalised-model.md" },
     { "Time dependence" = "model-details/time-dep.md" },
+    { "Assets" = "model-details/assets.md" },
   ]},
   { "Tutorials" = [
     { "STEVFNs theory" = "tutorials/stevfns-theory.md" },
