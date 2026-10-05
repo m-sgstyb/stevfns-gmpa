@@ -67,8 +67,8 @@ if __name__ == "__main__":
             "one or more literal, case-sensitive case study names."
         ),
     )
-    parser.add_argument("--solver", choices=["highs", "clarabel"], default="clarabel",
-                         help="Choose solver (default: clarabel)")
+    parser.add_argument("--solver", choices=["highs", "clarabel"], default="highs",
+                         help="Choose solver (default: highs)")
     parser.add_argument("--sub", action="store_true",
                          help="Only run the specific country combo provided (no sub-combinations)")
     parser.add_argument(
