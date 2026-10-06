@@ -30,3 +30,4 @@ Type,sizing_constant,sizing_constant_units,usage_constant,usage_constant_units,c
 28,0.271,G$/GWh,2.71E-05,G$/GWh,0.975,0.975,0.0001,0,GWh,0.01,0.03,87600,h,CN
 29,0.271,G$/GWh,2.71E-05,G$/GWh,0.975,0.975,0.0001,0,GWh,0.01,0.03,87600,h,TR
 30,0.271,G$/GWh,2.71E-05,G$/GWh,0.975,0.975,0.0001,0,GWh,0.01,0.03,87600,h,JP
+31,0.13,G$/GWh,1.50E-06,G$/GWh,0.95,0.95,0.0000625,0,GWh,0.01,0.08,87600,h,MX
