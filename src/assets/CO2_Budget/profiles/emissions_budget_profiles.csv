@@ -1,0 +1,13 @@
+scenario_name,co2_budget,co2_budget_unit,case_study
+2C,1000000,MtCO2e,diy-kit-test
+2C,900000,MtCO2e,diy-kit-test
+2C,800000,MtCO2e,diy-kit-test
+2C,700000,MtCO2e,diy-kit-test
+2C,600000,MtCO2e,diy-kit-test
+2C,500000,MtCO2e,diy-kit-test
+2.5C,1500000,MtCO2e,diy-kit-test
+2.5C,1350000,MtCO2e,diy-kit-test
+2.5C,1200000,MtCO2e,diy-kit-test
+2.5C,1050000,MtCO2e,diy-kit-test
+2.5C,900000,MtCO2e,diy-kit-test
+2.5C,750000,MtCO2e,diy-kit-test

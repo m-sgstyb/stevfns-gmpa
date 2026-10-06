@@ -1,2 +1,13 @@
 Type,trajectory_filename,case_study
-0,SG-emissions-budget-1.5,SG
+0,emissions_budget_profiles,SG
+1,emissions_budget_profiles,M
+2,emissions_budget_profiles,X
+3,emissions_budget_profiles,d
+4,emissions_budget_profiles,i
+5,emissions_budget_profiles,y
+6,emissions_budget_profiles,-
+7,emissions_budget_profiles,k
+8,emissions_budget_profiles,t
+9,emissions_budget_profiles,e
+10,emissions_budget_profiles,s
+11,emissions_budget_profiles,diy-kit-test
