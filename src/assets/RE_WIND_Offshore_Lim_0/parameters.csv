@@ -1,5 +1,5 @@
 Type,sizing_constant,sizing_constant_unit,lifespan,lifespan_unit,RE_type,set_size,set_number,maximum_size,maximum_size_unit,interest_rate,existing_capacity,existing_capacity_unit,existing_capacity_decay_rate,location_name
-0,6.108180249,G$/GWp,262800,h,WINDOUT,24,0,0.003,GWp,0.02,0.1,GWp,0.005,SG
+0,cost_projections,G$/GWp,262800,h,WINDOUT,24,0,0.003,GWp,0.02,0.1,GWp,0.005,SG
 1,cost_projections,G$/GWp,262800,h,WINDOUT,24,0,654.167,GWp,0.02,0.1,GWp,0.005,ID
 2,5.243535306,G$/GWp,262800,h,WINDOUT,24,0,74.594,GWp,0.02,0.1,GWp,0.005,MY
 3,5.654633228,G$/GWp,262800,h,WINDOUT,24,0,1.545,GWp,0.02,0.1,GWp,0.005,BN

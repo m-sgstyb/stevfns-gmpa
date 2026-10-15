@@ -22,7 +22,7 @@ class Network_STEVFNs:
         self.base_folder = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
         self.system_parameters_df = pd.DataFrame({
             "parameter": ["timestep", "discount_rate", "project_life", "reinvestment_period"],
-            "value" : [1, 0.05, 262800, 43800],#default values are [1hour, 5%, 30years, 5years]
+            "value" : [1, 0.05, 219000, 43800],#default values are [1hour, 5%, 25years, 5years]
             "unit" : ["h", "unitless", "timestep", "timestep"]}).set_index("parameter")
         self.system_structure_properties = dict({
             "simulated_timesteps" : 0,})

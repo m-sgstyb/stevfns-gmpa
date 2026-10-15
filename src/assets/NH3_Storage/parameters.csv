@@ -1,4 +1,4 @@
-Type,sizing_constant,sizing_constant_unit,usage_constant_1,usage_constant_1_unit,conversion_factor,lifespan,lifespan_units,existing_capacity,existing_capacity_unit,exisitng_capacity_decay_rate,interest_rate,location_name
+Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,conversion_factor,lifespan,lifespan_units,existing_capacity,existing_capacity_unit,existing_capacity_decay_rate,interest_rate,location_name
 0,0.5,G$/(Gg),0.00E+00,G$/(Gg h),0.999987,262800,h,0,Ggh,0,0.12,SG
 1,0.5,G$/(Gg),0.00E+00,G$/(Gg h),0.999987,262800,h,0,Ggh,0,0.12,ID
 2,0.5,G$/(Gg),0.00E+00,G$/(Gg h),0.999987,262800,h,0,Ggh,0,0.12,MY
