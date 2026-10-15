@@ -57,7 +57,9 @@ class NH3_Storage_Asset(Stock_Asset_STEVFNs):
         self.cost_fun_params = {"sizing_constant": cp.Parameter(shape=(self.num_periods, self.num_periods), nonneg=True,
                                                                 name=f"sizing_cost_{self.asset_name}"),
                                 "usage_constant": cp.Parameter(self.number_of_edges, nonneg=True,
-                                                                name=f"usage_cost_{self.asset_name}")}
+                                                                name=f"usage_cost_{self.asset_name}"),
+                                "terminal_charge": cp.Parameter(shape=(self.num_periods,), nonneg=True,
+                                                                name=f"terminal_charge_{self.asset_name}")}
 
         self.conversion_fun_params = {"conversion_factor": cp.Parameter(nonneg=True,
                                                                         name=f"conversion_factor_{self.asset_name}")}
