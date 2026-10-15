@@ -109,29 +109,36 @@ class RE_WIND_Onshore_Lim_2_Asset(Stock_Asset_STEVFNs):
         self.gen_profile.value = np.array(new_profile)
         return
     
-    def _load_cost_profile(self):
+    def _load_cost_profile(self):  
         """Reads a given profile of RE total installed capital costs
         Projected into the future by reinvestment period
-        parameters.csv colum for sizing constant must have string for
-        filename
+        if parameters.csv has a single value, this is broadcasted to
+        all reinvestment periods, if it is a profile it should be 
+        provided as a profile and the value for sizing_constant should be
+        profile name. 
+        The profile file should have a location column to filter by location
         """
-        costs_filename = self.parameters_df.get("sizing_constant") + ".csv"
-        costs_path = os.path.join(self.parameters_folder, "profiles", costs_filename)
-        costs_df = pd.read_csv(costs_path)
-        location = self.parameters_df["location_name"]
+        sizing_constant = self.parameters_df.get("sizing_constant")
+        if isinstance(sizing_constant, str):
+            costs_filename = self.parameters_df.get("sizing_constant") + ".csv"
+            costs_path = os.path.join(self.parameters_folder, "profiles", costs_filename)
+            costs_df = pd.read_csv(costs_path)
+            location = self.parameters_df["location_name"]
 
-        rows = costs_df[
-            (costs_df["case_study"] == location)
-        ]
-        values = rows["sizing_constant"].to_numpy(dtype=float)
-    
-        if values.size != self.num_periods:
-            raise ValueError(
-                f"Sizing constant for location='{location}' in "
-                f"{costs_filename} has {values.size} matching rows, "
-                f"expected {self.num_periods} (one per reinvestment period)."
-            )
-        return values
+            rows = costs_df[
+                (costs_df["case_study"] == location)
+            ]
+            values = rows["sizing_constant"].to_numpy(dtype=float)
+        
+            if values.size != self.num_periods:
+                raise ValueError(
+                    f"Sizing constant for location='{location}' in "
+                    f"{costs_filename} has {values.size} matching rows, "
+                    f"expected {self.num_periods} (one per reinvestment period)."
+                )
+            return values
+        single_cost = float(sizing_constant)
+        return np.full(self.num_periods, single_cost)
 
     def _update_parameters(self):
         sizing_constant = self._load_cost_profile() # load profile with learning curve
