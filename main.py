@@ -110,8 +110,8 @@ def main():
         
         readable_names_df = load_readable_names(
             os.path.join(base_folder, "src", "results", "readable_names.csv"))
-        dpacc_trajectories_filename = os.path.join(data_folder, "dpacc-trajectories.csv")
-        hourly_flows_filename = os.path.join(data_folder, "hourly-flows.csv")
+        dpacc_trajectories_filename = os.path.join(case_study_folder, "dpacc-trajectories.csv")
+        #hourly_flows_filename = os.path.join(case_study_folder, "hourly-flows.csv")
 
         def _tagged(path, tag):
             """
