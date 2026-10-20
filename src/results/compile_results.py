@@ -7,6 +7,7 @@ Compiling results for STEVFNs case studies and scenarios
 import os
 import pandas as pd
 import numpy as np
+import re
 
 # --- Lookups derived from case-study input files --- #
 
@@ -37,7 +38,7 @@ def load_readable_names(readable_names_path):
 
 def compile_scenario_results(my_network, network_structure_df, location_parameters_df,
                               readable_names_df, scenario_id, case_id,
-                              start_year=2025, reinvestment_period_years=None):
+                              start_year=2026, reinvestment_period_years=None):
     """
     Walks every asset in a solved my_network and returns one long-format
     DataFrame with to get costs and emissions data for result analysis
@@ -80,6 +81,21 @@ def compile_scenario_results(my_network, network_structure_df, location_paramete
          "year", "technology", "metric", "unit", "value"]
     ]
     return results_df
+
+_WIND_BIN = r"(?i)^((?:Onshore|Offshore) wind)[\s_]*\d+$"
+def to_website_version(df, value_col="value"):
+    """
+    Sum and merge wind bins 0...9 to total wind (onshore and offshore separately)
+    Works on results_df
+    """
+    if df.empty:
+        return df
+    out = df.copy()
+    out["technology"] = out["technology"].astype(str).str.replace(
+        _WIND_BIN, r"\1", regex=True
+    )
+    group_cols = [c for c in out.columns if c!= value_col]
+    return out.groupby(group_cols, as_index=False, dropna=False)[value_col].sum()
 
 # --- Splitting / aggregating into the final result file shapes --- #
 
@@ -127,7 +143,6 @@ def aggregate_emissions_by_country(emissions_df):
     )
     return grouped
 
-
 def aggregate_costs_by_technology(costs_df):
     """
     Cost per technology, country, sceanrio for dpacc
@@ -172,7 +187,7 @@ def get_capacities_by_technology(costs_df):
 
 def compile_hourly_flows(my_network, network_structure_df, location_parameters_df,
                           readable_names_df, scenario_id, case_id,
-                          start_year=2025, reinvestment_period_years=None):
+                          start_year=2026, reinvestment_period_years=None):
     """
     For every asset in my_network with get_period_flows gets the hourly
     per period flows for later plotting

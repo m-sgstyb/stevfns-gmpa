@@ -21,7 +21,7 @@ from src.plotting import testing_plots
 from src.results.compile_results import (
     load_readable_names, compile_scenario_results, split_by_metric,
     join_capacities, aggregate_emissions_by_country, aggregate_costs_by_technology,
-    compile_hourly_flows, append_and_save,
+    compile_hourly_flows, append_and_save, to_website_version
 )
 
 def main():
@@ -50,8 +50,8 @@ def main():
     start_time0 = time.time()
     my_network = Network_STEVFNs()
     my_network.build(network_structure_df)
- 
- 
+
+
     end_time = time.time()
     print("Time taken to build network = ", end_time - start_time0, "s")
     # total_df = pd.DataFrame()
@@ -109,10 +109,18 @@ def main():
         # --- Export results --- #
         
         readable_names_df = load_readable_names(
-        os.path.join(base_folder, "src", "results", "readable_names.csv"))
+            os.path.join(base_folder, "src", "results", "readable_names.csv"))
         dpacc_trajectories_filename = os.path.join(data_folder, "dpacc-trajectories.csv")
         hourly_flows_filename = os.path.join(data_folder, "hourly-flows.csv")
 
+        def _tagged(path, tag):
+            """
+            Tag internal vs website results
+            """
+            root, ext = os.path.splitext(path)
+            return f"{root}-{tag}{ext}" if tag else path
+        
+        # Internal results, wind bins unbundled
         scenario_results_df = compile_scenario_results(
             my_network=my_network,
             network_structure_df=network_structure_df,
@@ -120,40 +128,46 @@ def main():
             readable_names_df=readable_names_df,
             scenario_id=my_network.scenario_name,
             case_id=case_study_name, # change for just collab name later or re define the convention for GMPA results
-            start_year=2025,
+            start_year=2026, # Current project start convention
         )
 
-        costs_df, emissions_df = split_by_metric(scenario_results_df)
-        capacities_df = join_capacities(scenario_results_df)
+        # Website results (wind bins summed)
+        website_results_df = to_website_version(scenario_results_df)
+        versions = {
+            "": scenario_results_df,
+            "website": website_results_df,
+        }
+        for tag, res_df in versions.items():
+            costs_df, emissions_df = split_by_metric(res_df)
+            capacities_df = join_capacities(res_df)
+            technology_trajectories_df = aggregate_costs_by_technology(costs_df)
+
+            append_and_save(technology_trajectories_df, _tagged(dpacc_trajectories_filename, tag))
+            append_and_save(costs_df, _tagged(os.path.join(case_study_folder, "costs-over-time.csv"), tag))
+            append_and_save(capacities_df, _tagged(os.path.join(case_study_folder, "installed-cap-over-time.csv"), tag))
+        
+        _, emissions_df = split_by_metric(scenario_results_df)
         emissions_by_country_df = aggregate_emissions_by_country(emissions_df)
-        technology_trajectories_df = aggregate_costs_by_technology(costs_df)
-        append_and_save(technology_trajectories_df, dpacc_trajectories_filename)
-
-        hourly_flows_df = compile_hourly_flows(
-            my_network=my_network,
-            network_structure_df=network_structure_df,
-            location_parameters_df=location_parameters_df,
-            readable_names_df=readable_names_df,
-            scenario_id=my_network.scenario_name,
-            case_id=case_study_name,
-            start_year=2025,
-        )
-        append_and_save(hourly_flows_df, hourly_flows_filename)
-        append_and_save(costs_df, os.path.join(data_folder, "costs-over-time.csv"))
-        append_and_save(capacities_df, os.path.join(data_folder, "installed-cap-over-time.csv"))
-        append_and_save(emissions_df, os.path.join(data_folder, "emissions-over-time.csv"))
-        append_and_save(emissions_by_country_df, os.path.join(data_folder, "emissions-over-time-by-country.csv"))
+        append_and_save(emissions_by_country_df,
+                os.path.join(case_study_folder, "emissions-over-time-by-country.csv"))
+        
+        #hourly_flows_df = compile_hourly_flows(
+        #    my_network=my_network,
+        #    network_structure_df=network_structure_df,
+        #    location_parameters_df=location_parameters_df,
+        #    readable_names_df=readable_names_df,
+        #    scenario_id=my_network.scenario_name,
+        #    case_id=case_study_name,
+        #    start_year=2026,
+        #)
+        #append_and_save(hourly_flows_df, hourly_flows_filename)
     
     final_time = time.time()
 
     print("------------------  All Scenarios Run  ------------------------\n",
           "Time to build network, run all scenarios, export and plot data",
           (final_time - start_time0)/60, "min")
-    
-    # bess_flows = my_network.assets[6].get_hourly_flows()
-    # bess_flows_df = pd.DataFrame(bess_flows)
-    # bess_flows_df.to_csv(os.path.join(case_study_folder, "bess_flows.csv"))
-    
+
     
 if __name__ == "__main__":
     main()
