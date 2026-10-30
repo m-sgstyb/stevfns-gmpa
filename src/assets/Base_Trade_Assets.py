@@ -102,28 +102,41 @@ class Trade_Stock_Asset_STEVFNs(Stock_Asset_STEVFNs):
 
     def _build_stock_edges(self):
         """Same accounting as Stock_Asset_STEVFNs, except a cohort invested in
-        period k lands in the stock node at period k + delay_periods
-        If this falls beyond model horizon, dropped"""
+        period k lands in the stock node at period k + delay_periods.
+        If this falls beyond the model horizon, it is dropped.
+
+        Existing (pre-model) capacity is seeded once at p = 0. For p > 0 only its
+        period-on-period decay leaves the node; the surviving fleet is carried
+        forward through carryover_out, so it is never re-injected."""
         decommission_out = self.decom_mask_param @ self.new_capacity
 
         for p in range(self.num_periods):
             stock_node = self.network.extract_node(self.stock_node_location,
-                                                     self.stock_node_type, p)
+                                                self.stock_node_type, p)
             stock_node.curtailment = False
 
+            # Retirement of new cohorts at end of life
             decom_edge = Edge_STEVFNs()
             self.edges.append(decom_edge)
             decom_edge.attach_source_node(stock_node)
             decom_edge.flow = decommission_out[p]
 
-            existing_edge = Edge_STEVFNs()
-            self.edges.append(existing_edge)
-            existing_edge.attach_target_node(stock_node)
-            existing_edge.flow = self.existing_capacity_vec[p]
+            if p == 0:
+                # Seed the pre-model existing fleet once
+                existing_edge = Edge_STEVFNs()
+                self.edges.append(existing_edge)
+                existing_edge.attach_target_node(stock_node)
+                existing_edge.flow = self.existing_capacity_vec[0]
+            else:
+                # Decay of the pre-model fleet between period p-1 and p
+                existing_decom_edge = Edge_STEVFNs()
+                self.edges.append(existing_decom_edge)
+                existing_decom_edge.attach_source_node(stock_node)
+                existing_decom_edge.flow = (self.existing_capacity_vec[p - 1]
+                                            - self.existing_capacity_vec[p])
 
-            if p > 0:
                 prev_stock_node = self.network.extract_node(self.stock_node_location,
-                                                              self.stock_node_type, p - 1)
+                                                            self.stock_node_type, p - 1)
                 carry_in_edge = Edge_STEVFNs()
                 self.edges.append(carry_in_edge)
                 carry_in_edge.attach_source_node(prev_stock_node)
@@ -136,7 +149,7 @@ class Trade_Stock_Asset_STEVFNs(Stock_Asset_STEVFNs):
                 carry_out_edge.attach_source_node(stock_node)
                 carry_out_edge.flow = self.carryover_out[p]
 
-            # delayed install: cohort decided in period k starts operating at k + delay_periods == p
+            # Delayed install: cohort decided in period k starts operating at k + delay_periods == p
             k = p - self.delay_periods
             if 0 <= k < self.num_periods:
                 install_edge = Edge_STEVFNs()
