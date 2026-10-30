@@ -1,4 +1,19 @@
 # DIY-Kit Automation Notes
+---
+Notes on the feature dev in reverse chronological order (most recent first).
+
+## 2026.10.21
+1. Bug fixes on result export and modelling parameter inputs resolved
+2. Add country DIY Kit path complete and tested with results export
+
+### Next Steps
+1. Resolve collaboration result production with accurate location IDs
+2. Define heatmap data
+3. Define and automate CO2 Budget profile generation for new countries to be added and to enable collaboration definitions.
+4. Worked example of a collaboration arrangement and requirements of that automation, including CO2_Budget definitions.
+
+
+## 2026.10.06
 ### Updates
 
 1. I have drafted a `0_BASE_AUTARKY` folder to use as the baseline to copy files from and determine full `Location_Parameters.csv` as the previous pipeline for `GMPA_full_automation` did, applying to new assets and the time dependent version.

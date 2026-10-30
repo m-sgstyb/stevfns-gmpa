@@ -1,21 +1,13 @@
 # Case Study Setup
 ---
- 🚧 This site is currently under construction. Further detail will be added soon  🚧
+ 🚧 This site is currently under construction. Updates to the workflow may be added as it evolves  🚧
 
 After successful [Installation](../home/installation.md), and 
 running of [Quick-Start](../home/quick-start.md) example, the following can be set up.
 
 ### Create a Case Study folder
 
-In Data/Case_Study, create a new folder with your case study name. If you have selected a country, for example Indonesia, this may be something representative like `id-test`, or if you want multiple countries for collaboration, it could be `id-sg-collab`. Think of names that are simple but descriptive. 
-
-!!! note
-    Case Study folder naming convention
-
-    For CLI ergonomics and visual separation, we recommend adhering to kebab-case (words separated by dashes) convention for naming new case study folders:
-    
-    - lower case only: try not to use capital leters ( use `id-sg-collab` instead of `ID-SG-Collab`)
-    - avoid spaces or underscores
+In data/Case_Study, create a new folder with your case study name. If you have selected a country, for example Indonesia, this may be something representative like `ID-test`, or if you want multiple countries for collaboration, it could be `ID-SG-collab`. Think of names that are simple but descriptive. 
 
 #### Necessary details
 ---

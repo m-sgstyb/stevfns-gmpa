@@ -1,8 +1,7 @@
 # Generalised Asset Model Formulation
 ---
 
-The Space-Time-Energy Vector Flow Networks (STEVFNs, pronounced _"stevens"_) is a generalised
-model generator. Originally developed to model energy systems, it models systems as
+STEVFNs is a generalised model generator. Originally developed to model energy systems, it models systems as
 directed flow networks, solved as a single convex optimisation problem: minimise total
 system cost subject to conservation-of-flow constraints at every node.
 The original theoretical background and formulation can be consulted at:

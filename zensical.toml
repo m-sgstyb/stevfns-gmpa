@@ -8,7 +8,6 @@ copyright = "Copyright © 2026 MOYA Analytics"
 nav = [
   { "Home" = [
     "index.md",
-    { "Introduction" = "home/introduction.md" },
     { "Installation" = "home/installation.md" },
     { "Quick Start" = "home/quick-start.md" },
     { "Workflow" = "home/workflow.md" },
@@ -22,9 +21,10 @@ nav = [
     { "Configuration" = "custom-data/config.md" },
   ]}, 
   { "Model Details" = [
+    { "Introduction" = "model-details/model-intro.md" },
     { "Architecture" = "model-details/architecture.md"},
     { "Generalised asset model" = "model-details/generalised-model.md" },
-    { "Time dependence" = "model-details/time-dep.md" },
+    { "Base assets" = "model-details/base-assets.md" },
     { "Assets" = "model-details/assets.md" },
   ]},
   { "Tutorials" = [
