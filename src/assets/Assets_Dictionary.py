@@ -24,8 +24,6 @@ from .H2_to_NH3 import H2_to_NH3_Asset
 from .H2_Storage import H2_Storage_Asset
 from .H2_Transport import H2_Transport_Asset
 
-from .EL_Demand_UM import EL_Demand_UM_Asset
-from .EL_Demand_Constant import EL_Demand_Constant_Asset
 from .CO2_Budget import CO2_Budget_Asset
 from .PP_CO2 import PP_CO2_Asset
 from .PP_NGS_CCGT_CO2 import PP_NGS_CCGT_CO2_Asset
@@ -108,8 +106,6 @@ ASSET_DICT = {EL_Demand_Asset.asset_name: EL_Demand_Asset,
               H2_to_NH3_Asset.asset_name: H2_to_NH3_Asset,
               H2_Storage_Asset.asset_name: H2_Storage_Asset,
               H2_Transport_Asset.asset_name: H2_Transport_Asset,
-              EL_Demand_UM_Asset.asset_name: EL_Demand_UM_Asset,
-              EL_Demand_Constant_Asset.asset_name: EL_Demand_Constant_Asset,
               CO2_Budget_Asset.asset_name: CO2_Budget_Asset,
               PP_CO2_Asset.asset_name: PP_CO2_Asset,
               PP_NGS_CCGT_CO2_Asset.asset_name: PP_NGS_CCGT_CO2_Asset,
