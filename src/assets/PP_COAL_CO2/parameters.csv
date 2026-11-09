@@ -1,4 +1,4 @@
-Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,existing_capacity,existing_capacity_unit,existing_capacity_decay_rate,interest_rate,lifespan,lifespan_units,CO2_emissions_factor,CO2_emissions_factor_unit,
+Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,existing_capacity,existing_capacity_unit,existing_capacity_decay_rate,interest_rate,lifespan,lifespan_units,CO2_emissions_factor,CO2_emissions_factor_unit,location_name
 0,1.352,G$/GWp,2.78E-05,G$/GWh,0,GWp,0,0.03,525600,h,0.34056,GgCO2e/GWh,SG
 1,1.352,G$/GWp,2.78E-05,G$/GWh,0,GWp,0,0.03,525600,h,0.34056,GgCO2e/GWh,ID
 2,1.352,G$/GWp,0.000277778,G$/GWh,0,GWp,0,0.03,525600,h,0.34056,GgCO2e/GWh,MY

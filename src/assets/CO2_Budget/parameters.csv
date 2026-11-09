@@ -1,2 +1,3 @@
 Type,trajectory_filename,case_study
-0,emissions_budget_profiles,diy-kit-test
+0,reference_emissions,bau_least_cost
+1,emissions_budget_profiles,diy-kit-test

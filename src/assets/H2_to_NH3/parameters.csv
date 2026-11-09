@@ -1,4 +1,4 @@
-Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,electricity_consumption,electricity_consumption_unit,conversion_factor_stoich,conversion_factor_stoich_unit,conversion_factor_yield,conversion_factor_yield_unit,lifespan,lifespan_units,existing_capacity,existing_capacity_unit,existing_capacity_decay_rate,interest_rate,location_name
+Type,sizing_constant,sizing_constant_unit,usage_constant,usage_constant_unit,electricity_intensity,electricity_intensity_unit,conversion_factor_stoich,conversion_factor_stoich_unit,conversion_factor_yield,conversion_factor_yield_unit,lifespan,lifespan_units,existing_capacity,existing_capacity_unit,existing_capacity_decay_rate,interest_rate,location_name
 0,2.494117647,G$/Gg NH3 h,1.19E+00,G$/Gg NH3 h,1.432664756,Gg NH3/GWh,5.666666667,GgNH3/GgH2,0.97,GgNH3/GgH2,262800,h,0,GWp,0,0.1,SG
 1,2.494117647,G$/Gg NH3 h,1.19E+00,G$/Gg NH3 h,1.432664756,Gg NH3/GWh,5.666666667,GgNH3/GgH2,0.97,GgNH3/GgH2,262800,h,0,GWp,0,0.1,ID
 2,2.494117647,G$/Gg NH3 h,1.19E+00,G$/Gg NH3 h,1.432664756,Gg NH3/GWh,5.666666667,GgNH3/GgH2,0.97,GgNH3/GgH2,262800,h,0,GWp,0,0.1,MY
