@@ -41,8 +41,8 @@ class H2_to_NH3_Asset(Stock_Asset_STEVFNs):
         """
         Convert Electricity requirements for EL->H2_to_NH3 asset
         """
-        electricity_consumption = params["electricity_consumption"]
-        return electricity_consumption * flows
+        electricity_intensity = params["electricity_intensity"]
+        return electricity_intensity * flows
     
     
     def __init__(self):
@@ -54,8 +54,8 @@ class H2_to_NH3_Asset(Stock_Asset_STEVFNs):
                                                             name=f"conversion_factor_yield_{self.asset_name}") # process efficiency
                 }
         self.conversion_fun_params_2 = {
-                    "electricity_consumption": cp.Parameter(nonneg=True,
-                                                            name=f"electricity_consumption_{self.asset_name}")
+                    "electricity_intensity": cp.Parameter(nonneg=True,
+                                                            name=f"electricity_intensity_{self.asset_name}")
                 }
         return
     
@@ -93,8 +93,8 @@ class H2_to_NH3_Asset(Stock_Asset_STEVFNs):
                                                             name=f"conversion_factor_yield_{self.asset_name}") # process efficiency
                 }
         self.conversion_fun_params_2 = {
-                    "electricity_consumption": cp.Parameter(nonneg=True,
-                                                            name=f"electricity_consumption_{self.asset_name}")
+                    "electricity_intensity": cp.Parameter(nonneg=True,
+                                                            name=f"electricity_intensity_{self.asset_name}")
         }
         return
 
@@ -170,7 +170,7 @@ class H2_to_NH3_Asset(Stock_Asset_STEVFNs):
     def _update_parameters(self):
         self.conversion_fun_params["conversion_factor_stoich"].value = float(self.parameters_df["conversion_factor_stoich"])
         self.conversion_fun_params["conversion_factor_yield"].value = float(self.parameters_df["conversion_factor_yield"])
-        self.conversion_fun_params_2["electricity_consumption"].value = float(self.parameters_df["electricity_consumption"])
+        self.conversion_fun_params_2["electricity_intensity"].value = float(self.parameters_df["electricity_intensity"])
         self._update_usage_constant()
 
         sizing_constant_vec = self._load_baseline_capex()
