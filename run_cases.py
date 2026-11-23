@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 25 11:44:26 2025
-
-@author: Mónica Sagastuy-Breña
-Wrapper script to run main.py through CLI and not edit the script with hard coded details
+Wrapper script to run main.py through CLI and not
+edit the script with hard coded details
 """
 
 import subprocess
@@ -69,8 +67,8 @@ if __name__ == "__main__":
             "one or more literal, case-sensitive case study names."
         ),
     )
-    parser.add_argument("--solver", choices=["mosek", "clarabel"], default="clarabel",
-                         help="Choose solver (default: clarabel)")
+    parser.add_argument("--solver", choices=["highs", "clarabel"], default="highs",
+                         help="Choose solver (default: highs)")
     parser.add_argument("--sub", action="store_true",
                          help="Only run the specific country combo provided (no sub-combinations)")
     parser.add_argument(

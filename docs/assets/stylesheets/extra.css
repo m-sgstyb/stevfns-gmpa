@@ -1,0 +1,343 @@
+/* ============================================
+   LAYOUT COMPONENTS
+   ============================================ */
+/* Header gradient */
+.md-header,
+.md-tabs {
+  background: linear-gradient(
+    90deg,
+    #3F8FAE 0%,
+    #5668F6 30%,
+    #7A5697 100%
+  );
+}
+
+/* Keep header and tabs text white */
+.md-header__title,
+.md-header__button,
+.md-header__source,
+.md-tabs__link {
+  color: #ffffff !important;
+}
+
+/* Tabs: hover and active state */
+.md-tabs__link:hover {
+  color: #ffffff !important;
+  opacity: 0.9;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+  text-underline-offset: 0.18em;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect (slight lift) */
+.md-tabs__item:hover {
+  transform: translateY(-1px);
+  transition: transform 0.15s ease;
+}
+
+/* Improve contrast for inactive tabs */
+.md-tabs__link {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Logo size adjuster */
+.md-header__button.md-logo img {
+  height: 80px; /* default ~32px */
+}
+
+/* 1) Light-mode footer shading */
+[data-md-color-scheme="default"] .md-footer {
+  background: #f5f5f5;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="default"] .md-footer-meta {
+  background: #f5f5f5;
+}
+
+/* Footer shading in light mode */
+[data-md-color-scheme="default"] .md-footer,
+[data-md-color-scheme="default"] .md-footer-meta {
+  background: #99999941 !important;
+}
+
+/* Two-column footer layout */
+.md-footer-meta__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  column-gap: 2rem;
+}
+
+/* Left column: stack copyright + "Made with..." */
+.md-copyright {
+  display: block;
+}
+
+/* Right column: icons */
+.md-social {
+  grid-template-columns: auto 1fr;
+  justify-self: end;
+}
+
+/* Keep the selected item highlight in the left nav in light mode */
+[data-md-color-scheme="default"] .md-nav__item--active > .md-nav__link,
+[data-md-color-scheme="default"] .md-nav__link--active {
+  background-color: rgba(63, 143, 174, 0.16);
+  color: #3F8FAE;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px rgba(63, 143, 174, 0.18);
+}
+
+/* Adjustments for media screens */
+@media screen and (max-width: 768px) {
+  .md-footer-meta__inner {
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+  }
+
+  .md-social {
+    justify-self: start;
+  }
+}
+
+/* Grid layout for images */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--grid-gap);
+  margin: 2rem 0;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+/* Grid for image galleries */
+.grid-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+  margin: var(--content-spacing) 0;
+}
+
+.grid-images img {
+  width: 32%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+table {
+  width: 100%;
+  margin: var(--content-spacing) 0;
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+table tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+
+/* Light mode code block panel + copy button */
+[data-md-color-scheme="default"] .md-typeset pre,
+[data-md-color-scheme="default"] .md-typeset .highlight > pre,
+[data-md-color-scheme="default"] .md-typeset .highlight .codehilite {
+  background: #dcdce1 !important;
+  border-radius: 9px;
+}
+
+/* Keep the code block itself transparent so the panel shows through */
+[data-md-color-scheme="default"] .md-typeset pre > code {
+  background: transparent !important;
+}
+
+[data-md-color-scheme="default"] .md-typeset .md-clipboard {
+  color: rgba(0, 0, 0, 0.55) !important;
+  background: transparent !important;
+}
+
+/* ============================================
+   BADGES & BUTTONS
+   ============================================ */
+
+/* Badge styling */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.875em;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+  margin: 0.2em;
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .grid-images {
+    flex-direction: column;
+  }
+
+  .grid-images img {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .grid-images img {
+    width: 48%;
+  }
+}
+
+/* ============================================
+   NAVIGATION ENHANCEMENTS
+   ============================================ */
+
+/* Table of contents improvements */
+.md-sidebar--secondary {
+  position: sticky;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Spacing utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* ============================================
+   MERMAID DIAGRAM STYLING
+   ============================================ */
+
+/* Light mode */
+[data-md-color-scheme="default"] .mermaid {
+  --md-mermaid-node-bg-color: #CE92FF;   /* shaded purple */
+  --md-mermaid-node-fg-color: #ffffff;
+  --md-mermaid-edge-color: #3F8FAE;      /* start of header gradient */
+  --md-mermaid-label-bg-color: #ffffff;
+  --md-mermaid-label-fg-color: #7A5697;
+  --md-mermaid-font-family: "Roboto", sans-serif;
+}
+
+/* Dark mode */
+[data-md-color-scheme="slate"] .mermaid {
+  --md-mermaid-node-bg-color: #4C2F63;   /* darker purple */
+  --md-mermaid-node-fg-color: #ffffff;
+  --md-mermaid-edge-color: #3F8FAE;      /* blue arrows */
+  --md-mermaid-label-bg-color: #1e1e1e;
+  --md-mermaid-label-fg-color: #ffffff;
+  --md-mermaid-font-family: "Roboto", sans-serif;
+}
+
+/* Mermaid container styling */
+.mermaid {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+}
+
+/* Make sure text is readable in both modes */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Increase text size in Mermaid diagrams */
+.mermaid text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Increase node label text size */
+.mermaid .nodeLabel {
+  font-size: 16px !important;
+}
+
+/* Node text styling for light mode */
+[data-md-color-scheme="default"] .mermaid .nodeLabel {
+  color: #1565c0 !important;
+  font-weight: 500;
+}
+
+/* Node text styling for dark mode */
+[data-md-color-scheme="slate"] .mermaid .nodeLabel {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* Edge label styling for light mode */
+[data-md-color-scheme="default"] .mermaid .edgeLabel {
+  background-color: #ffffff !important;
+  color: #1565c0 !important;
+}
+
+/* Edge label styling for dark mode */
+[data-md-color-scheme="slate"] .mermaid .edgeLabel {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+/* ============================================
+   END OF STYLES
+   ============================================ */

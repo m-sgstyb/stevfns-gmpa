@@ -1,0 +1,75 @@
+﻿Asset_Class,Readable_Name
+BESS,BESS
+CEM_Demand,Cement demand
+CEM_Production,Cement production
+CEM_Production_EL,Cement production electric
+CO2_Budget,Emissions Budget
+EL_Demand,Electricity demand
+EL_to_H2,Electrolyser
+EL_to_HTH,Electric kiln
+EL_to_NH3,Electrolyser + Haber Bosch
+EL_Transport,HVDC
+FF_to_HTH,Fossil fired kiln
+H2_Storage,H2 Storage
+H2_to_EL,Hydrogen fuel cell
+H2_to_NH3,Haber Bosch
+H2_Transport,H2 Shipping
+HTH_Demand,High Temp. Heating demand
+HYDRO,Hydropower (flex)
+NH3_Storage,Ammonia storage
+NH3_to_EL,Ammonia fuel cell
+NH3_to_HTH,Ammonia fired kiln
+NH3_Transport,Ammonia shipping
+Nuclear_Fission_Baseload,Nuclear
+PHS,PHS
+PHS_ramp,PHS ramp
+PP_CO2,Generic fossil power plant
+PP_COAL_CO2,Coal power plant
+PP_NGS_CCGT_CO2,Nat gas CCGT
+PP_NGS_SCGT_CO2,Nat gas SCGT
+PP_OIL_CO2,Fuel oil power plant
+RE_PV_Openfield_BAU,Openfield PV
+RE_PV_Openfield_Lim,Openfield PV
+RE_PV_Rooftop_Lim,Rooftop PV
+RE_WIND_Offshore_Lim,Offshore wind
+RE_WIND_Offshore_Lim_0,Offshore wind 0
+RE_WIND_Offshore_Lim_1,Offshore wind 1
+RE_WIND_Offshore_Lim_2,Offshore wind 2
+RE_WIND_Offshore_Lim_3,Offshore wind 3
+RE_WIND_Offshore_Lim_4,Offshore wind 4
+RE_WIND_Offshore_Lim_5,Offshore wind 5
+RE_WIND_Offshore_Lim_6,Offshore wind 6
+RE_WIND_Offshore_Lim_7,Offshore wind 7
+RE_WIND_Offshore_Lim_8,Offshore wind 8
+RE_WIND_Offshore_Lim_9,Offshore wind 9
+RE_WIND_Onshore_BAU_0,Onshore wind bau 0
+RE_WIND_Onshore_BAU_1,Onshore wind bau 1
+RE_WIND_Onshore_BAU_2,Onshore wind bau 2
+RE_WIND_Onshore_BAU_3,Onshore wind bau 3
+RE_WIND_Onshore_BAU_4,Onshore wind bau 4
+RE_WIND_Onshore_BAU_5,Onshore wind bau 5
+RE_WIND_Onshore_BAU_6,Onshore wind bau 6
+RE_WIND_Onshore_BAU_7,Onshore wind bau 7
+RE_WIND_Onshore_BAU_8,Onshore wind bau 8
+RE_WIND_Onshore_BAU_9,Onshore wind bau 9
+RE_WIND_Onshore_Lim,Onshore wind
+RE_WIND_Onshore_Lim_0,Onshore wind 0
+RE_WIND_Onshore_Lim_1,Onshore wind 1
+RE_WIND_Onshore_Lim_2,Onshore wind 2
+RE_WIND_Onshore_Lim_3,Onshore wind 3
+RE_WIND_Onshore_Lim_4,Onshore wind 4
+RE_WIND_Onshore_Lim_5,Onshore wind 5
+RE_WIND_Onshore_Lim_6,Onshore wind 6
+RE_WIND_Onshore_Lim_7,Onshore wind 7
+RE_WIND_Onshore_Lim_8,Onshore wind 8
+RE_WIND_Onshore_Lim_9,Onshore wind 9
+STL_BF_BOF,Steel Production BF-BOF
+STL_Demand,Steel Demand
+STL_DRI_EAF_H2,Steel Production DRI-EAF H2
+STL_DRI_EAF_NG,Steel Production DRI-EAF NG
+VEH_EL_FRT,Electric freight vehicle
+VEH_EL_PGR,Electric passenger vehicle
+VEH_FRT_Demand,Freight activity
+VEH_ICE_FRT,ICE Freight vehicle
+VEH_ICE_PGR,ICE Passenger vehicle
+VEH_PGR_Demand,Passenger activity
